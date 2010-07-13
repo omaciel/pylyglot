@@ -1,0 +1,21 @@
+{% if words %}
+  <ul class="words">
+    {% for word in words %}
+      <li>
+        <strong>{{ word.term }}</strong>
+        <ul>
+            {% for sentence in word.sentence_set.all %}
+            <li>
+                {{ sentence.msgid }}<br />
+                {{ sentence.msgstr }}
+            </li>
+            {% empty %}
+            <li>This word has no phrases</li>
+            {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No phrases were found that match your search term.</p>
+{% endif %}

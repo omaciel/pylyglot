@@ -2,3 +2,5 @@
 *.pyc
 *.swp
 99-*.conf
+.DS_Store
+*.db

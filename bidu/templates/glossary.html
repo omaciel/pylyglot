@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Search Glossary{% endblock %}
+{% block head %}Search Glossary{% endblock %}
+{% block content %}
+<form id="search-form" method="get" action=".">
+  {{ form }}
+  <input type="submit" value="search" />
+</form>
+<div id="search-results">
+  {% if show_results %}
+    {% include "word_list.html" %}
+  {% endif %}
+</div>
+{% endblock %}
