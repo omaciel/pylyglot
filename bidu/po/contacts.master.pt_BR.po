@@ -1,0 +1,405 @@
+# Brazilian Portuguese translation for Contacts package.
+# Copyright (C) 2007 OpenedHand
+# This file is distributed under the same license as the Contacts package.
+# Leonardo Ferreira Fontenelle <leonardof@gnome.org>, 2007.
+# Michel Recondo <michel@recondo.com.br>, 2008, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Contacts\n"
+"Report-Msgid-Bugs-To: http://bugzilla.openedhand.com/enter_bug.cgi?"
+"product=Contacts&component=General\n"
+"POT-Creation-Date: 2010-04-24 22:05+0000\n"
+"PO-Revision-Date: 2010-04-22 17:44-0300\n"
+"Last-Translator: Michel Recondo <michel@recondo.com.br>\n"
+"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../data/contacts.desktop.in.h:1
+msgid "Address book"
+msgstr "Catálogo de endereços"
+
+#: ../data/contacts.desktop.in.h:2 ../src/contacts-edit-pane.c:86
+#: ../src/contacts-gtk.c:216 ../src/contacts-main.c:191
+msgid "Contacts"
+msgstr "Contatos"
+
+#: ../src/contacts-callbacks-ebook.c:71 ../src/contacts-callbacks-ebook.c:146
+#: ../src/contacts-callbacks-ui.c:194 ../src/contacts-ui.c:75
+msgid "Unnamed"
+msgstr "Sem nome"
+
+#: ../src/contacts-callbacks-ui.c:199
+#, c-format
+msgid "Are you sure you want to delete '%s'?"
+msgstr "Você tem certeza de que quer excluir \"%s\"?"
+
+#: ../src/contacts-callbacks-ui.c:203
+#, c-format
+msgid "Are you sure you want to delete %d contacts?"
+msgstr "Você tem certeza de que quer excluir %d contatos?"
+
+#: ../src/contacts-callbacks-ui.c:288
+#, c-format
+msgid "Would you like to import contact '%s'?"
+msgstr "Você gostaria de importar o contato \"%s\"?"
+
+#: ../src/contacts-callbacks-ui.c:293
+msgid "_Show contact"
+msgstr "_Mostrar contato"
+
+#: ../src/contacts-callbacks-ui.c:294
+msgid "_Import contact"
+msgstr "_Importar contato"
+
+#: ../src/contacts-callbacks-ui.c:350
+msgid "Import Contact"
+msgstr "Importar contato"
+
+#: ../src/contacts-callbacks-ui.c:383
+#, c-format
+msgid "Imported one contact"
+msgid_plural "Imported %d contacts"
+msgstr[0] "Um contato importado"
+msgstr[1] "%d contatos importados"
+
+#: ../src/contacts-callbacks-ui.c:426
+msgid "Export Contact"
+msgstr "Exportar contato"
+
+#. TODO: make it nicer for i18n
+#: ../src/contacts-callbacks-ui.c:463
+#, c-format
+msgid ""
+"<big><b>The file \"%s\" already exists.\n"
+"Do you want to replace it?</b></big>"
+msgstr ""
+"<big><b>O arquivo \"%s\" já existe.\n"
+"Você gostaria de substituí-lo?</b></big>"
+
+#: ../src/contacts-callbacks-ui.c:469
+msgid "Replacing it will overwrite its contents."
+msgstr "Substituí-lo sobrescreverá seu conteúdo."
+
+#: ../src/contacts-callbacks-ui.c:473
+msgid "_Replace"
+msgstr "_Substituir"
+
+#: ../src/contacts-callbacks-ui.c:618
+msgid ""
+"Contacts is free software; you can redistribute it and/or modify it under "
+"the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version.\n"
+"\n"
+"Contacts is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License along with "
+"Contacts; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+"St, Fifth Floor, Boston, MA 0110-1301, USA"
+msgstr ""
+"Contacts é software livre; você pode redistribuí-lo e/ou modificá-lo sob os "
+"termos da Licença Pública Geral GNU (GNU General Public License), conforme "
+"publicada pela Free Software Foundation; tanto a versão 2 da Licença como (a "
+"seu critério) qualquer versão mais nova.\n"
+"\n"
+"Contacts é distribuído na expectativa de ser útil, mas SEM QUALQUER "
+"GARANTIA; sem mesmo a garantia implícita de COMERCIALIZAÇÃO ou de ADEQUAÇÃO "
+"A QUALQUER PROPÓSITO EM PARTICULAR. Consulte a Licença Pública Geral GNU "
+"para obter mais detalhes.\n"
+"\n"
+"Você deve ter recebido uma cópia da Licença Pública Geral GNU junto com "
+"Contacts; caso contrário, escreva para a Free Software Foundation, Inc., 51 "
+"Franklin St, Fifth Floor, Boston, MA 02110-1301 USA."
+
+#. Translators: please translate this as your own name and optionally email
+#. like so: "Your Name <your@email.com>"
+#: ../src/contacts-callbacks-ui.c:633
+msgid "translator-credits"
+msgstr ""
+"Leonardo Ferreira Fontenelle <leonardof@gnome.org>\n"
+"Michel Recondo <michel@recondo.com.br>"
+
+#: ../src/contacts-callbacks-ui.c:678 ../src/contacts-gtk.c:109
+msgid "All"
+msgstr "Todos"
+
+#: ../src/contacts-edit-pane.c:104
+msgid "Are you sure you want to delete this contact?"
+msgstr "Você tem certeza de que quer excluir este contato?"
+
+#: ../src/contacts-edit-pane.c:142
+msgid "Couldn't update contact"
+msgstr "Não foi possível atualizar o contato"
+
+#: ../src/contacts-edit-pane.c:147
+#, c-format
+msgid "Information couldn't be updated, error was: %s"
+msgstr "A informação não pôde ser atualizada; o erro foi: %s"
+
+#: ../src/contacts-edit-pane.c:183
+msgid "Couldn't add contact"
+msgstr "Não foi possível adicionar o contato"
+
+#: ../src/contacts-edit-pane.c:188
+#, c-format
+msgid "Cannot add contact: %s"
+msgstr "Não foi possível adicionar o contato: %s"
+
+#. Create label/button text
+#. * Translators, the first
+#. * argument is the field's
+#. * name, ex. <b>Country:</b>
+#.
+#. "<b>%s:</b>\n<small>(%s)</small>",
+#: ../src/contacts-edit-pane.c:403 ../src/contacts-edit-pane.c:518
+#: ../src/contacts-ui.c:181 ../src/contacts-ui.c:187
+#, c-format
+msgid "<b>%s:</b>"
+msgstr "<b>%s:</b>"
+
+#. TODO: make nicer for i18n
+#: ../src/contacts-edit-pane.c:478
+msgid "<b>Type:</b>"
+msgstr "<b>Tipo:</b>"
+
+#: ../src/contacts-edit-pane.c:825
+msgid "Change groups"
+msgstr "Alterar grupos"
+
+#: ../src/contacts-edit-pane.c:825
+msgid "<b>Choose groups</b>"
+msgstr "<b>Escolha os grupos</b>"
+
+#: ../src/contacts-edit-pane.c:887
+msgid "Add field"
+msgstr "Adicionar campo"
+
+#. TODO: make nicer for i18n
+#: ../src/contacts-edit-pane.c:889
+msgid "<b>Choose a field</b>"
+msgstr "<b>Escolha um campo</b>"
+
+#: ../src/contacts-edit-pane.c:1246
+msgid "Edit contact"
+msgstr "Editar contato"
+
+#: ../src/contacts-gtk.c:226
+msgid "C_ontacts"
+msgstr "C_ontatos"
+
+#: ../src/contacts-gtk.c:243
+msgid "_Import..."
+msgstr "_Importar..."
+
+#: ../src/contacts-gtk.c:253
+msgid "C_ontact"
+msgstr "C_ontato"
+
+#: ../src/contacts-gtk.c:263
+msgid "_Groups"
+msgstr "_Grupos"
+
+#: ../src/contacts-gtk.c:266
+msgid "_Export"
+msgstr "_Exportar"
+
+#: ../src/contacts-gtk.c:276
+msgid "Ed_it"
+msgstr "_Editar"
+
+#: ../src/contacts-gtk.c:291
+msgid "_Help"
+msgstr "Aj_uda"
+
+#: ../src/contacts-gtk.c:346
+msgid "_Search:"
+msgstr "_Pesquisar:"
+
+#: ../src/contacts-gtk.c:355
+msgid "0-9#"
+msgstr "0-9#"
+
+#: ../src/contacts-gtk.c:360
+msgid "A-G"
+msgstr "A-G"
+
+#: ../src/contacts-gtk.c:366
+msgid "H-N"
+msgstr "H-N"
+
+#: ../src/contacts-gtk.c:371
+msgid "O-U"
+msgstr "O-U"
+
+#: ../src/contacts-gtk.c:376
+msgid "V-Z"
+msgstr "V-Z"
+
+#: ../src/contacts-gtk.c:473
+msgid "_Add Field"
+msgstr "_Adicionar campo"
+
+#: ../src/contacts-gtk.c:477
+msgid "_Remove Field"
+msgstr "_Remover campo"
+
+#: ../src/contacts-gtk.c:660
+msgid "Edit Types"
+msgstr "Editar tipos"
+
+#: ../src/contacts-gtk.c:672
+msgid "<span><b>Make a choice:</b></span>"
+msgstr "<span><b>Faça uma escolha:</b></span>"
+
+#: ../src/contacts-main.c:90
+msgid "Error starting address book"
+msgstr "Erro ao iniciar o catálogo de endereços"
+
+#: ../src/contacts-main.c:93
+#, c-format
+msgid "Got error %d when getting book view"
+msgstr "Erro %d ao obter a visão do catálogo"
+
+#: ../src/contacts-main.c:118
+msgid "Error opening address book"
+msgstr "Erro ao abrir o catálogo de endereços"
+
+#: ../src/contacts-main.c:121
+#, c-format
+msgid "Got error %d when opening book"
+msgstr "Erro %d ao abrir o catálogo"
+
+#: ../src/contacts-main.c:193
+msgid "- A light-weight address-book"
+msgstr "- Um catálogo de endereços leve"
+
+#: ../src/contacts-ui.c:177 ../src/contacts-utils.c:75
+#: ../src/contacts-utils.c:84
+msgid "Other"
+msgstr "Outro"
+
+#: ../src/contacts-utils.c:39
+msgid "Phone"
+msgstr "Telefone"
+
+#: ../src/contacts-utils.c:40
+msgid "Email"
+msgstr "E-mail"
+
+#: ../src/contacts-utils.c:41
+msgid "Jabber"
+msgstr "Jabber"
+
+#: ../src/contacts-utils.c:42
+msgid "MSN"
+msgstr "MSN"
+
+#: ../src/contacts-utils.c:43
+msgid "Yahoo"
+msgstr "Yahoo"
+
+#: ../src/contacts-utils.c:44
+msgid "AIM"
+msgstr "AIM"
+
+#: ../src/contacts-utils.c:45
+msgid "ICQ"
+msgstr "ICQ"
+
+#: ../src/contacts-utils.c:46
+msgid "Groupwise"
+msgstr "Groupwise"
+
+#: ../src/contacts-utils.c:47
+msgid "Address"
+msgstr "Endereço"
+
+#: ../src/contacts-utils.c:50
+msgid "Homepage"
+msgstr "Página inicial"
+
+#: ../src/contacts-utils.c:58
+msgid "PO Box"
+msgstr "Caixa postal"
+
+#: ../src/contacts-utils.c:59
+msgid "Ext."
+msgstr "Complemento"
+
+#: ../src/contacts-utils.c:60
+msgid "Street"
+msgstr "Endereço"
+
+#: ../src/contacts-utils.c:61
+msgid "City"
+msgstr "Cidade"
+
+#: ../src/contacts-utils.c:62
+msgid "Province"
+msgstr "Bairro"
+
+#: ../src/contacts-utils.c:63
+msgid "Postal Code"
+msgstr "CEP"
+
+#: ../src/contacts-utils.c:64
+msgid "Country"
+msgstr "País"
+
+#: ../src/contacts-utils.c:71 ../src/contacts-utils.c:82
+msgid "Home"
+msgstr "Casa"
+
+#: ../src/contacts-utils.c:72
+msgid "Cell"
+msgstr "Celular"
+
+#: ../src/contacts-utils.c:73 ../src/contacts-utils.c:83
+msgid "Work"
+msgstr "Comercial"
+
+#: ../src/contacts-utils.c:74
+msgid "Fax"
+msgstr "Fax"
+
+#. Get a filename
+#. Note: I don't use the GTK_WINDOW cast as gtk_widget_get_ancestor
+#. * can return NULL and this would probably throw a critical Gtk error.
+#.
+#: ../src/contacts-utils.c:480
+msgid "Open image"
+msgstr "Abrir imagem"
+
+#: ../src/contacts-utils.c:490
+msgid "No image"
+msgstr "Sem imagem"
+
+#. Contacts with priority <= REQUIRED have to be shown
+#. * when creating a new contact.
+#.
+#. For the image-chooser dialog
+#: ../src/contacts-defs.h:165
+msgid "No Group"
+msgstr "Sem grupo"
+
+#~ msgid "Unknown"
+#~ msgstr "Desconhecido"
+
+#~ msgid "Locality"
+#~ msgstr "Cidade"
+
+#~ msgid "Region"
+#~ msgstr "Estado"
+
+#~ msgid "_Contacts"
+#~ msgstr "_Contatos"
+
+#~ msgid "_Contact"
+#~ msgstr "_Contato"

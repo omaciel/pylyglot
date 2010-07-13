@@ -1,0 +1,403 @@
+# Douglas Soares de Andrade <douglas@archlinux-br.org>, 2007.
+# Og Maciel <ogmaciel@gnome.org>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Dates 0.4.3\n"
+"Report-Msgid-Bugs-To: http://bugzilla.openedhand.com/enter_bug.cgi?"
+"product=Dates&component=General\n"
+"POT-Creation-Date: 2009-07-28 19:26+0000\n"
+"PO-Revision-Date: 2009-07-27 15:11-0800\n"
+"Last-Translator: williane <williane.tenca@ptiglobal.net>\n"
+"Language-Team: Portuguese/Brazil <gnome-l10n-br@listas.cipsga.org.br>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../data/dates.desktop.in.h:1 ../src/dates_callbacks.c:314
+#: ../src/dates_hildon.c:402 ../src/dates_hildon.c:514
+#: ../src/dates_hildon.c:524 ../src/dates_gtk.c:54 ../src/dates_gtk.c:72
+#: ../src/dates_main.c:405
+msgid "Dates"
+msgstr "Datas"
+
+#: ../data/dates.desktop.in.h:2
+msgid "Your appointments"
+msgstr "Sua agenda"
+
+#: ../src/dates_callbacks.c:345
+msgid ""
+"This program is free software; you can redistribute it and/or modify\n"
+"it under the terms of the GNU General Public License as published by\n"
+"the Free Software Foundation; either version 2, or (at your option)\n"
+"any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful,\n"
+"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"GNU General Public License for more details."
+msgstr ""
+"Este programa é um software livre; você pode redistribuí-lo e/ou modificá-"
+"lo\n"
+"sob os termos da Licença Pública Geral GNU publicada pela Free Software \n"
+"Foundation; qualquer versão 2 da Licença, ou (a seu critério) outra versão \n"
+"posterior.\n"
+"\n"
+"Este programa é distribuído na esperança de que seja útil, mas SEM NENHUMA \n"
+"GARANTIA; sem mesmo implicar garantias de COMERCIABILIDADE ou ADAPTAÇÃO A \n"
+"UM PROPÓSITO PARTICULAR.  Veja a Licença Pública Geral GNU (GPL) para mais "
+"detalhes."
+
+#. Translators: please translate this as your own name and optionally email
+#. like so: "Your Name <your@email.com>"
+#: ../src/dates_callbacks.c:357
+msgid "translator-credits"
+msgstr ""
+"Douglas Soares de Andrade <douglas@archlinux-br.org>\n"
+"Og Maciel <ogmaciel@gnome.org>"
+
+#: ../src/dates_callbacks.c:1075
+msgid "Unknown event"
+msgstr "Evento desconhecido"
+
+#: ../src/dates_callbacks.c:1079 ../src/dates_callbacks.c:1093
+#, c-format
+msgid "Are you sure you want to delete event '%s'?"
+msgstr "Você tem certeza que deseja excluir o compromisso \"%s\"?"
+
+#: ../src/dates_callbacks.c:1083 ../src/dates_callbacks.c:1096
+msgid "Keep event"
+msgstr "Manter compromisso"
+
+#: ../src/dates_callbacks.c:1084 ../src/dates_callbacks.c:1097
+msgid "Delete event"
+msgstr "Excluir compromisso"
+
+#: ../src/dates_callbacks.c:1224
+msgid "New event"
+msgstr "Novo compromisso"
+
+#: ../src/dates_callbacks.c:1305
+msgid ""
+"Dates failed to open the system calendar. You will not be able to view or "
+"create events; this may be remedied by restarting."
+msgstr ""
+"O Dates falhou ao abrir o calendário do sistema. Você não poderá visualizar "
+"ou criar eventos; isso pode ser remediado reiniciando o sistema."
+
+#: ../src/dates_callbacks.c:1396 ../src/dates_callbacks.c:1400
+msgid " (Read Only)"
+msgstr " (Somente leitura)"
+
+#: ../src/dates_callbacks.c:1398 ../src/dates_callbacks.c:1400
+msgid "Unknown"
+msgstr "Desconhecido"
+
+#: ../src/dates_callbacks.c:1851
+msgid "No calendar events found."
+msgstr "Nenhum evento encontrado."
+
+#: ../src/dates_hildon.c:448 ../src/dates_gtk.c:516
+msgid "Time"
+msgstr "Horário"
+
+#: ../src/dates_hildon.c:475 ../src/dates_gtk.c:377 ../src/dates_gtk.c:649
+msgid "Forever"
+msgstr "Eternamente"
+
+#: ../src/dates_gtk.c:99
+msgid "Find:"
+msgstr "Procurar:"
+
+#: ../src/dates_gtk.c:169 ../src/dates_gtk.c:317
+msgid "Details"
+msgstr "Detalhes"
+
+#: ../src/dates_gtk.c:197
+msgid "Calendar:"
+msgstr "Calendário"
+
+#: ../src/dates_gtk.c:215
+msgid "Summary:"
+msgstr "Resumo"
+
+#: ../src/dates_gtk.c:231
+msgid "Time:"
+msgstr "Horário"
+
+#: ../src/dates_gtk.c:252
+msgid "Start"
+msgstr "Começo"
+
+#: ../src/dates_gtk.c:261
+msgid "to"
+msgstr "até"
+
+#: ../src/dates_gtk.c:269
+msgid "End"
+msgstr "Final"
+
+#: ../src/dates_gtk.c:277
+msgid "Summary"
+msgstr "Resumo"
+
+#: ../src/dates_gtk.c:292
+msgid "Details:"
+msgstr "Detalhes:"
+
+#: ../src/dates_gtk.c:332
+msgid "Repeats:"
+msgstr "Repete:"
+
+#: ../src/dates_gtk.c:346
+msgid "None"
+msgstr "Nenhum"
+
+#: ../src/dates_gtk.c:347
+msgid "Every Day"
+msgstr "Diariamente"
+
+#: ../src/dates_gtk.c:349
+msgid "Every Week"
+msgstr "Semanalmente"
+
+#: ../src/dates_gtk.c:351
+msgid "Every Fortnight"
+msgstr "Quinzenalmente"
+
+#: ../src/dates_gtk.c:353
+msgid "Every Month"
+msgstr "Mensalmente"
+
+#: ../src/dates_gtk.c:355
+msgid "Every Year"
+msgstr "Anualmente"
+
+#: ../src/dates_gtk.c:357
+msgid "Custom"
+msgstr "Personalizado"
+
+#: ../src/dates_gtk.c:359
+msgid "On:"
+msgstr "Em:"
+
+#: ../src/dates_gtk.c:365
+msgid "Until:"
+msgstr "Até:"
+
+#: ../src/dates_gtk.c:386
+msgid "Sun"
+msgstr "Dom"
+
+#: ../src/dates_gtk.c:391
+msgid "Mon"
+msgstr "Seg"
+
+#: ../src/dates_gtk.c:396
+msgid "Tue"
+msgstr "Ter"
+
+#: ../src/dates_gtk.c:401
+msgid "Wed"
+msgstr "Qua"
+
+#: ../src/dates_gtk.c:406
+msgid "Thu"
+msgstr "Qui"
+
+#: ../src/dates_gtk.c:411
+msgid "Fri"
+msgstr "Sex"
+
+#: ../src/dates_gtk.c:416
+msgid "Sat"
+msgstr "Sáb"
+
+#: ../src/dates_gtk.c:444
+msgid "_Exceptions"
+msgstr "_Exceções"
+
+#: ../src/dates_gtk.c:448 ../src/dates_gtk.c:1687
+msgid "Repeats"
+msgstr "Repete"
+
+#: ../src/dates_gtk.c:554 ../src/dates_view.c:1176
+msgid "AM"
+msgstr "AM"
+
+#. result for the dialog
+#. Create the dialog
+#: ../src/dates_gtk.c:788
+msgid "New calendar"
+msgstr "Novo calendário"
+
+#. Create the label
+#: ../src/dates_gtk.c:808 ../src/dates_gtk.c:1221 ../src/dates_main.c:487
+msgid "Calendar"
+msgstr "Calendário"
+
+#. Create the label for the type
+#: ../src/dates_gtk.c:845 ../src/dates_gtk.c:1258
+msgid "Type:"
+msgstr "Tipo:"
+
+#. Create the label for the name
+#: ../src/dates_gtk.c:906 ../src/dates_gtk.c:1291
+msgid "_Name:"
+msgstr "_Nome:"
+
+#. Create the label for the name
+#: ../src/dates_gtk.c:940 ../src/dates_gtk.c:1332
+msgid "_Colour:"
+msgstr "_Cor:"
+
+#. Create the label for the uri
+#: ../src/dates_gtk.c:979 ../src/dates_gtk.c:1388
+msgid "_Location:"
+msgstr "_Lugar:"
+
+#: ../src/dates_gtk.c:1117
+#, c-format
+msgid "Are you sure you want to delete the calendar named '%s'?"
+msgstr "Você tem certeza que quer excluir o calendário \"%s\"?"
+
+#. Create the dialog
+#: ../src/dates_gtk.c:1190 ../src/dates_gtk.c:1198
+msgid "Edit calendar"
+msgstr "Editar calendário"
+
+#: ../src/dates_gtk.c:1601
+msgid "Calendars"
+msgstr "Calendários"
+
+#: ../src/dates_gtk.c:1712
+msgid ""
+"<i>You can toggle a repeat\n"
+"by double-clicking a date\n"
+"on the calendar.</i>"
+msgstr ""
+"<i>Você pode ativar a repetição\n"
+"dando um clique duplo em um compromisso\n"
+"no calendário.<i>"
+
+#: ../src/dates_gtk.c:1775
+msgid "_Today"
+msgstr "_Hoje"
+
+#: ../src/dates_gtk.c:1868
+msgid "_Calendar"
+msgstr "_Calendário"
+
+#: ../src/dates_gtk.c:1883
+msgid "_Import..."
+msgstr "_Importar..."
+
+#. Edit menu commented out. Might be useful later...
+#.
+#. menuitem2 = gtk_menu_item_new_with_mnemonic (_("_Edit"));
+#. gtk_widget_show (menuitem2);
+#. #ifndef DATES_MENU_WITHOUT_BAR
+#. gtk_container_add (GTK_CONTAINER (d->main_menu), menuitem2);
+#. #else
+#. gtk_menu_shell_append (GTK_MENU_SHELL (d->main_menu), menuitem2);
+#. #endif
+#.
+#. menuitem2_menu = gtk_menu_new ();
+#. gtk_menu_item_set_submenu (GTK_MENU_ITEM (menuitem2), menuitem2_menu);
+#.
+#. cut_menuitem = gtk_image_menu_item_new_from_stock ("gtk-cut",
+#. *accel_group);
+#. gtk_widget_show (cut_menuitem);
+#. gtk_container_add (GTK_CONTAINER (menuitem2_menu), cut_menuitem);
+#. gtk_widget_set_sensitive (cut_menuitem, FALSE);
+#.
+#. copy_menuitem = gtk_image_menu_item_new_from_stock ("gtk-copy",
+#. *accel_group);
+#. gtk_widget_show (copy_menuitem);
+#. gtk_container_add (GTK_CONTAINER (menuitem2_menu), copy_menuitem);
+#. gtk_widget_set_sensitive (copy_menuitem, FALSE);
+#.
+#. paste_menuitem = gtk_image_menu_item_new_from_stock ("gtk-paste",
+#. *accel_group);
+#. gtk_widget_show (paste_menuitem);
+#. gtk_container_add (GTK_CONTAINER (menuitem2_menu), paste_menuitem);
+#. gtk_widget_set_sensitive (paste_menuitem, FALSE);
+#.
+#: ../src/dates_gtk.c:1929
+msgid "_View"
+msgstr "_Visualizar"
+
+#: ../src/dates_gtk.c:1960
+msgid "_Help"
+msgstr "_Ajuda"
+
+#.
+#. * Hack an hbox into the top of the GtkFileChooserDialog. Done this way
+#. * rather than with a GtkFileChooserWidget to avoid some horrible faffing
+#. * about with sizing.
+#.
+#: ../src/dates_gtk.c:2148
+msgid "Import calendar"
+msgstr "Importar calendário"
+
+#: ../src/dates_gtk.c:2160
+msgid "Target _calendar:"
+msgstr "Calendário de destino:"
+
+#: ../src/dates_gtk.c:2238
+#, c-format
+msgid "Error when importing: %s"
+msgstr "Erro ao importar: %s"
+
+#: ../src/dates_gtk.c:2257
+msgid "No writable calendars to import into."
+msgstr "Sem calendários em modo de escrita para efetuar a importação."
+
+#: ../src/dates_view.c:1176
+msgid "PM"
+msgstr "PM"
+
+#: ../src/dates_main.c:105
+msgid "On This Computer"
+msgstr "Neste computador"
+
+#. Now create a default source for it
+#: ../src/dates_main.c:112
+msgid "Personal"
+msgstr "Pessoal"
+
+#: ../src/dates_main.c:150
+msgid "On The Web"
+msgstr "Na web"
+
+#: ../src/dates_main.c:408
+msgid " - A light-weight, zooming calendar"
+msgstr " - Um calendário ampliável super leve"
+
+#: ../src/dates_main.c:481
+msgid "Selected"
+msgstr "Selecionado"
+
+#: ../src/gconf-bridge.c:1218
+#, c-format
+msgid "GConf error: %s"
+msgstr "Erro GConf: %s"
+
+#: ../src/gconf-bridge.c:1228
+msgid "All further errors shown only on terminal."
+msgstr "Todos erros restantes mostrados só no terminal."
+
+#~ msgid "What"
+#~ msgstr "O que"
+
+#~ msgid "When"
+#~ msgstr "Quando"
+
+#~ msgid "<big><b>Dates</b></big>"
+#~ msgstr "<big><b>Compromissos</b></big>"
+
+#~ msgid "<b>:</b>"
+#~ msgstr "<b>:</b>"
+
+#~ msgid "<b>Calendar</b>"
+#~ msgstr "<b>Calendário</b>"

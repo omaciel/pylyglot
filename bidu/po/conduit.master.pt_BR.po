@@ -1,0 +1,1541 @@
+# Brazilian Portuguese translation for conduit.
+# Copyright (C) 2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the conduit package.
+# Vladimir Melo <vmelo@gnome.org>, 2007-2008.
+# Og Maciel <ogmaciel@gnome.org>, 2008.
+# Leonardo Fontenelle <leo.fontenelle@gmail.com>, 2008.
+# Fábio Nogueira <deb-user-ba@ubuntu.com>, 2008.
+# Michel Recondo <mrecondo@gmail.com>, 2008.
+#
+# Flamarion Jorge <jorge.flamarion@gmail.com>, 2009.
+# Jonh Wendell <jwendell@gnome.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: conduit\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=conduit&component=documentation and translation\n"
+"POT-Creation-Date: 2010-01-21 18:41+0000\n"
+"PO-Revision-Date: 2009-08-25 16:27-0300\n"
+"Last-Translator: Flamarion Jorge <jorge.flamarion@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../data/conduit.desktop.in.in.h:1
+msgid "Conduit Synchronizer"
+msgstr "Sincronizador Conduit"
+
+#: ../data/conduit.desktop.in.in.h:2
+msgid "Synchronization for GNOME"
+msgstr "Sincronização para GNOME"
+
+#: ../conduit/Knowledge.py:8
+msgid "What Do You Want to Synchronize?"
+msgstr "O que você quer sincronizar?"
+
+#: ../conduit/Knowledge.py:9
+msgid "Drag and Drop a Data Provider on the Canvas"
+msgstr "Arraste e solte um provedor de dados sobre a tela"
+
+#: ../conduit/Knowledge.py:11
+msgid "Synchronization Group Created"
+msgstr "Sincronização de grupo criada"
+
+#: ../conduit/Knowledge.py:12
+msgid "Add Another Data Provider to the Group to Synchronize it"
+msgstr "Adicione outro provedor de dados para o grupo para sincroniza-lo"
+
+#: ../conduit/Knowledge.py:14
+msgid "You Are Now Ready to Synchronize"
+msgstr "Você está pronto para sincronizar"
+
+#: ../conduit/Knowledge.py:15
+msgid "Right Click on Group for Options"
+msgstr "Clique com o botão direito para opções de grupo"
+
+#: ../conduit/Knowledge.py:24
+msgid "Synchronize Two Folders"
+msgstr "Sincronizar duas pastas"
+
+#: ../conduit/Knowledge.py:27
+msgid "Backup Folder to Box.net"
+msgstr "Backup de pasta no Box.net"
+
+#: ../conduit/Knowledge.py:30
+msgid "Synchronize Tagged F-Spot Photos to Flickr"
+msgstr "Sincroniza fotos etiquetadas do F-Spot para o Flickr"
+
+#: ../conduit/Knowledge.py:33
+#, fuzzy
+#| msgid "Synchronize Tagged F-Spot Photos to Flickr"
+msgid "Synchronize Photos to Flickr"
+msgstr "Sincroniza fotos etiquetadas do F-Spot para o Flickr"
+
+#: ../conduit/Knowledge.py:36
+msgid "Upload Photos to Facebook"
+msgstr ""
+
+#: ../conduit/Knowledge.py:39
+#, fuzzy
+#| msgid "Synchronize data from RSS enclosures"
+msgid "Synchronize Desktop Wallpaper from a RSS Feed"
+msgstr "Sincroniza dados de componentes de RSS"
+
+#: ../conduit/Main.py:59
+msgid "Conduit is a synchronization application."
+msgstr "Conduit é um aplicativo de sincronização."
+
+#: ../conduit/Main.py:63
+#, python-format
+msgid "Launch without GUI. [default: %default]"
+msgstr "Lançar sem interface gráfica [padrão: %default]"
+
+#: ../conduit/Main.py:67
+#, python-format
+msgid "Save dataprovider configuration to FILE. [default: %default]"
+msgstr "Salvar configuração de provedor de dados no ARQUIVO [padrão: %default]"
+
+#: ../conduit/Main.py:71
+#, python-format
+msgid "Iconify on startup. [default: %default]"
+msgstr "Minimizar na inicialização [padrão: %default]"
+
+#: ../conduit/Main.py:75
+#, python-format
+msgid "Run with the specified UI. [default: %default]"
+msgstr "Executar com UI específico [default: %default]"
+
+#: ../conduit/Main.py:79
+msgid "Only load modules in the named files. [default: load all modules]"
+msgstr ""
+"Somente carregar módulos nas chamadas de arquivos [padrão: carregar todos "
+"módulos]"
+
+#: ../conduit/Main.py:83
+msgid "Do not load modules in the named files. [default: load all modules]"
+msgstr ""
+"Não carregar módulos nas chamadas de arquivos. [padrão: carregar todos "
+"módulos]"
+
+#: ../conduit/Main.py:87
+msgid ""
+"Explicitly set internal Conduit settings (keys) to the given values for this "
+"session. [default: do not set]"
+msgstr ""
+"Explicitamente definir configurações (chaves) internas no Conduit de\n"
+"determinados valores para esta sessão, [padrão: não definir]"
+
+#: ../conduit/Main.py:91
+#, python-format
+msgid ""
+"Enable loading of unfinished or unsupported dataproviders. [default: %"
+"default]"
+msgstr ""
+"Habilitar carregamento de provedores de dados inacabados ou  sem suporte. "
+"[default: %default]"
+
+#: ../conduit/Main.py:95
+#, python-format
+msgid "Generate more debugging information. [default: %default]"
+msgstr "Gerar mais informações de depuração. [padrão: %default]"
+
+#: ../conduit/Main.py:99
+#, python-format
+msgid "Generate less debugging information. [default: %default]"
+msgstr "Gerar menos informações de depuração. [padrão: %default]"
+
+#: ../conduit/Main.py:103
+#, python-format
+msgid "Generate no debugging information. [default: %default]"
+msgstr "Não gerar informações de depuração. [padrão: %default]"
+
+#: ../conduit/dataproviders/DataProvider.py:22
+msgid "Ready"
+msgstr "Pronto"
+
+#: ../conduit/dataproviders/DataProvider.py:23
+msgid "New data to sync"
+msgstr "Novos dados para sincronizar"
+
+#: ../conduit/dataproviders/DataProvider.py:24
+msgid "Refreshing..."
+msgstr "Atualizando..."
+
+#: ../conduit/dataproviders/DataProvider.py:25
+msgid "Refreshed OK"
+msgstr "Atualizado com sucesso"
+
+#: ../conduit/dataproviders/DataProvider.py:26
+msgid "Error Refreshing"
+msgstr "Erro de atualização"
+
+#: ../conduit/dataproviders/DataProvider.py:27
+msgid "Synchronizing..."
+msgstr "Sincronizando..."
+
+#: ../conduit/dataproviders/DataProvider.py:28
+msgid "Synchronized OK"
+msgstr "Sincronizado com sucesso"
+
+#: ../conduit/dataproviders/DataProvider.py:29
+msgid "Error Synchronizing"
+msgstr "Erro de sincronização"
+
+#: ../conduit/dataproviders/DataProvider.py:30
+msgid "Synchronization Skipped"
+msgstr "Sincronização ignorada"
+
+#: ../conduit/dataproviders/DataProvider.py:31
+msgid "Synchronization Cancelled"
+msgstr "Sincronização cancelada"
+
+#: ../conduit/dataproviders/DataProvider.py:32
+msgid "Synchronization Conflict"
+msgstr "Conflito de sincronização"
+
+#: ../conduit/dataproviders/DataProvider.py:33
+msgid "Not Configured"
+msgstr "Não configurado"
+
+#: ../conduit/dataproviders/Image.py:34
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "640x480"
+msgstr "640x480"
+
+#: ../conduit/dataproviders/Image.py:34
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "800x600"
+msgstr "800x600"
+
+#: ../conduit/dataproviders/Image.py:34
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "1024x768"
+msgstr "1024x768"
+
+#. Signifies that a conversion should not take place
+#: ../conduit/dataproviders/Image.py:35
+#: ../conduit/modules/N800Module/N800Module.py:57
+msgid "None"
+msgstr "Nenhum"
+
+#. Default Categories for the DataProviders
+#: ../conduit/dataproviders/__init__.py:6
+msgid "Files and Folders"
+msgstr "Arquivos e pastas"
+
+#: ../conduit/dataproviders/__init__.py:7
+#: ../conduit/modules/iPodModule/iPodModule.py:179
+msgid "Notes"
+msgstr "Notas"
+
+#: ../conduit/dataproviders/__init__.py:8
+#: ../conduit/modules/iPodModule/iPodModule.py:367
+msgid "Photos"
+msgstr "Fotos"
+
+#: ../conduit/dataproviders/__init__.py:9
+msgid "Office"
+msgstr "Escritório"
+
+#: ../conduit/dataproviders/__init__.py:10
+msgid "Settings"
+msgstr "Configurações"
+
+#: ../conduit/dataproviders/__init__.py:11
+msgid "Miscellaneous"
+msgstr "Miscelânea"
+
+#: ../conduit/dataproviders/__init__.py:12
+msgid "Media"
+msgstr "Mídia"
+
+#: ../conduit/dataproviders/__init__.py:13
+msgid "Bookmarks"
+msgstr "Marcadores"
+
+#: ../conduit/dataproviders/__init__.py:14
+msgid "Test"
+msgstr "Teste"
+
+#: ../conduit/gtkui/Canvas.py:152
+msgid "Drag a Data Provider here to continue"
+msgstr "Arraste um provedor de dados para cá para continuar"
+
+#: ../conduit/gtkui/Canvas.py:217
+msgid "Show me"
+msgstr "Mostre-me"
+
+#. Visible column0 is
+#. [pixbuf + source display name] or
+#. [source_data.get_snippet()]
+#: ../conduit/gtkui/ConflictResolver.py:91
+msgid "Source"
+msgstr "Fonte"
+
+#: ../conduit/gtkui/ConflictResolver.py:105
+msgid "Resolution"
+msgstr "Resolução"
+
+#. Visible column2 is the display name of source and source data
+#: ../conduit/gtkui/ConflictResolver.py:110
+msgid "Sink"
+msgstr "Recipiente"
+
+#: ../conduit/gtkui/ConflictResolver.py:150
+#: ../conduit/gtkui/ConflictResolver.py:151
+#, python-format
+msgid "Conflicts (%s)"
+msgstr "Conflitos (%s)"
+
+#. name,                      #url
+#: ../conduit/gtkui/UI.py:33
+msgid "Introduction"
+msgstr "Introdução"
+
+#: ../conduit/gtkui/UI.py:34
+msgid "Writing a Data Provider"
+msgstr "Gravar um provedor de dados"
+
+#: ../conduit/gtkui/UI.py:35
+msgid "API Documentation"
+msgstr "Documentação da API"
+
+#: ../conduit/gtkui/UI.py:36
+msgid "Test Results"
+msgstr "Resultados de testes"
+
+#: ../conduit/gtkui/UI.py:52
+msgid "Examples"
+msgstr "Exemplos"
+
+#. Build some liststores to display
+#: ../conduit/gtkui/UI.py:139
+msgid "Convert from"
+msgstr "Converter de"
+
+#: ../conduit/gtkui/UI.py:140
+msgid "into"
+msgstr "para"
+
+#: ../conduit/gtkui/UI.py:190
+msgid "Relationship Database"
+msgstr "Banco de dados de relações"
+
+#: ../conduit/gtkui/UI.py:194
+msgid "Conversions Available"
+msgstr "Conversões disponíveis"
+
+#: ../conduit/gtkui/UI.py:200 ../conduit/gtkui/Tree.py:355
+#: ../conduit/modules/FileModule/FileConfiguration.py:117
+msgid "Name"
+msgstr "Nome"
+
+#: ../conduit/gtkui/UI.py:204
+msgid "Loaded"
+msgstr "Carregado"
+
+#: ../conduit/gtkui/UI.py:329
+#, python-format
+msgid " - %s (Development Version)"
+msgstr " - %s (Versão de desenvolvimento)"
+
+#: ../conduit/gtkui/UI.py:331
+msgid " - Running Uninstalled"
+msgstr " - Executando sem estar instalado"
+
+#: ../conduit/gtkui/UI.py:375
+msgid "Developers"
+msgstr "Desenvolvedores"
+
+#: ../conduit/gtkui/UI.py:539 ../conduit/hildonui/UI.py:127
+msgid "Synchronization in progress. Do you want to cancel it?"
+msgstr "Sincronização em progresso. Você deseja cancelar?"
+
+#: ../conduit/gtkui/UI.py:711
+msgid "_Synchronize All"
+msgstr "_Sincronizar tudo"
+
+#: ../conduit/gtkui/UI.py:711
+msgid "Synchronizes All Groups"
+msgstr "Sincronizar todos os grupos"
+
+#: ../conduit/gtkui/UI.py:712
+msgid "_Cancel Synchronization"
+msgstr "_Cancelar sincronização"
+
+#: ../conduit/gtkui/UI.py:712
+msgid "Cancels Currently Synchronizing Groups"
+msgstr "Cancela a sincronização atual de grupos"
+
+#: ../conduit/gtkui/UI.py:713
+msgid "_Quit"
+msgstr "_Sair"
+
+#: ../conduit/gtkui/UI.py:713
+msgid "Close Conduit"
+msgstr "Fecha o Conduit"
+
+#: ../conduit/gtkui/UI.py:753
+msgid "Synchronization Error"
+msgstr "Erro de sincronização"
+
+#: ../conduit/gtkui/UI.py:756
+msgid "Synchronization Complete"
+msgstr "Sincronização concluída"
+
+#: ../conduit/gtkui/UI.py:764
+msgid "Synchronizing"
+msgstr "Sincronizando"
+
+#: ../conduit/gtkui/Tree.py:364
+msgid "Description"
+msgstr "Descrição"
+
+#: ../conduit/gtkui/ConfigItems.py:733
+#, python-format
+msgid "Total: %d"
+msgstr "Total: %d"
+
+#: ../conduit/gtkui/WindowConfigurator.py:14
+msgid "Configure"
+msgstr "Configurar"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:58
+msgid "Backpack Notes"
+msgstr "Notas do Backpack"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:59
+msgid "Store things in Backpack Notes"
+msgstr "Armazenar coisas nas notas do Backpack"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:105
+#: ../conduit/modules/FlickrModule/FlickrModule.py:307
+#: ../conduit/modules/ZotoModule/ZotoModule.py:243
+msgid "Account details"
+msgstr "Detalhes da conta"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:106
+msgid "Login"
+msgstr "Iniciar sessão"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:109
+msgid "API key"
+msgstr "Chave API"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:112
+msgid "Saved notes"
+msgstr "Notas salvas"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:113
+msgid "Save notes in page"
+msgstr "Salvar notas na página"
+
+#: ../conduit/modules/BansheeModule/BansheeModule.py:52
+msgid "Banshee Playlists"
+msgstr "Listas de reprodução do Banshee"
+
+#: ../conduit/modules/BansheeModule/BansheeModule.py:53
+msgid "Synchronize your Banshee playlists"
+msgstr "Sincroniza suas listas de reprodução do Banshee"
+
+#: ../conduit/modules/BansheeModule/BansheeModule.py:187
+#: ../conduit/modules/BansheeModule/BansheeModule.py:188
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:116
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:117
+msgid "Playlists"
+msgstr "Listas de reprodução"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:29
+msgid "Box.net"
+msgstr "Box.net"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:30
+msgid "Synchronize your Box.net files"
+msgstr "Sincroniza seus arquivos do Box.net"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:290
+#: ../conduit/modules/FileModule/FileModule.py:82
+msgid "Folder"
+msgstr "Pasta"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:291
+msgid "Folder name"
+msgstr "Nome da pasta"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:295
+msgid "Load folders"
+msgstr "Carregar pastas"
+
+#: ../conduit/modules/ConverterModule.py:91
+msgid "Note-"
+msgstr "Nota-"
+
+#: ../conduit/modules/DesktopWallpaperModule.py:38
+msgid "Wallpaper"
+msgstr "Papel de parede"
+
+#: ../conduit/modules/DesktopWallpaperModule.py:39
+msgid "Changes your Desktop Wallpaper"
+msgstr "Troca o plano de fundo da sua área de trabalho"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:107
+#, python-format
+msgid "Select %s"
+msgstr "Selecionar %s"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:127
+msgid "Evolution Contacts"
+msgstr "Contatos do Evolution"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:128
+msgid "Synchronize your contacts"
+msgstr "Sincroniza seus contatos"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:178
+msgid "Evolution Calendar"
+msgstr "Calendário do Evolution"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:179
+msgid "Synchronize your calendar"
+msgstr "Sincroniza seu calendário"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:240
+msgid "Evolution Tasks"
+msgstr "Tarefas do Evolution"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:241
+msgid "Synchronize your tasks"
+msgstr "Sincroniza suas tarefas"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:297
+msgid "Evolution Memos"
+msgstr "Memorandos do Evolution"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:298
+msgid "Synchronize your memos"
+msgstr "Sincroniza seus memorandos"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:38
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:39
+msgid "Synchronize your Facebook photos"
+msgstr "Sincroniza suas fotos do Facebook"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:124
+#: ../conduit/modules/FlickrModule/FlickrModule.py:282
+msgid "Loading album list..."
+msgstr "Obtendo lista de álbuns..."
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:128
+msgid "Failed to connect"
+msgstr "Falha ao conectar"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:131
+msgid "Logged in"
+msgstr "Autenticado"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:133
+msgid "Failed to login"
+msgstr "Falha no login"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:145
+#: ../conduit/modules/FspotModule/FspotModule.py:243
+msgid "Status"
+msgstr "Status"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:150
+#: ../conduit/modules/iPodModule/iPodModule.py:461
+#: ../conduit/modules/ZotoModule/ZotoModule.py:252
+msgid "Album"
+msgstr "Álbum"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:151
+msgid "Album name"
+msgstr "Nome do álbum"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:156
+msgid "Load albums"
+msgstr "Carregar álbuns"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:58
+msgid "RSS Feed"
+msgstr "Fonte de RSS"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:59
+msgid "Synchronize data from RSS enclosures"
+msgstr "Sincroniza dados de componentes de RSS"
+
+#. FIXME: Add Randomize
+#: ../conduit/modules/FeedModule/FeedModule.py:114
+msgid "Feed details"
+msgstr "Detalhes da fonte de notícias"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:115
+msgid "Feed address"
+msgstr "Endereço da fonte de notícias"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:118
+msgid "Enclosure settings"
+msgstr "Configurações de componentes"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:119
+msgid "Limit downloaded enclosures"
+msgstr "Limitar download de componentes"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:125
+msgid "Limit to"
+msgstr "Limitar para"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:129
+msgid "Randomize enclosures"
+msgstr "Randomizar componentes"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:133
+msgid "Download types"
+msgstr "Baixar tipos"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:134
+msgid "Download audio files"
+msgstr "Baixar arquivos de áudio"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:135
+msgid "Download video files"
+msgstr "Baixar arquivos de vídeo"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:136
+msgid "Download photo files"
+msgstr "Baixar arquivos de fotos"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:111
+msgid "Icon"
+msgstr "Ícone"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:123
+#: ../conduit/modules/GConfModule/GConfModule.py:138
+msgid "Items"
+msgstr "Itens"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:149
+#, python-format
+msgid "<i>Contains %s files</i>"
+msgstr "<i>Contém %s arquivos</i>"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:248
+msgid "Include file..."
+msgstr "Incluir arquivo..."
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:258
+msgid "All files"
+msgstr "Todos os arquivos"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:271
+msgid "Include folder..."
+msgstr "Incluir pasta..."
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:314
+msgid "Please Name All Folders"
+msgstr "Por favor nomeie todas as pastas"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:315
+msgid ""
+"All folders require a descriptive name. To name a folder simply click on it"
+msgstr ""
+"Todas as pastas requerem um nome descritivo. Para nomear uma pasta "
+"simplesmente clique nela"
+
+#: ../conduit/modules/FileModule/FileModule.py:23
+msgid "Files"
+msgstr "Arquivos"
+
+#: ../conduit/modules/FileModule/FileModule.py:24
+msgid "Source for synchronizing multiple files"
+msgstr "Fonte para sincronização de arquivos múltiplos"
+
+#: ../conduit/modules/FileModule/FileModule.py:83
+msgid "Synchronize folders"
+msgstr "Sincronizar pastas"
+
+#: ../conduit/modules/Firefox3Module/Firefox3Module.py:40
+msgid "Firefox 3 Bookmarks"
+msgstr "Marcadores do Firefox"
+
+#: ../conduit/modules/Firefox3Module/Firefox3Module.py:41
+msgid "Syncronize your Firefox 3 Bookmarks"
+msgstr "Sincroniza seus marcadores do Firefox 3"
+
+#: ../conduit/modules/Firefox3Module/Firefox3Module.py:100
+msgid "Firefox Profile"
+msgstr "Perfil do Firefox"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:76
+msgid "Flickr"
+msgstr "Flickr"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:77
+msgid "Synchronize your Flickr.com photos"
+msgstr "Sincroniza suas fotos do Flickr.com"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:287
+msgid "Failed to connect."
+msgstr "Falha ao conectar."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:290
+msgid "Album names loaded."
+msgstr "Nomes de álbuns carregados."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:292
+msgid "Failed to login."
+msgstr "Falha no login."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:303
+msgid "Logging in, please wait..."
+msgstr "Identificando, por favor aguarde..."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:308
+#: ../conduit/modules/GoogleBookmarksModule.py:67
+#: ../conduit/modules/ZotoModule/ZotoModule.py:244
+msgid "Username"
+msgstr "Nome de usuário"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:319
+msgid "Authenticate"
+msgstr "Autenticar"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:323
+#: ../conduit/modules/ZotoModule/ZotoModule.py:251
+msgid "Saved photo settings"
+msgstr "Preferências de fotos salvas"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:328
+msgid "Resize photos"
+msgstr "Redimensionar fotos"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "Do not resize"
+msgstr "Não redimensionar"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:332
+msgid "Photos are public"
+msgstr "As fotos são públicas"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:25
+msgid "F-Spot"
+msgstr "F-Spot"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:26
+msgid "Synchronize your F-Spot photos"
+msgstr "Sincroniza suas fotos do F-Spot"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:152
+msgid "F-Spot DBus interface is operating in read-only mode"
+msgstr "A interface DBus do F-Spot está operando em modo somente leitura"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:218
+msgid "F-Spot is running"
+msgstr "F-Spot está executando"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:219
+msgid "Please start F-Spot or activate the D-Bus Extension"
+msgstr "Por favor inicie o F-Spot ou ative a extensão D-Bus"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:244
+msgid "Start F-Spot"
+msgstr "Iniciar F-Spot"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:248
+#: ../conduit/modules/FspotModule/FspotModule.py:249
+msgid "Tags"
+msgstr "Etiquetas"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:262
+msgid "Add tags"
+msgstr "Adicionar etiquetas"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:263
+msgid "Tag name"
+msgstr "Nome da etiqueta"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:266
+msgid "Add tag"
+msgstr "Adicionar etiqueta"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:21
+msgid "Application Settings"
+msgstr "Configurações do aplicativo"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:22
+msgid "Synchronize your application settings"
+msgstr "Sincroniza as configurações dos seus aplicativos"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:31
+msgid "Metacity"
+msgstr "Metacity"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:32
+msgid "Nautilus"
+msgstr "Nautilus"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:33
+msgid "Preferred Applications"
+msgstr "Aplicativos preferenciais"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:34
+msgid "Desktop Interface"
+msgstr "Interface da área de trabalho"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:35
+msgid "Gnome Terminal"
+msgstr "GNOME Terminal"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:137
+msgid "Applications to Synchronize"
+msgstr "Aplicativos a sincronizar"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:19
+msgid "Google Bookmarks"
+msgstr "Google Bookmarks"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:20
+msgid "Sync your Google Bookmarks"
+msgstr "Sincroniza seu Google Bookmarks"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:66
+msgid "Login Details"
+msgstr "Detalhes de login"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:70
+#: ../conduit/modules/ZotoModule/ZotoModule.py:247
+msgid "Password"
+msgstr "Senha"
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:399
+msgid "Google Calendar"
+msgstr "Google Agenda"
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:400
+msgid "Synchronize your Google Calendar"
+msgstr "Sincroniza seu Google Agenda"
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:582
+msgid "Picasa"
+msgstr "Picasa"
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:583
+msgid "Synchronize your Google Picasa photos"
+msgstr "Sincroniza suas fotos do Google Picasa"
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:745
+msgid "Google Contacts"
+msgstr "Contatos do Gmail"
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:746
+msgid "Synchronize your Google Mail contacts"
+msgstr "Sincroniza seus contatos do Gmail"
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:1076
+msgid "Google Documents"
+msgstr "Google Docs"
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:1077
+msgid "Synchronize your Google Documents"
+msgstr "Sincroniza seu Google Docs"
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:1322
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:69
+msgid "Unknown"
+msgstr "Desconhecido"
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:1323
+msgid "miscellaneous"
+msgstr "miscelânea"
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:1324
+msgid "No description."
+msgstr "Nenhuma descrição."
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:1333
+msgid "YouTube"
+msgstr "YouTube"
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:1334
+msgid "Synchronize data from YouTube"
+msgstr "Sincroniza dados do YouTube"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:180
+msgid "Synchronize your iPod notes"
+msgstr "Sincroniza suas notas do iPod"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:295
+msgid "Contacts"
+msgstr "Contatos"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:296
+msgid "Synchronize your iPod contacts"
+msgstr "Sincroniza seus contatos do iPod"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:331
+msgid "Calendar"
+msgstr "Calendário"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:332
+msgid "Synchronize your iPod calendar"
+msgstr "Sincroniza seu calendário do iPod"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:368
+msgid "Synchronize your iPod photos"
+msgstr "Sincroniza suas fotos do iPod"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:465
+msgid "Delete"
+msgstr "Excluir"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:695
+#: ../conduit/modules/iPodModule/iPodModule.py:812
+#: ../conduit/modules/N800Module/N800Module.py:77
+msgid "Encoding"
+msgstr "Codificação"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:811
+msgid "Conversion options"
+msgstr "Opções de conversão"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:816
+msgid "Keep converted files"
+msgstr "Manter arquivos convertidos"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:846
+msgid "iPod Music"
+msgstr "Músicas do iPod"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:847
+msgid "Synchronize your iPod music"
+msgstr "Sincroniza suas músicas do iPod"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:882
+msgid "iPod Video"
+msgstr "Vídeos do iPod"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:883
+msgid "Synchronize your iPod videos"
+msgstr "Sincroniza seus vídeos do iPod"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:907
+msgid "Movie"
+msgstr "Vídeos"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:908
+msgid "Music Video"
+msgstr "Vídeos musicais"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:909
+msgid "TV Show"
+msgstr "Exibir tv"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:911
+msgid "Video kind"
+msgstr "Tipo de vídeo"
+
+#. Translators: Translate this in derived classes.
+#: ../conduit/modules/N800Module/N800Module.py:55
+msgid "Conduit"
+msgstr "Conduit"
+
+#: ../conduit/modules/N800Module/N800Module.py:105
+msgid "N800 Files"
+msgstr "Arquivos do N800"
+
+#: ../conduit/modules/N800Module/N800Module.py:106
+msgid "Synchronizes files/folders to a N800 device"
+msgstr "Sincronizar arquivos/pastas para um dispositivo N800"
+
+#. To translators: default backup folder of N800
+#: ../conduit/modules/N800Module/N800Module.py:111
+msgid "Backups"
+msgstr "Backups"
+
+#: ../conduit/modules/N800Module/N800Module.py:126
+msgid "N800 Music"
+msgstr "Músicas do N800"
+
+#: ../conduit/modules/N800Module/N800Module.py:127
+msgid "Synchronizes music to a N800 device"
+msgstr "Sincroniza músicas para um dispositivo N800"
+
+#. To translators: defaul music folder of N800
+#: ../conduit/modules/N800Module/N800Module.py:133
+msgid "Music"
+msgstr "Músicas"
+
+#: ../conduit/modules/N800Module/N800Module.py:150
+msgid "N800 Videos"
+msgstr "Vídeos do N800"
+
+#: ../conduit/modules/N800Module/N800Module.py:151
+msgid "Synchronizes video to a N800 device"
+msgstr "Sincroniza vídeos para um dispositivo N800"
+
+#. To translators: defaul video folder of N800
+#: ../conduit/modules/N800Module/N800Module.py:157
+msgid "Video"
+msgstr "Vídeos"
+
+#: ../conduit/modules/N800Module/N800Module.py:174
+msgid "N800 Photos"
+msgstr "Fotos do N800"
+
+#: ../conduit/modules/N800Module/N800Module.py:175
+msgid "Synchronizes photos to an N800 device"
+msgstr "Sincroniza fotos para um dispositivo N800"
+
+#. To translators: default photos folder of N800
+#: ../conduit/modules/N800Module/N800Module.py:181
+msgid "Photo"
+msgstr "Fotos"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:19
+msgid "Nautilus Bookmarks"
+msgstr "Marcadores do Nautilus"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:20
+msgid "Sync your Nautilus Bookmarks"
+msgstr "Sincronizar seus marcadores do Nautilus"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:145
+msgid "Sync bookmarks to local places/files"
+msgstr "Sincronizar marcadores para lugares/arquivos locais"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:148
+msgid "Sync bookmarks to remote places/files"
+msgstr "Sincronizar marcadores para lugares/arquivos remotos"
+
+#: ../conduit/modules/NetworkModule/Server.py:147
+msgid "Network"
+msgstr "Rede"
+
+#: ../conduit/modules/NetworkModule/Server.py:148
+msgid "Enable synchronization via network"
+msgstr "Habilita sincronização via rede"
+
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:44
+msgid "Rhythmbox Music"
+msgstr "Músicas do Rhythmbox"
+
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:45
+msgid "Synchronize songs from your Rhythmbox playlists"
+msgstr "Sincroniza músicas das suas listas de reprodução do Rhythmbox"
+
+#: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
+msgid "Shutterfly"
+msgstr "Shutterfly"
+
+#: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:27
+msgid "Synchronize your Shutterfly photos"
+msgstr "Sincroniza suas fotos do Shutterfly"
+
+#: ../conduit/modules/ShutterflyModule/shutterfly/shutterfly.py:33
+msgid "%Y-%m-%d %H:%M:%S"
+msgstr "%Y-%m-%d %H:%M:%S"
+
+#: ../conduit/modules/SmugMugModule/SmugMugModule.py:28
+msgid "SmugMug"
+msgstr "SmugMug"
+
+#: ../conduit/modules/SmugMugModule/SmugMugModule.py:29
+msgid "Synchronize your SmugMug.com photos"
+msgstr "Sincroniza suas fotos do SmugMug.com"
+
+#: ../conduit/modules/ZotoModule/ZotoModule.py:154
+msgid "Zoto"
+msgstr "Zoto"
+
+#: ../conduit/modules/ZotoModule/ZotoModule.py:155
+msgid "Synchronize your Zoto photos"
+msgstr "Sincroniza suas fotos do Zoto"
+
+#~ msgid "<b>Default Synchronization Options</b>"
+#~ msgstr "<b>Opções padrões de sincronização</b>"
+
+#~ msgid "<b>General</b>"
+#~ msgstr "<b>Geral</b>"
+
+#~ msgid "Always Up-To-Date"
+#~ msgstr "Sempre atualizar"
+
+#~ msgid "Ask Me What to Do"
+#~ msgstr "Pergunte-me o que fazer"
+
+#~ msgid "Ask me what to do"
+#~ msgstr "Pergunta o que fazer"
+
+#~ msgid "Cancel Synchronization"
+#~ msgstr "Cancelar sincronização"
+
+#~ msgid "Cancel currently-synchronizing groups"
+#~ msgstr "Cancela a sincronização atual de grupos"
+
+#~ msgid "Clear Canvas"
+#~ msgstr "Limpar tela"
+
+#~ msgid "Compare"
+#~ msgstr "Comparar"
+
+#~ msgid "Conduit Preferences"
+#~ msgstr "Preferências do Conduit"
+
+#~ msgid "Configuration"
+#~ msgstr "Configurações"
+
+#~ msgid "Configure Item"
+#~ msgstr "Configurar item"
+
+#~ msgid "Configure the synchronization settings for this item"
+#~ msgstr "Define as configurações de sincronização para este item"
+
+#~ msgid "Conflict Options"
+#~ msgstr "Opções de conflito"
+
+#~ msgid "Conflicts"
+#~ msgstr "Conflitos"
+
+#~ msgid "Contents"
+#~ msgstr "Conteúdos"
+
+#~ msgid "Data Conversions"
+#~ msgstr "Conversões de dados"
+
+#~ msgid "Data Providers"
+#~ msgstr "Provedores de dados"
+
+#~ msgid "Delete Group"
+#~ msgstr "Excluir grupo"
+
+#~ msgid "Delete Item"
+#~ msgstr "Excluir item"
+
+#~ msgid "Delete Options"
+#~ msgstr "Opções de exclusão"
+
+#~ msgid "Delete from the corresponding sink"
+#~ msgstr "Excluir do recipiente correspondente"
+
+#~ msgid "Delete the Corresponding Item"
+#~ msgstr "Excluir o item correspondente"
+
+#~ msgid "Editor"
+#~ msgstr "Editor"
+
+#~ msgid "Minimize to notification area"
+#~ msgstr "Minimizar para área de notificação"
+
+#~ msgid "Refresh Group"
+#~ msgstr "Atualizar grupo"
+
+#~ msgid "Refresh Item"
+#~ msgstr "Atualizar item"
+
+#~ msgid "Replace the Older Item"
+#~ msgstr "Substituir o item mais antigo"
+
+#~ msgid "Replace the older item"
+#~ msgstr "Substitui o item mais antigo"
+
+#~ msgid "Resolve Conflicts"
+#~ msgstr "Resolver conflitos"
+
+#~ msgid "Save settings on exit"
+#~ msgstr "Salvar configurações ao sair"
+
+#~ msgid "Show Hints"
+#~ msgstr "Mostrar dicas"
+
+#~ msgid "Show status icon"
+#~ msgstr "Mostrar ícone de status"
+
+#~ msgid "Skip"
+#~ msgstr "Pular"
+
+#~ msgid "Slow Synchronization"
+#~ msgstr "Sincronização lenta"
+
+#~ msgid "Start Conduit at login"
+#~ msgstr "Iniciar o Conduit no início da sessão"
+
+#~ msgid "Synchronization Options"
+#~ msgstr "Opções de sincronização"
+
+#~ msgid "Synchronize All"
+#~ msgstr "Sincronizar tudo"
+
+#~ msgid "Synchronize Group"
+#~ msgstr "Sincronizar grupo"
+
+#~ msgid "Synchronize group"
+#~ msgstr "Sincroniza grupo"
+
+#~ msgid "Synchronizes all groups"
+#~ msgstr "Sincroniza todos os grupos"
+
+#~ msgid "Title"
+#~ msgstr "Título"
+
+#~ msgid "Two-Way Synchronization"
+#~ msgstr "Sincronização bilateral"
+
+#~ msgid "When an item has been deleted:"
+#~ msgstr "Quando um item for excluído:"
+
+#~ msgid "When an item is deleted..."
+#~ msgstr "Quando um item é excluído..."
+
+#~ msgid "When there is a conflict..."
+#~ msgstr "Quando houver um conflito..."
+
+#~ msgid "When there is a two-way conflict:"
+#~ msgstr "Quando houver um conflito bilateral:"
+
+#~ msgid "_Edit"
+#~ msgstr "_Editar"
+
+#~ msgid "_File"
+#~ msgstr "_Arquivo"
+
+#~ msgid "_Help"
+#~ msgstr "Aj_uda"
+
+#~ msgid "<b>Account Details</b>"
+#~ msgstr "<b>Detalhes da conta</b>"
+
+#~ msgid "Calendar:"
+#~ msgstr "Agenda:"
+
+#~ msgid "Email:"
+#~ msgstr "E-mail:"
+
+#~ msgid "Load Calendars"
+#~ msgstr "Carregar agendas"
+
+#~ msgid "Password:"
+#~ msgstr "Senha:"
+
+#~ msgid "Create Partnership"
+#~ msgstr "Criar parceria"
+
+#~ msgid "Windows Mobile Contacts"
+#~ msgstr "Contatos do Windows Mobile"
+
+#~ msgid "Windows Mobile Calendar"
+#~ msgstr "Calendário do Windows Mobile"
+
+#~ msgid "Tasks"
+#~ msgstr "Tarefas"
+
+#~ msgid "Windows Mobile Tasks"
+#~ msgstr "Tarefas do Windows Mobile"
+
+#~ msgid "Not Configured Correctly"
+#~ msgstr "Configuração incorreta"
+
+#~ msgid "<b>Saved Note Settings</b>"
+#~ msgstr "<b>Salvar configurações das notas</b>"
+
+#~ msgid "Backpack"
+#~ msgstr "Backpack"
+
+#~ msgid "Enabled"
+#~ msgstr "Habilitado"
+
+#~ msgid "<b>Return Playlists</b>"
+#~ msgstr "<b>Retornar listas de reprodução</b>"
+
+#~ msgid "Banshee"
+#~ msgstr "Banshee"
+
+#~ msgid "Folder:"
+#~ msgstr "Pasta:"
+
+#~ msgid "Load"
+#~ msgstr "Carregar"
+
+#~ msgid "Addressbook:"
+#~ msgstr "Catálogo de endereços:"
+
+#~ msgid "Evolution"
+#~ msgstr "Evolution"
+
+#~ msgid ""
+#~ "Limit the Number of\n"
+#~ "Enclosures Downloaded to:"
+#~ msgstr ""
+#~ "Limitar o número de\n"
+#~ "componentes baixados para:"
+
+#~ msgid "<b>Items to Synchronize</b>"
+#~ msgstr "<b>Itens para sincronizar</b>"
+
+#~ msgid "Add Directory"
+#~ msgstr "Adicionar diretório"
+
+#~ msgid "Add File"
+#~ msgstr "Adicionar arquivo"
+
+#~ msgid "Advanced"
+#~ msgstr "Avançado"
+
+#~ msgid "File Configuration"
+#~ msgstr "Configurações de arquivo"
+
+#~ msgid "Folder Configuration"
+#~ msgstr "Configurações de pasta"
+
+#~ msgid "Folder Location:"
+#~ msgstr "Localização da pasta:"
+
+#~ msgid "Follow Symbolic Links"
+#~ msgstr "Seguir links simbólicos"
+
+#~ msgid "Ignore File Modification Times"
+#~ msgstr "Ignorar tempo de modificação do arquivo"
+
+#~ msgid "Include Hidden Files"
+#~ msgstr "Incluir arquivos ocultos"
+
+#~ msgid "Select A Folder"
+#~ msgstr "Selecionar uma pasta"
+
+#~ msgid "Photoset Name:"
+#~ msgstr "Nome do conjunto de fotos:"
+
+#~ msgid "<b>Return Photos Tagged With</b>"
+#~ msgstr "<b>Retornar fotos etiquetadas com</b>"
+
+#~ msgid "Create Tags: "
+#~ msgstr "Criar etiquetas: "
+
+#~ msgid "Synchronize your desktop preferences"
+#~ msgstr "Sincroniza suas preferências da área de trabalho"
+
+#~ msgid "<b>Downloaded Document Format</b>"
+#~ msgstr "<b>Formato do documento baixado</b>"
+
+#~ msgid "Presentations"
+#~ msgstr "Apresentações"
+
+#~ msgid "Spreadsheets"
+#~ msgstr "Planilhas"
+
+#~ msgid "<b>Download Videos</b>"
+#~ msgstr "<b>Baixar vídeos</b>"
+
+#~ msgid "Favorites of above user"
+#~ msgstr "Favoritos do usuário acima"
+
+#~ msgid "Max retrieved videos (0 is unlimited):"
+#~ msgstr "Máx. de vídeos recuperados (0 é ilimitado):"
+
+#~ msgid "Top rated"
+#~ msgstr "Mais bem avaliados"
+
+#~ msgid "Uploaded by above user"
+#~ msgstr "Enviado pelo usuário acima"
+
+#~ msgid "YouTube Source"
+#~ msgstr "Fonte do YouTube"
+
+#~ msgid "<b>Encoding</b>"
+#~ msgstr "<b>Codificação</b>"
+
+#~ msgid "iPod Photos"
+#~ msgstr "Fotos do iPod"
+
+#~ msgid "%s Format (%s)"
+#~ msgstr "%s Formato (%s)"
+
+#~ msgid "unchanged"
+#~ msgstr "inalterado"
+
+#~ msgid "<b>Synchronize the Following Playlists</b>"
+#~ msgstr "<b>Sincronizar as seguintes listas de reprodução</b>"
+
+#~ msgid "Rhythmbox Playlists"
+#~ msgstr "Listas de reprodução do Rhythmbox"
+
+#~ msgid "Slow Sync"
+#~ msgstr "Sincronização lenta"
+
+#~ msgid "Sync Options"
+#~ msgstr "Opções de sincronização"
+
+#~ msgid "Two Way Sync"
+#~ msgstr "Sincronização bilateral"
+
+#~ msgid "Use built in Web browser"
+#~ msgstr "Usar navegador de internet embutido"
+
+#~ msgid "_About"
+#~ msgstr "_Sobre"
+
+#~ msgid "About Conduit"
+#~ msgstr "Sobre o Conduit"
+
+#~ msgid "Please Enter a Folder Name"
+#~ msgstr "Por favor digite o nome de uma pasta"
+
+#~ msgid ""
+#~ "All folders require a descriptive name. To name a folder enter its name "
+#~ "where indicated"
+#~ msgstr ""
+#~ "Todas as pastas requerem um nome descritivo. Para nomear uma pasta digite "
+#~ "seu nome no local indicado"
+
+#~ msgid "By user"
+#~ msgstr "Por usuário"
+
+#~ msgid "User: "
+#~ msgstr "Usuário: "
+
+#~ msgid "_Synchronize"
+#~ msgstr "_Sincronizar"
+
+#~ msgid "Synchronize all dataproviders"
+#~ msgstr "Sincronizar todos os provedores de dados"
+
+#~ msgid "F-Spot Photos"
+#~ msgstr "Fotos do F-Spot"
+
+#~ msgid "Gmail Emails"
+#~ msgstr "E-mails do Gmail"
+
+#~ msgid "Sync your emails"
+#~ msgstr "Sincroniza seus e-mails"
+
+#~ msgid "<b>Return Emails Matching</b>"
+#~ msgstr "<b>Retornar E-mails que Coincidem com</b>"
+
+#~ msgid "<b>When Saving Emails</b>"
+#~ msgstr "<b>Quando Salvar E-mails</b>"
+
+#~ msgid "All emails"
+#~ msgstr "Todos os e-mails"
+
+#~ msgid "Emails in folder:"
+#~ msgstr "E-mails na pasta:"
+
+#~ msgid "Emails with label:"
+#~ msgstr "E-mails com rótulo:"
+
+#~ msgid "Unread emails"
+#~ msgstr "E-mails não lidos"
+
+#~ msgid "Sync your Evolution contacts"
+#~ msgstr "Sincronizar seus contatos do Evolution"
+
+#~ msgid "Evolution Events"
+#~ msgstr "Eventos do Evolution"
+
+#~ msgid "Sync your Evolution events"
+#~ msgstr "Sincronizar seus eventos do Evolution"
+
+#~ msgid "Evolution Todo"
+#~ msgstr "Tarefas do Evolution"
+
+#~ msgid "Picasa Desktop"
+#~ msgstr "Picasa Desktop"
+
+#~ msgid "Sync your Picasa photos"
+#~ msgstr "Sincroniza suas fotos do Picasa"
+
+#~ msgid "<b>Return Photos In The Following Albums</b>"
+#~ msgstr "<b>Retornar Fotos nos Seguintes Álbuns</b>"
+
+#~ msgid "Sync your devices contacts"
+#~ msgstr "Sincronizar seus contatos dos dispositivos"
+
+#~ msgid "Sync your devices events"
+#~ msgstr "Sincronizar seus eventos dos dispositivos"
+
+#~ msgid "Sync your devices tasks"
+#~ msgstr "Sincronizar suas tarefas dos dispositivos"
+
+#~ msgid "Dataproviders"
+#~ msgstr "Provedores de dados"
+
+#~ msgid "dialog1"
+#~ msgstr "dialog1"
+
+#~ msgid "F-Spot DBus Photos"
+#~ msgstr "Fotos do F-Spot pelo DBus"
+
+#~ msgid "Sync your F-Spot photos over DBus"
+#~ msgstr "Sincronizar suas fotos do F-Spot pelo DBus"
+
+#~ msgid "Email"
+#~ msgstr "E-mail"
+
+#~ msgid "<b>Saved Email Settings</b>"
+#~ msgstr "<b>Configurações de E-mail Salvas</b>"
+
+#~ msgid "Attach label to email"
+#~ msgstr "Anexar rótulo ao e-mail"
+
+#~ msgid "Gmail Sink Properties"
+#~ msgstr "Propriedades do Recipiente do Gmail"
+
+#~ msgid "Password:   "
+#~ msgstr "Senha:   "
+
+#~ msgid "Save with label:"
+#~ msgstr "Salvar com rótulo:"
+
+#~ msgid "Username: "
+#~ msgstr "Nome de usuário: "
+
+#~ msgid "Network your desktop"
+#~ msgstr "Conectar sua área de trabalho em rede"
+
+#~ msgid "%Y-%m-%dT%H:%M:%S"
+#~ msgstr "%Y-%m-%dT%H:%M:%S"
+
+#~ msgid "Synce Events"
+#~ msgstr "Eventos do Synce"
+
+#~ msgid "Synce Todo"
+#~ msgstr "Tarefas do Synce"
+
+#~ msgid "Settings Configuration"
+#~ msgstr "Configuração de Preferências"
+
+#~ msgid "Enable iPod and USB Key Support"
+#~ msgstr "Habilitar Suporte a iPod e USB"
+
+#~ msgid "Backpack Notes Sink Properties"
+#~ msgstr "Propriedades de Destino das Notas do Backpack"
+
+#~ msgid "Url: "
+#~ msgstr "Url: "
+
+#~ msgid "Attach Tag to Photo"
+#~ msgstr "Anexar Etiqueta à Foto"
+
+#~ msgid "Flickr Sink Properties"
+#~ msgstr "Propriedades de Destino do Flickr"
+
+#~ msgid "Photos are Restricted to Family"
+#~ msgstr "Fotos são Restritas à Família"
+
+#~ msgid "Photos are Restricted to Friends"
+#~ msgstr "Fotos são Restritas aos Amigos"
+
+#~ msgid "Gmail Source Properties"
+#~ msgstr "Propriedades de Fonte de Gmail"
+
+#~ msgid "Tomboy Notes"
+#~ msgstr "Notas do Tomboy"
+
+#~ msgid "GNOME Wiki"
+#~ msgstr "Wiki do GNOME"
+
+#~ msgid "Get Pages from the GNOME Wiki"
+#~ msgstr "Obter Páginas do Wiki do GNOME"

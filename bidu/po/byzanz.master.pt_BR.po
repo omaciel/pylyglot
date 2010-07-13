@@ -1,0 +1,309 @@
+# Portuguese translations for byzanz package.
+# Copyright (C) 2008 THE byzanz'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the byzanz package.
+# Fábio Nogueira <deb-user-ba@ubuntu.com>, 2008.
+# Antonio Fernandes C. Neto <fernandes@pelivre.org>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: byzanz.DEAD.pt_BR\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=byzanz&component=general\n"
+"POT-Creation-Date: 2010-02-20 11:13+0000\n"
+"PO-Revision-Date: 2009-12-30 17:41-0300\n"
+"Last-Translator: Antonio Fernandes C. Neto <fernandes@pelivre.org>\n"
+"Language-Team: Brazilian Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../src/byzanz.schemas.in.h:1
+msgid ""
+"If set, Byzanz will record audio from the default audio device if the format "
+"supports it. This allows narrating along with the recording."
+msgstr ""
+
+#: ../src/byzanz.schemas.in.h:2 ../src/byzanzapplet.c:294 ../src/record.c:40
+#, fuzzy
+#| msgid "Record _Window"
+msgid "Record audio"
+msgstr "Gravar a _Janela"
+
+#: ../src/byzanz.schemas.in.h:3
+msgid "Recording method"
+msgstr "Método de gravação"
+
+#: ../src/byzanz.schemas.in.h:4
+msgid "Save filename"
+msgstr "Salvar nome do arquivo"
+
+#: ../src/byzanz.schemas.in.h:5
+msgid "URI for the filename Byzanz will suggest when starting a recording."
+msgstr ""
+"URI para o nome do arquivo Byzanz que irá sugerir quando iniciar a gravação."
+
+#: ../src/byzanz.schemas.in.h:6
+msgid ""
+"Use this method as the default method for recording. Must be one of \"screen"
+"\" for recording the whole screen, \"area\" for selecting an area or \"window"
+"\" to select a window."
+msgstr ""
+"Utilize este método como o padrão para gravação. Deve ser \"screen\" para "
+"gravação de toda tela, \"area\" para selecionar uma área ou \"window\" para "
+"selecionar uma janela."
+
+#: ../src/byzanzapplet.c:103 ../src/byzanzapplet.c:268
+msgid "Record your desktop"
+msgstr "Gravar sua área de trabalho"
+
+#: ../src/byzanzapplet.c:104
+msgid "Select area to record"
+msgstr "Selecionar área para gravar"
+
+#: ../src/byzanzapplet.c:105
+msgid "End current recording"
+msgstr "Final da gravação atual"
+
+#: ../src/byzanzapplet.c:106
+msgid "Abort encoding of recording"
+msgstr "Cancelar codificação da gravação"
+
+#: ../src/byzanzapplet.c:278
+msgid "All files"
+msgstr "Todos os arquivos"
+
+#: ../src/byzanzapplet.c:368
+msgid "Desktop Session"
+msgstr "Sessão da área de trabalho"
+
+#: ../src/byzanzapplet.c:371 ../src/ByzanzApplet.server.in.in.h:3
+msgid "Record what's happening on your desktop"
+msgstr "Grave o que está acontecendo na sua área de trabalho"
+
+#: ../src/byzanzapplet.c:373
+msgid "translator-credits"
+msgstr "Fábio Nogueira <deb-user-ba@ubuntu.com>, 2008."
+
+#: ../src/byzanzapplet.xml.h:1
+msgid "_About"
+msgstr "_Sobre"
+
+#: ../src/byzanzencoder.c:89 ../src/byzanzencodergstreamer.c:118
+msgid "This format does not support recording audio."
+msgstr ""
+
+#: ../src/byzanzencoderbyzanz.c:80
+msgid "Byzanz debug files"
+msgstr ""
+
+#: ../src/byzanzencoderflv.c:38
+msgid "Flash video"
+msgstr "Vídeo Flash"
+
+#: ../src/byzanzencodergif.c:209
+msgid "No image to encode."
+msgstr "Nenhuma imagem para codificar."
+
+#: ../src/byzanzencodergif.c:248
+msgid "GIF images"
+msgstr "Imagens GIF"
+
+#: ../src/byzanzencodergstreamer.c:156
+msgid "Failed to start GStreamer pipeline"
+msgstr "Falha ao iniciar a fila de processamento do GStreamer"
+
+#: ../src/byzanzencoderogv.c:38
+msgid "Theora video"
+msgstr "Vídeo Theora"
+
+#: ../src/byzanzselect.c:354
+msgid "Record _Desktop"
+msgstr "Gravar a Área _de Trabalho"
+
+#: ../src/byzanzselect.c:354
+msgid "Record the entire desktop"
+msgstr "Gravar toda a área de trabalho"
+
+#: ../src/byzanzselect.c:356
+msgid "Record _Area"
+msgstr "Gravar uma Áre_a"
+
+#: ../src/byzanzselect.c:356
+msgid "Record a selected area of the desktop"
+msgstr "Gravar uma área selecionada da área de trabalho"
+
+#: ../src/byzanzselect.c:358
+msgid "Record _Window"
+msgstr "Gravar a _Janela"
+
+#: ../src/byzanzselect.c:358
+msgid "Record a selected window"
+msgstr "Gravar a janela selecionada"
+
+#: ../src/byzanzserialize.c:89
+#, fuzzy
+#| msgid "Cannot start recording."
+msgid "Not a Byzanz recording"
+msgstr "Não é possível iniciar a gravação."
+
+#: ../src/byzanzserialize.c:95
+msgid "Unsupported byte order"
+msgstr ""
+
+#: ../src/ByzanzApplet.server.in.in.h:1
+msgid "Byzanz Factory"
+msgstr "Fábrica de Byzanz"
+
+#: ../src/ByzanzApplet.server.in.in.h:2
+msgid "Desktop Recorder"
+msgstr "Gravador da Área de Trabalho"
+
+#: ../src/playback.c:37
+#, fuzzy, c-format
+#| msgid "usage: %s [OPTIONS] filename\n"
+msgid "usage: %s [OPTIONS] INFILE OUTFILE\n"
+msgstr "uso: %s [OPÇÕES] nome do arquivo\n"
+
+#: ../src/playback.c:38 ../src/record.c:68
+#, c-format
+msgid "       %s --help\n"
+msgstr "       %s --help\n"
+
+#: ../src/playback.c:77
+msgid "process a byzanz debug recording"
+msgstr ""
+
+#: ../src/playback.c:84 ../src/record.c:140
+#, c-format
+msgid "Wrong option: %s\n"
+msgstr "Opção incorreta: %s\n"
+
+#: ../src/record.c:37
+msgid "Duration of animation (default: 10 seconds)"
+msgstr "Duração da animação (padrão: 10 segundos)"
+
+#: ../src/record.c:37 ../src/record.c:38
+msgid "SECS"
+msgstr "SEGS"
+
+#: ../src/record.c:38
+msgid "Delay before start (default: 1 second)"
+msgstr "Atraso antes de iniciar (padrão: 1 segundo)"
+
+#: ../src/record.c:39
+msgid "Record mouse cursor"
+msgstr "Gravar o cursor do mouse"
+
+#: ../src/record.c:41
+msgid "X coordinate of rectangle to record"
+msgstr "Coordenada X do retângulo para gravar"
+
+#: ../src/record.c:41 ../src/record.c:42 ../src/record.c:43 ../src/record.c:44
+msgid "PIXEL"
+msgstr "PIXEL"
+
+#: ../src/record.c:42
+msgid "Y coordinate of rectangle to record"
+msgstr "Coordenada Y do retângulo para gravar"
+
+#: ../src/record.c:43
+msgid "Width of recording rectangle"
+msgstr "Largura do retângulo para gravação"
+
+#: ../src/record.c:44
+msgid "Height of recording rectangle"
+msgstr "Altura do retângulo para gravação"
+
+#: ../src/record.c:45
+msgid "Be verbose"
+msgstr "Detalhado"
+
+#: ../src/record.c:67
+#, c-format
+msgid "usage: %s [OPTIONS] filename\n"
+msgstr "uso: %s [OPÇÕES] nome do arquivo\n"
+
+#: ../src/record.c:77
+#, c-format
+msgid "Error during recording: %s\n"
+msgstr "Erro durante a gravação: %s\n"
+
+#: ../src/record.c:83
+msgid "Recording done.\n"
+msgstr "Gravação concluída.\n"
+
+#: ../src/record.c:91
+msgid "Recording completed. Finishing encoding...\n"
+msgstr "Gravação concluída. Finalizando codificação...\n"
+
+#: ../src/record.c:100
+#, c-format
+msgid "Recording starts. Will record %d seconds...\n"
+msgstr "Iniciando gravação. Serão gravados %d segundos...\n"
+
+#: ../src/record.c:132
+msgid "record your current desktop session"
+msgstr "gravar sua sessão atual da área de trabalho"
+
+#: ../src/record.c:149
+#, c-format
+msgid "Given area is not inside desktop.\n"
+msgstr "Fornece a área que não está dentro da área de trabalho.\n"
+
+#~ msgid ""
+#~ "If set, Byzanz will record the mouse cursor. While useful, recording the "
+#~ "mouse cursor results in bigger files and should therefore be used with "
+#~ "care."
+#~ msgstr ""
+#~ "Se configurado, o Byzanz irá gravar o cursor do mouse. Embora útil, "
+#~ "gravar o cursor do mouse resulta em arquivos maiores e portanto deve ser "
+#~ "utilizado com cuidado."
+
+#~ msgid "Premature end of GStreamer pipeline"
+#~ msgstr "Fim prematuro da fila de processamento do GStreamer"
+
+#~ msgid "Directory to save in"
+#~ msgstr "Diretório para salvar"
+
+#~ msgid ""
+#~ "This is the directory that Byzanz will default to when saving a file."
+#~ msgstr "Este é o diretório que o Byzanz irá por padrão salvar os arquivos."
+
+#~ msgid "A file could not be saved."
+#~ msgstr "Um arquivo não pode ser salvo."
+
+#~ msgid ""
+#~ "\"%s\" could not be saved.\n"
+#~ "The error that occured was: %s"
+#~ msgstr ""
+#~ "\"%s\" não pode ser salvo.\n"
+#~ "O erro que ocorreu foi: %s"
+
+#~ msgid "Save Recorded File"
+#~ msgstr "Salvar Arquivo Gravado"
+
+#~ msgid ""
+#~ "Byzanz requires a 24bpp or 32bpp depth for recording. The current "
+#~ "resolution is set to %dbpp."
+#~ msgstr ""
+#~ "Byzanz exige uma profundidade de 24bpp ou 32bpp para gravação. A "
+#~ "resolução atual está configurada para %dbpp."
+
+#~ msgid "Record _Mouse Cursor"
+#~ msgstr "Gravar Cursor do _Mouse"
+
+#~ msgid "Let the animation loop"
+#~ msgstr "Deixar que a animação se repita"
+
+#~ msgid "Preparing recording. Will start in 1 second...\n"
+#~ msgstr "Preparando a gravação. Será iniciada em 1 segundo...\n"
+
+#~ msgid ""
+#~ "Could not prepare recording.\n"
+#~ "Most likely the Damage extension is not available on the X server or the "
+#~ "file \"%s\" is not writable.\n"
+#~ msgstr ""
+#~ "Não é possível preparar a gravação.\n"
+#~ "É possível que a extensão Damage não esteja disponível no servidor X ou o "
+#~ "arquivo \"%s\" não é gravável.\n"

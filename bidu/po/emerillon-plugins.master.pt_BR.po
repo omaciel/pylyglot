@@ -1,0 +1,104 @@
+# Brazilian Portuguese translation for emerillon-plugins.
+# Copyright (C) 2009 emerillon-plugins's COPYRIGHT HOLDER
+# This file is distributed under the same license as the emerillon-plugins package.
+# Vladimir Melo <vmelo@gnome.org>, 2009.
+# Hugo Vaz Sampaio <hvazsampaio@gmail.com>, 2010.
+# Djavan Fagundes <djavan@comum.org>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: emerillon-plugins master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=emerillon&component=Plugins\n"
+"POT-Creation-Date: 2010-06-08 22:08+0000\n"
+"PO-Revision-Date: 2010-06-04 17:22-0200\n"
+"Last-Translator: Djavan Fagundes <djavan@comum.org>\n"
+"Language-Team: Brazilian Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Virtaal 0.5.2\n"
+
+#: ../plugins/bixi/bixi.emerillon-plugin.in.h:1
+msgid ""
+"Displays stations from the Bixi network with available bikes and empty docks."
+msgstr ""
+"Exibe as estações da rede Bixi com bicicletas disponíveis e encaixes vazios."
+
+#: ../plugins/bixi/bixi.emerillon-plugin.in.h:2 ../plugins/bixi/bixi.c:719
+msgid "Montreal Public Bike System"
+msgstr "Sistema Público de Bicicletas de Montreal"
+
+#: ../plugins/bixi/bixi.c:325
+msgid "Loading Montreal Public Bike System data from bixi.com..."
+msgstr "Carregando Sistema Público de Bicicletas de Montreal de bixi.com..."
+
+#: ../plugins/bixi/bixi.c:507 ../plugins/bixi/bixi.c:680
+msgid "Bikes"
+msgstr "Bicicletas"
+
+#: ../plugins/bixi/bixi.c:517
+msgid "Docks"
+msgstr "Encaixes"
+
+#: ../plugins/bixi/bixi.c:564
+msgid "Show"
+msgstr "Mostrar"
+
+#: ../plugins/bixi/bixi.c:594
+msgid "Available Bikes"
+msgstr "Bicicletas disponíveis"
+
+#: ../plugins/bixi/bixi.c:600
+msgid "Empty Docks"
+msgstr "Encaixes vazios"
+
+#: ../plugins/bixi/bixi.c:666
+msgid "Name"
+msgstr "Nome"
+
+#: ../plugins/sample-vala/sample-vala.emerillon-plugin.in.h:1
+msgid "An example plugin written in Vala."
+msgstr "Um exemplo de plugin escrito em Vala."
+
+#: ../plugins/sample-vala/sample-vala.emerillon-plugin.in.h:2
+msgid "Vala Example"
+msgstr "Exemplo de Vala"
+
+#: ../plugins/image-export/image-export.emerillon-plugin.in.h:1
+msgid "Exports the map as a PNG image."
+msgstr "Exportar o mapa como uma imagem PNG."
+
+#: ../plugins/image-export/image-export.emerillon-plugin.in.h:2
+msgid "Image Exporter"
+msgstr "Exportador de imagem"
+
+#: ../plugins/image-export/image-export.vala:51
+msgid "Export as _image"
+msgstr "Exportar como _imagem"
+
+#: ../plugins/image-export/image-export.vala:56
+msgid "Attach to _email"
+msgstr "Anexar para _e-mail"
+
+#. create the save dialog
+#: ../plugins/image-export/image-export.vala:107
+msgid "Save as png image"
+msgstr "Salvar como uma imagem png"
+
+#. save the image in the temp folder
+#: ../plugins/image-export/image-export.vala:112
+#: ../plugins/image-export/image-export.vala:151
+msgid "map.png"
+msgstr "mapa.png"
+
+#: ../plugins/image-export/image-export.vala:128
+#: ../plugins/image-export/image-export.vala:169
+msgid "Error"
+msgstr "Erro"
+
+#: ../plugins/image-export/image-export.vala:170
+msgid "Your email client is not supported."
+msgstr "Seu cliente de e-mail não possui suporte."

@@ -1,0 +1,837 @@
+# Brazilian Portuguese translation of accounts-dialog
+# This file is distributed under the same license as the accounts-dialog package.
+# Lucas Mezêncio <lucas.mezencio@gmail.com>, 2010.
+# Enrico Nicoletto <liverig@gmail.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: accounts-dialog\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=accounts-dialog&component=general\n"
+"POT-Creation-Date: 2010-05-30 01:13+0000\n"
+"PO-Revision-Date: 2010-05-29 15:35-0300\n"
+"Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../src/fingerprint-strings.h:28
+#, c-format
+msgid "Place your left thumb on %s"
+msgstr "Coloque seu polegar esquerdo em %s"
+
+#: ../src/fingerprint-strings.h:28
+#, c-format
+msgid "Swipe your left thumb on %s"
+msgstr "Passe seu polegar esquerdo em %s"
+
+#: ../src/fingerprint-strings.h:29
+#, c-format
+msgid "Place your left index finger on %s"
+msgstr "Coloque seu dedo indicador esquerdo em %s"
+
+#: ../src/fingerprint-strings.h:29
+#, c-format
+msgid "Swipe your left index finger on %s"
+msgstr "Passe seu dedo indicador esquerdo em %s"
+
+#: ../src/fingerprint-strings.h:30
+#, c-format
+msgid "Place your left middle finger on %s"
+msgstr "Coloque seu dedo médio esquerdo em %s"
+
+#: ../src/fingerprint-strings.h:30
+#, c-format
+msgid "Swipe your left middle finger on %s"
+msgstr "Passe seu dedo médio esquerdo em %s"
+
+#: ../src/fingerprint-strings.h:31
+#, c-format
+msgid "Place your left ring finger on %s"
+msgstr "Coloque seu dedo anelar esquerdo em %s"
+
+#: ../src/fingerprint-strings.h:31
+#, c-format
+msgid "Swipe your left ring finger on %s"
+msgstr "Passe seu dedo anelar esquerdo em %s"
+
+#: ../src/fingerprint-strings.h:32
+#, c-format
+msgid "Place your left little finger on %s"
+msgstr "Coloque seu dedo mínimo esquerdo em %s"
+
+#: ../src/fingerprint-strings.h:32
+#, c-format
+msgid "Swipe your left little finger on %s"
+msgstr "Passe seu dedo mínimo esquerdo em %s"
+
+#: ../src/fingerprint-strings.h:33
+#, c-format
+msgid "Place your right thumb on %s"
+msgstr "Coloque seu polegar direito em %s"
+
+#: ../src/fingerprint-strings.h:33
+#, c-format
+msgid "Swipe your right thumb on %s"
+msgstr "Passe seu polegar direito em %s"
+
+#: ../src/fingerprint-strings.h:34
+#, c-format
+msgid "Place your right index finger on %s"
+msgstr "Coloque seu dedo indicador direito em %s"
+
+#: ../src/fingerprint-strings.h:34
+#, c-format
+msgid "Swipe your right index finger on %s"
+msgstr "Passe seu dedo indicador direito em %s"
+
+#: ../src/fingerprint-strings.h:35
+#, c-format
+msgid "Place your right middle finger on %s"
+msgstr "Coloque seu dedo médio direito em %s"
+
+#: ../src/fingerprint-strings.h:35
+#, c-format
+msgid "Swipe your right middle finger on %s"
+msgstr "Passe seu dedo médio direito em %s"
+
+#: ../src/fingerprint-strings.h:36
+#, c-format
+msgid "Place your right ring finger on %s"
+msgstr "Coloque seu dedo anelar direito em %s"
+
+#: ../src/fingerprint-strings.h:36
+#, c-format
+msgid "Swipe your right ring finger on %s"
+msgstr "Passe seu dedo anelar direito em %s"
+
+#: ../src/fingerprint-strings.h:37
+#, c-format
+msgid "Place your right little finger on %s"
+msgstr "Coloque seu dedo mínimo direito em %s"
+
+#: ../src/fingerprint-strings.h:37
+#, c-format
+msgid "Swipe your right little finger on %s"
+msgstr "Passe seu dedo mínimo direito em %s"
+
+#: ../src/fingerprint-strings.h:72 ../src/fingerprint-strings.h:98
+msgid "Place your finger on the reader again"
+msgstr "Coloque seu dedo no leitor novamente"
+
+#: ../src/fingerprint-strings.h:74 ../src/fingerprint-strings.h:100
+msgid "Swipe your finger again"
+msgstr "Passe seu dedo novamente"
+
+#: ../src/fingerprint-strings.h:77
+msgid "Swipe was too short; try again"
+msgstr "A passada do dedo foi muito curta; tente novamente"
+
+#: ../src/fingerprint-strings.h:79
+msgid "Your finger was not centered; try swiping your finger again"
+msgstr "Seu dedo não estava centralizado; tente passar seu dedo novamente"
+
+#: ../src/fingerprint-strings.h:81
+msgid "Remove your finger and try swiping it again"
+msgstr "Retire seu dedo e tente passá-lo novamente"
+
+#: ../src/fingerprint-strings.h:103
+msgid "Swipe was too short, try again"
+msgstr "A passada do dedo foi muito curta, tente novamente"
+
+#: ../src/fingerprint-strings.h:105
+msgid "Your finger was not centered, try swiping your finger again"
+msgstr "Seu dedo não estava centralizado, tente passar seu dedo novamente"
+
+#: ../src/fingerprint-strings.h:107
+msgid "Remove your finger, and try swiping your finger again"
+msgstr "Retire seu dedo, tente passá-lo novamente."
+
+#: ../src/gdm-languages.c:613
+msgid "Unspecified"
+msgstr "Não especificado"
+
+#: ../src/main.c:342
+msgid "Failed to delete user"
+msgstr "Falha ao excluir o usuário"
+
+#: ../src/main.c:402
+msgid "You cannot delete your own account."
+msgstr "Você não pode excluir sua própria conta."
+
+#: ../src/main.c:411
+#, c-format
+msgid "%s is still logged in"
+msgstr "%s ainda está conectado"
+
+#: ../src/main.c:415
+msgid ""
+"Deleting a user while they are logged in can leave the system in an "
+"inconsistent state."
+msgstr ""
+"Excluir um usuário enquanto ele estiver conectado pode deixar o sistema num "
+"estado inconsistente."
+
+#: ../src/main.c:424
+#, c-format
+msgid "Do you want to keep %s's files?"
+msgstr "Você deseja manter arquivos de %s?"
+
+#: ../src/main.c:428
+msgid ""
+"It is possible to keep the home directory, mail spool and temporary files "
+"around when deleting a user account."
+msgstr ""
+"É possível manter seu diretório pessoal, email e arquivos temporários ao "
+"excluir uma conta de usuário."
+
+#: ../src/main.c:431
+msgid "_Delete Files"
+msgstr "_Excluir arquivos"
+
+#: ../src/main.c:432
+msgid "_Keep Files"
+msgstr "_Manter arquivos"
+
+#: ../src/main.c:433
+msgid "_Cancel"
+msgstr "_Cancelar"
+
+#: ../src/main.c:510
+msgctxt "Password mode"
+msgid "Account disabled"
+msgstr "Conta desativada"
+
+#: ../src/main.c:518
+msgctxt "Password mode"
+msgid "To be set at next login"
+msgstr "A ser definida no próximo login"
+
+#: ../src/main.c:521
+msgctxt "Password mode"
+msgid "None"
+msgstr "Nenhum"
+
+#: ../src/main.c:1200
+msgid "Failed to contact the accounts service"
+msgstr "Falha ao chamar o serviço de contas"
+
+#: ../src/main.c:1202
+msgid "Please make sure that the AccountService is installed and enabled."
+msgstr ""
+"Por favor certifique-se de que o Serviço de contas está instalado e ativado."
+
+#: ../src/main.c:1245 ../data/user-accounts-dialog.ui.h:10
+msgid "Create a user"
+msgstr "Criar um usuário"
+
+#: ../src/main.c:1249 ../src/main.c:1584
+msgid ""
+"To create a user,\n"
+"click the * icon first"
+msgstr ""
+"Para criar um usuário,\n"
+"clique antes no ícone *"
+
+#: ../src/main.c:1257 ../data/user-accounts-dialog.ui.h:11
+msgid "Delete the selected user"
+msgstr "Exclue o usuário selecionado"
+
+#: ../src/main.c:1261 ../src/main.c:1589
+msgid ""
+"To delete the selected user,\n"
+"click the * icon first"
+msgstr ""
+"Para excluir o usuário selecionado,\n"
+"clique no ícone * primeiro"
+
+#: ../src/main.c:1476 ../src/main.c:1484 ../src/main.c:1513 ../src/main.c:1524
+#: ../src/main.c:1539 ../src/main.c:1556
+msgid ""
+"To make changes,\n"
+"click the * icon first"
+msgstr ""
+"Para realizar alterações,\n"
+"clique antes no ícone *"
+
+#: ../src/main.c:1500
+msgid ""
+"To change the account type,\n"
+"click the * icon first"
+msgstr ""
+"Para alterar o tipo de conta,\n"
+"clique antes no ícone *"
+
+#: ../src/main.c:1628
+msgid "Enable debugging code"
+msgstr "Ativar depuração de código"
+
+#: ../src/main.c:1629
+msgid "Output version information and exit"
+msgstr "informações sobre a versão de saída e sair"
+
+#: ../src/main.c:1641
+msgid "Lets you edit user account information."
+msgstr "Permite a você editar informações de contas de usuário."
+
+#: ../src/run-passwd.c:426
+msgid "Authentication failed"
+msgstr "Falha na autenticação"
+
+#: ../src/run-passwd.c:502 ../src/um-password-dialog.c:385
+#, c-format
+msgid "The new password is too short"
+msgstr "A nova senha é muito curta"
+
+#: ../src/run-passwd.c:507
+#, c-format
+msgid "The new password is too simple"
+msgstr "A nova senha é muito simples"
+
+#: ../src/run-passwd.c:511
+#, c-format
+msgid "The old and new passwords are too similar"
+msgstr "As senhas antigas e atuais são muito similares"
+
+#: ../src/run-passwd.c:514
+#, c-format
+msgid "The new password must contain numeric or special characters"
+msgstr "A nova senha deve conter caracteres numéricos ou especiais"
+
+#: ../src/run-passwd.c:518
+#, c-format
+msgid "The old and new passwords are the same"
+msgstr "As senhas antigas e atuais são iguais"
+
+#: ../src/run-passwd.c:522
+#, c-format
+msgid "Your password has been changed since you initially authenticated!"
+msgstr "Sua senha foi alterada uma vez que foi inicialmente autenticada!"
+
+#: ../src/run-passwd.c:526
+#, c-format
+msgid "The new password does not contain enough different characters"
+msgstr "A nova senha não contém caracteres distintos o suficiente"
+
+#: ../src/run-passwd.c:530
+#, c-format
+msgid "Unknown error"
+msgstr "Erro desconhecido"
+
+#: ../src/um-account-dialog.c:78
+msgid "Failed to create user"
+msgstr "Falha ao criar o usuário"
+
+#: ../src/um-account-dialog.c:175
+#, c-format
+msgid "A user with the short name '%s' already exists"
+msgstr "Já existe um usuário com o nome abreviado \"%s\""
+
+#: ../src/um-account-dialog.c:179
+#, c-format
+msgid "The short name is too long"
+msgstr "O nome abreviado é muito longo"
+
+#: ../src/um-account-dialog.c:182
+msgid "The short name cannot start with a '-'"
+msgstr "O nome abreviado não pode iniciar com um '-'"
+
+#: ../src/um-account-dialog.c:185
+msgid ""
+"The short name must consist of:\n"
+" ➣ letters from the English alphabet\n"
+" ➣ digits\n"
+" ➣ any of the characters '.', '-' and '_'"
+msgstr ""
+"O nome abreviado deve ser constituído por:\n"
+" ➣ letras do alfabeto inglês\n"
+" ➣ dígitos\n"
+" ➣ qualquer um dos caracteres '.', '-' e '_'"
+
+#: ../src/um-account-type.c:35
+msgctxt "Account type"
+msgid "Standard"
+msgstr "Padrão"
+
+#: ../src/um-account-type.c:37
+msgctxt "Account type"
+msgid "Administrator"
+msgstr "Administrador"
+
+#: ../src/um-account-type.c:39
+msgctxt "Account type"
+msgid "Supervised"
+msgstr "Supervisionada"
+
+#: ../src/um-fingerprint-dialog.c:104
+msgid ""
+"You are not allowed to access the device. Contact your system administrator."
+msgstr ""
+"Você não tem permissão para acessar o dispositivo. Entre em contato com o "
+"administrador do sistema."
+
+#: ../src/um-fingerprint-dialog.c:106
+msgid "The device is already in use."
+msgstr "O dispositivo já está sendo usado."
+
+#: ../src/um-fingerprint-dialog.c:108
+msgid "An internal error occurred."
+msgstr "Ocorreu um erro interno."
+
+#: ../src/um-fingerprint-dialog.c:174 ../src/um-fingerprint-dialog.c:175
+#: ../src/um-login-options.c:352
+msgid "Disabled"
+msgstr "Desabilitado"
+
+#: ../src/um-fingerprint-dialog.c:178 ../src/um-fingerprint-dialog.c:179
+msgid "Enabled"
+msgstr "Habilitado"
+
+#: ../src/um-fingerprint-dialog.c:221
+msgid "Delete registered fingerprints?"
+msgstr "Excluir as impressões digitais registradas?"
+
+#: ../src/um-fingerprint-dialog.c:225
+msgid "_Delete Fingerprints"
+msgstr "_Excluir impressões digitais"
+
+#: ../src/um-fingerprint-dialog.c:232
+msgid ""
+"Do you want to delete your registered fingerprints so fingerprint login is "
+"disabled?"
+msgstr ""
+"Você gostaria de excluir suas impressões digitais registradas para que o "
+"início da sessão com impressão digital seja desativado?"
+
+#: ../src/um-fingerprint-dialog.c:360
+msgid "Done!"
+msgstr "Pronto!"
+
+#. translators:
+#. * The variable is the name of the device, for example:
+#. * "Could you not access "Digital Persona U.are.U 4000/4000B" device
+#: ../src/um-fingerprint-dialog.c:406 ../src/um-fingerprint-dialog.c:428
+#, c-format
+msgid "Could not access '%s' device"
+msgstr "Não foi possível acessar o dispositivo \"%s\""
+
+#. translators:
+#. * The variable is the name of the device, for example:
+#. * "Could you not access "Digital Persona U.are.U 4000/4000B" device
+#: ../src/um-fingerprint-dialog.c:477
+#, c-format
+msgid "Could not start finger capture on '%s' device"
+msgstr "Não foi possível iniciar a captura de digitais no dispositivo '%s'"
+
+#: ../src/um-fingerprint-dialog.c:546
+msgid "Could not access any fingerprint readers"
+msgstr "Não foi possível acessar nenhum leitor de impressão digital"
+
+#: ../src/um-fingerprint-dialog.c:547
+msgid "Please contact your system administrator for help."
+msgstr ""
+"Por favor, entre em contato com o administrador do sistema para obter ajuda."
+
+#: ../src/um-fingerprint-dialog.c:584 ../data/account-fingerprint.ui.h:1
+msgid "Enable Fingerprint Login"
+msgstr "Ativar início de sessão com impressão digital"
+
+#. translators:
+#. * The variable is the name of the device, for example:
+#. * "To enable fingerprint login, you need to save one of your fingerprints, using the
+#. * 'Digital Persona U.are.U 4000/4000B' device."
+#: ../src/um-fingerprint-dialog.c:620
+#, c-format
+msgid ""
+"To enable fingerprint login, you need to save one of your fingerprints, "
+"using the '%s' device."
+msgstr ""
+"Para ativar o início de sessão com impressão digital, você precisa salvar "
+"uma das suas impressões digitais, usando o dispositivo '%s'."
+
+#: ../src/um-fingerprint-dialog.c:628
+#, c-format
+msgid ""
+"Enrolling fingerprints for\n"
+"<b><big>%s</big></b>"
+msgstr ""
+"Registrando impressões digitais para\n"
+"<b><big>%s</big></b>"
+
+#: ../src/um-language-dialog.c:338
+msgid "Other..."
+msgstr "Outro..."
+
+#: ../src/um-password-dialog.c:189
+msgid "More choices..."
+msgstr "Mais opções..."
+
+#: ../src/um-password-dialog.c:295
+msgid "Please choose another password."
+msgstr "Por favor, escolha outra senha."
+
+#: ../src/um-password-dialog.c:304
+msgid "Please type your current password again."
+msgstr "Por favor, digite sua senha atual novamente."
+
+#: ../src/um-password-dialog.c:310
+msgid "Password could not be changed"
+msgstr "A senha não pôde ser trocada"
+
+#: ../src/um-password-dialog.c:382
+msgid "You need to enter a new password"
+msgstr "Você precisa digitar uma nova senha"
+
+#: ../src/um-password-dialog.c:391
+msgid "You need to confirm the password"
+msgstr "Você precisa confirmar sua senha"
+
+#: ../src/um-password-dialog.c:394
+msgid "The passwords do not match"
+msgstr "As senhas não conferem"
+
+#: ../src/um-password-dialog.c:400
+msgid "You need to enter your current password"
+msgstr "Você precisa digitar sua senha atual"
+
+#: ../src/um-password-dialog.c:403
+msgid "The current password is not correct"
+msgstr "A senha atual não está correta"
+
+#: ../src/um-password-dialog.c:476 ../src/um-password-dialog.c:693
+msgctxt "Password strength"
+msgid "Too short"
+msgstr "Muito pequena"
+
+#: ../src/um-password-dialog.c:479 ../src/um-password-dialog.c:694
+msgctxt "Password strength"
+msgid "Weak"
+msgstr "Fraca"
+
+#: ../src/um-password-dialog.c:481 ../src/um-password-dialog.c:695
+msgctxt "Password strength"
+msgid "Fair"
+msgstr "Razoável"
+
+#: ../src/um-password-dialog.c:483 ../src/um-password-dialog.c:696
+msgctxt "Password strength"
+msgid "Good"
+msgstr "Boa"
+
+#: ../src/um-password-dialog.c:485 ../src/um-password-dialog.c:697
+msgctxt "Password strength"
+msgid "Strong"
+msgstr "Forte"
+
+#: ../src/um-password-dialog.c:524
+msgid "Passwords do not match"
+msgstr "As senhas não conferem"
+
+#: ../src/um-password-dialog.c:550
+msgid "Wrong password"
+msgstr "Senha incorreta"
+
+#: ../src/um-photo-dialog.c:213 ../data/photo-dialog.ui.h:2
+msgid "Browse for more pictures"
+msgstr "Pesquisar por mais imagens"
+
+#: ../src/um-photo-dialog.c:430
+msgid "Take a photo..."
+msgstr "Tirar uma foto..."
+
+#: ../src/um-photo-dialog.c:448
+msgid "Browse for more pictures..."
+msgstr "Pesquisar por mais imagens..."
+
+#: ../src/um-photo-dialog.c:685
+#, c-format
+msgid "Used by %s"
+msgstr "Utilizado por %s"
+
+#: ../src/um-user-manager.c:430
+#, c-format
+msgid "A user with name '%s' already exists."
+msgstr "Um usuário com o nome \"%s\" já existe."
+
+#: ../src/um-user-manager.c:525
+msgid "This user does not exist."
+msgstr "Esse usuário não existe."
+
+#: ../data/account-dialog.ui.h:1 ../data/user-accounts-dialog.ui.h:7
+msgid "Administrator"
+msgstr "Administrador"
+
+#: ../data/account-dialog.ui.h:2
+msgid "Cr_eate"
+msgstr "Cr_iar"
+
+#: ../data/account-dialog.ui.h:3
+msgid "Create new account"
+msgstr "Criar nova conta"
+
+#: ../data/account-dialog.ui.h:4 ../data/user-accounts-dialog.ui.h:22
+msgid "Standard"
+msgstr "Padrão"
+
+#: ../data/account-dialog.ui.h:5 ../data/user-accounts-dialog.ui.h:23
+msgid "Supervised"
+msgstr "Supervisionada"
+
+#: ../data/account-dialog.ui.h:6
+msgid "_Account Type:"
+msgstr "_Tipo de conta:"
+
+#: ../data/account-dialog.ui.h:7
+msgid "_Full name:"
+msgstr "_Nome completo:"
+
+#: ../data/account-dialog.ui.h:8
+msgid "_Short name:"
+msgstr "_Nome abreviado:"
+
+#: ../data/language-chooser.ui.h:1 ../data/photo-dialog.ui.h:3
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ../data/language-chooser.ui.h:2 ../data/photo-dialog.ui.h:8
+msgid "Select"
+msgstr "Selecionar"
+
+#: ../data/password-dialog.ui.h:1
+msgid ""
+"<a href=\"http://wolfram.org/writing/howto/password.html\">How to choose a "
+"strong password</a>"
+msgstr ""
+"<a href=\"http://wolfram.org/writing/howto/password.html\">Como escolher uma "
+"senha segura</a>"
+
+#: ../data/password-dialog.ui.h:2
+msgid ""
+"<small>This hint may be displayed at the login screen.  It will be visible "
+"to all users of this system.  Do <b>not</b> include the password here.</"
+"small>"
+msgstr ""
+"<smal>Esta dica será exibida na tela de login. Ela será visível a todos os "
+"usuários deste sistema. <b>Não</b> inclua a senha aqui.</small>"
+
+#: ../data/password-dialog.ui.h:3
+msgid "C_onfirm password:"
+msgstr "C_onfirmar senha:"
+
+#: ../data/password-dialog.ui.h:4
+msgid "Ch_ange"
+msgstr "Troc_ar"
+
+#: ../data/password-dialog.ui.h:5
+msgid "Changing password for:"
+msgstr "Trocar senha para:"
+
+#: ../data/password-dialog.ui.h:6
+msgid "Choose a generated password"
+msgstr "Escolher uma senha gerada"
+
+#: ../data/password-dialog.ui.h:7
+msgid "Choose password at next login"
+msgstr "Escolher senha no próximo login"
+
+#: ../data/password-dialog.ui.h:8
+msgid "Current _password:"
+msgstr "_Senha atual:"
+
+#: ../data/password-dialog.ui.h:9
+msgid "Disable this account"
+msgstr "Desativar esta conta"
+
+#
+#: ../data/password-dialog.ui.h:10
+msgid "Enable this account"
+msgstr "Desativar esta conta"
+
+#: ../data/password-dialog.ui.h:11
+msgid "Fair"
+msgstr "Razoável"
+
+#: ../data/password-dialog.ui.h:12
+msgid "Log in without a password"
+msgstr "Entrar sem uma senha"
+
+#: ../data/password-dialog.ui.h:13
+msgid "Set a password now"
+msgstr "Definir uma senha agora"
+
+#: ../data/password-dialog.ui.h:14
+msgid "_Action:"
+msgstr "_Ação:"
+
+#: ../data/password-dialog.ui.h:15
+msgid "_Hint:"
+msgstr "_Dica"
+
+#: ../data/password-dialog.ui.h:16
+msgid "_New password:"
+msgstr "_Nova senha:"
+
+#: ../data/password-dialog.ui.h:17
+msgid "_Show password"
+msgstr "_Mostrar senha"
+
+#: ../data/photo-dialog.ui.h:1
+msgid "Browse"
+msgstr "Pesquisar"
+
+#: ../data/photo-dialog.ui.h:4
+msgid "Changing photo for:"
+msgstr "Alterando a foto para:"
+
+#: ../data/photo-dialog.ui.h:5
+msgid ""
+"Choose a picture that will be shown at the login screen for this account."
+msgstr ""
+"Escolha uma imagem que será mostrada na tela de início de sessão para esta "
+"conta."
+
+#: ../data/photo-dialog.ui.h:6
+msgid "Gallery"
+msgstr "Galeria"
+
+#: ../data/photo-dialog.ui.h:7
+msgid "Photograph"
+msgstr "Fotografia"
+
+#: ../data/photo-dialog.ui.h:9
+msgid "Take a photograph"
+msgstr "Tirar uma foto"
+
+#: ../data/user-accounts-dialog.ui.h:1
+msgid ""
+"A guest account will allow anyone to temporarily log in to this computer "
+"without a password.  For security, remote logins to this account are not "
+"allowed.\n"
+"\n"
+"<b>When the guest user logs out, all files and data associated with the "
+"account will be deleted.</b>"
+msgstr ""
+"Uma conta de convidado permitirá que qualquer um temporariamente inicie a "
+"sessão neste computador sem uma senha.  Para segurança, inícios de sessão "
+"remotos não são permitidos nesta conta.\n"
+"\n"
+"<b>Quando o usuário convidado encerra a sessão, todos os arquivos e dados "
+"associados com esta conta serão excluídos.</b>"
+
+#: ../data/user-accounts-dialog.ui.h:4
+msgid "Account Information"
+msgstr "Informações da conta"
+
+#: ../data/user-accounts-dialog.ui.h:5
+msgid "Account type:"
+msgstr "Tipo de conta:"
+
+#: ../data/user-accounts-dialog.ui.h:6
+msgid "Address Book Card:"
+msgstr "Cartão do livro de endereço:"
+
+#: ../data/user-accounts-dialog.ui.h:8
+msgid "Allow guests to log in to this computer"
+msgstr "Permitir que visitantes usem este computador"
+
+#: ../data/user-accounts-dialog.ui.h:9
+msgid "Automatic Login:"
+msgstr "Entrar automaticamente:"
+
+#: ../data/user-accounts-dialog.ui.h:12
+msgid "E-mail address:"
+msgstr "Endereço de e-mail:"
+
+#: ../data/user-accounts-dialog.ui.h:13
+msgid "Fingerprint Login:"
+msgstr "Início de sessão com impressão digital:"
+
+#: ../data/user-accounts-dialog.ui.h:14
+msgid "Language:"
+msgstr "Idioma:"
+
+#: ../data/user-accounts-dialog.ui.h:15
+msgid "Location:"
+msgstr "Localização:"
+
+#: ../data/user-accounts-dialog.ui.h:16
+msgid "Open"
+msgstr "Abrir"
+
+#: ../data/user-accounts-dialog.ui.h:17
+msgid "Password:"
+msgstr "Senha:"
+
+#: ../data/user-accounts-dialog.ui.h:18
+msgid "Restrictions:"
+msgstr "Restrições"
+
+#: ../data/user-accounts-dialog.ui.h:19
+msgid "Show Shutdown, Suspend and Restart actions"
+msgstr "Mostrar ações de Desligar, Suspender e Reiniciar"
+
+#: ../data/user-accounts-dialog.ui.h:20
+msgid "Show list of users"
+msgstr "Mostrar lista de usuários"
+
+#: ../data/user-accounts-dialog.ui.h:21
+msgid "Show password hints"
+msgstr "Mostrar dicas de senha"
+
+#: ../data/user-accounts-dialog.ui.h:24
+msgid "_Login Options"
+msgstr "Opções de _login"
+
+#: ../data/account-fingerprint.ui.h:2
+msgid "Left index finger"
+msgstr "Dedo indicador esquerdo"
+
+#: ../data/account-fingerprint.ui.h:3
+msgid "Left little finger"
+msgstr "Dedo mínimo esquerdo"
+
+#: ../data/account-fingerprint.ui.h:4
+msgid "Left middle finger"
+msgstr "Dedo médio esquerdo"
+
+#: ../data/account-fingerprint.ui.h:5
+msgid "Left ring finger"
+msgstr "Dedo anelar esquerdo"
+
+#: ../data/account-fingerprint.ui.h:6
+msgid "Left thumb"
+msgstr "Polegar esquerdo"
+
+#: ../data/account-fingerprint.ui.h:7
+msgid "Other finger: "
+msgstr "Outro dedo:"
+
+#: ../data/account-fingerprint.ui.h:8
+msgid "Right index finger"
+msgstr "Dedo indicador direito"
+
+#: ../data/account-fingerprint.ui.h:9
+msgid "Right little finger"
+msgstr "Dedo mínimo direito"
+
+#: ../data/account-fingerprint.ui.h:10
+msgid "Right middle finger"
+msgstr "Dedo médio direito "
+
+#: ../data/account-fingerprint.ui.h:11
+msgid "Right ring finger"
+msgstr "Dedo anelar direito"
+
+#: ../data/account-fingerprint.ui.h:12
+msgid "Right thumb"
+msgstr "Polegar direito"
+
+#: ../data/account-fingerprint.ui.h:13
+msgid ""
+"Your fingerprint was successfully saved. You should now be able to log in "
+"using your fingerprint reader."
+msgstr ""
+"Sua impressão digital foi salva com sucesso. Agora você deve estar apto a "
+"iniciar a sessão usando seu leitor de impressão digital."

@@ -1,0 +1,996 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=anjal\n"
+"POT-Creation-Date: 2010-02-09 06:06+0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: GLSPTB_Gabor <gaborx.k.becht@intel.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+
+#. XXX Allow the category icons to be referenced as named
+#. *     icons, since GtkAction does not support GdkPixbufs.
+#. Get the icon file for some default category.  Doesn't matter
+#. * which, so long as it has an icon.  We're just interested in
+#. * the directory components.
+#: ../src/main.c:181 ../src/anjal-settings-main.c:117
+msgid "Birthday"
+msgstr ""
+
+#: ../src/main.c:267 ../src/anjal-settings-main.c:189
+msgid "Run Anjal in a window"
+msgstr "Rodar Anjal numa janela"
+
+#: ../src/main.c:268 ../src/anjal-settings-main.c:190
+msgid "Make Anjal the default email client"
+msgstr "Faça do Anjal o cliente email padrão"
+
+#: ../src/main.c:283 ../src/main.c:292 ../src/anjal-settings-main.c:212
+msgid "Anjal email client"
+msgstr "Cliente de email Anjal"
+
+#: ../src/custom-cell-renderer-toggle-pixbuf.c:115
+msgid "Toggle state"
+msgstr "Estado alternante"
+
+#: ../src/custom-cell-renderer-toggle-pixbuf.c:116
+msgid "The toggle state of the button"
+msgstr "O estado alternante do botão"
+
+#: ../src/custom-cell-renderer-toggle-pixbuf.c:130
+msgid "toggled"
+msgstr "alternado"
+
+#: ../src/em-tree-store.c:83
+msgid "From"
+msgstr "De"
+
+#: ../src/em-tree-store.c:84
+msgid "Subject"
+msgstr "Assunto"
+
+#: ../src/em-tree-store.c:85
+msgid "Date"
+msgstr "Data"
+
+#: ../src/em-tree-store.c:86 ../src/em-format-mail.c:1615
+#: ../src/em-format-mail.c:1673 ../src/em-format-mail.c:1699
+msgid "To"
+msgstr "Para"
+
+#: ../src/em-tree-store.c:87 ../src/mail-folder-view.c:1657
+msgid "Flags"
+msgstr "Marcadores"
+
+#: ../src/em-tree-store.c:88
+msgid "Thread Count"
+msgstr "Contagem de thread"
+
+#: ../src/em-tree-store.c:89
+msgid "Thread Preview"
+msgstr "Pré-visualizar thread"
+
+#: ../src/em-tree-store.c:90
+msgid "Unread"
+msgstr "Não lida"
+
+#: ../src/em-tree-store.c:91 ../src/em-format-mail-display.c:2000
+msgid "Attachment"
+msgstr "Anexo"
+
+#: ../src/em-tree-store.c:362
+#, c-format
+msgid "<span foreground=\"%s\" >%s%s</span>"
+msgstr "<span frente=\"%s\" >%s%s</span>"
+
+#. TRANSLATORS: don't translate the terms in brackets
+#: ../src/anjal-settings-main.c:197
+msgid "ID of the socket to embed in"
+msgstr ""
+
+#: ../src/anjal-settings-main.c:198
+msgid "socket"
+msgstr ""
+
+#: ../src/mail-capplet-shell.c:306 ../anjal-settings.desktop.in.h:2
+#, fuzzy
+#| msgid "Settings"
+msgid "Email Settings"
+msgstr "Configurações  "
+
+#: ../src/mail-capplet-shell.c:320 ../src/mail-shell.c:379
+#: ../src/mail-shell.c:876
+msgid "Quit"
+msgstr "Sair"
+
+#. create the local source group
+#: ../src/mail-capplet-shell.c:438 ../src/mail-component.c:299
+#: ../src/mail-folder-view.c:228 ../src/mail-shell.c:1038
+msgid "On This Computer"
+msgstr "Neste computador"
+
+#. Create the default Person addressbook
+#: ../src/mail-capplet-shell.c:446 ../src/mail-shell.c:1046
+msgid "Personal"
+msgstr "Pessoal"
+
+#. translators: standard local mailbox names
+#: ../src/mail-component.c:145
+msgid "Inbox"
+msgstr "Caixa de entrada"
+
+#: ../src/mail-component.c:146
+msgid "Drafts"
+msgstr "Rascunhos"
+
+#: ../src/mail-component.c:147
+msgid "Outbox"
+msgstr "Caixa de saída"
+
+#: ../src/mail-component.c:148
+msgid "Sent"
+msgstr "Enviado"
+
+#: ../src/mail-component.c:149
+msgid "Templates"
+msgstr "Modelos"
+
+#: ../src/mail-component.c:1296
+msgid "Error"
+msgstr "Erro"
+
+#: ../src/mail-component.c:1296
+msgid "Errors"
+msgstr "Erros  "
+
+#: ../src/mail-component.c:1297
+msgid "Warning"
+msgstr "Aviso"
+
+#: ../src/mail-component.c:1297
+msgid "Warnings and Errors"
+msgstr "Avisos e erros"
+
+#: ../src/mail-component.c:1298
+msgid "Debug"
+msgstr "Depurar"
+
+#: ../src/mail-component.c:1298
+msgid "Error, Warnings and Debug messages"
+msgstr "Mensagens de erro, aviso e depuração"
+
+#: ../src/mail-component.c:1431
+msgid "Debug Logs"
+msgstr "Logs de depuração"
+
+#: ../src/mail-component.c:1445
+msgid "Show _errors in the status bar for"
+msgstr "Mostrar _erros na barra de status para"
+
+#. Translators: This is the second part of the sentence
+#. * "Show _errors in the status bar for" - XXX - "second(s)."
+#: ../src/mail-component.c:1461
+msgid "second(s)."
+msgstr "segundo(s)."
+
+#: ../src/mail-component.c:1467
+msgid "Log Messages:"
+msgstr "Mensagens de log:"
+
+#: ../src/mail-component.c:1508
+msgid "Log Level"
+msgstr "Nível de log"
+
+#: ../src/mail-component.c:1517
+msgid "Time"
+msgstr "Horário"
+
+#. gtk_tree_view_column_set_fixed_width (column, 720);
+#: ../src/mail-component.c:1527 ../src/mail-folder-view.c:1703
+msgid "Messages"
+msgstr "Mensagens"
+
+#: ../src/mail-component.c:1536
+msgid "Close this window"
+msgstr "Fechar essa janela"
+
+#: ../src/mail-composer-view.c:179 ../src/mail-conv-view.c:586
+#: ../src/mail-folder-view.c:254 ../src/mail-account-view.c:724
+#: ../src/mail-settings-view.c:267 ../src/mail-people-view.c:246
+msgid "Close Tab"
+msgstr "Fechar guia"
+
+#: ../src/mail-composer-view.c:190
+msgid "New email"
+msgstr "Novo email"
+
+#: ../src/mail-composer-view.c:292
+msgid "Untitled Message"
+msgstr "Mensagem sem título"
+
+#: ../src/mail-conv-view.c:596
+msgid "Message"
+msgstr "Mensagem"
+
+#: ../src/mail-folder-view.c:167
+msgid "_Date"
+msgstr "_Data"
+
+#: ../src/mail-folder-view.c:168
+msgid "_Subject"
+msgstr "_ Assunto"
+
+#: ../src/mail-folder-view.c:169
+msgid "_From"
+msgstr "_De"
+
+#: ../src/mail-folder-view.c:223
+msgid "Trash"
+msgstr "Lixo"
+
+#: ../src/mail-folder-view.c:225 ../src/mail-message-view.c:1492
+msgid "Junk"
+msgstr "Lixo"
+
+#: ../src/mail-folder-view.c:228 ../src/mail-folder-view.c:231
+msgid "on"
+msgstr ""
+
+#: ../src/mail-folder-view.c:283
+msgid "Select Folder"
+msgstr "Selecione pasta"
+
+#: ../src/mail-folder-view.c:484
+msgid "Loading folder"
+msgstr "Carregando pasta"
+
+#: ../src/mail-folder-view.c:654 ../src/mail-message-view.c:638
+#: ../src/mail-sqlite-store.c:280
+msgid "?"
+msgstr "?"
+
+#: ../src/mail-folder-view.c:661 ../src/mail-message-view.c:645
+#: ../src/mail-sqlite-store.c:287
+msgid "Today %l:%M %p"
+msgstr "Hoje %l:%M %p"
+
+#: ../src/mail-folder-view.c:670 ../src/mail-message-view.c:654
+#: ../src/mail-sqlite-store.c:296
+msgid "Yesterday %l:%M %p"
+msgstr "Ontem %l:%M %p"
+
+#: ../src/mail-folder-view.c:682 ../src/mail-message-view.c:666
+#: ../src/mail-sqlite-store.c:308
+msgid "%a %l:%M %p"
+msgstr "%a %l:%M %p"
+
+#: ../src/mail-folder-view.c:690 ../src/mail-message-view.c:674
+#: ../src/mail-sqlite-store.c:316
+msgid "%b %d %l:%M %p"
+msgstr "%b %d %l:%M %p"
+
+#: ../src/mail-folder-view.c:692 ../src/mail-message-view.c:676
+#: ../src/mail-sqlite-store.c:318
+msgid "%b %d %Y"
+msgstr "%d %b %Y"
+
+#. { E_POPUP_ITEM, "10.emfv.00", N_("_Reply to Sender"), emfv_popup_reply_sender, NULL, "mail-reply-sender", EM_POPUP_SELECT_ONE },
+#. { E_POPUP_ITEM, "10.emfv.01", N_("Reply to _All"), emfv_popup_reply_all, NULL, "mail-reply-all", EM_POPUP_SELECT_ONE },
+#. { E_POPUP_ITEM, "10.emfv.02", N_("_Forward"), emfv_popup_forward, NULL, "mail-forward", EM_POPUP_SELECT_MANY },
+#: ../src/mail-folder-view.c:1167
+msgid "_Open in New Tab"
+msgstr "_Abrir em nova guia"
+
+#: ../src/mail-folder-view.c:1168
+msgid "_Open in This Tab"
+msgstr "_Abrir nessa guia"
+
+#: ../src/mail-folder-view.c:1170
+msgid "_Delete"
+msgstr "_Excluir"
+
+#: ../src/mail-folder-view.c:1171
+msgid "U_ndelete"
+msgstr "D_esfazer"
+
+#: ../src/mail-folder-view.c:1173
+msgid "Mar_k as Read"
+msgstr "Mar_car com lida"
+
+#: ../src/mail-folder-view.c:1174
+msgid "Mark as _Unread"
+msgstr "Marcar como _não lida"
+
+#. { E_POPUP_ITEM, "50.mfv.02", N_("Mark as _Important"), emfv_popup_mark_important, NULL, "mail-mark-important", EM_POPUP_SELECT_MARK_IMPORTANT|EM_FOLDER_VIEW_SELECT_LISTONLY },
+#. { E_POPUP_ITEM, "50.mfv.03", N_("Mark as Un_important"), emfv_popup_mark_unimportant, NULL, NULL, EM_POPUP_SELECT_MARK_UNIMPORTANT|EM_FOLDER_VIEW_SELECT_LISTONLY },
+#: ../src/mail-folder-view.c:1177
+msgid "Mark as _Junk"
+msgstr "Marcar como _lixo"
+
+#: ../src/mail-folder-view.c:1178
+msgid "Mark as _Not Junk"
+msgstr "Marcar como _não lixo"
+
+#: ../src/mail-folder-view.c:1599
+msgid "Please select a folder on the folder tree"
+msgstr "Favor selecionar uma pasta na árvore de pastas"
+
+#: ../src/mail-folder-view.c:1935
+msgid "_Ascending"
+msgstr "_Subindo"
+
+#: ../src/mail-folder-view.c:1943
+msgid "D_escending"
+msgstr "D_escendo"
+
+#: ../src/mail-folder-view.c:2029
+msgid "Searching for "
+msgstr "Procurando"
+
+#: ../src/mail-folder-view.c:2029
+msgid "Clearing search"
+msgstr "Limpando procura"
+
+#: ../src/mail-message-view.c:317 ../src/mail-message-view.c:409
+#: ../src/mail-message-view.c:624 ../src/mail-message-view.c:1388
+msgid "<u>show details</u>"
+msgstr "<u>mostrar detalhes</u>"
+
+#: ../src/mail-message-view.c:396 ../src/mail-message-view.c:620
+msgid "<u>hide details</u>"
+msgstr "<u>ocultar detalhes</u>"
+
+#: ../src/mail-message-view.c:738 ../src/em-format-mail.c:1274
+msgid "Formatting message"
+msgstr "Formatando mensagem"
+
+#. Name is in here
+#: ../src/mail-message-view.c:1420
+msgid "From:"
+msgstr "De:"
+
+#. The To field
+#: ../src/mail-message-view.c:1433
+msgid "To:"
+msgstr "Para:"
+
+#: ../src/mail-message-view.c:1448
+msgid "Cc:"
+msgstr "Cópia:"
+
+#. Subject is in here
+#: ../src/mail-message-view.c:1461
+msgid "Subject:"
+msgstr "Assunto:"
+
+#: ../src/mail-message-view.c:1483
+msgid "Delete"
+msgstr "Excluir"
+
+#. gtk_box_pack_start (header_row, mmview->priv->spinner, FALSE, FALSE, 0);
+#. gtk_widget_hide (mmview->priv->spinner);
+#: ../src/mail-message-view.c:1507
+msgid "Downloading message"
+msgstr "Baixando mensagem"
+
+#. To translators: Reply to the sender. The format is replaced by the
+#. name of the sender.
+#.
+#: ../src/mail-message-view.c:1526
+#, c-format
+msgid "Reply to %s"
+msgstr "Reponder a %s"
+
+#: ../src/mail-message-view.c:1536
+msgid "Reply All"
+msgstr "Responder a todos"
+
+#: ../src/mail-message-view.c:1541
+msgid "Forward"
+msgstr "Encaminhar"
+
+#: ../src/mail-message-view.c:1546
+msgid "Discard"
+msgstr "Descartar"
+
+#: ../src/mail-message-view.c:1551
+msgid "Move to tab"
+msgstr "Ir para guia"
+
+#: ../src/mail-shell.c:219 ../src/mail-shell.c:272 ../src/mail-shell.c:410
+#, fuzzy
+#| msgid "Mailer"
+msgid "Mail"
+msgstr "Correspondente"
+
+#: ../src/mail-shell.c:286 ../src/mail-shell.c:785
+msgid "Check Mail"
+msgstr "Verificar email"
+
+#: ../src/mail-shell.c:304 ../src/mail-shell.c:803
+msgid "New Mail"
+msgstr "Novo email"
+
+#: ../src/mail-shell.c:339 ../src/mail-shell.c:836
+msgid "Sort By"
+msgstr "Classificar por"
+
+#: ../src/mail-shell.c:366 ../src/mail-shell.c:863
+#: ../src/mail-settings-view.c:277
+msgid "Settings"
+msgstr "Configurações  "
+
+#: ../src/mail-shell.c:898 ../src/mail-people-view.c:256
+msgid "People"
+msgstr "Gente"
+
+#: ../src/mail-view.c:244
+msgid "New Tab"
+msgstr "Nova guia"
+
+#: ../src/mail-account-view.c:58
+msgid "Please enter your full name."
+msgstr "Favor digitar seu nome completo."
+
+#: ../src/mail-account-view.c:59
+msgid "Please enter your email address."
+msgstr "Favor digitar seu endereço de email."
+
+#: ../src/mail-account-view.c:60
+msgid "The email addres you have entered is invalid."
+msgstr "O endereço de email digitado é inválido."
+
+#: ../src/mail-account-view.c:226
+msgid "<span size=\"large\" weight=\"bold\">Personal details:</span>"
+msgstr "<span size=\"large\" weight=\"bold\">Detalhes pessoais:</span>"
+
+#: ../src/mail-account-view.c:231
+msgid "Name:"
+msgstr "Nome:"
+
+#: ../src/mail-account-view.c:240
+msgid "Email address:"
+msgstr "Endereço email:"
+
+#: ../src/mail-account-view.c:250
+msgid "<span size=\"large\" weight=\"bold\">Receiving details:</span>"
+msgstr "<span size=\"large\" weight=\"bold\">Detalhes de recebimento:</span>"
+
+#: ../src/mail-account-view.c:255 ../src/mail-account-view.c:305
+msgid "Server type:"
+msgstr "Tipo de servidor:"
+
+#: ../src/mail-account-view.c:264 ../src/mail-account-view.c:314
+msgid "Server address:"
+msgstr "Endereço de servidor:"
+
+#: ../src/mail-account-view.c:274 ../src/mail-account-view.c:324
+msgid "Username:"
+msgstr "Nome do usuário:"
+
+#: ../src/mail-account-view.c:283 ../src/mail-account-view.c:333
+msgid "Use encryption:"
+msgstr "Usar encriptação:"
+
+#: ../src/mail-account-view.c:288 ../src/mail-account-view.c:338
+msgid "never"
+msgstr "nunca"
+
+#: ../src/mail-account-view.c:300
+msgid "<span size=\"large\" weight=\"bold\">Sending details:</span>"
+msgstr "<span size=\"large\" weight=\"bold\">Detalhes de envio:</span>"
+
+#: ../src/mail-account-view.c:357
+msgid ""
+"To use the email application you'll need to setup an account. Put your email "
+"address and password in below and we'll try and work out all the settings. "
+"If we can't do it automatically you'll need your server details as well."
+msgstr ""
+"Para usar seu email, é necessário configurar uma conta. Digite seu endereço "
+"de email e senha embaixo e vamos tentar ajustar as configurações. Se não for "
+"possível automaticamente, você precisará de seu detalhes de servidor também."
+
+#: ../src/mail-account-view.c:359
+msgid ""
+"Sorry, we can't work out the settings to get your mail automatically. Please "
+"enter them below. We've tried  to make a start with the details you just "
+"entered but you may need to change them."
+msgstr ""
+"Sinto muito, não foi possível ajustar as configurações para receber seu "
+"email automaticamente. Favor digitar embaixo. Nós tentamos iniciar com seus "
+"detalhes, mas você poderá precisar modificá-los."
+
+#: ../src/mail-account-view.c:361
+msgid "You can specify more options to configure the account."
+msgstr "É possível especificar mais opções para configurar a conta."
+
+#: ../src/mail-account-view.c:363
+msgid ""
+"Now we need your settings for sending mail. We've tried to make some guesses "
+"but you should check them over to make sure."
+msgstr ""
+"Agora precisamos de suas configurações para enviar email. Nós tentamos "
+"adivinhar o necessário, mas é bom você verificar para ter certeza."
+
+#: ../src/mail-account-view.c:364
+#, fuzzy
+#| msgid "You can specify more options to configure the account."
+msgid "You can specify your default settings for your account."
+msgstr "É possível especificar mais opções para configurar a conta."
+
+#: ../src/mail-account-view.c:365
+msgid ""
+"Time to check things over before we try and connect to the server and fetch "
+"your mail."
+msgstr ""
+"Está na hora de verificar tudo antes de conectar ao servidor e buscar seu "
+"email."
+
+#. { MAV_IDENTITY_PAGE, N_("Identity"), N_("Next - Receiving mail"), NULL, IDENTITY_DETAIL, create_identity_page, fill_identity, save_identity },
+#. { MAV_RECV_PAGE, N_("Receiving mail"), N_("Next - Sending mail"), N_("Back - Identity"), RECEIVE_DETAIL, create_receive_page, fill_receive, save_receive},
+#. { MAV_SEND_PAGE, N_("Sending mail"), N_("Next - Review account"), N_("Back - Receiving mail"), SEND_DETAIL, create_send_page, fill_send, save_send},
+#. { MAV_REVIEW_PAGE, N_("Review account"), N_("Finish"), N_("Back - Sending"), REVIEW_DETAIL, NULL, NULL, save_account},
+#: ../src/mail-account-view.c:385
+msgid "Identity"
+msgstr "Identidade"
+
+#: ../src/mail-account-view.c:385
+msgid "Next - Receiving mail"
+msgstr "Avançar - Recebendo email"
+
+#: ../src/mail-account-view.c:386
+msgid "Receiving mail"
+msgstr "Recebendo email"
+
+#: ../src/mail-account-view.c:386 ../src/mail-account-view.c:387
+msgid "Next - Sending mail"
+msgstr "Avançar - Enviando email"
+
+#: ../src/mail-account-view.c:386
+msgid "Back - Identity"
+msgstr "Voltar - Identidade"
+
+#: ../src/mail-account-view.c:386
+msgid "Next - Receiving options"
+msgstr "Avançar - Recebendo opções"
+
+#: ../src/mail-account-view.c:387
+msgid "Receiving options"
+msgstr "Recebendo opções"
+
+#: ../src/mail-account-view.c:387 ../src/mail-account-view.c:389
+msgid "Back - Receiving mail"
+msgstr "Voltar -  Recebendo email"
+
+#: ../src/mail-account-view.c:389
+msgid "Sending mail"
+msgstr "Enviando email"
+
+#: ../src/mail-account-view.c:389 ../src/mail-account-view.c:390
+msgid "Next - Review account"
+msgstr "Avançar - Revistando conta"
+
+#: ../src/mail-account-view.c:389
+#, fuzzy
+#| msgid "Next - Review account"
+msgid "Next - Defaults"
+msgstr "Avançar - Revistando conta"
+
+#: ../src/mail-account-view.c:389
+msgid "Back - Receiving options"
+msgstr "Voltar -  Recebendo opções"
+
+#: ../src/mail-account-view.c:390
+msgid "Defaults"
+msgstr ""
+
+#: ../src/mail-account-view.c:390
+#, fuzzy
+#| msgid "Back - Sending"
+msgid "Back - Sending mail"
+msgstr "Voltar - Enviando"
+
+#: ../src/mail-account-view.c:392
+msgid "Review account"
+msgstr "Revistar conta"
+
+#: ../src/mail-account-view.c:392
+msgid "Finish"
+msgstr "Concluir"
+
+#: ../src/mail-account-view.c:392
+msgid "Back - Sending"
+msgstr "Voltar - Enviando"
+
+#: ../src/mail-account-view.c:734
+msgid "Account Wizard"
+msgstr "Assitente de conta"
+
+#: ../src/mail-settings-view.c:149
+msgid "Modify"
+msgstr "Modificar"
+
+#: ../src/mail-settings-view.c:151
+msgid "Add a new account"
+msgstr "Adicionar nova conta"
+
+#: ../src/mail-settings-view.c:186
+msgid "<span size=\"large\" weight=\"bold\">Account management</span>"
+msgstr "<span size=\"large\" weight=\"bold\">Gerenciamento de conta</span>"
+
+#: ../src/mail-utils.c:192
+msgid "Rendering image"
+msgstr "Resolvendo imagem"
+
+#: ../src/em-format-mail.c:524 ../src/em-format-mail.c:533
+#, c-format
+msgid "Retrieving `%s'"
+msgstr "Obtendo `%s'"
+
+#: ../src/em-format-mail.c:674 ../src/em-format-mail-display.c:584
+msgid "Unsigned"
+msgstr "Não assinado"
+
+#: ../src/em-format-mail.c:675 ../src/em-format-mail-display.c:585
+msgid "Valid signature"
+msgstr "Assinatura válida"
+
+#: ../src/em-format-mail.c:676 ../src/em-format-mail-display.c:586
+msgid "Invalid signature"
+msgstr "Assinatura inválida"
+
+#: ../src/em-format-mail.c:677 ../src/em-format-mail-display.c:587
+msgid "Valid signature, but cannot verify sender"
+msgstr "Assinatura válida, mas impossível verificar o remetente"
+
+#: ../src/em-format-mail.c:678 ../src/em-format-mail-display.c:588
+msgid "Signature exists, but need public key"
+msgstr "Assinatura existe, mas precisa de chave pública"
+
+#: ../src/em-format-mail.c:684 ../src/em-format-mail-display.c:595
+msgid "Unencrypted"
+msgstr "Não encriptado"
+
+#: ../src/em-format-mail.c:685 ../src/em-format-mail-display.c:596
+msgid "Encrypted, weak"
+msgstr "Encriptado, fraco"
+
+#: ../src/em-format-mail.c:686 ../src/em-format-mail-display.c:597
+msgid "Encrypted"
+msgstr "Encriptado"
+
+#: ../src/em-format-mail.c:687 ../src/em-format-mail-display.c:598
+msgid "Encrypted, strong"
+msgstr "Encriptado, forte"
+
+#: ../src/em-format-mail.c:953
+msgid "Unknown external-body part."
+msgstr "Parte do corpo externo desconhecido"
+
+#: ../src/em-format-mail.c:961
+msgid "Malformed external-body part."
+msgstr "Parte do corpo externo mal formado"
+
+#: ../src/em-format-mail.c:991
+#, c-format
+msgid "Pointer to FTP site (%s)"
+msgstr "Ponteiro ao site FTP (%s) "
+
+#: ../src/em-format-mail.c:1002
+#, c-format
+msgid "Pointer to local file (%s) valid at site \"%s\""
+msgstr "Ponteiro para arquivo local  (%s) válida no site \"%s\" "
+
+#: ../src/em-format-mail.c:1004
+#, c-format
+msgid "Pointer to local file (%s)"
+msgstr "Ponteiro ao arquivo local (%s)"
+
+#: ../src/em-format-mail.c:1025
+#, c-format
+msgid "Pointer to remote data (%s)"
+msgstr "Ponteiro a dados remotos (%s)"
+
+#: ../src/em-format-mail.c:1036
+#, c-format
+msgid "Pointer to unknown external data (\"%s\" type)"
+msgstr "Ponteiro para dados externos desconhecidos (\"%s\" tipo)"
+
+#: ../src/em-format-mail.c:1458
+msgid "Formatting Message..."
+msgstr "Formatando mensagem..."
+
+#: ../src/em-format-mail.c:1616 ../src/em-format-mail.c:1680
+#: ../src/em-format-mail.c:1702
+msgid "Cc"
+msgstr "Cópia"
+
+#: ../src/em-format-mail.c:1617 ../src/em-format-mail.c:1686
+#: ../src/em-format-mail.c:1705
+msgid "Bcc"
+msgstr "Cópia oculta"
+
+#. pseudo-header
+#: ../src/em-format-mail.c:1797
+msgid "Mailer"
+msgstr "Correspondente"
+
+#. translators: strftime format for local time equivalent in Date header display, with day
+#: ../src/em-format-mail.c:1824
+msgid " (%a, %R %Z)"
+msgstr " (%a, %R %Z)"
+
+#. translators: strftime format for local time equivalent in Date header display, without day
+#: ../src/em-format-mail.c:1829
+msgid " (%R %Z)"
+msgstr " (%R %Z)"
+
+#. To translators: This message suggests to the receipients that the sender of the mail is
+#. different from the one listed in From field.
+#.
+#: ../src/em-format-mail.c:1964
+#, c-format
+msgid "This message was sent by <b>%s</b> on behalf of <b>%s</b>"
+msgstr "Essa mensagem foi enviada por <b>%s</b> em nome de <b>%s</b>"
+
+#: ../src/em-format-mail-display.c:584
+msgid ""
+"This message is not signed. There is no guarantee that this message is "
+"authentic."
+msgstr ""
+"Essa mensagem não está assinada. Não há garantia que a mensagem seja "
+"autêntica."
+
+#: ../src/em-format-mail-display.c:585
+msgid ""
+"This message is signed and is valid meaning that it is very likely that this "
+"message is authentic."
+msgstr ""
+"Essa mensagem está assinada e é válida, o que quer dizer que provavelmente é "
+"autêntica."
+
+#: ../src/em-format-mail-display.c:586
+msgid ""
+"The signature of this message cannot be verified, it may have been altered "
+"in transit."
+msgstr ""
+"A assinatura dessa mensagem não pode ser verificada, talvez foi alterada em "
+"trânsito."
+
+#: ../src/em-format-mail-display.c:587
+msgid ""
+"This message is signed with a valid signature, but the sender of the message "
+"cannot be verified."
+msgstr ""
+"Essa mensagem está assinada com assinatura válida, porém o remetente da "
+"mensagem não pode ser verificada."
+
+#: ../src/em-format-mail-display.c:588
+msgid ""
+"This message is signed with a signature, but there is no corresponding "
+"public key."
+msgstr ""
+"A mensagem está assinada com assinatura, porém não existe chave pública "
+"correspondente."
+
+#: ../src/em-format-mail-display.c:595
+msgid ""
+"This message is not encrypted. Its content may be viewed in transit across "
+"the Internet."
+msgstr ""
+"Essa mensagem não está encriptada. Seu conteúdo poderá ser visualizado "
+"através da Internet."
+
+#: ../src/em-format-mail-display.c:596
+msgid ""
+"This message is encrypted, but with a weak encryption algorithm. It would be "
+"difficult, but not impossible for an outsider to view the content of this "
+"message in a practical amount of time."
+msgstr ""
+"Essa mensagem está encriptada, porém com algoritmo de encriptação fraco. "
+"Seria difícil mas não impossível para pessoas externas visualizar o conteúdo "
+"dessa mensagem num tempo hábil."
+
+#: ../src/em-format-mail-display.c:597
+msgid ""
+"This message is encrypted.  It would be difficult for an outsider to view "
+"the content of this message."
+msgstr ""
+"Essa mensagem está encriptada. Seria muito difícil para pessoas externas "
+"visualizar o conteúdo dessa mensagem."
+
+#: ../src/em-format-mail-display.c:598
+msgid ""
+"This message is encrypted, with a strong encryption algorithm. It would be "
+"very difficult for an outsider to view the content of this message in a "
+"practical amount of time."
+msgstr ""
+"Essa mensagem está encriptada, com forte algoritmo de encriptação. Seria "
+"muito difícil para uma pessoa externa visualizar o conteúdo dessa mensagem "
+"num tempo hábil."
+
+#: ../src/em-format-mail-display.c:699
+msgid "_View Certificate"
+msgstr "_Visualizar certificado"
+
+#: ../src/em-format-mail-display.c:714
+msgid "This certificate is not viewable"
+msgstr "O certificado não é visualizável."
+
+#: ../src/em-format-mail-display.c:1031
+msgid "Completed on %B %d, %Y, %l:%M %p"
+msgstr "Concluído em %B %d, %Y, %l:%M %p"
+
+#: ../src/em-format-mail-display.c:1039
+msgid "Overdue:"
+msgstr "Atrasado:"
+
+#: ../src/em-format-mail-display.c:1042
+msgid "by %B %d, %Y, %l:%M %p"
+msgstr "por %B %d, %Y, %l:%M %p"
+
+#: ../src/em-format-mail-display.c:1201
+msgid "_View Inline"
+msgstr "_Visualizar em linha"
+
+#: ../src/em-format-mail-display.c:1202
+msgid "_Hide"
+msgstr "_Ocultar  "
+
+#: ../src/em-format-mail-display.c:1203
+msgid "_Fit to Width"
+msgstr "_Ajustar à largura"
+
+#: ../src/em-format-mail-display.c:1204
+msgid "Show _Original Size"
+msgstr "Mostrar _tamanho original"
+
+#: ../src/em-format-mail-display.c:1551
+msgid "Saved"
+msgstr "Salvo"
+
+#: ../src/em-format-mail-display.c:1572
+#, c-format
+msgid "Could not save '%s'"
+msgstr "Impossivel salvar '%s"
+
+#: ../src/em-format-mail-display.c:1575
+#, c-format
+msgid "Could not save the attachment"
+msgstr "Não foi possível salvar o anexo"
+
+#. Translators: Default attachment filename.
+#: ../src/em-format-mail-display.c:1610
+msgid "attachment.dat"
+msgstr "anexo.dat"
+
+#: ../src/em-format-mail-display.c:1635
+msgid "Saving..."
+msgstr "Salvando..."
+
+#: ../src/em-format-mail-display.c:1727
+msgid "Download"
+msgstr "Baixar"
+
+#: ../src/em-format-mail-display.c:1933 ../src/em-format-mail-display.c:1972
+msgid "View _Unformatted"
+msgstr "Visualizar _Não formatado"
+
+#: ../src/em-format-mail-display.c:1935
+msgid "Hide _Unformatted"
+msgstr "Ocultar _Não formatado"
+
+#: ../src/em-format-mail-display.c:1992
+msgid "O_pen With"
+msgstr "A_brir com"
+
+#: ../src/em-format-mail-display.c:2069
+msgid ""
+"Evolution cannot render this email as it is too large to process. You can "
+"view it unformatted or with an external text editor."
+msgstr ""
+"Evolution não pode resolver esse email porque é muito grande para processar. "
+"Você poderá visualizá-lo sem formatação ou com um editor de texto externo."
+
+#: ../src/anjal.schemas.in.h:1
+msgid "Anjal window height"
+msgstr "Altura da janela Anjal"
+
+#: ../src/anjal.schemas.in.h:2
+msgid "Anjal window width"
+msgstr "Largura da janela Anjal"
+
+#: ../src/anjal.schemas.in.h:3
+msgid "Height of Anjal window."
+msgstr "Altura da janela Anjal."
+
+#: ../src/anjal.schemas.in.h:4
+msgid "Width of Anjal window."
+msgstr "Largura da janela Anjal."
+
+#: ../src/anjal.xml.in.h:1
+msgid "Anjal Email Reader"
+msgstr "Leitor de email Anjal"
+
+#: ../anjal.desktop.in.h:1
+msgid "Anjal"
+msgstr "Anjal"
+
+#: ../anjal.desktop.in.h:2
+msgid "Email"
+msgstr "Email"
+
+#: ../anjal.desktop.in.h:3
+msgid "Send and receive"
+msgstr "Enviar e receber"
+
+#: ../anjal-settings.desktop.in.h:1
+msgid "Configure email accounts"
+msgstr ""
+
+#~ msgid "Message not yet downloaded  or preview could not be constructed\n"
+#~ msgstr ""
+#~ "Mensagem ainda não baixada ou pré-visualização não pôde ser montado\n"
+
+#~ msgid "Matches: %d"
+#~ msgstr "Corresponde: %d"
+
+#~ msgid "Fin_d:"
+#~ msgstr "Ach_ar:"
+
+#~ msgid "_Previous"
+#~ msgstr "_Anterior"
+
+#~ msgid "_Next"
+#~ msgstr "_Próximo"
+
+#~ msgid "M_atch case"
+#~ msgstr "Corre_sponder tipo de letra"
+
+#~ msgid "Save attachment as"
+#~ msgstr "Salvar anexo como"
+
+#~ msgid "Select folder to save all attachments"
+#~ msgstr "Selecione pasta para salvar todos os anexos"
+
+#~ msgid "Hide Folder Tree"
+#~ msgstr "Ocultar árvore de pastas"
+
+#~ msgid "Enter the recipients of the message"
+#~ msgstr "Digite os destinatários dessa mensagem"
+
+#~ msgid "Enter the addresses that will receive a carbon copy of the message"
+#~ msgstr "Digite os endereços que receberão uma cópia da mensagem"
+
+#~ msgid ""
+#~ "Enter the addresses that will receive a carbon copy of the message "
+#~ "without appearing in the recipient list of the message"
+#~ msgstr ""
+#~ "Digite os endereços que receberão uma cópia da mensagem e que não "
+#~ "aparecerão na lista de destinatários da mensagem"
+
+#~ msgid "Fr_om:"
+#~ msgstr "De_:"
+
+#~ msgid "_To:"
+#~ msgstr "_ Para:"
+
+#~ msgid "_Cc:"
+#~ msgstr "_cópia:"
+
+#~ msgid "Show CC"
+#~ msgstr "Mostra Cópia"
+
+#~ msgid "_Bcc:"
+#~ msgstr "_Cópia oculta"
+
+#~ msgid "Show BCC"
+#~ msgstr "Mostrar Cópia oculta"
+
+#~ msgid "S_ubject:"
+#~ msgstr "As_sunto:"

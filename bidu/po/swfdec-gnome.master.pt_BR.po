@@ -1,0 +1,145 @@
+# Portuguese/Brazil translation of swfdec-gnome.
+# This file is distributed under the same license as the swfdec-gnome package.
+# Jonh Wendell <wendell@bani.com.br>, 2008.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: swfdec-gnome 2.22\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=swfdec-"
+"gnome&component=general\n"
+"POT-Creation-Date: 2009-08-30 16:14+0000\n"
+"PO-Revision-Date: 2008-02-08 09:37-0300\n"
+"Last-Translator: Jonh Wendell <wendell@bani.com.br>\n"
+"Language-Team: Portuguese/Brazil <gnome-pt_br-list@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../data/swfdec-player.desktop.in.h:1
+msgid "Play Adobe Flash files"
+msgstr "Reproduz arquivos Adobe Flash"
+
+#: ../data/swfdec-player.desktop.in.h:2 ../player/swfdec-player.c:70
+#: ../player/swfdec-player.ui.h:9
+msgid "Swfdec Flash Player"
+msgstr "Reprodutor de arquivos Flash"
+
+#: ../player/swfdec-player.c:63
+msgid "don't play sound"
+msgstr "não reproduz som"
+
+#: ../player/swfdec-player.c:64
+msgid "start player paused"
+msgstr "inicia a reprodução pausado"
+
+#: ../player/swfdec-player.c:65
+msgid "[FILE ...]"
+msgstr "[ARQUIVO. ..]"
+
+#: ../player/swfdec-player.c:79
+#, c-format
+msgid "Error parsing command line arguments: %s\n"
+msgstr "Erro ao analisar os argumentos na linha de comando: %s\n"
+
+#: ../player/swfdec-player.ui.h:1
+msgid "Close"
+msgstr "Fechar"
+
+#: ../player/swfdec-player.ui.h:2
+msgid "Mute"
+msgstr "Mudo"
+
+#: ../player/swfdec-player.ui.h:3
+msgid "Mute sound output"
+msgstr "Emudece a saída do som"
+
+#: ../player/swfdec-player.ui.h:4
+msgid "Open _Recent"
+msgstr "Abrir _recente"
+
+#: ../player/swfdec-player.ui.h:5
+msgid "Open a file"
+msgstr "Abre um arquivo"
+
+#: ../player/swfdec-player.ui.h:6
+msgid "Play / P_ause"
+msgstr "Reproduzir / P_ausar"
+
+#: ../player/swfdec-player.ui.h:7
+msgid "Play or pause the file"
+msgstr "Reproduz ou pausa o arquivo"
+
+#: ../player/swfdec-player.ui.h:8
+msgid "Select a recently opened file"
+msgstr "Seleciona um arquivo recentemente aberto"
+
+#: ../player/swfdec-player.ui.h:10
+msgid "_About"
+msgstr "_Sobre"
+
+#: ../player/swfdec-player.ui.h:11
+msgid "_Close"
+msgstr "_Fechar"
+
+#: ../player/swfdec-player.ui.h:12
+msgid "_File"
+msgstr "_Arquivo"
+
+#: ../player/swfdec-player.ui.h:13
+msgid "_Help"
+msgstr "Aj_uda"
+
+#: ../player/swfdec-player.ui.h:14
+msgid "_Open..."
+msgstr "_Abrir..."
+
+#: ../player/swfdec-window.c:85
+#, c-format
+msgid "<i>%s</i> is broken, playback aborted."
+msgstr "<i>%s</i> está quebrado, reprodução abortada."
+
+#: ../player/swfdec-window.c:87
+#, c-format
+msgid "<i>%s</i> is not a Flash file."
+msgstr "<i>%s</i> não é um arquivo Flash."
+
+#: ../player/swfdec-window.c:240
+msgid "Broken user interface definition file"
+msgstr "Arquivo de interface quebrado"
+
+#: ../player/swfdec-window-handlers.c:53
+msgid "Select a file to play"
+msgstr "Selecione um arquivo para reproduzir"
+
+#. Translators: This is a special message that shouldn't be translated
+#. * literally. It is used in the about box to give credits to
+#. * the translators.
+#. * Thus, you should translate it to your name and email address.
+#. * You should also include other translators who have contributed to
+#. * this translation; in that case, please write each of them on a separate
+#. * line seperated by newlines (\n).
+#.
+#: ../player/swfdec-window-handlers.c:131
+msgid "translator-credits"
+msgstr "Jonh Wendell <wendell@bani.com.br>"
+
+#: ../thumbnailer/swfdec-thumbnailer.schemas.in.h:1
+msgid "Enable the creation of new thumbnails."
+msgstr "Habilita a criação de novas miniaturas."
+
+#: ../thumbnailer/swfdec-thumbnailer.schemas.in.h:2
+msgid "Enable thumbnailing of Flash files"
+msgstr "Habilitar miniaturas de arquivos Flash"
+
+#: ../thumbnailer/swfdec-thumbnailer.schemas.in.h:3
+msgid "Thumbnail command for Flash files"
+msgstr "Comando para geração de miniaturas de arquivos Flash"
+
+#: ../thumbnailer/swfdec-thumbnailer.schemas.in.h:4
+msgid ""
+"Valid command plus arguments for the Flash file thumbnailer. See nautilus "
+"thumbnailer documentation for more information."
+msgstr ""
+"Um comando válido mais parâmetros para a geração de miniaturas de arquivos "
+"Flash. Veja a documentação do nautilus para maiores informações."

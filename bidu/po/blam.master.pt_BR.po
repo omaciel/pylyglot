@@ -1,0 +1,538 @@
+# Brazilian Portuguese translation of blam.
+# This file is distributed under the same license as the blam package.
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# Everson Santos Araujo <nobios@por.com.br>, 2004.
+# Raphael Higino <In memoriam>, 2004.
+# Vladimir Melo <vladimirmelo.psi@gmail.com>, 2007.
+# Fábio Nogueira <deb-user-ba@ubuntu.com>, 2008.
+# Michel Recondo <mrecondo@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: blam\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=blam&component=general\n"
+"POT-Creation-Date: 2010-06-06 16:58+0000\n"
+"PO-Revision-Date: 2008-06-06 12:56-0300\n"
+"Last-Translator: Michel Recondo <mrecondo@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../blam.desktop.in.in.h:1
+msgid "Blam Feed Reader"
+msgstr "Agregador de notícias Blam"
+
+#: ../blam.desktop.in.in.h:2
+msgid "Feed reader"
+msgstr "Agregador de fontes (\"feeds\") de notícia"
+
+#: ../blam.schemas.in.h:1
+msgid "Automatically refresh all channels at a regular interval."
+msgstr "Atualiza automaticamente todos os canais num intervalo regular."
+
+#: ../blam.schemas.in.h:2
+msgid "Automatically refresh channels"
+msgstr "Atualizar canais automaticamente"
+
+#: ../blam.schemas.in.h:3
+msgid "Automatically refresh channels interval"
+msgstr "Intervalo para atualizar canais automaticamente"
+
+#: ../blam.schemas.in.h:4
+msgid "Current theme"
+msgstr "Tema atual"
+
+#: ../blam.schemas.in.h:5
+msgid "Height of entry list"
+msgstr "Altura da lista de entradas"
+
+#: ../blam.schemas.in.h:6
+msgid "Height of main window"
+msgstr "Altura da janela principal"
+
+#: ../blam.schemas.in.h:7
+msgid "Reverse the entries in the entry list"
+msgstr "Inverter as entradas na lista de entradas"
+
+#: ../blam.schemas.in.h:8
+msgid "Show the newest entries at the top of the entry list."
+msgstr "Mostrar as entradas mais novas no topo da lista de entradas."
+
+#: ../blam.schemas.in.h:9
+msgid "State of the main window"
+msgstr "Estado da janela principal"
+
+#: ../blam.schemas.in.h:10
+msgid "The height of the entry list."
+msgstr "A altura da lista de entradas."
+
+#: ../blam.schemas.in.h:11
+msgid "The height of the main window."
+msgstr "A altura da janela principal."
+
+#: ../blam.schemas.in.h:12
+msgid "The refresh rate for when to refresh all channels."
+msgstr "A taxa de atualização ao atualizar todos os canais."
+
+#: ../blam.schemas.in.h:13
+msgid ""
+"The state of the main window, valid values are 'normal' and 'maximized'."
+msgstr ""
+"O estado da janela principal, valores válidos são 'normal' e 'maximizada'."
+
+#: ../blam.schemas.in.h:14
+msgid "The stored position of the main window, the X coordinate."
+msgstr "A posição armazenada da janela principal, a coordenada X."
+
+#: ../blam.schemas.in.h:15
+msgid "The stored position of the main window, the Y coordinate."
+msgstr "A posição armazenada da janela principal, a coordenada Y."
+
+#: ../blam.schemas.in.h:16
+msgid "The theme used to render the entries."
+msgstr "O tema usado para renderizar as entradas."
+
+#: ../blam.schemas.in.h:17
+msgid "The width of the channel list."
+msgstr "A largura da lista de canais."
+
+#: ../blam.schemas.in.h:18
+msgid "The width of the main window."
+msgstr "A largura da janela principal."
+
+#: ../blam.schemas.in.h:19
+msgid "Width of channel list"
+msgstr "Largura da lista de canais"
+
+#: ../blam.schemas.in.h:20
+msgid "Width of the main window"
+msgstr "Largura da janela principal"
+
+#: ../blam.schemas.in.h:21
+msgid "X position of main window"
+msgstr "A posição X da janela principal"
+
+#: ../blam.schemas.in.h:22
+msgid "Y position of main window"
+msgstr "A posição Y da janela principal"
+
+#: ../src/blam.glade.h:1
+msgid "    "
+msgstr "    "
+
+#: ../src/blam.glade.h:2
+msgid "About Blam"
+msgstr "Sobre o Blam"
+
+#: ../src/blam.glade.h:3
+msgid "Add _Group"
+msgstr "Adicionar _grupo"
+
+#: ../src/blam.glade.h:4
+msgid "Add a new channel"
+msgstr "Adicionar um novo canal"
+
+#: ../src/blam.glade.h:5
+msgid "Behaviour"
+msgstr "Comportamento"
+
+#: ../src/blam.glade.h:6
+msgid "Blam"
+msgstr "Blam"
+
+#: ../src/blam.glade.h:7
+msgid "Change the fields to update channel information"
+msgstr "Altere os campos para atualizar as informações do canal"
+
+#: ../src/blam.glade.h:8
+msgid "Channels ({0} unread)"
+msgstr "Canais ({0} não lidos)"
+
+#: ../src/blam.glade.h:9
+msgid "Create a new group"
+msgstr "Cria um novo grupo"
+
+#: ../src/blam.glade.h:10
+msgid "Create new group"
+msgstr "Criar um grupo novo"
+
+#: ../src/blam.glade.h:11
+msgid "E_ntry"
+msgstr "E_ntrada"
+
+#: ../src/blam.glade.h:12
+msgid "Edit channel"
+msgstr "Editar canal"
+
+#: ../src/blam.glade.h:13
+msgid "Enter the URL of the new channel"
+msgstr "Digite a URL do novo canal"
+
+#: ../src/blam.glade.h:14
+msgid "Enter the URL or filename for the OPML file"
+msgstr "Digite a URL ou o nome de arquivo para o arquivo OPML"
+
+#: ../src/blam.glade.h:15
+msgid "Error"
+msgstr "Erro"
+
+#: ../src/blam.glade.h:16
+msgid "Import OPML Feed"
+msgstr "Importar notícia OPML"
+
+#: ../src/blam.glade.h:17
+msgid "Importing OPML file"
+msgstr "Importando arquivo OPML"
+
+#: ../src/blam.glade.h:18
+msgid "Importing channels"
+msgstr "Importando canais"
+
+#: ../src/blam.glade.h:19
+msgid "Keywords:"
+msgstr "Palavras-chave:"
+
+#: ../src/blam.glade.h:20
+msgid "Mark All as _Read"
+msgstr "Marcar tudo como _lido"
+
+#: ../src/blam.glade.h:21
+msgid "Name:"
+msgstr "Nome:"
+
+#: ../src/blam.glade.h:22
+msgid "Name: "
+msgstr "Nome: "
+
+#: ../src/blam.glade.h:23
+msgid "Password"
+msgstr "Senha"
+
+#: ../src/blam.glade.h:24
+msgid "Preferences"
+msgstr "Preferências"
+
+#: ../src/blam.glade.h:25
+msgid "Refresh _All"
+msgstr "Atualizar _todos"
+
+#: ../src/blam.glade.h:26
+msgid "Refresh feeds on startup"
+msgstr "Recarregar fontes na inicialização"
+
+#: ../src/blam.glade.h:27
+msgid "Remove Channel?"
+msgstr "Excluir o canal?"
+
+#: ../src/blam.glade.h:28
+msgid "Set Theme"
+msgstr "Definir Tema"
+
+#: ../src/blam.glade.h:29
+msgid "Theme"
+msgstr "Tema"
+
+#: ../src/blam.glade.h:30
+msgid "Themes"
+msgstr "Temas"
+
+#: ../src/blam.glade.h:31
+msgid "URL:"
+msgstr "URL:"
+
+#: ../src/blam.glade.h:32
+msgid "Username"
+msgstr "Nome do usuário"
+
+#: ../src/blam.glade.h:33
+msgid "_Automatically refresh all channels every"
+msgstr "_Atualizar todos os canais automaticamente a cada"
+
+#: ../src/blam.glade.h:34
+msgid "_Channel"
+msgstr "_Canal"
+
+#: ../src/blam.glade.h:35 ../src/ChannelList.cs:492
+msgid "_Edit"
+msgstr "_Editar"
+
+#: ../src/blam.glade.h:36
+msgid "_Edit keywords"
+msgstr "_Editar palavras-chave"
+
+#: ../src/blam.glade.h:37
+msgid "_Export OPML"
+msgstr "_Exportar OPML"
+
+#: ../src/blam.glade.h:38
+msgid "_File"
+msgstr "_Arquivo"
+
+#: ../src/blam.glade.h:39
+msgid "_Help"
+msgstr "Aj_uda"
+
+#: ../src/blam.glade.h:40
+msgid "_Ignore SSL certificate check errors"
+msgstr "_Ignorar erros de verificação de certificado SSL"
+
+#: ../src/blam.glade.h:41
+msgid "_Import"
+msgstr "_Importar"
+
+#: ../src/blam.glade.h:42
+msgid "_Import OPML"
+msgstr "_Importar OPML"
+
+#: ../src/blam.glade.h:43
+msgid "_Mark as Read"
+msgstr "_Marcar como lido"
+
+#: ../src/blam.glade.h:44 ../src/Application.cs:412
+msgid "_Mark as unread"
+msgstr "_Marcar como não lido"
+
+#: ../src/blam.glade.h:45
+msgid "_Mark items read after"
+msgstr "_Marcar itens lidos depois"
+
+#: ../src/blam.glade.h:46
+msgid "_Newest entries at the top"
+msgstr "Entradas mais _novas no topo"
+
+#: ../src/blam.glade.h:47
+msgid "_Next unread"
+msgstr "_Próximo não lido"
+
+#: ../src/blam.glade.h:48
+msgid "_Refresh All"
+msgstr "_Atualizar todos"
+
+#: ../src/blam.glade.h:49
+msgid "_Remove"
+msgstr "_Excluir"
+
+#: ../src/blam.glade.h:50
+msgid "_Select file"
+msgstr "_Selecionar arquivo"
+
+#: ../src/blam.glade.h:51
+msgid "_URL:"
+msgstr "_URL:"
+
+#: ../src/blam.glade.h:52
+msgid "minutes"
+msgstr "minutos"
+
+#: ../src/blam.glade.h:53
+msgid "seconds"
+msgstr "segundos"
+
+#: ../src/ChannelList.cs:483 ../src/Application.cs:414
+msgid "_Mark as read"
+msgstr "_Marcar como lido"
+
+#: ../src/ChannelList.cs:486
+msgid "_Refresh"
+msgstr "_Atualizar"
+
+#: ../src/ChannelList.cs:497
+msgid "Remo_ve"
+msgstr "_Excluir"
+
+#: ../src/Application.cs:217
+msgid "Blam News Reader"
+msgstr "Agregador de notícias Blam"
+
+#: ../src/Application.cs:461
+#, csharp-format
+msgid "File {0} already exists"
+msgstr "O arquivo {0} já existe"
+
+#: ../src/Application.cs:463
+msgid "Do you want to overwrite the file?"
+msgstr "Você deseja sobrescrever o arquivo?"
+
+#: ../src/Application.cs:466
+msgid "_Overwrite"
+msgstr "_Sobrescrever"
+
+#: ../src/Application.cs:483
+msgid "Export to..."
+msgstr "Exportar para..."
+
+#: ../src/Application.cs:485 ../src/Opml.cs:97
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ../src/Application.cs:486
+msgid "Save"
+msgstr "Salvar"
+
+#: ../src/Application.cs:714
+#, csharp-format
+msgid "Refreshing: {0}"
+msgstr "Atualizando: {0}"
+
+#: ../src/Application.cs:741
+#, csharp-format
+msgid "Next update at {0}"
+msgstr ""
+
+#: ../src/Application.cs:860
+#, fuzzy, csharp-format
+#| msgid "{0} unread item"
+#| msgid_plural "{0} unread items"
+msgid "{0} unread item ({1} new)"
+msgid_plural "{0} unread items ({1} new)"
+msgstr[0] "{0} item não lido"
+msgstr[1] "{0} itens não lidos"
+
+#: ../src/Dialogs.cs:200
+#, csharp-format
+msgid "Do you want to remove the channel or group {0} from the channel list?"
+msgstr "Você quer excluir o canal ou o grupo {0} da lista de canais?"
+
+#: ../src/ItemView.cs:99
+#, csharp-format
+msgid "by {0}"
+msgstr "por {0}"
+
+#: ../src/ItemView.cs:100
+msgid "Show in browser"
+msgstr "Mostrar no navegador"
+
+#: ../src/Opml.cs:95
+msgid "Select OPML file"
+msgstr "Selecione o arquivo OPML"
+
+#: ../src/Opml.cs:98
+msgid "Open"
+msgstr "Abrir"
+
+#: ../src/Opml.cs:130
+#, csharp-format
+msgid "Imported {0} channels from OPML file"
+msgstr "{0} canais importados do arquivo OPML"
+
+#: ../src/Opml.cs:143
+#, csharp-format
+msgid "Failed to import {0}"
+msgstr "Falha ao importar {0}"
+
+#: ../src/Opml.cs:152
+msgid "Not a valid OPML file"
+msgstr "Não é um arquivo OPML válido"
+
+#: ../src/Opml.cs:157
+msgid "File not found"
+msgstr "Arquivo não encontrado"
+
+#: ../src/Opml.cs:162
+msgid "Invalid file name"
+msgstr "Nome de arquivo inválido"
+
+#: ../src/Opml.cs:167
+msgid "Could not find OPML file"
+msgstr "Não foi possível encontrar o arquivo OPML"
+
+#: ../src/Opml.cs:172
+msgid "Unknown error"
+msgstr "Erro desconhecido"
+
+#: ../src/Opml.cs:188
+msgid "Opening OPML file"
+msgstr "Abrido arquivo OPML"
+
+#~ msgid "M_ove to group"
+#~ msgstr "M_over para grupo"
+
+#~ msgid "_Open link in browser"
+#~ msgstr "_Abrir link no navegador"
+
+#~ msgid "_Copy link location"
+#~ msgstr "_Copiar link"
+
+#~ msgid "Authors:"
+#~ msgstr "Autores:"
+
+#~ msgid "Imendio Blam - "
+#~ msgstr "Imendio Blam - "
+
+#~ msgid "Mikael Hallendal (micke@imendio.com)"
+#~ msgstr "Mikael Hallendal (micke@imendio.com)"
+
+#~ msgid "Translators:"
+#~ msgstr "Tradutores:"
+
+#~ msgid "_Add"
+#~ msgstr "A_dicionar"
+
+#~ msgid "translator-credits"
+#~ msgstr ""
+#~ "Everson Santos Araujo <nobios@por.com.br>\n"
+#~ "Raphael Higino <raphaelh@uai.com.br>\n"
+#~ "Vladimir Melo <vladimirmelo.psi@gmail.com>"
+
+#~ msgid "Imendio Blam News Reader"
+#~ msgstr "Leitor de Notícias Imendio Blam"
+
+#~ msgid "Imendio Blam"
+#~ msgstr "Imendio Blam"
+
+#~ msgid "/_Refresh"
+#~ msgstr "/_Atualizar"
+
+#~ msgid "/_Edit"
+#~ msgstr "/_Editar"
+
+#~ msgid "/_Mark as read"
+#~ msgstr "/_Marcar como lido"
+
+#~ msgid "/Remo_ve"
+#~ msgstr "/_Remover"
+
+#~ msgid "Imported {0} channels"
+#~ msgstr "{0} canais importados"
+
+#~ msgid "*"
+#~ msgstr "*"
+
+#~ msgid "BLAM!"
+#~ msgstr "BLAM!"
+
+#~ msgid "Insert translators names"
+#~ msgstr ""
+#~ "Everson Santos Araujo <nobios@por.com.br>\n"
+#~ "Raphael Higino <raphaelh@uai.com.br>"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Image:"
+#~ msgstr "Imagem:"
+
+#~ msgid "To set an image you can drag an image into the dialog."
+#~ msgstr ""
+#~ "Para definir uma imagem você pode arrastá-la para a caixa de diálogo."
+
+#~ msgid "<span size=\"larger\"><b>Blog Aggregator Maximus!</b></span>"
+#~ msgstr "<span size=\"larger\"><b>Blog Aggregator Maximus!</b></span>"
+
+#~ msgid "Add a new OPML subscription"
+#~ msgstr "Adicionar uma nova assinatura OPML"
+
+#~ msgid "Enter the name and URL of the new OPML subscribtion."
+#~ msgstr "Digite o nome e a URL da nova assinatura OPML."
+
+#~ msgid "U_pdate"
+#~ msgstr "A_tualizar"
+
+#~ msgid "_New"
+#~ msgstr "_Novo"
+
+#~ msgid "_Update All"
+#~ msgstr "At_ualizar todos"
