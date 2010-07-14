@@ -1,3 +1,4 @@
+from aurelio.views import glossary_page
 from django.conf.urls.defaults import *
 from django.conf import settings
 
@@ -8,7 +9,8 @@ urlpatterns = patterns('',
     # Example:
     # (r'^bidu/', include('bidu.foo.urls')),
 
-    url(r'^aurelio/', include('aurelio.urls.entries')),
+    url(r'^$', glossary_page, name="frontpage"),
+    url(r'^/aurelio', include('aurelio.urls.entries')),
 
     # Administration
     url(r'^admin/', include(admin.site.urls)),
