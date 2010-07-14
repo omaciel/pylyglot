@@ -1,16 +1,17 @@
+{% load sortfilter %}
 {% if words %}
   <ul class="words">
     {% for word in words %}
       <li>
         <strong>{{ word.term }}</strong>
         <ul>
-            {% for sentence in word.sentence_set.all %}
+            {% for sentence in word.sentence_set.all|order_by:"length" %}
             <li>
                 {{ sentence.msgid }}<br />
-                {{ sentence.msgstr }}
+                {{ sentence.msgstr }} (score: {{ sentence.length }})
             </li>
             {% empty %}
-            <li>This word has no phrases</li>
+            <li>Could not find any sentences with this term.</li>
             {% endfor %}
         </ul>
       </li>
