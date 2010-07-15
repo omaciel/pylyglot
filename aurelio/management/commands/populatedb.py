@@ -8,6 +8,8 @@ from django.template.defaultfilters import striptags
 from django.core.management.base import AppCommand
 from django.core.management.base import BaseCommand, CommandError
 
+from django.db import transaction
+
 from polib import pofile
 from bidu.aurelio.models import Sentence, Package, Word
 
@@ -26,6 +28,7 @@ class Command(BaseCommand):
         for f in conffiles:
             self.populate_db(f)
 
+    @transaction.commit_manually
     def populate_db(self, po):
         packageName = os.path.basename(po).split(".")[0]
 
@@ -34,36 +37,55 @@ class Command(BaseCommand):
         po = pofile(po, autodetect_encoding=True, encoding='utf-8')
         valid_entries = [e for e in po if not e.obsolete]
 
-        for entry in valid_entries:
-            sentence, created = Sentence.objects.get_or_create(msgid=entry.msgid, msgstr=entry.msgstr)
-            if entry.flags:
-                sentence.flags = ", ".join(entry.flags)
-            sentence.translated = entry.translated()
-            sentence.packages.add(package)
+        sentences = []
 
-            # Strip html tags.
-            entry = striptags(entry.msgid)
-            # Get rid of underscores...
-            entry = entry.replace("_", "")
-            # ... and newline chars
-            entry = entry.replace("\n", " ")
-            # Strip usual ponctuation characters at end of line.
-            entry = entry.strip(CHARS)
-            # Splitting on spaces
-            entry = entry.split(" ")
+        try:
+            for entry in valid_entries:
+                sentence, created = Sentence.objects.get_or_create(msgid=entry.msgid, msgstr=entry.msgstr)
+                if entry.flags:
+                    sentence.flags = ", ".join(entry.flags)
+                sentence.translated = entry.translated()
+                sentence.packages.add(package)
 
-            for word in entry:
-                # More clean up
-                for char in CHARS:
-                    word = word.replace(char, "")
-                if "%" in word:
-                    word = ""
-                # Check for blanks
-                if not word.isspace() and len(word) > 0 and not word.isnumeric():
-                    # Remove common articles
-                    if word.lower() not in COMMON:
-                        term, created = Word.objects.get_or_create(term=word.lower())
-                        sentence.words.add(term)
-                        print term
+                sentences.append(sentence)
+        except Exception, e:
+            print "&&&&&&&&&&&&&&&&&&&&&&&"
+            print str(e)
+            transaction.rollback()
+        else:
+            transaction.commit()
 
-            sentence.save()
+        try:
+            for sentence in sentences:
+
+                # Strip html tags.
+                entry = striptags(sentence.msgid)
+                # Get rid of underscores...
+                entry = entry.replace("_", "")
+                # ... and newline chars
+                entry = entry.replace("\n", " ")
+                # Strip usual ponctuation characters at end of line.
+                entry = entry.strip(CHARS)
+                # Splitting on spaces
+                entry = entry.split(" ")
+
+                for word in entry:
+                    # More clean up
+                    for char in CHARS:
+                        word = word.replace(char, "")
+                    if "%" in word:
+                        word = ""
+                    # Check for blanks
+                    if not word.isspace() and len(word) > 0 and not word.isnumeric():
+                        # Remove common articles
+                        if word.lower() not in COMMON:
+                            term, created = Word.objects.get_or_create(term=word.lower())
+                            sentence.words.add(term)
+                            print term
+
+        except Exception, e:
+            print "**************************"
+            print str(e)
+            transaction.rollback()
+        else:
+            transaction.commit()
