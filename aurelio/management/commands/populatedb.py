@@ -81,7 +81,6 @@ class Command(BaseCommand):
                         if word.lower() not in COMMON:
                             term, created = Word.objects.get_or_create(term=word.lower())
                             sentence.words.add(term)
-                            print term
 
         except Exception, e:
             print "**************************"
