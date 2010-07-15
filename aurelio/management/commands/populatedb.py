@@ -13,8 +13,29 @@ from django.db import transaction
 from polib import pofile
 from bidu.aurelio.models import Sentence, Package, Word
 
-COMMON = ["it", "or", "no", "the", "a", "an", "as", "of", "is", "are", "for", "to", "%s", "`%s'", "'%s'", "not", "yes", "at", "with", "by", "in", "on", "and"]
-CHARS = " !,.?;:_*"
+COMMON = [
+    "an",
+    "and",
+    "are",
+    "as",
+    "at",
+    "by",
+    "for",
+    "in",
+    "is",
+    "it",
+    "no",
+    "not",
+    "of",
+    "on",
+    "or",
+    "the",
+    "to",
+    "with",
+    "yes",
+]
+
+CHARS = "-!,.?;:_*/()@#$%^&"
 
 class Command(BaseCommand):
 
@@ -58,25 +79,19 @@ class Command(BaseCommand):
         try:
             for sentence in sentences:
 
-                # Strip html tags.
+                # Strip html tags...
                 entry = striptags(sentence.msgid)
-                # Get rid of underscores...
-                entry = entry.replace("_", "")
+                # ... and other non alpha characters...
+                for char in CHARS:
+                    entry = entry.replace(char, "")
                 # ... and newline chars
                 entry = entry.replace("\n", " ")
-                # Strip usual ponctuation characters at end of line.
-                entry = entry.strip(CHARS)
                 # Splitting on spaces
                 entry = entry.split(" ")
 
                 for word in entry:
-                    # More clean up
-                    for char in CHARS:
-                        word = word.replace(char, "")
-                    if "%" in word:
-                        word = ""
                     # Check for blanks
-                    if not word.isspace() and len(word) > 0 and not word.isnumeric():
+                    if not word.isspace() and len(word) > 1 and not word.isdigit():
                         # Remove common articles
                         if word.lower() not in COMMON:
                             term, created = Word.objects.get_or_create(term=word.lower())
