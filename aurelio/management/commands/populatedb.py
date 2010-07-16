@@ -66,7 +66,9 @@ class Command(BaseCommand):
                 if entry.flags:
                     sentence.flags = ", ".join(entry.flags)
                 sentence.translated = entry.translated()
-                sentence.packages.add(package)
+
+                if package not in sentence.packages.all():
+                    sentence.packages.add(package)
 
                 sentences.append(sentence)
         except Exception, e:
