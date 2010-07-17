@@ -1,0 +1,404 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dd,dl,dt,li,ol,ul,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;font-weight:normal;font-style:normal;text-align:left;font-family:inherit;}table{border-collapse:collapse;border-spacing:0;}ol,ul{list-style:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}
+
+
+
+body{
+	background:black;
+	font-family: Myriad Pro,helvetica, sans-serif;
+	background: url(../images/pylyglot_background.jpg) repeat;
+	color:#414141;
+}
+
+h1,h2,h3,h4,h5,h6{
+	letter-spacing: -0.02em;
+	font-weight:light;
+	padding-bottom:10px;
+}
+
+h3,h4,h5,h6{
+	color:#5C5C5C;
+}
+
+body,
+#container{
+position:relative;
+}
+
+#container,
+#footer{
+	width:814px;
+	margin:auto;
+	padding-left:18px;
+	padding-right:18px;
+	
+}
+
+
+#container{
+	background:#fff;
+	margin-top:-10px;
+}
+
+#header{
+	position:relative;
+	padding-top:10px;
+	position:relative;
+	height:200px;
+}
+
+
+#search{
+	position:absolute;
+	right:0;
+	top:24px;
+}
+
+/*form*/
+
+form input[type=text]{
+	background:#F3F3F3;
+	border:none;
+	padding:5px;
+	color:black;
+	font-size:.8em;
+}
+
+form input[type=submit]{
+	background:#D9E021;
+	border:none;
+	color:black;
+	font-size;.8em;
+	padding:5px;
+}
+
+form input[type=submit]:hover{
+	background:#fff;
+	color:black;
+	outline:1px solid #D9E021;
+}
+
+
+
+
+h2#subtitle {
+color:#CCCCCC;
+font-size:19px;
+position:absolute;
+right:0;
+top:121px;
+}
+
+
+#header h1 a{
+	position:absolute;
+	display:block;
+	width:240px;
+	height:56px;
+	background: url(../images/pylyglot_logo_240x56.png) no-repeat;
+	text-indent:-5000px;
+	overflow:hidden;
+	top:95px;
+	z-index:10;
+}
+
+
+
+/*#header ul{
+	padding-top:11px;
+}
+
+#header ul li{
+	display:inline;
+	padding-right:8px;
+	margin-right:5px;
+	border-right:1px solid #ccc;
+}*/
+
+a{
+	color:#ccc;
+	text-decoration:none;
+}
+
+a:hover{
+	color:#9C2416;
+}
+
+
+
+#featured_project{
+	position:relative;
+	height:160px;
+	border:1px solid #ccc;
+	padding:20px;
+	margin-bottom:20px;
+}
+
+#graphic{
+	clear:both;
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+
+#tabs{
+	width:350px;
+	border:none;
+	float:left;
+}
+
+.ui-widget-header{
+	background: #fff;
+	border:none;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+margin-bottom:0;
+padding-bottom:0;
+}
+
+.ui-tabs .ui-tabs-nav li {
+margin:2px 4px 1px -3px;
+}
+
+.ui-corner-top{
+-moz-border-radius-topleft:0px !important;
+-moz-border-radius-topright:0px !important;
+-webkit-border-top-left-radius:0px !important;
+-webkit-border-top-right-radius:0px !important;
+}
+
+.ui-corner-bottom {
+-moz-border-radius-bottomleft:0px !important;
+-moz-border-radius-bottomright:0px !important;
+-webkit-border-bottom-left-radius:0px !important;
+-webkit-border-bottom-right-radius:0px !important;
+}
+
+.ui-state-default,
+.ui-state-hover,
+.ui-state-focus,{
+	border:none;
+}
+
+.bloco{
+	min-height:208px;
+	color:#fff;
+	border:1px solid #ccc;
+	font-size:80%;
+
+}
+
+a.tab_title{
+	color:#fff !important;
+}
+
+#fragment-1,
+a[href="#fragment-1"]{
+	background:#41439a;
+}
+
+#fragment-2,
+a[href="#fragment-2"]{
+	background:#ae1447;
+}
+
+#fragment-3,
+a[href="#fragment-3"]{
+	background:#1a7d3f;
+}
+
+#top_lists{
+	width:425px;
+	float:right;
+}
+
+.top_five{
+	float:left;
+	margin-bottom:35px;
+	width:200px;
+}
+
+.top_five h3{
+	letter-spacing:-1.05px;
+}
+.top_five ul li:hover{
+	list-style:square;
+	color: #9C2416;
+}
+
+.last{
+	margin-left:20px;
+}
+
+#footer{
+	clear:both;
+	background: url(../images/pylyglot_face_footer_850x109.png) no-repeat;
+	height:109px;
+	
+}
+
+#footer ul{
+	float: left;
+	margin-right:50px;
+	font-size:14px;
+	margin-top:20px;
+}
+
+#footer ul li{
+	margin-bottom:2px;
+}
+
+#footer ul li:hover{
+	list-style:square;
+	color:#9C2416;
+
+}
+
+#footer ul li a:hover{
+	color:#9C2416;
+}
+
+
+p#credit{
+	width:850px;
+	margin:auto;
+	margin:10px auto 40px auto;
+	font-size:80%;
+	color:#ccc;
+}
+
+p#credit a{
+	color:gray;
+}
+
+p#credit a:hover{
+	color:#ae1447;
+	border-bottom:1px dotted #ccc;
+}
+
+p#credit a:visited{
+	border-bottom:#ccc;
+}
+
+.clear{
+	clear:both;
+}
+
+/*internal page*/
+
+#project{
+overflow:auto;
+}
+
+
+#project_info,
+#project_graphics{
+	width:45%;
+}
+
+
+#project_info p{
+	font-size:80%;
+	line-height:1.4em;
+}
+
+#project_info{
+	float:left;
+}
+
+
+#project_graphics{
+	float:right;
+}
+
+#project_numbers{
+	clear:both;
+	padding:10px 0;
+	margin-bottom:20px;
+}
+
+#project_numbers ul li{
+	font-size:80%;
+}
+
+
+
+/* glossary */
+#glossary{
+	padding-bottom:20px;
+	min-height:250px;
+}
+
+#glossary_search{
+	width:45%;
+	float:left;
+}
+
+#glossary_howto{
+	width:45%;
+	float:right;
+	
+}
+
+#glossary_howto p{
+	font-size:80%;
+}
+
+
+/*
+	LEVEL ONE
+*/
+ul.dropdown                         { position: relative; z-index:100; margin:0 0; padding:0 0; top:10px; left:-6px;}
+ul.dropdown li                      { font-weight: bold; float: left; zoom: 1; background: #fff; }
+ul.dropdown a:hover		            { color: #fff;}
+ul.dropdown a:active                { color: #fff;}
+ul.dropdown li a                    { display: block; padding: 4px 8px; border-right: 1px solid #ccc; color: #ccc; }
+ul.dropdown li:last-child a         { border-right: none; } 
+ul.dropdown li.hover,
+ul.dropdown li:hover                { background: #D9E021; color: #fff; position: relative; }
+ul.dropdown li.hover a              { color: black; }
+
+
+
+/*	LEVEL TWO */
+
+ul.dropdown ul 						{ width: 220px; visibility: hidden; position: absolute; top: 100%; left: 0; }
+ul.dropdown ul li 					{ font-weight: normal; background: #fff; color: #000; 
+									  border-bottom: 1px solid #ccc; float: none; }
+									  
+                                   
+ul.dropdown ul li a					{ border-right: none; width: 100%; display: inline-block;} 
+
+
+/*	LEVEL THREE */
+
+ul.dropdown ul ul 					{ left: 100%; top: 0; }
+ul.dropdown li:hover > ul 			{ visibility: visible; }
+
+#customers
+{
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+width:100%;
+border-collapse:collapse;
+}
+#customers td, #customers th 
+{
+font-size:1.2em;
+border:1px solid #98bf21;
+padding:3px 7px 2px 7px;
+}
+#customers th 
+{
+font-size:1.4em;
+text-align:left;
+padding-top:5px;
+padding-bottom:4px;
+background-color:#A7C942;
+color:#fff;
+}
+#customers tr.alt td 
+{
+color:#000;
+background-color:#EAF2D3;
+}

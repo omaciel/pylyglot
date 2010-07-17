@@ -5,7 +5,7 @@ from django import forms
 
 class SearchForm(forms.Form):
     query = forms.CharField(
-        label = u'Enter a word to search for',
+            label = u'Search for:',
         widget = forms.TextInput(attrs={'size': 32})
     )
 

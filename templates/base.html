@@ -1,11 +1,28 @@
 {% load i18n %}
-<!DOCTYPE html>
 
-<html>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>{% block title %}{% endblock %}</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="{{ MEDIA_URL }}css/style.css" type="text/css" media="screen" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>{% block title %}Pylyglot{% endblock %}</title>
+
+    <script type="text/javascript" src="{{ MEDIA_URL }}js/tabs.js"></script>
+    <link type="text/css" href="{{ MEDIA_URL }}css/jquery.ui.all.css" rel="stylesheet" />
+    <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-1.4.1.js"></script>
+    <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-ui.js"></script>
+    <script type="text/javascript" language="javascript" src="{{ MEDIA_URL }}js/jquery.dropdownPlain.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#tabs").tabs();
+      });
+      </script>
+
+
+    <link rel="stylesheet" href="{{ MEDIA_URL }}css/style.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+    <link rel="stylesheet" href="{{ MEDIA_URL }}css/thickbox.css" type="text/css"/>
     {% block extracss %}{% endblock %}
 
     {% block extrajs %}{% endblock %}
@@ -19,10 +36,46 @@
 </head>
 
 <body>
-    <img src="{{ MEDIA_URL }}images/pylyglot_logo_227x50.png" alt="Pylyglot" />
+    <div id="container">
+        <div id="header">
+                <ul class="dropdown">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Language</a></li>
+                <li><a href="#">Tools</a>
+                    <ul class="sub_menu">
+                         <li><a href="#">Text Editors</a></li>
+                         <li><a href="#">Translation Tools</a>
+                            <ul>
+                                <li><a href="#">Glossary</a></li>
+                            </ul>
+                         </li>
+                    </ul><!--end sub_menu-->
+                </li><!--end tools menu-->
+                <li><a href="#">Login</a>
+            </ul>
 
-    <h1>{% block head %}{% endblock %}</h1>
 
-    {% block content %}{% endblock %}
+        <h1><a href="#">Pylyglot</a></h1>
+            <h2 id="subtitle">Translate news & statistics made simple</h2>
+
+            <h1>{% block head %}{% endblock %}</h1>
+
+        </div>
+
+        {% block content %}{% endblock %}
+
+        <p id="credit">Pylyglot 2010. All Rights Reserved. Design: <a href="#">QuartoEstudio.com</a></p>
+
+<script type="text/javascript">
+//menu fix for IE
+$(document).ready(function(){
+        $('li.headlink').hover(
+            function() { $('ul', this).css('display', 'block'); },
+            function() { $('ul', this).css('display', 'none'); });
+    });
+
+
+</script>
+
 </body>
 </html>
