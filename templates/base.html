@@ -7,19 +7,22 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="{{ MEDIA_URL }}css/style.css" type="text/css" media="screen" />
     {% block extracss %}{% endblock %}
-    
+
     {% block extrajs %}{% endblock %}
-    
+
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    {% if not settings.DEBUG %}
+        {% include "analytics.html" %}
+    {% endif %}
 </head>
 
 <body>
     <img src="{{ MEDIA_URL }}images/pylyglot_logo_227x50.png" alt="Pylyglot" />
-    
+
     <h1>{% block head %}{% endblock %}</h1>
-    
+
     {% block content %}{% endblock %}
 </body>
 </html>
