@@ -6,12 +6,14 @@
         <tr>
             <th>Original</th>
             <th>Translated</th>
+            <th>Pacotes</th>
             <th>Score</th>
         </tr>
         {% for sentence in word.sentence_set.all|order_by:"length" %}
         <tr>
             <td>{{ sentence.msgid }}</td>
             <td>{{ sentence.msgstr }}</td>
+            <td>{{ sentence.packages.all|join:"<br /" }}</td>
             <td>{{ sentence.length }}</td>
         </tr>
         {% empty %}
