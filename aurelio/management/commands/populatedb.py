@@ -13,6 +13,8 @@ from django.db import transaction
 from polib import pofile
 from bidu.aurelio.models import Sentence, Package, Word
 
+from datetime import datetime
+
 COMMON = [
     "an",
     "and",
@@ -50,12 +52,28 @@ class Command(BaseCommand):
             self.populate_db(f)
 
     @transaction.commit_manually
-    def populate_db(self, po):
-        packageName = os.path.basename(po).split(".")[0]
+    def populate_db(self, pfile):
+
+        # Read in the *.po file
+        po = pofile(pfile, autodetect_encoding=True, encoding='utf-8')
+        packageName = os.path.basename(pfile).split(".")[0]
+        # Format is 2010-04-29 15:07+0300
+        revisiondate = po.metadata['PO-Revision-Date'][:-5]
+        revisiondate = datetime.strptime(revisiondate, "%Y-%m-%d %H:%M")
 
         package, created = Package.objects.get_or_create(name=packageName)
+
+        # Existing package?
+        if not created:
+            # Is the *.po older or equal to existing package?
+            if revisiondate == package.revisiondate or revisiondate < package.revisiondate:
+                print "Package %s has already been parsed!" % packageName
+                return
+        # Either a new package or the *.po is newer
+        package.revisiondate = revisiondate
+        package.save()
+
         print "Parsing %s" % packageName
-        po = pofile(po, autodetect_encoding=True, encoding='utf-8')
         valid_entries = [e for e in po if not e.obsolete]
 
         sentences = []
@@ -70,6 +88,7 @@ class Command(BaseCommand):
                 if package not in sentence.packages.all():
                     sentence.packages.add(package)
 
+                sentence.save()
                 sentences.append(sentence)
         except Exception, e:
             print "&&&&&&&&&&&&&&&&&&&&&&&"
@@ -98,6 +117,7 @@ class Command(BaseCommand):
                         if word.lower() not in COMMON:
                             term, created = Word.objects.get_or_create(term=word.lower())
                             sentence.words.add(term)
+                            sentence.save()
 
         except Exception, e:
             print "**************************"
