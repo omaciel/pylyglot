@@ -73,7 +73,7 @@ class Command(BaseCommand):
             logging.info("Package %s doesn't seem to be translated yet for %s." % (packageName, language))
             return
 
-        logging.info("Parsing %s for %s" % (packageName, language)
+        logging.info("Parsing %s for %s") % (packageName, language)
 
         language, created = Language.objects.get_or_create(short_name=language)
         package = Package.objects.filter(name=packageName).filter(sentence__translations__language__short_name=language.short_name).distinct()
