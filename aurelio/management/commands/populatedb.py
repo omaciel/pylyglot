@@ -65,14 +65,19 @@ class Command(BaseCommand):
         revisiondate = datetime.strptime(revisiondate, "%Y-%m-%d %H:%M")
 
         language, created = Language.objects.get_or_create(short_name=language)
-        package, created = Package.objects.get_or_create(name=packageName)
+        package = Package.objects.filter(name=packageName).filter(sentence__translations__language__short_name=language.short_name).distinct()
 
         # Existing package?
-        if not created:
+        if package:
+            package = package[0]
             # Is the *.po older or equal to existing package?
             if revisiondate == package.revisiondate or revisiondate < package.revisiondate:
-                print "Package %s has already been parsed!" % packageName
+                print "Package %s for %s has already been parsed!" % (packageName, language.short_name)
                 return
+        else:
+            # Create the package in the databse
+            package = Package(name=packageName)
+
         # Either a new package or the *.po is newer
         package.revisiondate = revisiondate
         package.save()
