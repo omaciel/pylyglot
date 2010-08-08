@@ -66,7 +66,14 @@ class Command(BaseCommand):
         language =  os.path.basename(pfile).split(".")[2]
         # Format is 2010-04-29 15:07+0300
         revisiondate = po.metadata['PO-Revision-Date'][:-5]
-        revisiondate = datetime.strptime(revisiondate, "%Y-%m-%d %H:%M")
+
+        try:
+            revisiondate = datetime.strptime(revisiondate, "%Y-%m-%d %H:%M")
+        except Exception, e:
+            logging.info("Package %s doesn't seem to be translated yet for %s." % (packageName, language))
+            return
+
+        logging.info("Parsing %s for %s" % (packageName, language)
 
         language, created = Language.objects.get_or_create(short_name=language)
         package = Package.objects.filter(name=packageName).filter(sentence__translations__language__short_name=language.short_name).distinct()
@@ -86,7 +93,6 @@ class Command(BaseCommand):
         package.revisiondate = revisiondate
         package.save()
 
-        logging.info("Parsing %s" % packageName)
         valid_entries = [e for e in po if not e.obsolete]
 
         sentences = []
