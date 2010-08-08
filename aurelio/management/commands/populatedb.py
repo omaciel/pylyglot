@@ -14,6 +14,10 @@ from polib import pofile
 from bidu.aurelio.models import Sentence, Package, Word, Language, Translation
 
 from datetime import datetime
+import logging
+
+log = logging.getLogger()
+log.setLevel(settings.LOG_LEVEL)
 
 COMMON = [
     "an",
@@ -42,7 +46,7 @@ CHARS = "-!,.?;:_*/()@#$%^&"
 class Command(BaseCommand):
 
     def handle(self, *test_labels, **options):
-        print settings.SCRATCH_DIR
+        logging.info("Scratch directory is %s." % settings.SCRATCH_DIR)
 
         conffiles = glob.glob(os.path.join(settings.SCRATCH_DIR, '*.po'))
 
@@ -72,7 +76,7 @@ class Command(BaseCommand):
             package = package[0]
             # Is the *.po older or equal to existing package?
             if revisiondate == package.revisiondate or revisiondate < package.revisiondate:
-                print "Package %s for %s has already been parsed!" % (packageName, language.short_name)
+                logging.info("Package %s for %s has already been parsed!" % (packageName, language.short_name))
                 return
         else:
             # Create the package in the databse
@@ -82,7 +86,7 @@ class Command(BaseCommand):
         package.revisiondate = revisiondate
         package.save()
 
-        print "Parsing %s" % packageName
+        logging.info("Parsing %s" % packageName)
         valid_entries = [e for e in po if not e.obsolete]
 
         sentences = []
@@ -104,8 +108,7 @@ class Command(BaseCommand):
 
                 sentences.append(sentence)
         except Exception, e:
-            print "&&&&&&&&&&&&&&&&&&&&&&&"
-            print str(e)
+            logging.error("Failed to create sentences: %s" % str(e))
             transaction.rollback()
         else:
             transaction.commit()
@@ -136,8 +139,7 @@ class Command(BaseCommand):
                 sentence.save()
 
         except Exception, e:
-            print "**************************"
-            print str(e)
+            logging.error("Failed to create words: %s" % str(e))
             transaction.rollback()
         else:
             transaction.commit()
