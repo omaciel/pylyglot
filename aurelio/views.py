@@ -13,14 +13,16 @@ def glossary_page(request):
   if 'query' in request.GET:
      show_results = True
      query = request.GET['query'].strip()
+     language = request.GET['languages'].strip()
      if query:
        form = SearchForm({'query' : query})
        words = Word.objects.filter(
          term__icontains=query
-       )[:10]
+       ).filter(sentence__translations__language__id=language)[:10]
   variables = RequestContext(request, {
      'form': form,
      'words': words,
+     'languageid': language,
      'show_results': show_results,
   })
   if request.GET.has_key('ajax'):

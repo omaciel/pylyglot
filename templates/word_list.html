@@ -6,18 +6,22 @@
         <tr>
             <th>Original</th>
             <th>Translated</th>
-            <th>Pacotes</th>
+            <th>Packages</th>
             <th>Score</th>
         </tr>
         {% for sentence in word.sentence_set.all|order_by:"length" %}
-        <tr>
-            <td>{{ sentence.msgid }}</td>
-            <td>{{ sentence.msgstr }}</td>
-            <td>{{ sentence.packages.all|join:"<br /" }}</td>
-            <td>{{ sentence.length }}</td>
-        </tr>
-        {% empty %}
-        <tr><td>Could not find any sentences with this term.</td></tr>
+        {% for translation in sentence.translations.all %}
+                {% ifequal translation.language.id|stringformat:"s" languageid %}
+                <tr>
+                    <td>{{ sentence.msgid }}</td>
+                    <td>{{ translation.msgstr }}</td>
+                    <td>{{ sentence.packages.all|join:"<br /" }}</td>
+                    <td>{{ sentence.length }}</td>
+                </tr>
+                {% endifequal %}
+            {% empty %}
+                <tr><td>Could not find any sentences with this term.</td></tr>
+            {% endfor %}
         {% endfor %}
     </table>
 

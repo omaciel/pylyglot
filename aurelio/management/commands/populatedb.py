@@ -11,7 +11,7 @@ from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
 
 from polib import pofile
-from bidu.aurelio.models import Sentence, Package, Word
+from bidu.aurelio.models import Sentence, Package, Word, Language, Translation
 
 from datetime import datetime
 
@@ -56,11 +56,15 @@ class Command(BaseCommand):
 
         # Read in the *.po file
         po = pofile(pfile, autodetect_encoding=True, encoding='utf-8')
+
+        # Extract information from the file name.
         packageName = os.path.basename(pfile).split(".")[0]
+        language =  os.path.basename(pfile).split(".")[2]
         # Format is 2010-04-29 15:07+0300
         revisiondate = po.metadata['PO-Revision-Date'][:-5]
         revisiondate = datetime.strptime(revisiondate, "%Y-%m-%d %H:%M")
 
+        language, created = Language.objects.get_or_create(short_name=language)
         package, created = Package.objects.get_or_create(name=packageName)
 
         # Existing package?
@@ -80,15 +84,19 @@ class Command(BaseCommand):
 
         try:
             for entry in valid_entries:
-                sentence, created = Sentence.objects.get_or_create(msgid=entry.msgid, msgstr=entry.msgstr)
+                sentence, created = Sentence.objects.get_or_create(msgid=entry.msgid)
                 if entry.flags:
                     sentence.flags = ", ".join(entry.flags)
-                sentence.translated = entry.translated()
 
                 if package not in sentence.packages.all():
                     sentence.packages.add(package)
 
+                # Add translation
+                translation, created = Translation.objects.get_or_create(msgstr=entry.msgstr, language=language)
+                translation.translated = entry.translated()
+                sentence.translations.add(translation)
                 sentence.save()
+
                 sentences.append(sentence)
         except Exception, e:
             print "&&&&&&&&&&&&&&&&&&&&&&&"
@@ -117,7 +125,10 @@ class Command(BaseCommand):
                         if word.lower() not in COMMON:
                             term, created = Word.objects.get_or_create(term=word.lower())
                             sentence.words.add(term)
-                            sentence.save()
+                sentence.length = len(sentence.words.all())
+
+
+                sentence.save()
 
         except Exception, e:
             print "**************************"
