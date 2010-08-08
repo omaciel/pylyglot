@@ -1,6 +1,7 @@
 {% load sortfilter %}
-{% if translations %}
-<h1>Word: {{ query }}</h1>
+{% if words %}
+    {% for word in words %}
+    <h1>Word: {{ word.term }}</h1>
     <table id="customers">
         <tr>
             <th>Original</th>
@@ -8,19 +9,22 @@
             <th>Packages</th>
             <th>Score</th>
         </tr>
-        {% for translation in translations %}
-            {% for sentence in translation.sentence_set.all %}
+        {% for sentence in word.sentence_set.all|order_by:"length"|slice:":10" %}
+            {% for translation in sentence.translations.all %}
+                {% ifequal translation.language.id|stringformat:"s" languageid %}
                 <tr>
                     <td>{{ sentence.msgid }}</td>
                     <td>{{ translation.msgstr }}</td>
                     <td>{{ sentence.packages.all|join:"<br /" }}</td>
                     <td>{{ sentence.length }}</td>
                 </tr>
+                {% endifequal %}
+            {% empty %}
+                <tr><td>Could not find any sentences with this term.</td></tr>
             {% endfor %}
-        {% empty %}
-            <tr><td>Could not find any sentences with this term.</td></tr>
         {% endfor %}
     </table>
+    {% endfor %}
 {% else %}
   <p>No phrases were found that match your search term.</p>
 {% endif %}

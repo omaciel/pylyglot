@@ -41,7 +41,7 @@ COMMON = [
     "yes",
 ]
 
-CHARS = "-!,.?;:_*/()@#$%^&"
+CHARS = "-!,.?;:_*/()@#$%^&'"
 
 class Command(BaseCommand):
 
@@ -73,7 +73,7 @@ class Command(BaseCommand):
             logging.info("Package %s doesn't seem to be translated yet for %s." % (packageName, language))
             return
 
-        logging.info("Parsing %s for %s") % (packageName, language)
+        logging.info("Parsing %s for %s" % (packageName, language))
 
         language, created = Language.objects.get_or_create(short_name=language)
         package = Package.objects.filter(name=packageName).filter(sentence__translations__language__short_name=language.short_name).distinct()
@@ -95,57 +95,46 @@ class Command(BaseCommand):
 
         valid_entries = [e for e in po if not e.obsolete]
 
-        sentences = []
-
         try:
             for entry in valid_entries:
-                sentence, created = Sentence.objects.get_or_create(msgid=entry.msgid)
-                if entry.flags:
-                    sentence.flags = ", ".join(entry.flags)
+                if entry.translated():
+                    sentence, created = Sentence.objects.get_or_create(msgid=entry.msgid)
+                    if entry.flags:
+                        sentence.flags = ", ".join(entry.flags)
 
-                if package not in sentence.packages.all():
-                    sentence.packages.add(package)
+                    if package not in sentence.packages.all():
+                        sentence.packages.add(package)
 
-                # Add translation
-                translation, created = Translation.objects.get_or_create(msgstr=entry.msgstr, language=language)
-                translation.translated = entry.translated()
-                sentence.translations.add(translation)
-                sentence.save()
+                    # Add translation
+                    translation, created = Translation.objects.get_or_create(msgstr=entry.msgstr, language=language)
+                    translation.translated = entry.translated()
+                    sentence.translations.add(translation)
 
-                sentences.append(sentence)
+                    # Strip html tags...
+                    entry = striptags(sentence.msgid)
+                    # ... and other non alpha characters...
+                    for char in CHARS:
+                        entry = entry.replace(char, " ")
+                    # ... and double-quotes...
+                    entry = entry.replace('"', " ")
+                    # ... and newline chars
+                    entry = entry.replace("\n", " ")
+                    # Splitting on spaces
+                    entry = entry.split(" ")
+
+                    for word in entry:
+                        # Check for blanks
+                        if not word.isspace() and len(word) > 1 and not word.isdigit():
+                            # Remove common articles
+                            if word.lower() not in COMMON:
+                                term, created = Word.objects.get_or_create(term=word.lower())
+                                if term not in sentence.words.all():
+                                    sentence.words.add(term)
+                    sentence.length = len(sentence.words.all())
+                    sentence.save()
+
         except Exception, e:
             logging.error("Failed to create sentences: %s" % str(e))
-            transaction.rollback()
-        else:
-            transaction.commit()
-
-        try:
-            for sentence in sentences:
-
-                # Strip html tags...
-                entry = striptags(sentence.msgid)
-                # ... and other non alpha characters...
-                for char in CHARS:
-                    entry = entry.replace(char, "")
-                # ... and newline chars
-                entry = entry.replace("\n", " ")
-                # Splitting on spaces
-                entry = entry.split(" ")
-
-                for word in entry:
-                    # Check for blanks
-                    if not word.isspace() and len(word) > 1 and not word.isdigit():
-                        # Remove common articles
-                        if word.lower() not in COMMON:
-                            term, created = Word.objects.get_or_create(term=word.lower())
-                            sentence.words.add(term)
-                sentence.length = len(sentence.words.all())
-
-
-                sentence.save()
-
-        except Exception, e:
-            logging.error("Failed to create words: %s" % str(e))
             transaction.rollback()
         else:
             transaction.commit()

@@ -8,7 +8,7 @@ from aurelio.models import *
 
 def glossary_page(request):
     form = SearchForm()
-    translations = []
+    words = []
     language = 1
     query = ''
     show_results = False
@@ -20,13 +20,15 @@ def glossary_page(request):
         if query and language.isdigit():
             form = SearchForm({'query' : query})
 
-            translations = Translation.objects.filter(
-                language__id=language).filter(sentence__words__term__icontains=query).order_by('sentence__length')
+            words = Word.objects.filter(
+                    term__contains=query,
+                    sentence__translations__language__id=language
+                ).distinct()
 
     variables = RequestContext(request, {
         'form': form,
         'query': query,
-        'translations': translations,
+        'words': words,
         'languageid': language,
         'show_results': show_results,
     })
