@@ -16,7 +16,7 @@ def glossary_page(request):
     if 'query' in request.GET:
         show_results = True
         query = request.GET['query'].strip()
-        language = request.GET['available_languages'].strip()
+        language = request.GET['languages'].strip()
         if query and language.isdigit():
             form = SearchForm({'query' : query})
 
@@ -33,8 +33,4 @@ def glossary_page(request):
         'show_results': show_results,
     })
 
-    if request.GET.has_key('ajax'):
-        return render_to_response('word_list.html', variables)
-    else:
-        return render_to_response('glossary.html', variables)
-
+    return render_to_response('glossary.html', variables)

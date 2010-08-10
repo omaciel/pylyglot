@@ -5,10 +5,8 @@ from django import forms
 from aurelio.models import Language
 
 class SearchForm(forms.Form):
-    languages = Language.objects.all().values_list('id', 'short_name')
-    available_languages = forms.ChoiceField(choices = languages, initial="1")
-    query = forms.CharField(
-            label = u'Search for:',
-        widget = forms.TextInput(attrs={'size': 32})
-    )
 
+    available_languages = Language.objects.all().values_list('id', 'short_name')
+
+    languages = forms.ChoiceField(choices = available_languages, initial="1")
+    query = forms.CharField()
