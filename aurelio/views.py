@@ -16,7 +16,7 @@ def glossary_page(request):
     if 'query' in request.GET:
         show_results = True
         query = request.GET['query'].strip()
-        language = request.GET['languages'].strip()
+        language = request.GET['available_languages'].strip()
         if query and language.isdigit():
             form = SearchForm({'query' : query})
 
