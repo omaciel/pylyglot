@@ -1,4 +1,5 @@
 {% load i18n %}
+{% load tryinclude %}
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -30,9 +31,7 @@
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    {% if not settings.DEBUG %}
-        {% include "analytics.html" %}
-    {% endif %}
+    {% try_to_include "analytics.html" %}
 </head>
 
 <body>
