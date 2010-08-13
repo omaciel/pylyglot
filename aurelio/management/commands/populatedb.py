@@ -11,6 +11,9 @@ from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
 
 from polib import pofile
+from dateutil.parser import parse
+from dateutil.tz import tzutc
+
 from bidu.aurelio.models import Sentence, Package, Word, Language, Translation
 
 from datetime import datetime
@@ -65,10 +68,11 @@ class Command(BaseCommand):
         packageName = os.path.basename(pfile).split(".")[0]
         language =  os.path.basename(pfile).split(".")[2]
         # Format is 2010-04-29 15:07+0300
-        revisiondate = po.metadata['PO-Revision-Date'][:-5]
+        revisiondate = po.metadata['PO-Revision-Date']
 
         try:
-            revisiondate = datetime.strptime(revisiondate, "%Y-%m-%d %H:%M")
+            revisiondate = parse(revisiondate)
+            revisiondate = revisiondate.astimezone(tzutc())
         except Exception, e:
             logging.info("Package %s doesn't seem to be translated yet for %s." % (packageName, language))
             return
@@ -76,13 +80,17 @@ class Command(BaseCommand):
         logging.info("Parsing %s for %s" % (packageName, language))
 
         language, created = Language.objects.get_or_create(short_name=language)
+        logging.info("Language %s created: %s" % (language, created))
+
         package = Package.objects.filter(name=packageName).filter(sentence__translations__language__short_name=language.short_name).distinct()
 
         # Existing package?
         if package:
             package = package[0]
             # Is the *.po older or equal to existing package?
-            if revisiondate == package.revisiondate or revisiondate < package.revisiondate:
+            pkgrevisiondate = package.revisiondate.strftime("%Y-%m-%d %H:%M")
+            porevisiondate = revisiondate.strftime("%Y-%m-%d %H:%M")
+            if porevisiondate == pkgrevisiondate or porevisiondate < pkgrevisiondate:
                 logging.info("Package %s for %s has already been parsed!" % (packageName, language.short_name))
                 return
         else:

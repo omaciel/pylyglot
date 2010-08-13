@@ -24,3 +24,4 @@ Dependencies:
 
 * Django 1.2: http://djangoproject.org
 * polib: http://bitbucket.org/izi/polib/src
+* dateutil: http://labix.org/python-dateutil
