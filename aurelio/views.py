@@ -7,9 +7,18 @@ from aurelio.forms import PackageSearchForm, SearchForm
 from aurelio.models import *
 
 def front_page(request):
+    packages = Package.objects.count()
+    translations = Translation.objects.count()
+    languages = Language.objects.count()
+    latest_packages = Package.objects.all().order_by("-revisiondate")[:10]
+
     variables = RequestContext(request, {
+        'packages': packages,
+        'translations': translations,
+        'languages': languages,
+        'latest_packages': latest_packages,
         })
-    return render_to_response('base.html', variables)
+    return render_to_response('frontpage.html', variables)
 
 def translations_page(request):
     form = SearchForm()
