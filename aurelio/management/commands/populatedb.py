@@ -117,6 +117,7 @@ class Command(BaseCommand):
                     # Add translation
                     translation, created = Translation.objects.get_or_create(msgstr=entry.msgstr, language=language)
                     translation.translated = entry.translated()
+                    translation.save()
                     sentence.translations.add(translation)
 
                     # Strip html tags...
