@@ -7,5 +7,6 @@ from aurelio.views import *
 urlpatterns = patterns('',
     # Browsing
     url(r'^$', glossary_page, name='glossary_glossary_list'),
+    url(r'^packages', packages_page, name='packages_list'),
 )
 

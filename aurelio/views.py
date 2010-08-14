@@ -3,10 +3,15 @@
 
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from aurelio.forms import *
+from aurelio.forms import PackageSearchForm, SearchForm
 from aurelio.models import *
 
-def glossary_page(request):
+def front_page(request):
+    variables = RequestContext(request, {
+        })
+    return render_to_response('base.html', variables)
+
+def translations_page(request):
     form = SearchForm()
     words = []
     language = 1
@@ -34,3 +39,25 @@ def glossary_page(request):
     })
 
     return render_to_response('glossary.html', variables)
+
+def packages_page(request):
+
+    packages = []
+
+    if request.method == 'POST':
+        form = PackageSearchForm(request.POST)
+
+        if form.is_valid():
+            term = form.cleaned_data['query']
+            packages = Package.objects.filter(name__icontains=term)
+
+    else:
+        form = PackageSearchForm()
+        packages = Package.objects.all()
+
+    variables = RequestContext(request, {
+        'form': form,
+        'packages': packages,
+        })
+
+    return render_to_response('packages.html', variables)

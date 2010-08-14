@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form id="search" method="post" action=".">{% csrf_token %}
+  {{ form }}
+  <input type="submit" value="search" />
+</form>
+<div id="search-results">
+    {% if packages %}
+        <ul>
+            {% for package in packages %}
+            <li>{{ package.name }} - Last Revised on {{ package.revisiondate|date:"DATETIME_FORMAT" }} UTC</li>
+            {% empty %}
+                <li>No packages found.</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <ul><li>No packages were found that match your search term.</li></ul>
+    {% endif %}
+</div>
+{% endblock %}

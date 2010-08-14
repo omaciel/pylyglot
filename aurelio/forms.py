@@ -10,3 +10,7 @@ class SearchForm(forms.Form):
 
     languages = forms.ChoiceField(choices = available_languages, initial="1")
     query = forms.CharField()
+
+class PackageSearchForm(forms.Form):
+
+    query = forms.CharField()
