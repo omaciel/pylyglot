@@ -66,13 +66,14 @@ class Command(BaseCommand):
 
         # Extract information from the file name.
         packageName = os.path.basename(pfile).split(".")[0]
-        language =  os.path.basename(pfile).split(".")[2]
+        language =  os.path.basename(pfile).split(".")[-2]
         # Format is 2010-04-29 15:07+0300
         revisiondate = po.metadata['PO-Revision-Date']
 
         try:
             revisiondate = parse(revisiondate)
             revisiondate = revisiondate.astimezone(tzutc())
+            revisiondate = datetime.strptime(revisiondate.astimezone(tzutc()).strftime("%Y-%m-%d %H:%M"), "%Y-%m-%d %H:%M")
         except Exception, e:
             logging.info("Package %s doesn't seem to be translated yet for %s." % (packageName, language))
             return
@@ -88,8 +89,8 @@ class Command(BaseCommand):
         if package:
             package = package[0]
             # Is the *.po older or equal to existing package?
-            pkgrevisiondate = package.revisiondate.strftime("%Y-%m-%d %H:%M")
-            porevisiondate = revisiondate.strftime("%Y-%m-%d %H:%M")
+            pkgrevisiondate = package.revisiondate
+            porevisiondate = revisiondate
             if porevisiondate == pkgrevisiondate or porevisiondate < pkgrevisiondate:
                 logging.info("Package %s for %s has already been parsed!" % (packageName, language.short_name))
                 return
