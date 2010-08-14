@@ -11,7 +11,7 @@ urlpatterns = patterns('',
 
     url(r'^$', front_page, name="frontpage"),
     url(r'^packages/', packages_page, name="packages"),
-    url(r'^translations', translations_page, name="translations"),
+    url(r'^translations/', translations_page, name="translations"),
 
     # Administration
     url(r'^admin/', include(admin.site.urls)),
