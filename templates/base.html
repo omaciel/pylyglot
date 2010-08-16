@@ -1,82 +1,27 @@
 {% load i18n %}
 {% load tryinclude %}
 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <link rel="canonical" href="http://pylyglot.org/"/>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="description" content="Translation news & statistics made simple.">
+        <meta name="keywords" content="translations, gnome">
+        <title>{% block title %} Pylyglot {% endblock %}</title>
+        <link title="Pylyglot" type="application/opensearchdescription+xml" rel="search" href="opensearch.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="#" />
+    </head>
+    <body>
+        <div style="width:800px;margin:auto;text-align:center;">
+            <a href="/">
+                <img src="{{ MEDIA_URL }}images/logo.png" alt="Pylyglot - Translation news & statistics made simple." style="margin-top:20px;margin-bottom:30px;" border="0">
+            </a>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+            {% block content %}{% endblock %}
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>{% block title %}Pylyglot{% endblock %}</title>
-
-    <script type="text/javascript" src="{{ MEDIA_URL }}js/tabs.js"></script>
-    <link type="text/css" href="{{ MEDIA_URL }}css/jquery.ui.all.css" rel="stylesheet" />
-    <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-1.4.1.js"></script>
-    <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-ui.js"></script>
-    <script type="text/javascript" language="javascript" src="{{ MEDIA_URL }}js/jquery.dropdownPlain.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $("#tabs").tabs();
-      });
-      </script>
-
-
-    <link rel="stylesheet" href="{{ MEDIA_URL }}css/style.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
-    <link rel="stylesheet" href="{{ MEDIA_URL }}css/thickbox.css" type="text/css"/>
-    {% block extracss %}{% endblock %}
-
-    {% block extrajs %}{% endblock %}
-
-    <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    {% try_to_include "analytics.html" %}
-</head>
-
-<body>
-    <div id="container">
-        <div id="header">
-                <ul class="dropdown">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="{% url package_list %}">Packages</a></li>
-                    <li><a href="#">Translations</a></li>
-                    <li><a href="#">Language</a></li>
-                    <li><a href="#">Tools</a>
-                    <ul class="sub_menu">
-                         <li><a href="#">Text Editors</a></li>
-                         <li><a href="#">Translation Tools</a>
-                            <ul>
-                                <li><a href="#">Glossary</a></li>
-                            </ul>
-                         </li>
-                    </ul><!--end sub_menu-->
-                </li><!--end tools menu-->
-                <li><a href="#">Login</a>
-            </ul>
-
-
-        <h1><a href="#">Pylyglot</a></h1>
-            <h2 id="subtitle">Translate news & statistics made simple</h2>
-
-            <h1>{% block head %}{% endblock %}</h1>
-
+            <p id="credit">Pylyglot 2010. All Rights Reserved. Design: <a href="http://quartoestudio.com">QuartoEstudio.com</a></p>
         </div>
 
-        {% block content %}{% endblock %}
-
-        <p id="credit">Pylyglot 2010. All Rights Reserved. Design: <a href="http://quartoestudio.com">QuartoEstudio.com</a></p>
-
-<script type="text/javascript">
-//menu fix for IE
-$(document).ready(function(){
-        $('li.headlink').hover(
-            function() { $('ul', this).css('display', 'block'); },
-            function() { $('ul', this).css('display', 'none'); });
-    });
-
-
-</script>
-
-</body>
+    </body>
 </html>

@@ -1,15 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <ul>
-        <li>
-            <p>Total packages in the system: {{ packages }}</p>
-        </li>
-        <li>
-            <p>Total translations: {{ translations }}</p>
-        </li>
-        <li>
-            <p>Total languages: {{ languages }}</p>
-        </li>
-    </ul>
+    <form id="search" method="post" action=".">
+        {% csrf_token %}
+        <p>{{ form.languages }} {{ form.query }} <input type="submit" value="search" /></p>
+    </form>
+
+    {% if packages %}
+        {% with packages as object_list %}
+            {% include "packages/package_list.html" %}
+        {% endwith %}
+    {% endif %}
+    <p>Total translations: {{ translations }}</p>
+    <p>Total languages: {{ languages }}</p>
+
 {% endblock %}

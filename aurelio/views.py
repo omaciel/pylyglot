@@ -6,9 +6,22 @@ from django.template import RequestContext
 from aurelio.forms import PackageSearchForm, SearchForm
 from aurelio.models import *
 from bidu.languages.models import Language
+from bidu.packages.models import Package
 
 def index(request):
-    packages = Package.objects.count()
+
+    packages = []
+    if request.method == 'POST':
+        form = SearchForm(request.POST)
+        if form.is_valid():
+            query = form.cleaned_data['query']
+            language = form.cleaned_data['languages']
+
+            packages = Package.objects.filter(name__icontains=query)[:50]
+            #form = SearchForm({'query' : query})
+    else:
+        form = SearchForm()
+
     translations = Translation.objects.count()
     languages = Language.objects.count()
     latest_packages = Package.objects.all().order_by("-revisiondate")[:10]
@@ -18,6 +31,8 @@ def index(request):
         'translations': translations,
         'languages': languages,
         'latest_packages': latest_packages,
+        'form': form,
+        'frontpage': True,
         })
     return render_to_response('index.html', variables)
 
