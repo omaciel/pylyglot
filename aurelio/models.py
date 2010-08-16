@@ -1,7 +1,8 @@
-# vim: ts=4 sw=4 expandtab ai
 # -*- encoding: utf-8 -*-
+# vim: ts=4 sw=4 expandtab ai
 
 from django.db import models
+from bidu.packages.models import Package
 
 class Language(models.Model):
 
@@ -17,14 +18,6 @@ class Word(models.Model):
 
     def __unicode__(self):
         return self.term
-
-class Package(models.Model):
-
-    name = models.CharField(max_length=255)
-    revisiondate = models.DateTimeField(blank=True, null=True)
-
-    def __unicode__(self):
-        return self.name
 
 class Translation(models.Model):
 

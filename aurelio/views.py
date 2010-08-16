@@ -1,12 +1,12 @@
-# vim: ts=4 sw=4 expandtab ai
 # -*- encoding: utf-8 -*-
+# vim: ts=4 sw=4 expandtab ai
 
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from aurelio.forms import PackageSearchForm, SearchForm
 from aurelio.models import *
 
-def front_page(request):
+def index(request):
     packages = Package.objects.count()
     translations = Translation.objects.count()
     languages = Language.objects.count()
@@ -18,7 +18,7 @@ def front_page(request):
         'languages': languages,
         'latest_packages': latest_packages,
         })
-    return render_to_response('frontpage.html', variables)
+    return render_to_response('index.html', variables)
 
 def translations_page(request):
     form = SearchForm()
@@ -48,25 +48,3 @@ def translations_page(request):
     })
 
     return render_to_response('glossary.html', variables)
-
-def packages_page(request):
-
-    packages = []
-
-    if request.method == 'POST':
-        form = PackageSearchForm(request.POST)
-
-        if form.is_valid():
-            term = form.cleaned_data['query']
-            packages = Package.objects.filter(name__icontains=term)
-
-    else:
-        form = PackageSearchForm()
-        packages = Package.objects.all()
-
-    variables = RequestContext(request, {
-        'form': form,
-        'packages': packages,
-        })
-
-    return render_to_response('packages.html', variables)
