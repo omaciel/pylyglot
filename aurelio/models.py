@@ -3,14 +3,7 @@
 
 from django.db import models
 from bidu.packages.models import Package
-
-class Language(models.Model):
-
-    long_name = models.CharField(max_length=255, blank=True, null=True)
-    short_name = models.CharField(max_length=30)
-
-    def __unicode__(self):
-        return "%s (%s)" % (self.long_name, self.short_name)
+from bidu.translations.models import Translation
 
 class Word(models.Model):
 
@@ -18,16 +11,6 @@ class Word(models.Model):
 
     def __unicode__(self):
         return self.term
-
-class Translation(models.Model):
-
-    msgstr = models.TextField()
-    translated = models.BooleanField()
-
-    language = models.ForeignKey(Language)
-
-    def __unicode_(self):
-        return self.msgstr.encode("utf-8")
 
 class Sentence(models.Model):
 

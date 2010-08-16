@@ -1,4 +1,4 @@
-from aurelio.views import index
+from aurelio.views import *
 from django.conf.urls.defaults import *
 from django.conf import settings
 
@@ -8,7 +8,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^$', index, name="frontpage"),
     url(r'^packages/', include('bidu.packages.urls')),
-    #url(r'^translations/', translations_page, name="translations"),
+    url(r'^translations/', translations_page, name="translations"),
 
     # Administration
     url(r'^admin/', include(admin.site.urls)),

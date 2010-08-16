@@ -1,5 +1,5 @@
 from django.conf.urls.defaults import *
-from bidu.aurelio.models import Package
+from bidu.packages.models import Package
 
 info_dict = {
     'queryset': Package.objects.all(),

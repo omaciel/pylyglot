@@ -2,9 +2,9 @@
 
 {% block content %}
 <div id="search-results">
-    {% if package_list %}
+    {% if object_list %}
         <ul>
-            {% for package in package_list %}
+            {% for package in object_list %}
             <li>{{ package.name }} - Last Revised on {{ package.revisiondate|date:"DATETIME_FORMAT" }} UTC</li>
             {% empty %}
                 <li>No packages found.</li>

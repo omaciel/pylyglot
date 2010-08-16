@@ -5,6 +5,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from aurelio.forms import PackageSearchForm, SearchForm
 from aurelio.models import *
+from bidu.languages.models import Language
 
 def index(request):
     packages = Package.objects.count()
