@@ -17,6 +17,8 @@ class Sentence(models.Model):
     msgid = models.TextField()
     length = models.IntegerField(blank=True, null=True)
     flags = models.CharField(max_length=255, blank=True, null=True)
+    create_date = models.DateTimeField(auto_now_add=True)
+    update_date = models.DateTimeField(auto_now=True)
 
     packages = models.ManyToManyField(Package)
     words = models.ManyToManyField(Word)
