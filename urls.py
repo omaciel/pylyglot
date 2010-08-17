@@ -1,4 +1,4 @@
-from aurelio.views import *
+from core.views import *
 from django.conf.urls.defaults import *
 from django.conf import settings
 

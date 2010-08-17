@@ -3,8 +3,8 @@
 
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from aurelio.forms import PackageSearchForm, SearchForm
-from aurelio.models import *
+from core.forms import PackageSearchForm, SearchForm
+from core.models import *
 
 def index(request):
 
