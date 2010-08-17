@@ -11,6 +11,9 @@ from bidu.packages.models import Package
 def index(request):
 
     packages = []
+    translations = []
+    language = 1
+
     if request.method == 'POST':
         form = SearchForm(request.POST)
         if form.is_valid():
@@ -18,11 +21,14 @@ def index(request):
             language = form.cleaned_data['languages']
 
             packages = Package.objects.filter(name__icontains=query)[:50]
+            translations = Word.objects.filter(
+                    term__contains=query,
+                    sentence__translations__language__id=language
+                ).distinct()
             #form = SearchForm({'query' : query})
     else:
         form = SearchForm()
 
-    translations = Translation.objects.count()
     languages = Language.objects.count()
     latest_packages = Package.objects.all().order_by("-revisiondate")[:10]
 
@@ -31,8 +37,8 @@ def index(request):
         'translations': translations,
         'languages': languages,
         'latest_packages': latest_packages,
+        'languageid': language,
         'form': form,
-        'frontpage': True,
         })
     return render_to_response('index.html', variables)
 

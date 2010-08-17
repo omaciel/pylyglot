@@ -8,10 +8,15 @@
 
     {% if packages %}
         {% with packages as object_list %}
-            {% include "packages/package_list.html" %}
+            {% include "packages/list.html" %}
         {% endwith %}
     {% endif %}
-    <p>Total translations: {{ translations }}</p>
+
+    {% if translations %}
+        {% with translations as object_list %}
+            {% include "translations/list.html" %}
+        {% endwith %}
+    {% endif %}
     <p>Total languages: {{ languages }}</p>
 
 {% endblock %}

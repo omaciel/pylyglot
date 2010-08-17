@@ -6,9 +6,9 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', index, name="frontpage"),
+    url(r'^$', index, name="home"),
     url(r'^packages/', include('bidu.packages.urls')),
-    url(r'^translations/', translations_page, name="translations"),
+    url(r'^translations/', include('bidu.translations.urls')),
 
     # Administration
     url(r'^admin/', include(admin.site.urls)),

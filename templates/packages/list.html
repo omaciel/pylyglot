@@ -1,10 +1,4 @@
-{% extends "base.html" %}
 {% block content %}
-<form id="search" method="post" action=".">
-    {% csrf_token %}
-    <p>{{ form.query }} <input type="submit" value="search" /></p>
-</form>
-
 <div id="search-results">
     {% if object_list %}
         <p>The following {{ object_list.count }} package(s) matched your criteria:</p>
@@ -23,7 +17,7 @@
             {% endfor %}
         </table>
     {% else %}
-        <p>No packages were found that match your search term.</p>
+        <ul><li>No packages were found that match your search term.</li></ul>
     {% endif %}
 </div>
 {% endblock %}

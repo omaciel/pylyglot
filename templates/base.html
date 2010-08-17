@@ -11,6 +11,7 @@
         <title>{% block title %} Pylyglot {% endblock %}</title>
         <link title="Pylyglot" type="application/opensearchdescription+xml" rel="search" href="opensearch.xml">
         <link rel="alternate" type="application/rss+xml" title="RSS" href="#" />
+        {% try_to_include "analytics.html" %}
     </head>
     <body>
         <div style="width:800px;margin:auto;text-align:center;">
@@ -20,6 +21,12 @@
 
             {% block content %}{% endblock %}
 
+            <p id="nav">
+                <a href="{% url home %}">{% trans "Home" %}</a> | 
+                <a href="{% url translations_list %}">{% trans "Translations" %}</a> | 
+                <a href="{% url packages_list %}">{% trans "Packages" %}</a> | 
+                <a href="#">{% trans "Contact" %}</a>
+            </p>
             <p id="credit">Pylyglot 2010. All Rights Reserved. Design: <a href="http://quartoestudio.com">QuartoEstudio.com</a></p>
         </div>
 
