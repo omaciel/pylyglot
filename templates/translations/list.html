@@ -2,6 +2,7 @@
 {% block content %}
 <div id="search-results">
     {% if object_list %}
+        <p>The following {{ object_list.count }} term(s) matched your criteria:</p>
         {% for object in object_list %}
         <p>Term: {{ object.term }}</p>
         <table id="translations">
@@ -26,7 +27,7 @@
         </table>
         {% endfor %}
     {% else %}
-        <ul><li>No phrases were found that match your search term.</li></ul>
+        <p>No phrases were found that match your search term.</p>
     {% endif %}
 </div>
 {% endblock %}

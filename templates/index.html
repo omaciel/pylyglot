@@ -6,17 +6,13 @@
         <p>{{ form.languages }} {{ form.query }} <input type="submit" value="search" /></p>
     </form>
 
-    {% if packages %}
-        {% with packages as object_list %}
-            {% include "packages/list.html" %}
-        {% endwith %}
-    {% endif %}
+    {% with packages as object_list %}
+        {% include "packages/list.html" %}
+    {% endwith %}
 
-    {% if translations %}
-        {% with translations as object_list %}
-            {% include "translations/list.html" %}
-        {% endwith %}
-    {% endif %}
+    {% with translations as object_list %}
+        {% include "translations/list.html" %}
+    {% endwith %}
     <p>Total languages: {{ languages }}</p>
 
 {% endblock %}
