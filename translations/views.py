@@ -20,8 +20,8 @@ def index(request):
             translations = Word.objects.filter(
                     term__contains=query,
                     sentence__translations__language__id=language
-                ).distinct()
-            #form = SearchForm({'query' : query})
+                )
+            form = SearchForm({'query' : query})
     else:
         form = SearchForm()
 

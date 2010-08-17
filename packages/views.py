@@ -1,6 +1,7 @@
 # -*- encoding: utf-8 -*-
 # vim: ts=4 sw=4 expandtab ai
 
+from django.http import Http404
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from core.forms import PackageSearchForm
@@ -28,3 +29,16 @@ def index(request):
         })
 
     return render_to_response('packages/package_list.html', variables)
+
+
+def detail(request, object_id):
+    try:
+        p = Package.objects.get(pk=object_id)
+        print p
+    except Poll.DoesNotExist:
+        raise Http404
+    variables = RequestContext(request, {
+        'object': p,
+        })
+
+    return render_to_response('packages/detail.html', variables)

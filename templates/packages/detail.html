@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>{{ object.name }} - {{ object.revisiondate|date:"DATETIME_FORMAT" }}</p>
+{% endblock %}

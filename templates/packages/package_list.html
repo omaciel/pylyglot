@@ -15,7 +15,7 @@
             </tr>
             {% for object in object_list %}
             <tr>
-                <td>{{ object.name }}</td>
+                <td><a href="{{ object.get_absolute_url }}">{{ object.name }}</a></td>
                 <td>{{ object.revisiondate|date:"DATETIME_FORMAT" }}</td>
             </tr>
             {% empty %}
