@@ -41,32 +41,3 @@ def index(request):
         'form': form,
         })
     return render_to_response('index.html', variables)
-
-def translations_page(request):
-    form = SearchForm()
-    words = []
-    language = 1
-    query = ''
-    show_results = False
-
-    if 'query' in request.GET:
-        show_results = True
-        query = request.GET['query'].strip()
-        language = request.GET['languages'].strip()
-        if query and language.isdigit():
-            form = SearchForm({'query' : query})
-
-            words = Word.objects.filter(
-                    term__contains=query,
-                    sentence__translations__language__id=language
-                ).distinct()
-
-    variables = RequestContext(request, {
-        'form': form,
-        'query': query,
-        'words': words,
-        'languageid': language,
-        'show_results': show_results,
-    })
-
-    return render_to_response('glossary.html', variables)
