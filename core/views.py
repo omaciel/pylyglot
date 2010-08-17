@@ -3,7 +3,8 @@
 
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from bidu.core.forms import PackageSearchForm, SearchForm
+from bidu.core.forms import SearchForm
+
 from bidu.core.models import Word
 from bidu.languages.models import Language
 from bidu.packages.models import Package

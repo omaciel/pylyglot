@@ -3,6 +3,6 @@
 
 from django.conf import settings
 
-def TEMPLATE_DIRS(request):
+def templates_url(request):
 
-    return settings.TEMPLATE_DIRS
+    return {'template_url': settings.TEMPLATE_DIRS}
