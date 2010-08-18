@@ -3,8 +3,8 @@
 
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from core.forms import PackageSearchForm, SearchForm
-from core.models import *
+from core.forms import SearchForm
+from bidu.translations.models import Translation
 
 def index(request):
 
@@ -17,11 +17,11 @@ def index(request):
             query = form.cleaned_data['query']
             language = form.cleaned_data['languages']
 
-            translations = Word.objects.filter(
-                    term__contains=query,
-                    sentence__translations__language__id=language
-                )
-            form = SearchForm({'query' : query})
+            translations = Translation.objects.filter(
+                language__id=language
+                ).filter(sentence__words__term__contains=query
+                ).order_by('sentence__length')
+            #form = SearchForm({'query' : query})
     else:
         form = SearchForm()
 

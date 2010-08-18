@@ -3,29 +3,24 @@
 <div id="search-results">
     {% if object_list %}
         <p>The following {{ object_list.count }} term(s) matched your criteria:</p>
-        {% for object in object_list %}
-        <p>Term: {{ object.term }}</p>
         <table id="translations">
             <tr>
                 <th>Original</th>
                 <th>Translated</th>
                 <th>Score</th>
             </tr>
-            {% for sentence in object.sentence_set.all|order_by:"length"|slice:":10" %}
-                {% for translation in sentence.translations.all %}
-                    {% ifequal translation.language.id|stringformat:"s" languageid %}
+            {% for object in object_list %}
+                {% for sentence in object.sentence_set.all %}
                     <tr>
                         <td>{{ sentence.msgid }}</td>
-                        <td>{{ translation.msgstr }}</td>
+                        <td>{{ object.msgstr }}</td>
                         <td>{{ sentence.length }}</td>
                     </tr>
-                    {% endifequal %}
                 {% empty %}
                     <tr><td>Could not find any sentences with this term.</td></tr>
                 {% endfor %}
             {% endfor %}
         </table>
-        {% endfor %}
     {% else %}
         <p>No phrases were found that match your search term.</p>
     {% endif %}

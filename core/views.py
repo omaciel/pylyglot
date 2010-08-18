@@ -5,9 +5,9 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from bidu.core.forms import SearchForm
 
-from bidu.core.models import Word
 from bidu.languages.models import Language
 from bidu.packages.models import Package
+from bidu.translations.models import Translation
 
 def index(request):
 
@@ -22,22 +22,22 @@ def index(request):
             language = form.cleaned_data['languages']
 
             packages = Package.objects.filter(name__icontains=query)[:50]
-            translations = Word.objects.filter(
-                    term__contains=query,
-                    sentence__translations__language__id=language
-                ).distinct()
-            form = SearchForm({'query' : query})
+            translations = Translation.objects.filter(
+                language__id=language
+                ).filter(sentence__words__term__contains=query
+                ).order_by('sentence__length')
+            #form = SearchForm({'query' : query})
     else:
         form = SearchForm()
 
     languages = Language.objects.count()
-    latest_packages = Package.objects.all().order_by("-revisiondate")[:10]
+    #latest_packages = Package.objects.all().order_by("-revisiondate")[:10]
 
     variables = RequestContext(request, {
         'packages': packages,
         'translations': translations,
         'languages': languages,
-        'latest_packages': latest_packages,
+        #'latest_packages': latest_packages,
         'languageid': language,
         'form': form,
         })
