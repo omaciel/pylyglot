@@ -6,9 +6,9 @@ from bidu.languages.models import Language
 
 class SearchForm(forms.Form):
 
-    available_languages = Language.objects.all().values_list('id', 'short_name')
+    available_languages = Language.objects.all().values_list('id', 'short_name').order_by('short_name')
 
-    languages = forms.ChoiceField(choices = available_languages, initial="1")
+    languages = forms.ChoiceField(choices = available_languages)
     query = forms.CharField()
 
 class PackageSearchForm(forms.Form):
