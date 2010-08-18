@@ -6,7 +6,8 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', index, name="home"),
+    #url(r'^$', index, name="home"),
+    url(r'^$', include('bidu.translations.urls')),
     url(r'^packages/', include('bidu.packages.urls')),
     url(r'^translations/', include('bidu.translations.urls')),
 
