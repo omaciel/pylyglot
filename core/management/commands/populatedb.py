@@ -84,26 +84,10 @@ class Command(BaseCommand):
         logging.info("Parsing %s for %s" % (packageName, language))
 
         language, created = Language.objects.get_or_create(short_name=language)
-        logging.info("Language %s created: %s" % (language, created))
+        logging.info("Language %s created: %s" % (language.short_name, created))
 
-        package = Package.objects.filter(name=packageName).filter(sentence__translations__language__short_name=language.short_name).distinct()
-
-        # Existing package?
-        if package:
-            package = package[0]
-            # Is the *.po older or equal to existing package?
-            pkgrevisiondate = package.revisiondate
-            porevisiondate = revisiondate
-            if porevisiondate == pkgrevisiondate or porevisiondate < pkgrevisiondate:
-                logging.info("Package %s for %s has already been parsed!" % (packageName, language.short_name))
-                return
-        else:
-            # Create the package in the databse
-            package = Package(name=packageName)
-
-        # Either a new package or the *.po is newer
-        package.revisiondate = revisiondate
-        package.save()
+        package, created = Package.objects.get_or_create(name=packageName)
+        logging.info("Package %s created: %s" % (packageName, created))
 
         valid_entries = [e for e in po if not e.obsolete]
 
@@ -114,12 +98,11 @@ class Command(BaseCommand):
                     if entry.flags:
                         sentence.flags = ", ".join(entry.flags)
 
-                    if package not in sentence.packages.all():
-                        sentence.packages.add(package)
-
                     # Add translation
-                    translation, created = Translation.objects.get_or_create(msgstr=entry.msgstr, language=language)
+                    translation, created = Translation.objects.get_or_create(msgstr=entry.msgstr, language=language, package=package)
                     translation.translated = entry.translated()
+                    if created or revisiondate > translation.revisiondate:
+                        translation.revisiondate = revisiondate
                     translation.save()
                     sentence.translations.add(translation)
 
@@ -135,15 +118,14 @@ class Command(BaseCommand):
                     # Splitting on spaces
                     entry = entry.split(" ")
 
+                    words = []
                     for word in entry:
                         # Check for blanks
                         if not word.isspace() and len(word) > 1 and not word.isdigit():
                             # Remove common articles
                             if word.lower() not in COMMON:
-                                term, created = Word.objects.get_or_create(term=word.lower())
-                                if term not in sentence.words.all():
-                                    sentence.words.add(term)
-                    sentence.length = len(sentence.words.all())
+                                words.append(word)
+                    sentence.length = len(words)
                     sentence.save()
 
         except Exception, e:

@@ -9,7 +9,6 @@ from bidu.translations.models import Translation
 def index(request):
 
     translations = []
-    language = 1
 
     if request.method == 'POST':
         form = SearchForm(request.POST)
@@ -19,15 +18,13 @@ def index(request):
 
             translations = Translation.objects.filter(
                 language__id=language
-                ).filter(sentence__words__term__contains=query
+                ).filter(sentence__msgid__contains=query
                 ).order_by('sentence__length')
-            #form = SearchForm({'query' : query})
     else:
         form = SearchForm()
 
     variables = RequestContext(request, {
         'object_list': translations,
-        'languageid': language,
         'form': form,
         })
 
