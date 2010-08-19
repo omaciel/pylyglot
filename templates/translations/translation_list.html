@@ -1,32 +1,34 @@
 {% extends "base.html" %}
 {% load sortfilter %}
-{% block content %}
-<form id="search" method="post" action=".">
-    {% csrf_token %}
-    <p>{{ form.languages }} {{ form.query }} <input type="submit" value="search" /></p>
-</form>
 
-<div id="search-results">
+{% block content %}
+<div id="main">
+    <div class="package-result">
     {% if object_list %}
         <p>The following {{ object_list.count }} term(s) matched your criteria:</p>
-        <table id="translations">
+        <table class="results">
+            <tbody>
             <tr>
                 <th>Original</th>
                 <th>Translated</th>
-                <th>Score</th>
+                <th>Package</th>
+                <th>Latest Revision</th>
             </tr>
             {% for object in object_list %}
                 {% for sentence in object.sentence_set.all %}
                     <tr>
                         <td>{{ sentence.msgid }}</td>
                         <td>{{ object.msgstr }}</td>
+                        <td>{{ object.package.name }}</td>
                         <td>{{ sentence.length }}</td>
                     </tr>
                 {% empty %}
                     <tr><td>Could not find any sentences with this term.</td></tr>
                 {% endfor %}
             {% endfor %}
+        </tbody>
         </table>
+    </div>
     {% else %}
         <p>No phrases were found that match your search term.</p>
     {% endif %}

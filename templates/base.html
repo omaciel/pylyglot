@@ -2,8 +2,12 @@
 {% load tryinclude %}
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<html lang="en" class="no-js">
     <head>
+        <meta charset="utf-8">
+        <!--[if IE]><![endif]-->
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <link rel="canonical" href="http://pylyglot.org/"/>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta name="description" content="Translation news & statistics made simple.">
@@ -11,23 +15,74 @@
         <title>{% block title %} Pylyglot {% endblock %}</title>
         <link title="Pylyglot" type="application/opensearchdescription+xml" rel="search" href="opensearch.xml">
         <link rel="alternate" type="application/rss+xml" title="RSS" href="#" />
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+        <link rel="shortcut icon" href="{{ MEDIA_URL }}images/favicon.ico">
+        <link rel="stylesheet" href="{{ MEDIA_URL }}css/style.css?v=1">
+        <link rel="stylesheet" media="handheld" href="{{ MEDIA_URL }}css/handheld.css?v=1">
+        <script src="{{ MEDIA_URL }}js/modernizr-1.5.min.js"></script>
         {% try_to_include "analytics.html" %}
     </head>
-    <body>
-        <div style="width:800px;margin:auto;text-align:center;">
-            <a href="/">
-                <img src="{{ MEDIA_URL }}images/logo.png" alt="Pylyglot - Translation news & statistics made simple." style="margin-top:20px;margin-bottom:30px;" border="0">
-            </a>
+<!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
 
-            {% block content %}{% endblock %}
+    <div id="container">
+        <header>
+            <h1>
+                <a href="/" class="ht"><img src="{{ MEDIA_URL }}images/logo-179x119.jpg" alt="Pylyglot" width="179px" height="119" border="0" /></a>
+            </h1>
 
-            <p id="nav">
-                <a href="#">{% trans "About" %}</a> | 
-                <a href="#">{% trans "How to use" %}</a> | 
-                <a href="#">{% trans "Contact" %}</a>
-            </p>
-            <p id="credit">Pylyglot 2010. All Rights Reserved. Design: <a href="http://quartoestudio.com">QuartoEstudio.com</a></p>
-        </div>
 
+            <form id="search" method="post" action=".">
+                {% csrf_token %}
+                    <p>
+                        {{ form.languages }} {{ form.query }}
+                        <input type="submit" value="search" /></span></p>
+            </form>
+
+            <ul class="information-links">
+                <li><a href="#">{% trans "How to use" %}</a></li>
+                <li><a href="#">{% trans "About" %}</a></li>
+                <li><a href="#">{% trans "Contact" %}</a></li>
+            </ul>
+        </header>
+
+        {% block content %}{% endblock %}
+
+        <footer>
+        <p id="statistics"><span id="now-serving">Now serving</span>: <span id="languages-number">Languages: {{ total_languages }}</span> | <span id="packages-number">Packages: {{ total_packages }} </span>| <span id="sentences-number">Translations: {{ total_translations }}</span></p>
+            <p id="website-information">Pylyglot 2010. All Rights Reserverd. Design by: <a rel="nofollow" href="http://quartoestudio.com">QuartoEstudio.com</a></p>
+        </footer>
+      </div> <!-- end of #container -->
+
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+      <script>!window.jQuery && document.write('<script src="js/jquery-1.4.2.min.js"><\/script>')</script>
+      <script src="js/plugins.js?v=1"></script>
+      <script src="js/script.js?v=1"></script>
+
+      <!--[if lt IE 7 ]>
+        <script src="js/dd_belatedpng.js?v=1"></script>
+      <![endif]-->
+
+      <script src="js/profiling/yahoo-profiling.min.js?v=1"></script>
+      <script src="js/profiling/config.js?v=1"></script>
+
+      <script>
+       var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']]; 
+       (function(d, t) {
+        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        g.async = true; g.src = '//www.google-analytics.com/ga.js'; s.parentNode.insertBefore(g, s);
+       })(document, 'script');
+       
+       // add focus on form
+         
+          $(function(){  
+               $("input#id_query").focus();  
+            });
+      
+       
+      </script>
     </body>
 </html>
