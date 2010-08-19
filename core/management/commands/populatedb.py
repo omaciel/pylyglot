@@ -14,7 +14,7 @@ from polib import pofile
 from dateutil.parser import parse
 from dateutil.tz import tzutc
 
-from bidu.core.models import Sentence, Word
+from bidu.core.models import Sentence
 from bidu.packages.models import Package
 from bidu.languages.models import Language
 from bidu.translations.models import Translation
