@@ -2,7 +2,6 @@
 # vim: ts=4 sw=4 expandtab ai
 
 from django.db import models
-from bidu.packages.models import Package
 from bidu.translations.models import Translation
 
 class Word(models.Model):
@@ -20,8 +19,6 @@ class Sentence(models.Model):
     create_date = models.DateTimeField(auto_now_add=True)
     update_date = models.DateTimeField(auto_now=True)
 
-    packages = models.ManyToManyField(Package)
-    words = models.ManyToManyField(Word)
     translations = models.ManyToManyField(Translation)
 
     def __unicode_(self):
