@@ -85,7 +85,7 @@ button {  width: auto; overflow: visible; }
  
 body							{ background:#fff: }
 header					 		{ width: 600px; margin: auto; margin-bottom:50px;}
-header h1						{ text-align: center; margin-top:50px; margin-bottom:50px;}
+header h1						{ text-align: center; margin-top:50px; margin-bottom:25px;}
 header form						{ margin-bottom:50px; position:relative; border:1px solid #E8E8E8; height:32px; width:456px; margin:auto;}
 
 header form select 				{ position:	absolute; left:7px; top:6px; height: 1.6em; line-height:1.6em; border: 1px solid #E8E8E8; }
