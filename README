@@ -1,6 +1,8 @@
 Introduction:
 ============
 
+Pylyglot is a web based tool for translators. It contains a database of messages and their translations into several different languages that one can search for suggestions.
+
 Installation:
 ============
 
@@ -8,7 +10,9 @@ Installation:
 * Copy the conf/99-devel.conf.sample file and rename it to 99-devel.conf. By default sqlite is configured to be the engine with a new development.db file.
 * Create a po/ directory in the root directory of your checkout.
 * Populate the newly created po/ directory with *.po files. Right now the parser expects that *.po files are named in the following format:
-    packagename-branchname.po
+    packagename-branchname-language.po
+
+For example, download the French GNOME packages from http://l10n.gnome.org/languages/fr/gnome-2-32/ui.tar.gz and untar it into the po/ directory.
 
 NOTE: This will be changed so that the name of the package is parsed from the *.po header section!
 
