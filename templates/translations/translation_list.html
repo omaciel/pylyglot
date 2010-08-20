@@ -20,7 +20,7 @@
                         <td>{{ sentence.msgid }}</td>
                         <td>{{ object.msgstr }}</td>
                         <td>{{ object.package.name }}</td>
-                        <td>{{ object..revisiondate|date:"DATETIME_FORMAT" }}</td>
+                        <td>{{ object.revisiondate|date:"DATETIME_FORMAT" }}</td>
                     </tr>
                 {% empty %}
                     <tr><td>Could not find any sentences with this term.</td></tr>
