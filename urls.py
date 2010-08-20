@@ -12,6 +12,12 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 )
 
+urlpatterns += patterns('django.views.generic.simple',
+        url(r'^about', 'direct_to_template', {'template': 'about.html'}, name='about'),
+        url(r'^howto', 'direct_to_template', {'template': 'howto.html'}, name='howto'),
+        url(r'^contact', 'direct_to_template', {'template': 'contact.html'}, name='contact'),
+)
+
 if settings.DEBUG:
     urlpatterns += patterns('',
         url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
