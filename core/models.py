@@ -4,6 +4,13 @@
 from django.db import models
 from bidu.translations.models import Translation
 
+class Word(models.Model):
+
+    term = models.CharField(max_length=255)
+
+    def __unicode__(self):
+        return self.term
+
 class Sentence(models.Model):
 
     msgid = models.TextField()
@@ -12,6 +19,7 @@ class Sentence(models.Model):
     create_date = models.DateTimeField(auto_now_add=True)
     update_date = models.DateTimeField(auto_now=True)
 
+    words = models.ManyToManyField(Word)
     translations = models.ManyToManyField(Translation)
 
     def __unicode_(self):

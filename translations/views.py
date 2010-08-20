@@ -18,7 +18,7 @@ def index(request):
 
             translations = Translation.objects.filter(
                 language__id=language
-                ).filter(sentence__msgid__contains=query
+                ).filter(sentence__words__term__contains=query
                 ).order_by('sentence__length')
     else:
         form = SearchForm()

@@ -12,7 +12,7 @@
                 <th>Original</th>
                 <th>Translated</th>
                 <th>Package</th>
-                <th>Latest Revision</th>
+                <th>Latest Revision (UTC)</th>
             </tr>
             {% for object in object_list %}
                 {% for sentence in object.sentence_set.all %}
@@ -20,7 +20,7 @@
                         <td>{{ sentence.msgid }}</td>
                         <td>{{ object.msgstr }}</td>
                         <td>{{ object.package.name }}</td>
-                        <td>{{ sentence.length }}</td>
+                        <td>{{ object..revisiondate|date:"DATETIME_FORMAT" }}</td>
                     </tr>
                 {% empty %}
                     <tr><td>Could not find any sentences with this term.</td></tr>
@@ -30,7 +30,7 @@
         </table>
     </div>
     {% else %}
-        <p>No phrases were found that match your search term.</p>
+        <p style="text-align:center;">No phrases were found that match your search term.</p>
     {% endif %}
 </div>
 {% endblock %}

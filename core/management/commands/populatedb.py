@@ -14,7 +14,7 @@ from polib import pofile
 from dateutil.parser import parse
 from dateutil.tz import tzutc
 
-from bidu.core.models import Sentence
+from bidu.core.models import Sentence, Word
 from bidu.packages.models import Package
 from bidu.languages.models import Language
 from bidu.translations.models import Translation
@@ -118,14 +118,15 @@ class Command(BaseCommand):
                     # Splitting on spaces
                     entry = entry.split(" ")
 
-                    words = []
                     for word in entry:
                         # Check for blanks
                         if not word.isspace() and len(word) > 1 and not word.isdigit():
                             # Remove common articles
                             if word.lower() not in COMMON:
-                                words.append(word)
-                    sentence.length = len(words)
+                                term, created = Word.objects.get_or_create(term=word.lower())
+                                if term not in sentence.words.all():
+                                    sentence.words.add(term)
+                    sentence.length = len(sentence.words.all())
                     sentence.save()
 
         except Exception, e:
