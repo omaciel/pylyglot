@@ -14,10 +14,10 @@ from polib import pofile
 from dateutil.parser import parse
 from dateutil.tz import tzutc
 
-from bidu.core.models import Sentence, Word
-from bidu.packages.models import Package
-from bidu.languages.models import Language
-from bidu.translations.models import Translation
+from pylyglot.core.models import Sentence, Word
+from pylyglot.packages.models import Package
+from pylyglot.languages.models import Language
+from pylyglot.translations.models import Translation
 
 from datetime import datetime
 import logging

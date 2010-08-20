@@ -1,6 +1,6 @@
 from django.db import models
-from bidu.languages.models import Language
-from bidu.packages.models import Package
+from pylyglot.languages.models import Language
+from pylyglot.packages.models import Package
 
 class Translation(models.Model):
 

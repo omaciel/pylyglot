@@ -6,7 +6,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from core.forms import PackageSearchForm
 from core.models import *
-from bidu.packages.models import Package
+from pylyglot.packages.models import Package
 
 def index(request):
 

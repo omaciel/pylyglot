@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import *
 
-urlpatterns = patterns('bidu.translations.views',
+urlpatterns = patterns('pylyglot.translations.views',
 
         url(r'^$', 'index', name='home'),
 )

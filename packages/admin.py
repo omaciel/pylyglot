@@ -2,7 +2,7 @@
 # vim: ts=4 sw=4 expandtab ai
 
 from django.contrib import admin
-from bidu.packages.models import Package
+from pylyglot.packages.models import Package
 
 class PackageAdmin(admin.ModelAdmin):
     pass

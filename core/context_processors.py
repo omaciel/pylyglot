@@ -1,9 +1,9 @@
 # -*- encoding: utf-8 -*-
 # vim: ts=4 sw=4 expandtab ai
 
-from bidu.languages.models import Language
-from bidu.packages.models import Package
-from bidu.translations.models import Translation
+from pylyglot.languages.models import Language
+from pylyglot.packages.models import Package
+from pylyglot.translations.models import Translation
 
 def total_packages(request):
 

@@ -6,7 +6,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', include('bidu.translations.urls')),
+    url(r'^$', include('pylyglot.translations.urls')),
 
     # Administration
     url(r'^admin/', include(admin.site.urls)),

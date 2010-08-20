@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 
 from django import forms
-from bidu.languages.models import Language
+from pylyglot.languages.models import Language
 
 class SearchForm(forms.Form):
 

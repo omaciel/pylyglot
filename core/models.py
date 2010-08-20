@@ -2,7 +2,7 @@
 # vim: ts=4 sw=4 expandtab ai
 
 from django.db import models
-from bidu.translations.models import Translation
+from pylyglot.translations.models import Translation
 
 class Word(models.Model):
 
