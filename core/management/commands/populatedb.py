@@ -94,43 +94,84 @@ class Command(BaseCommand):
         try:
             for entry in valid_entries:
                 if entry.translated():
-                    sentence, created = Sentence.objects.get_or_create(msgid=entry.msgid)
-                    if entry.flags:
-                        sentence.flags = ", ".join(entry.flags)
+                    if entry.msgid_plural:
+                        entry.msgstr = entry.msgstr_plural.pop('0')
+                        entry.msgstr_plural = entry.msgstr_plural.pop('1')
 
-                    # Add translation
-                    translation, created = Translation.objects.get_or_create(msgstr=entry.msgstr, language=language, package=package)
-                    translation.translated = entry.translated()
-                    if created or revisiondate > translation.revisiondate:
-                        translation.revisiondate = revisiondate
-                    translation.save()
-                    sentence.translations.add(translation)
-
-                    # Strip html tags...
-                    entry = striptags(sentence.msgid)
-                    # ... and other non alpha characters...
-                    for char in CHARS:
-                        entry = entry.replace(char, " ")
-                    # ... and double-quotes...
-                    entry = entry.replace('"', " ")
-                    # ... and newline chars
-                    entry = entry.replace("\n", " ")
-                    # Splitting on spaces
-                    entry = entry.split(" ")
-
-                    for word in entry:
-                        # Check for blanks
-                        if not word.isspace() and len(word) > 1 and not word.isdigit():
-                            # Remove common articles
-                            if word.lower() not in COMMON:
-                                term, created = Word.objects.get_or_create(term=word.lower())
-                                if term not in sentence.words.all():
-                                    sentence.words.add(term)
-                    sentence.length = len(sentence.words.all())
-                    sentence.save()
+                        self.add_sentence(entry, language, package, revisiondate)
+                        self.add_sentence(entry, language, package, revisiondate, True)
+                    else:
+                        self.add_sentence(entry, language, package, revisiondate)
 
         except Exception, e:
             logging.error("Failed to create sentences: %s" % str(e))
             transaction.rollback()
         else:
             transaction.commit()
+
+    def add_sentence(self, entry, language, package, revisiondate, plural=False):
+
+        if plural:
+            msgid = entry.msgid_plural
+            msgstr = entry.msgstr_plural
+        else:
+            msgid = entry.msgid
+            msgstr = entry.msgstr
+
+        sentence, created = Sentence.objects.get_or_create(msgid=msgid)
+
+        if entry.flags:
+            sentence.flags = ", ".join(entry.flags)
+
+        sentence.translations.add(
+                self.add_translation(
+                    entry, msgstr, language, package, revisiondate
+                    )
+                )
+
+        entry = self.strip_junk(sentence)
+
+        for term in self.add_words(entry):
+            if term not in sentence.words.all():
+                sentence.words.add(term)
+
+        sentence.length = len(sentence.words.all())
+        sentence.save()
+
+    def add_translation(self, entry, msgstr, language, package, revisiondate):
+        # Add translation
+        translation, created = Translation.objects.get_or_create(msgstr=msgstr, language=language, package=package)
+        translation.translated = entry.translated()
+        if created or revisiondate > translation.revisiondate:
+            translation.revisiondate = revisiondate
+        translation.save()
+
+        return translation
+
+    def strip_junk(self, sentence):
+        # Strip html tags...
+        entry = striptags(sentence.msgid)
+        # ... and other non alpha characters...
+        for char in CHARS:
+            entry = entry.replace(char, " ")
+        # ... and double-quotes...
+        entry = entry.replace('"', " ")
+        # ... and newline chars
+        entry = entry.replace("\n", " ")
+        # Splitting on spaces
+        entry = entry.split(" ")
+
+        return entry
+
+    def add_words(self, entry):
+
+        terms = []
+        for word in entry:
+            # Check for blanks
+            if not word.isspace() and len(word) > 1 and not word.isdigit():
+                # Remove common articles
+                if word.lower() not in COMMON:
+                    term, created = Word.objects.get_or_create(term=word.lower())
+                    terms.append(term)
+
+        return terms
