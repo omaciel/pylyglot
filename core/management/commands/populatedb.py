@@ -19,6 +19,7 @@ from pylyglot.packages.models import Package
 from pylyglot.languages.models import Language
 from pylyglot.translations.models import Translation
 
+import time
 from datetime import datetime
 import logging
 
@@ -76,9 +77,11 @@ class Command(BaseCommand):
         try:
             revisiondate = parse(revisiondate)
             revisiondate = revisiondate.astimezone(tzutc())
-            revisiondate = datetime.strptime(revisiondate.astimezone(tzutc()).strftime("%Y-%m-%d %H:%M"), "%Y-%m-%d %H:%M")
+            revisiondate = datetime(*time.strptime(revisiondate.astimezone(tzutc()).strftime("%Y-%m-%d %H:%M"), "%Y-%m-%d %H:%M")[0:6])
+            #revisiondate = datetime.strptime(revisiondate.astimezone(tzutc()).strftime("%Y-%m-%d %H:%M"), "%Y-%m-%d %H:%M")
         except Exception, e:
             logging.info("Package %s doesn't seem to be translated yet for %s." % (packageName, language))
+            logging.error(str(e))
             return
 
         logging.info("Parsing %s for %s" % (packageName, language))
