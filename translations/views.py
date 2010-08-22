@@ -20,7 +20,6 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from pylyglot.core.forms import SearchForm
 from pylyglot.core.models import Word
-from pylyglot.translations.models import Translation
 
 def index(request):
 

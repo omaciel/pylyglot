@@ -14,8 +14,9 @@
                 <th>Translated</th>
                 <th>Package</th>
                 <th>Latest Revision (UTC)</th>
+                <th>Standardized</th>
             </tr>
-            {% for sentence in object.sentence_set.all|order_by:"length" %}
+            {% for sentence in object.sentence_set.all|order_by:"-translations__standardized, length" %}
                 {% for translation in sentence.translations.all %}
                     {% ifequal translation.language.id|stringformat:"s" language_id %}
                     <tr>
@@ -23,6 +24,7 @@
                         <td>{{ translation.msgstr }}</td>
                         <td>{{ translation.package.name }}</td>
                         <td>{{ translation.revisiondate|date:"DATETIME_FORMAT" }}</td>
+                        <td>{{ translation.standardized }}</td>
                     </tr>
                     {% endifequal %}
                 {% empty %}
