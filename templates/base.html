@@ -2,20 +2,18 @@
 {% load humanize %}
 {% load tryinclude %}
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE HTML>
 <html lang="en" class="no-js">
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
         <!--[if IE]><![endif]-->
 
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <link rel="canonical" href="http://pylyglot.org/"/>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta name="description" content="Translation news & statistics made simple.">
         <meta name="keywords" content="translations, gnome">
         <title>{% block title %} Pylyglot {% endblock %}</title>
         <link title="Pylyglot" type="application/opensearchdescription+xml" rel="search" href="opensearch.xml">
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="#" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed/" />
         <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
         <link rel="shortcut icon" href="{{ MEDIA_URL }}images/favicon.ico">
         <link rel="stylesheet" href="{{ MEDIA_URL }}css/style.css?v=1">
@@ -29,51 +27,50 @@
 <!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
 
-    <div id="container">
-        <header>
-            <h1>
-                <a href="/" class="ht"><img src="{{ MEDIA_URL }}images/logo-179x119.jpg" alt="Pylyglot" width="179px" height="119" border="0" /></a>
-            </h1>
+        <div id="container">
+            <header>
+                <h1>
+                    <a href="/" class="ht"><img src="{{ MEDIA_URL }}images/logo-179x119.jpg" alt="Pylyglot" /></a>
+                </h1>
 
 
-            <form id="search" method="post" action=".">
-                {% csrf_token %}
-                    <p>
-                        {{ form.languages }} {{ form.query }}
-                        <input type="submit" value="search" /></span></p>
-            </form>
+                <form id="search" method="post" action=".">
+                    {% csrf_token %}
+                        <p>
+                            {{ form.languages }} {{ form.query }}
+                            <input type="submit" value="search" /></p>
+                </form>
 
-            <ul class="information-links">
-                <li><a href="{% url howto %}">{% trans "How to use" %}</a></li>
-                <li><a href="{% url about %}">{% trans "About" %}</a></li>
-                <li><a href="{% url contact %}">{% trans "Contact" %}</a></li>
-            </ul>
-        </header>
+                <ul class="information-links">
+                    <li><a href="{% url howto %}">{% trans "How to use" %}</a></li>
+                    <li><a href="{% url about %}">{% trans "About" %}</a></li>
+                    <li><a href="{% url contact %}">{% trans "Contact" %}</a></li>
+                </ul>
+            </header>
 
-        {% block content %}{% endblock %}
+            {% block content %}{% endblock %}
 
-        <footer>
-            <p id="statistics">
-                <span id="now-serving">Now serving</span>: 
-                <span id="languages-number">Languages: {{ total_languages }}</span> | 
-                <span id="packages-number">Packages: {{ total_packages }}</span> | 
-                <span id="sentences-number">Translations: {{ total_translations|intcomma }}</span>
-            </p>
-            <p id="website-information">Pylyglot 2010. All Rights Reserverd. Design by: <a rel="nofollow" href="http://quartoestudio.com">QuartoEstudio.com</a></p>
-        </footer>
-      </div> <!-- end of #container -->
+            <footer>
+                <p id="statistics">
+                    <span id="now-serving">Now serving</span>: 
+                    <span id="languages-number">Languages: {{ total_languages }}</span> | 
+                    <span id="packages-number">Packages: {{ total_packages }}</span> | 
+                    <span id="sentences-number">Translations: {{ total_translations|intcomma }}</span>
+                </p>
+                <p id="website-information">Pylyglot 2010. All Rights Reserverd. Design by: <a rel="nofollow" href="http://quartoestudio.com">QuartoEstudio.com</a></p>
+            </footer>
+        </div> <!-- end of #container -->
 
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-      <script>!window.jQuery && document.write('<script src="js/jquery-1.4.2.min.js"><\/script>')</script>
-      <script src="js/plugins.js?v=1"></script>
-      <script src="js/script.js?v=1"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script>!window.jQuery && document.write('<script src="js/jquery-1.4.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js?v=1"></script>
+        <script src="js/script.js?v=1"></script>
 
-      <!--[if lt IE 7 ]>
-        <script src="js/dd_belatedpng.js?v=1"></script>
-      <![endif]-->
+        <!--[if lt IE 7 ]>
+          <script src="js/dd_belatedpng.js?v=1"></script>
+        <![endif]-->
 
-      <script src="js/profiling/yahoo-profiling.min.js?v=1"></script>
-      <script src="js/profiling/config.js?v=1"></script>
-
+        <script src="js/profiling/yahoo-profiling.min.js?v=1"></script>
+        <script src="js/profiling/config.js?v=1"></script>
     </body>
 </html>
