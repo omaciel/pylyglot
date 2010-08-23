@@ -164,10 +164,16 @@ class Command(BaseCommand):
 
     def add_translation(self, entry, msgstr, language, package, revisiondate):
         # Add translation
-        translation, created = Translation.objects.get_or_create(msgstr=msgstr, language=language, package=package)
-        translation.translated = entry.translated()
-        if created or revisiondate > translation.revisiondate:
+        translation = Translation.objects.filter(msgstr=msgstr, language=language, package=package)
+        if translation:
+            translation = translation[0]
+            if revisiondate > translation.revisiondate:
+                translation.revisiondate = revisiondate
+        else:
+            translation = Translation(msgstr=msgstr, language=language, package=package)
             translation.revisiondate = revisiondate
+
+        translation.translated = entry.translated()
         translation.save()
 
         return translation

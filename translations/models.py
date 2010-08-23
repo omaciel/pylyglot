@@ -22,13 +22,13 @@ from pylyglot.packages.models import Package
 
 class Translation(models.Model):
 
-    msgstr = models.TextField()
+    msgstr = models.TextField(max_length=1000)
     revisiondate = models.DateTimeField(blank=True, null=True)
     translated = models.BooleanField()
-    standardized = models.BooleanField(default=False)
+    standardized = models.NullBooleanField(default=False, blank=True, null=True)
 
-    language = models.ForeignKey(Language)
-    package = models.ForeignKey(Package, blank=True, null=True)
+    language = models.ForeignKey(Language, db_index=True)
+    package = models.ForeignKey(Package, db_index=True)
 
     def __unicode_(self):
         return self.msgstr.encode("utf-8")
