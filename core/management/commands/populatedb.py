@@ -75,7 +75,10 @@ class Command(BaseCommand):
         conffiles.sort()
 
         for f in conffiles:
+            t1 = datetime.now()
             self.populate_db(f)
+            t2 = datetime.now()
+            logging.info("Package added in %s seconds." % (t2 - t1).seconds)
 
     @transaction.commit_manually
     def populate_db(self, pfile):
@@ -113,13 +116,16 @@ class Command(BaseCommand):
             for entry in valid_entries:
                 if entry.translated():
                     if entry.msgid_plural:
-                        entry.msgstr = entry.msgstr_plural.pop('0')
-                        entry.msgstr_plural = entry.msgstr_plural.pop('1')
+                        entry.msgstr = entry.msgstr_plural.get('0', '')
+                        entry.msgstr_plural = entry.msgstr_plural.get('1', '')
 
-                        self.add_sentence(entry, language, package, revisiondate)
-                        self.add_sentence(entry, language, package, revisiondate, True)
+                        if entry.msgstr:
+                            self.add_sentence(entry, language, package, revisiondate)
+                        if entry.msgstr_plural:
+                            self.add_sentence(entry, language, package, revisiondate, True)
                     else:
-                        self.add_sentence(entry, language, package, revisiondate)
+                        if entry.msgstr:
+                            self.add_sentence(entry, language, package, revisiondate)
 
         except Exception, e:
             logging.error("Failed to create sentences: %s" % str(e))

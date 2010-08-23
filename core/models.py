@@ -21,7 +21,7 @@ from pylyglot.translations.models import Translation
 
 class Word(models.Model):
 
-    term = models.CharField(max_length=255)
+    term = models.CharField(max_length=255, db_index=True)
 
     def __unicode__(self):
         return self.term
