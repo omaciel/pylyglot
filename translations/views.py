@@ -19,10 +19,12 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from pylyglot.core.forms import SearchForm
-from pylyglot.core.models import Word
+from pylyglot.core.models import Sentence, Word
+from pylyglot.translations.models import Translation
 
 def index(request):
 
+    result = {}
     translations = []
     language_id = 1
 
@@ -32,15 +34,20 @@ def index(request):
             query = form.cleaned_data['query']
             language_id = form.cleaned_data['languages']
 
-            translations = Word.objects.filter(
-                term__contains=query
-                ).filter(sentence__translations__language__id=language_id
-                        ).distinct()
+            words = Word.objects.filter(term__contains=query).order_by('term')
+            for word in words:
+                trans = []
+                sentences = Sentence.objects.filter(words__term=word.term).order_by('length')
+                for sentence in sentences:
+                    translations = Translation.objects.filter(language__id=language_id).filter(sentence__id=sentence.id)
+                    for translation in translations:
+                        trans.append(translation)
+                result[word.term] = trans
     else:
         form = SearchForm()
 
     variables = RequestContext(request, {
-        'object_list': translations,
+        'object_list': result,
         'language_id': language_id,
         'form': form,
         })

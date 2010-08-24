@@ -5,8 +5,8 @@
 <div id="main">
     <div class="package-result">
     {% if object_list %}
-        {% for object in object_list %}
-        <h2><span>Term:</span> {{ object.term }}</h2>
+        {% for key, value in object_list.items %}
+        <h2><span>Term:</span> {{ key }}</h2>
         <table class="results">
             <tbody>
             <tr>
@@ -14,22 +14,18 @@
                 <th>Translated</th>
                 <th>Package</th>
                 <th>Latest Revision (UTC)</th>
-                <th>Standardized</th>
             </tr>
-            {% for sentence in object.sentence_set.all|order_by:"-translations__standardized,length" %}
-                {% for translation in sentence.translations.all %}
-                    {% ifequal translation.language.id|stringformat:"s" language_id %}
-                    <tr>
+            {% for translation in value %}
+                {% for sentence in translation.sentence_set.all %}
+                <tr>
                         <td>{{ sentence.msgid }}</td>
                         <td>{{ translation.msgstr }}</td>
                         <td>{{ translation.package.name }}</td>
                         <td>{{ translation.revisiondate|date:"DATETIME_FORMAT" }}</td>
-                        <td>{{ translation.standardized }}</td>
-                    </tr>
-                    {% endifequal %}
-                {% empty %}
-                    <tr><td>Could not find any sentences with this term.</td></tr>
+                </tr>
                 {% endfor %}
+            {% empty %}
+                <tr><td>Could not find any sentences with this term.</td></tr>
             {% endfor %}
         </tbody>
         </table>
