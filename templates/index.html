@@ -13,6 +13,6 @@
     {% with translations as object_list %}
         {% include "translations/list.html" %}
     {% endwith %}
-    <p>Total languages: {{ languages }}</p>
+    <p>{% trans "Total languages:" %} {{ languages }}</p>
 
 {% endblock %}

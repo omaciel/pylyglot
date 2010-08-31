@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% load sortfilter %}
 
 {% block content %}
@@ -6,14 +7,14 @@
     <div class="package-result">
     {% if object_list %}
         {% for key, value in object_list.items %}
-        <h2><span>Term:</span> {{ key }}</h2>
+        <h2><span>{% trans "Term:" %}</span> {{ key }}</h2>
         <table class="results">
             <tbody>
             <tr>
-                <th>Original</th>
-                <th>Translated</th>
-                <th>Package</th>
-                <th>Latest Revision (UTC)</th>
+                <th>{% trans "Original" %}</th>
+                <th>{% trans "Translated" %}</th>
+                <th>{% trans "Package" %}</th>
+                <th>{% trans "Latest Revision (UTC)" %}</th>
             </tr>
             {% for translation in value %}
                 {% for sentence in translation.sentence_set.all %}
@@ -25,14 +26,14 @@
                 </tr>
                 {% endfor %}
             {% empty %}
-                <tr><td>Could not find any sentences with this term.</td></tr>
+            <tr><td>{% trans "Could not find any sentences with this term." %}</td></tr>
             {% endfor %}
         </tbody>
         </table>
         {% endfor %}
     </div>
     {% else %}
-        <p style="text-align:center;">No phrases were found that match your search term.</p>
+    <p style="text-align:center;">{% trans "No phrases were found that match your search term." %}</p>
     {% endif %}
 </div>
 {% endblock %}

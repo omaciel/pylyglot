@@ -2,12 +2,12 @@
 {% block content %}
 <div id="search-results">
     {% if object_list %}
-        <p>The following {{ object_list.count }} term(s) matched your criteria:</p>
+    <p>{% trans "The following {{ object_list.count }} term(s) matched your criteria:" %}</p>
         <table id="translations">
             <tr>
-                <th>Original</th>
-                <th>Translated</th>
-                <th>Score</th>
+                <th>{% trans "Original" %}</th>
+                <th>{% trans "Translated" %}</th>
+                <th>{% trans "Score" %}</th>
             </tr>
             {% for object in object_list %}
                 {% for sentence in object.sentence_set.all %}
@@ -17,12 +17,12 @@
                         <td>{{ sentence.length }}</td>
                     </tr>
                 {% empty %}
-                    <tr><td>Could not find any sentences with this term.</td></tr>
+                <tr><td>{% trans "Could not find any sentences with this term." %}</td></tr>
                 {% endfor %}
             {% endfor %}
         </table>
     {% else %}
-        <p>No phrases were found that match your search term.</p>
+    <p>{% trans "No phrases were found that match your search term." %}</p>
     {% endif %}
 </div>
 {% endblock %}

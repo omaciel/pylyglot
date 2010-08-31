@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>This is a XML-RPC service. You can call the following methods using a XML-RPC client.</h1>
+<h1>{% trans "This is a XML-RPC service. You can call the following methods using a XML-RPC client." %}</h1>
 {% for method in methods %}
     <pre>
-        <h1>Method: {{ method.name }}</h1>
+        <h1>{% trans "Method:" %} {{ method.name }}</h1>
         {{ method.help }}
     </pre>
 {% endfor %}

@@ -52,12 +52,12 @@
 
             <footer>
                 <p id="statistics">
-                    <span id="now-serving">Now serving</span>: 
-                    <span id="languages-number">Languages: {{ total_languages }}</span> | 
-                    <span id="packages-number">Packages: {{ total_packages }}</span> | 
-                    <span id="sentences-number">Translations: {{ total_translations|intcomma }}</span>
+                <span id="now-serving">{% trans "Now serving" %}</span>: 
+                <span id="languages-number">{% trans "Languages" %}: {{ total_languages }}</span> | 
+                <span id="packages-number">{% trans "Packages:" %} {{ total_packages }}</span> | 
+                <span id="sentences-number">{% trans "Translations:" %} {{ total_translations|intcomma }}</span>
                 </p>
-                <p id="website-information">Pylyglot 2010. All Rights Reserverd. Design by: <a rel="nofollow" href="http://quartoestudio.com">QuartoEstudio.com</a></p>
+                <p id="website-information">Pylyglot 2010. {% trans "All Rights Reserverd. Design by:" %} <a rel="nofollow" href="http://quartoestudio.com">QuartoEstudio.com</a></p>
             </footer>
         </div> <!-- end of #container -->
 
