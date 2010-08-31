@@ -100,7 +100,7 @@ def get_translation(language, term):
     result = {}
 
     # XXX: The following search needs to become a function to be used on both
-    # get_translations and translations.views.index. 
+    # get_translations and translations.views.index.
     # While we don't have a definitive way to search we use this.
     words = Word.objects.filter(term__contains=term).order_by('term')
     for word in words:
@@ -116,7 +116,7 @@ def get_translation(language, term):
                 })
         result[word.term] = trans
 
-	return result
+    return result
 
 rpc_dispatcher.register_function(get_translation)
 rpc_dispatcher.register_function(get_languages)
