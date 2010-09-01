@@ -28,7 +28,10 @@ from pylyglot.languages.models import Language
 from pylyglot.core.models import Sentence, Word
 from pylyglot.translations.models import Translation
 
-rpc_dispatcher = SimpleXMLRPCDispatcher(allow_none=False, encoding=None)
+try:
+    rpc_dispatcher = SimpleXMLRPCDispatcher(allow_none=False, encoding=None)
+except Exception, e:
+    rpc_dispatcher = SimpleXMLRPCDispatcher()
 
 @csrf_exempt
 def rpc_service(request):
