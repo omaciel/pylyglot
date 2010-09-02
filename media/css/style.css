@@ -72,9 +72,17 @@ button {  width: auto; overflow: visible; }
 .clearfix { display: block; }
 
 
- /* Primary Styles
+ /* 
+ 	Primary Styles
     Author: QuartoEstudio.com
  */
+ 
+ h1 { font-size: 2em;}
+ h2 { font-size: 1.8em;}
+ h3 { font-size: 1.6em;}
+ h4 { font-size: 1.5em;}
+ 
+ P { font-size: 1em; }
  
  .ht{
  	text-indent:-9999px;
@@ -86,20 +94,21 @@ button {  width: auto; overflow: visible; }
 body							{ background:#fff: }
 header					 		{ width: 600px; margin: auto; margin-bottom:50px;}
 header h1						{ text-align: center; margin-top:50px; margin-bottom:25px;}
-header form						{ margin-bottom:50px; position:relative; border:1px solid #E8E8E8; height:32px; width:456px; margin:auto;}
+header form						{ margin-bottom:50px !important; position:relative; border:1px solid #E8E8E8; height:32px; width:456px; margin:auto;}
 
 header form select 				{ position:	absolute; left:7px; top:6px; height: 1.6em; line-height:1.6em; border: 1px solid #E8E8E8; }
 header form input[type=text]	{ position: absolute; left: 90px; top: 0px; height: 1em; width:320px; border: none; height:30px; font-size:1.5em; color:#545454; background:#fff;}
 header form input[type=submit]	{ position:	absolute; right:7px; top:0; height: 1.6em; background: url(../images/search-30x30.png) no-repeat; width:30px; height:30px; text-indent:-9999px; overflow:hidden; border:none;}
 
-ul.information-links			{ list-style:none; margin:0 0; padding:0 0; text-align:center; padding-top:25px;}
+ul.information-links			{ list-style:none; margin:0 0; padding:0 0; text-align:center;}
 ul.information-links li			{  display:inline; margin-left: 10px; text-transform:uppercase; font-size:80%; letter-spacing:.1em; }
 
 ul.information-links,
 p#statistics,
 p#website-information 			{ margin-bottom:10px }
 
-.package-result 				{ width:900px; margin:auto;}
+#main				{ width:900px; margin:auto;}
+
 .package-result tbody td,
 .package-result tbody th		{ width:450px; margin:auto; border:1px solid #E8E8E8; padding:10px; font-size:1em;}
 
@@ -109,13 +118,11 @@ p#website-information 			{ margin-bottom:10px }
 
 .package-result tbody th				{ background:#D9E021; color:#fff; letter-spacing:.05em; }
 
-
-.package-result							{ margin-bottom:50px;}
 .package-result	h2						{ margin-bottom:10px; font-size:2em;}
 .package-result	h2	span				{ color:#C1C1C1; font-size:80%;}
 
 
-footer									{ padding-top:20px; padding-bottom:50px; width:600px; margin:auto; }
+footer									{ padding-top:50px; padding-bottom:50px; width:600px; margin:auto; }
 footer p								{ text-align:center; }
 
 footer p#website-information			{ font-size:90%; color:#C1C1C1; } 
