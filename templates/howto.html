@@ -1,5 +1,6 @@
-{% extends "base.html" %}
+{% extends "internal.html" %}
+{% load i18n %}
 
 {% block content %}
-<p>This is where I will explain how to use this!</p>
+    <p>{% trans "This is where I will explain how to use this!" %}</p>
 {% endblock %}
