@@ -1,26 +1,9 @@
 {% load i18n %}
-{% load humanize %}
-{% load tryinclude %}
 
 <!DOCTYPE HTML>
 <html lang="en" class="no-js">
-    <head>
-        <meta charset="UTF-8">
-        <!--[if IE]><![endif]-->
+    {% include "page_header.html" %}
 
-        <link rel="canonical" href="http://pylyglot.org/"/>
-        <meta name="description" content="Translation news & statistics made simple.">
-        <meta name="keywords" content="translations, gnome">
-        <title>{% block title %} Pylyglot {% endblock %}</title>
-        <link title="Pylyglot" type="application/opensearchdescription+xml" rel="search" href="opensearch.xml">
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed/" />
-        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
-        <link rel="shortcut icon" href="{{ MEDIA_URL }}images/favicon.ico">
-        <link rel="stylesheet" href="{{ MEDIA_URL }}css/style.css?v=1">
-        <link rel="stylesheet" media="handheld" href="{{ MEDIA_URL }}css/handheld.css?v=1">
-        <script src="{{ MEDIA_URL }}js/modernizr-1.5.min.js"></script>
-        {% try_to_include "analytics.html" %}
-    </head>
 <!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
 <!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
 <!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
@@ -28,10 +11,13 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
 
         <div id="container">
+
             <header>
                 <h1>
                     <a href="/" class="ht"><img src="{{ MEDIA_URL }}images/logo-179x119.jpg" alt="Pylyglot" /></a>
                 </h1>
+
+                {% block search %}{% endblock %}
 
                 <ul class="information-links">
                     <li><a href="{% url howto %}">{% trans "How to use" %}</a></li>
@@ -42,27 +28,8 @@
 
             {% block content %}{% endblock %}
 
-            <footer>
-                <p id="statistics">
-                <span id="now-serving">{% trans "Now serving" %}</span>: 
-                <span id="languages-number">{% trans "Languages" %}: {{ total_languages }}</span> | 
-                <span id="packages-number">{% trans "Packages:" %} {{ total_packages }}</span> | 
-                <span id="sentences-number">{% trans "Translations:" %} {{ total_translations|intcomma }}</span>
-                </p>
-                <p id="website-information">Pylyglot 2010. {% trans "All Rights Reserverd. Design by:" %} <a rel="nofollow" href="http://quartoestudio.com">QuartoEstudio.com</a></p>
-            </footer>
+            {% include "page_footer.html" %}
+
         </div> <!-- end of #container -->
-
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-        <script>!window.jQuery && document.write('<script src="js/jquery-1.4.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js?v=1"></script>
-        <script src="js/script.js?v=1"></script>
-
-        <!--[if lt IE 7 ]>
-          <script src="js/dd_belatedpng.js?v=1"></script>
-        <![endif]-->
-
-        <script src="js/profiling/yahoo-profiling.min.js?v=1"></script>
-        <script src="js/profiling/config.js?v=1"></script>
     </body>
 </html>

@@ -1,6 +1,11 @@
 {% extends "base.html" %}
+
 {% load i18n %}
 {% load sortfilter %}
+
+{% block search %}
+    {% include "search_form.html" %}
+{% endblock %}
 
 {% block content %}
 <div id="main">

@@ -1,0 +1,7 @@
+
+<form id="search" method="post" action=".">
+    {% csrf_token %}
+        <p>
+            {{ form.languages }} {{ form.query }}
+            <input type="submit" value="search" /></p>
+</form>
