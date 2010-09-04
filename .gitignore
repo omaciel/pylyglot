@@ -4,5 +4,5 @@
 99-*.conf
 .DS_Store
 *.db
-*.po
+po/*
 analytics.html
