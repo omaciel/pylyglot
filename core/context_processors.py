@@ -16,9 +16,7 @@
 # You should have received a copy of the GNU General Public License
 # along with Pylyglot.  If not, see <http://www.gnu.org/licenses/>.
 
-from pylyglot.languages.models import Language
-from pylyglot.packages.models import Package
-from pylyglot.translations.models import Translation
+from pylyglot.core.models import Language, Package, Translation
 
 def total_packages(request):
 

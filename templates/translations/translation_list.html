@@ -22,14 +22,12 @@
                 <th>{% trans "Latest Revision (UTC)" %}</th>
             </tr>
             {% for translation in value %}
-                {% for sentence in translation.sentence_set.all %}
                 <tr>
-                        <td>{{ sentence.msgid }}</td>
+                        <td>{{ translation.msgid.msgid }}</td>
                         <td>{{ translation.msgstr }}</td>
                         <td>{{ translation.package.name }}</td>
                         <td>{{ translation.revisiondate|date:"DATETIME_FORMAT" }}</td>
                 </tr>
-                {% endfor %}
             {% empty %}
             <tr><td>{% trans "Could not find any sentences with this term." %}</td></tr>
             {% endfor %}

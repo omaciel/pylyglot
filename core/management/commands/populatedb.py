@@ -29,10 +29,7 @@ from polib import pofile
 from dateutil.parser import parse
 from dateutil.tz import tzutc
 
-from pylyglot.core.models import Sentence, Word
-from pylyglot.packages.models import Package
-from pylyglot.languages.models import Language
-from pylyglot.translations.models import Translation
+from pylyglot.core.models import Package, Language, Translation, Sentence, Word
 
 import time
 from datetime import datetime
@@ -63,7 +60,7 @@ COMMON = [
     "yes",
 ]
 
-CHARS = "-!,.?;:_*/()@#$%^&'"
+CHARS = "[]=-!,.?;:_*/()@#$%^&'"
 
 class Command(BaseCommand):
 
@@ -136,51 +133,51 @@ class Command(BaseCommand):
     def add_sentence(self, entry, language, package, revisiondate, plural=False):
 
         if plural:
-            msgid = entry.msgid_plural
-            msgstr = entry.msgstr_plural
+            sentence, created = Sentence.objects.get_or_create(msgid=entry.msgid_plural)
         else:
-            msgid = entry.msgid
-            msgstr = entry.msgstr
-
-        sentence, created = Sentence.objects.get_or_create(msgid=msgid)
+            sentence, created = Sentence.objects.get_or_create(msgid=entry.msgid)
 
         if entry.flags:
             sentence.flags = ", ".join(entry.flags)
 
-        sentence.translations.add(
-                self.add_translation(
-                    entry, msgstr, language, package, revisiondate
-                    )
-                )
+        self.add_translation(entry, sentence, language, package, revisiondate, plural)
 
-        entry = self.strip_junk(sentence)
+    def add_translation(self, entry, sentence, language, package, revisiondate, plural=False):
 
-        for term in self.add_words(entry):
-            if term not in sentence.words.all():
-                sentence.words.add(term)
+        if plural:
+            msgstr = entry.msgstr_plural
+            cleaned_entry = self.strip_junk(entry.msgid_plural)
+        else:
+            msgstr=entry.msgstr
+            cleaned_entry = self.strip_junk(entry.msgid)
 
-        sentence.length = len(sentence.words.all())
-        sentence.save()
+        translation = Translation.objects.filter(msgstr=msgstr, msgid=sentence, language=language, package=package)
 
-    def add_translation(self, entry, msgstr, language, package, revisiondate):
-        # Add translation
-        translation = Translation.objects.filter(msgstr=msgstr, language=language, package=package)
         if translation:
             translation = translation[0]
             if revisiondate > translation.revisiondate:
                 translation.revisiondate = revisiondate
+            else:
+                logging.info("This translation is older than what's the current value.")
         else:
-            translation = Translation(msgstr=msgstr, language=language, package=package)
+            translation = Translation(msgstr=msgstr, msgid=sentence, language=language, package=package)
             translation.revisiondate = revisiondate
+            translation.save()
+
+
+        for term in self.add_words(cleaned_entry):
+            if term not in translation.words.all():
+                translation.words.add(term)
+
+        sentence.length = len(translation.words.all())
+        sentence.save()
 
         translation.translated = entry.translated()
         translation.save()
 
-        return translation
-
     def strip_junk(self, sentence):
         # Strip html tags...
-        entry = striptags(sentence.msgid)
+        entry = striptags(sentence)
         # ... and other non alpha characters...
         for char in CHARS:
             entry = entry.replace(char, " ")

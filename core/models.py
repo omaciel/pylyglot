@@ -19,6 +19,25 @@
 from django.db import models
 from pylyglot.translations.models import Translation
 
+class Package(models.Model):
+
+    name = models.CharField(max_length=255)
+
+    def __unicode__(self):
+        return self.name
+
+    @models.permalink
+    def get_absolute_url(self):
+        return ('package_detail', [str(self.id)])
+
+class Language(models.Model):
+
+    long_name = models.CharField(max_length=255, blank=True, null=True)
+    short_name = models.CharField(max_length=30)
+
+    def __unicode__(self):
+        return "%s (%s)" % (self.long_name, self.short_name)
+
 class Word(models.Model):
 
     term = models.CharField(max_length=255, db_index=True)
@@ -34,11 +53,23 @@ class Sentence(models.Model):
     create_date = models.DateTimeField(auto_now_add=True)
     update_date = models.DateTimeField(auto_now=True)
 
-    words = models.ManyToManyField(Word)
-    translations = models.ManyToManyField(Translation)
-
     def __unicode_(self):
         return self.msgid.encode("utf-8")
 
     def __repr__(self):
         return u'<Sentence: %s>' % self.msgid.encode("utf-8")
+
+class Translation(models.Model):
+
+    msgstr = models.TextField(max_length=1000)
+    revisiondate = models.DateTimeField(blank=True, null=True)
+    translated = models.BooleanField()
+    standardized = models.NullBooleanField(default=False, blank=True, null=True)
+
+    language = models.ForeignKey(Language, db_index=True)
+    package = models.ForeignKey(Package, db_index=True)
+    msgid = models.ForeignKey(Sentence, db_index=True)
+    words = models.ManyToManyField(Word)
+
+    def __unicode_(self):
+        return self.msgstr.encode("utf-8")

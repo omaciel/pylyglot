@@ -17,7 +17,7 @@
 # along with Pylyglot.  If not, see <http://www.gnu.org/licenses/>.
 
 from django import forms
-from pylyglot.languages.models import Language
+from pylyglot.core.models import Language
 
 class SearchForm(forms.Form):
 

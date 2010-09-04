@@ -23,10 +23,7 @@ from django.template import RequestContext
 from django.shortcuts import render_to_response
 from django.views.decorators.csrf import csrf_exempt
 
-from pylyglot.packages.models import Package
-from pylyglot.languages.models import Language
-from pylyglot.core.models import Sentence, Word
-from pylyglot.translations.models import Translation
+from pylyglot.core.models import Language, Package, Sentence, Translation, Word
 
 try:
     rpc_dispatcher = SimpleXMLRPCDispatcher(allow_none=False, encoding=None)
@@ -108,15 +105,13 @@ def get_translation(language, term):
     words = Word.objects.filter(term__contains=term).order_by('term')
     for word in words:
         trans = []
-        sentences = Sentence.objects.filter(words__term=word.term).order_by('length')
-        for sentence in sentences:
-            translations = Translation.objects.filter(language__short_name=language).filter(sentence__id=sentence.id)
-            for translation in translations:
-                trans.append({
-                    'translation': translation.msgstr,
-                    'revisiondate': translation.revisiondate,
-                    'standardized': translation.standardized
-                })
+        translations = Translation.objects.filter(words__term=word.term, language__short_name=language).order_by('msgid__length')
+        for translation in translations:
+            trans.append({
+                'translation': translation.msgstr,
+                'revisiondate': translation.revisiondate,
+                'standardized': translation.standardized
+            })
         result[word.term] = trans
 
     return result
