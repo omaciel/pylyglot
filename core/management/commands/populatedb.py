@@ -159,7 +159,7 @@ class Command(BaseCommand):
                 translation.revisiondate = revisiondate
             else:
                 logging.info("This translation is older than what's the current value.")
-                logging.info(sentence)
+                logging.info(sentence.msgid)
                 logging.info(msgstr)
 
                 return
