@@ -23,7 +23,7 @@ from pylyglot.core.models import Sentence, Translation, Word
 
 def index(request):
 
-    result = {}
+    result = []
     translations = []
     language_id = 1
 
@@ -40,9 +40,7 @@ def index(request):
                 if translations:
                     for translation in translations:
                         trans.append(translation)
-                    result[word.term] = trans
-                else:
-                    words.pop(word)
+                    result.append({word.term: trans})
     else:
         form = SearchForm()
 
