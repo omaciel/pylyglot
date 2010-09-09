@@ -2,7 +2,33 @@
 {% load i18n %}
 
 {% block content %}
-<p id="informational">
-<span id="pylyglot">Pylyglot</span> {% trans "is a web based glossary compedium for Free and Open Source Software translators heavily inspired on the <a href='http://opentrans.eu'>Opentrans.eu</a> web site." %}
+<div id="informational">
+    <h2>{% trans "About" %}</h2>
+<p>
+<span id='pylyglot'>Pylyglot</span> {% trans "is a web based glossary compedium for Free and Open Source Software translators heavily inspired on the <a href='http://open-tran.eu'>Open-tran.eu</a> web site." %}
 </p>
+
+<p>{% trans "The main objective for <span id='pylyglot'>Pylyglot</span> is to <em>'provide a concise, yet comprehensive compilation of a body of knowledge'</em> for translators derived from existing Free and Open Source Software translations. The more data is added to the system, the more accurate and reliable the results will be!" %}</p>
+
+    <h2>{% trans "Contribute" %}</h2>
+    <p>Fancy helping us improving the web site, our services or the algorythim used to power <span id="pylyglot">Pylyglot</span>?Here's how you can help us:</p>
+    <h3>Write code, send in a patch, write tests!</h3>
+    <p>The source code is currently available on <a href="http://github.com/omaciel/pylyglot">Github</a> and can be easily cloned:</p>
+    <p><quote>git clone git://github.com/omaciel/pylyglot.git</quote></p>
+    <h3>{% trans "Know a thing or two about database optimization or algorhythms?" %}</h3>
+    <p>{% trans "Do you enjoy optimizing database queries or writing code to do some serious data crunching? We need you!" %}</p>
+
+    <h3>{% trans "Give the web site a facelift!" %}</h3>
+    <p>{% trans "Are you a designer or just plain enjoy improving the look and feel of things? We can always use some css and template polishing! Make sure to clone the source code (see above) and let your imagination take over!" %}</p>
+
+    <h2>{% trans "Credits" %}</h2>
+    <p>{% trans "In no particular order:" %}
+    <ul>
+        <li>Jacek Śliwerski - {% trans "Creator of <a href='http://open-tran.eu'>Open-tran.eu</a>." %}</li>
+        <li>Evandro Pastor - {% trans "Web designer from <a href='http://quartoestudio.com'>QuartoEstudio</a> and long time friend." %}</li>
+        <li>Elyezer Mendes - {% trans "Hacker extraordinaire and long time friend." %}</li>
+        <li>Taylon Silmer - {% trans "Django hacker and contributor." %}</li>
+    </ul>
+    </p>
+</div>
 {% endblock %}

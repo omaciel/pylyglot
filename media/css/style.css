@@ -136,8 +136,9 @@ footer span#languages-number			{ color:#DD1152; }
 footer span#packages-number				{ color:#2855B5; }
 footer span#sentences-number			{ color:#E13220; }
 
-p#informational							{ padding-left:20px; padding-right:20px; width:600px; margin:auto; text-indent: 40px;}
-p#informational span#pylyglot           { font-weight:bold; color:#00CC00; letter-spacing:.05em;}
+div#informational							{ padding-left:20px; padding-right:20px; width:600px; margin:auto; text-indent: 40px;}
+div#informational p							{ text-indent: 40px;}
+div#informational span#pylyglot             { font-weight:bold; color:#00CC00; letter-spacing:.05em;}
 
 /* 
  * print styles
