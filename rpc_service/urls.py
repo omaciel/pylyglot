@@ -19,5 +19,5 @@
 from django.conf.urls.defaults import *
 
 urlpatterns = patterns('pylyglot.rpc_service.views',
-    (r'^$', 'rpc_service'),
+    url(r'^$', 'rpc_service', name='xmlrpc',),
 )
