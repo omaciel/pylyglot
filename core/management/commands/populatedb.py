@@ -29,7 +29,7 @@ from polib import pofile
 from dateutil.parser import parse
 from dateutil.tz import tzutc
 
-from pylyglot.core.models import Package, Language, Translation, Sentence, Word
+from pylyglot.core.models import Language, Package, Translation
 
 import time
 from datetime import datetime
@@ -37,30 +37,6 @@ import logging
 
 log = logging.getLogger()
 log.setLevel(settings.LOG_LEVEL)
-
-COMMON = [
-    "an",
-    "and",
-    "are",
-    "as",
-    "at",
-    "by",
-    "for",
-    "in",
-    "is",
-    "it",
-    "no",
-    "not",
-    "of",
-    "on",
-    "or",
-    "the",
-    "to",
-    "with",
-    "yes",
-]
-
-CHARS = "[]=-!,.?;:_*/()@#$%^&'"
 
 class Command(BaseCommand):
 
@@ -117,12 +93,12 @@ class Command(BaseCommand):
                         entry.msgstr_plural = entry.msgstr_plural.get('1', '')
 
                         if entry.msgstr:
-                            self.add_sentence(entry, language, package, revisiondate)
+                            self.add_translations(entry.msgid, entry.msgstr, language, package, revisiondate)
                         if entry.msgstr_plural:
-                            self.add_sentence(entry, language, package, revisiondate, True)
+                            self.add_translations(entry.msgid_plural, entry.msgstr_plural, language, package, revisiondate)
                     else:
                         if entry.msgstr:
-                            self.add_sentence(entry, language, package, revisiondate)
+                            self.add_translations(entry.msgid, entry.msgstr, language, package, revisiondate)
 
         except Exception, e:
             logging.error("Failed to create sentences: %s" % str(e))
@@ -130,79 +106,15 @@ class Command(BaseCommand):
         else:
             transaction.commit()
 
-    def add_sentence(self, entry, language, package, revisiondate, plural=False):
+    def add_translations(self, msgid, msgstr, language, package, revisiondate):
 
-        if plural:
-            sentence, created = Sentence.objects.get_or_create(msgid=entry.msgid_plural)
-        else:
-            sentence, created = Sentence.objects.get_or_create(msgid=entry.msgid)
-
-        if entry.flags:
-            sentence.flags = ", ".join(entry.flags)
-
-        self.add_translation(entry, sentence, language, package, revisiondate, plural)
-
-    def add_translation(self, entry, sentence, language, package, revisiondate, plural=False):
-
-        if plural:
-            msgstr = entry.msgstr_plural
-            cleaned_entry = self.strip_junk(entry.msgid_plural)
-        else:
-            msgstr=entry.msgstr
-            cleaned_entry = self.strip_junk(entry.msgid)
-
-        translation = Translation.objects.filter(msgstr=msgstr, msgid=sentence, language=language, package=package)
-
-        if translation:
-            translation = translation[0]
-            if revisiondate > translation.revisiondate:
-                translation.revisiondate = revisiondate
-            else:
-                logging.info("This translation is older than what's the current value.")
-                logging.info(sentence.msgid)
-                logging.info(msgstr)
-
-                return
-        else:
-            translation = Translation(msgstr=msgstr, msgid=sentence, language=language, package=package)
-            translation.revisiondate = revisiondate
-            translation.save()
-
-
-        for term in self.add_words(cleaned_entry):
-            if term not in translation.words.all():
-                translation.words.add(term)
-
-        sentence.length = len(translation.words.all())
-        sentence.save()
-
-        translation.translated = entry.translated()
+        translation = Translation(
+                msgstr = msgstr,
+                msgid = msgid,
+                language = language,
+                package = package,
+                create_date = revisiondate,
+                length = len(msgid),
+                translated=True,
+            )
         translation.save()
-
-    def strip_junk(self, sentence):
-        # Strip html tags...
-        entry = striptags(sentence)
-        # ... and other non alpha characters...
-        for char in CHARS:
-            entry = entry.replace(char, " ")
-        # ... and double-quotes...
-        entry = entry.replace('"', " ")
-        # ... and newline chars
-        entry = entry.replace("\n", " ")
-        # Splitting on spaces
-        entry = entry.split(" ")
-
-        return entry
-
-    def add_words(self, entry):
-
-        terms = []
-        for word in entry:
-            # Check for blanks
-            if not word.isspace() and len(word) > 1 and not word.isdigit():
-                # Remove common articles
-                if word.lower() not in COMMON:
-                    term, created = Word.objects.get_or_create(term=word.lower())
-                    terms.append(term)
-
-        return terms

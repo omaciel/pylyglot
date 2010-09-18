@@ -11,9 +11,7 @@
 <div id="main">
     <div class="package-result">
     {% if object_list %}
-    {% for result in object_list %}
-    {% for key, value in result.items %}
-        <h2><span>{% trans "Term:" %}</span> {{ key }}</h2>
+    <h2><span>{% trans "Term:" %}</span> {{ query }} </h2>
         <table class="results">
             <tbody>
             <tr>
@@ -22,20 +20,18 @@
                 <th>{% trans "Package" %}</th>
                 <th>{% trans "Latest Revision (UTC)" %}</th>
             </tr>
-            {% for translation in value %}
+            {% for translation in object_list %}
                 <tr>
-                        <td>{{ translation.msgid.msgid }}</td>
+                        <td>{{ translation.msgid }}</td>
                         <td>{{ translation.msgstr }}</td>
                         <td>{{ translation.package.name }}</td>
-                        <td>{{ translation.revisiondate|date:"DATETIME_FORMAT" }}</td>
+                        <td>{{ translation.create_date|date:"DATETIME_FORMAT" }}</td>
                 </tr>
             {% empty %}
-            <tr><td>{% trans "Could not find any sentences with this term." %}</td></tr>
+                <tr><td>{% trans "Could not find any sentences with this term." %}</td></tr>
             {% endfor %}
         </tbody>
         </table>
-        {% endfor %}
-        {% endfor %}
     </div>
     {% else %}
     <p style="text-align:center;">{% trans "No phrases were found that match your search term." %}</p>

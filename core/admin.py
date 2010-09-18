@@ -17,9 +17,17 @@
 # along with Pylyglot.  If not, see <http://www.gnu.org/licenses/>.
 
 from django.contrib import admin
-from pylyglot.core.models import Sentence
+from pylyglot.core.models import Language, Package, Translation
 
-class SentenceAdmin(admin.ModelAdmin):
+class LanguageAdmin(admin.ModelAdmin):
     pass
 
-admin.site.register(Sentence, SentenceAdmin)
+class PackageAdmin(admin.ModelAdmin):
+    pass
+
+class TranslationAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(Language, LanguageAdmin)
+admin.site.register(Package, PackageAdmin)
+admin.site.register(Translation, TranslationAdmin)

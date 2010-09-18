@@ -23,7 +23,7 @@ from django.template import RequestContext
 from django.shortcuts import render_to_response
 from django.views.decorators.csrf import csrf_exempt
 
-from pylyglot.core.models import Language, Package, Sentence, Translation, Word
+from pylyglot.core.models import Language, Package, Translation
 
 try:
     rpc_dispatcher = SimpleXMLRPCDispatcher(allow_none=False, encoding=None)
@@ -93,26 +93,23 @@ def get_translation(language, term):
 
     Keys of the structure returned:
         translation -- Translated term.
-        revisiondate -- Last term revision.
+        updatedate -- Last term revision.
         standardized -- Whether it's a standardized term or not.
 
     """
-    result = {}
+    result = []
 
-    # XXX: The following search needs to become a function to be used on both
-    # get_translations and translations.views.index.
-    # While we don't have a definitive way to search we use this.
-    words = Word.objects.filter(term__contains=term).order_by('term')
-    for word in words:
-        trans = []
-        translations = Translation.objects.filter(words__term=word.term, language__short_name=language).order_by('msgid__length')
-        for translation in translations:
-            trans.append({
-                'translation': translation.msgstr,
-                'revisiondate': translation.revisiondate,
-                'standardized': translation.standardized
-            })
-        result[word.term] = trans
+    translations = Translation.objects.filter(
+            msgid__icontains=term,
+            language__short_name=language,
+        ).order_by('length')
+
+    for translation in translations:
+        result.append({
+            'translation': translation.msgstr,
+            'updatedate': translation.update_date,
+            'standardized': translation.standardized,
+        })
 
     return result
 
