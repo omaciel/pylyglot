@@ -102,7 +102,7 @@ def get_translation(language, term):
     translations = Translation.objects.filter(
             msgid__icontains=term,
             language__short_name=language,
-        ).order_by('length')
+        ).order_by('length', 'msgid', 'package__name')
 
     for translation in translations:
         result.append({

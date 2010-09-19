@@ -36,7 +36,7 @@ def index(request):
             translations = Translation.objects.filter(
                     msgid__icontains=query,
                     language__id=language_id,
-                ).order_by('length')
+                ).order_by('length', 'msgid', 'package__name')
     else:
         form = SearchForm()
 
