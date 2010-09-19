@@ -57,7 +57,11 @@ class Command(BaseCommand):
     def populate_db(self, pfile):
 
         # Read in the *.po file
-        po = pofile(pfile, autodetect_encoding=True, encoding='utf-8')
+        try:
+            po = pofile(pfile, autodetect_encoding=True, encoding='utf-8')
+        except Exception, e:
+            logging.error(str(e))
+            return
 
         # Extract information from the file name.
         packageName = os.path.basename(pfile).split(".")[0]
