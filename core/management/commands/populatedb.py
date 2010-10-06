@@ -19,6 +19,7 @@
 import glob
 import os.path
 from django.conf import settings
+from django.db import transaction
 from django.template.defaultfilters import striptags
 from django.core.management.base import AppCommand
 from django.core.management.base import BaseCommand, CommandError
