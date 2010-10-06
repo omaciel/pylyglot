@@ -29,6 +29,7 @@ def index(request):
 
     if request.method == 'POST':
         form = SearchForm(request.POST)
+        is_searching = True
         if form.is_valid():
             query = form.cleaned_data['query']
             language_id = form.cleaned_data['languages']
@@ -39,12 +40,14 @@ def index(request):
                 ).order_by('length', 'msgid', 'package__name')
     else:
         form = SearchForm()
+        is_searching = False
 
     variables = RequestContext(request, {
         'object_list': translations,
         'query': query,
         'language_id': language_id,
         'form': form,
+        'is_searching': is_searching,
         })
 
     return render_to_response('translations/translation_list.html', variables)

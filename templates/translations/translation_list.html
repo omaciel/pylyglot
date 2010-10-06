@@ -34,7 +34,9 @@
         </table>
     </div>
     {% else %}
-    <p style="text-align:center;">{% trans "No phrases were found that match your search term." %}</p>
+		{% if is_searching %}
+    		<p style="text-align:center;">{% trans "No phrases were found that match your search term." %}</p>
+		{% endif %}
     {% endif %}
 </div>
 {% endblock %}
