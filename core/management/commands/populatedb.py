@@ -46,12 +46,12 @@ class Command(BaseCommand):
 
         for f in conffiles:
             t1 = datetime.now()
-            self.populate_db(f)
+            self._populate_db(f)
             t2 = datetime.now()
             logging.info("Package added in %s seconds." % (t2 - t1).seconds)
 
     @transaction.commit_manually
-    def populate_db(self, pfile):
+    def _populate_db(self, pfile):
 
         # Read in the *.po file
         try:
@@ -70,6 +70,4 @@ class Command(BaseCommand):
         package, created = Package.objects.get_or_create(name=packageName)
         logging.info("Package %s created: %s" % (packageName, created))
 
-
         populate_db(po, package, language)
-

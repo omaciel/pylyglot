@@ -33,7 +33,9 @@ log.setLevel(settings.LOG_LEVEL)
 def populate_db(pofile, package, language):
 
     # Format is 2010-04-29 15:07+0300
-    revisiondate = pofile.metadata['PO-Revision-Date']
+    # Instead of using the file's revision date, use today's date
+    revisiondate = datetime.now(tzutc()).strftime("%Y-%m-%d %H:%M%Z")
+    logging.info("revisiondate: %s" % revisiondate)
 
     try:
         revisiondate = parse(revisiondate)
@@ -43,6 +45,7 @@ def populate_db(pofile, package, language):
     except Exception, e:
         logging.info("Package %s doesn't seem to be translated yet for %s." % (package.name, language.short_name))
         logging.error(str(e))
+        transaction.rollback()
         return
 
     logging.info("Parsing %s for %s" % (package.name, language.short_name))
@@ -51,8 +54,8 @@ def populate_db(pofile, package, language):
     translations = Translation.objects.filter(language=language, package=package)
 
     if translations:
-        translations.delete()
         logging.info("Deleting existing translations for %s / %s." % (package.name, language.short_name))
+        translations.delete()
 
     valid_entries = [e for e in pofile if not e.obsolete]
 
