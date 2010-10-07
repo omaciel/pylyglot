@@ -22,6 +22,7 @@ from pylyglot.translations.models import Translation
 class Package(models.Model):
 
     name = models.CharField(max_length=255)
+    src_url = models.URLField(verify_exists=False, blank=True, null=True)
 
     def __unicode__(self):
         return self.name
