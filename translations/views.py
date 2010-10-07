@@ -27,7 +27,7 @@ def index(request):
     language_id = 1
     query = ''
 
-    if request.method == 'POST':
+    if "query" in request.GET:
         form = SearchForm(request.POST)
         is_searching = True
         if form.is_valid():

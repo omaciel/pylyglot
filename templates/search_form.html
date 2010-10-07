@@ -1,7 +1,7 @@
 
-<form id="search" method="post" action=".">
-    {% csrf_token %}
+<form id="search" method="get" action=".">
         <p>
             {{ form.languages }} {{ form.query }}
-            <input type="submit" value="search" /></p>
+            <input type="submit" value="search" />
+        </p>
 </form>
