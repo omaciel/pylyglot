@@ -24,7 +24,7 @@ from pylyglot.core.models import Translation
 def index(request):
 
     translations = []
-    language_id = 1
+    short_name = 1
     query = ''
 
     if "query" in request.GET:
@@ -32,11 +32,11 @@ def index(request):
         is_searching = True
         if form.is_valid():
             query = form.cleaned_data['query']
-            language_id = form.cleaned_data['languages']
+            short_name = form.cleaned_data['languages']
 
             translations = Translation.objects.filter(
                     msgid__icontains=query,
-                    language__id=language_id,
+                    language__short_name=short_name,
                 ).order_by('length', 'msgid', 'package__name')
     else:
         form = SearchForm()
@@ -45,7 +45,7 @@ def index(request):
     variables = RequestContext(request, {
         'object_list': translations,
         'query': query,
-        'language_id': language_id,
+        'short_name': short_name,
         'form': form,
         'is_searching': is_searching,
         })
