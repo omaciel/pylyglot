@@ -28,7 +28,7 @@ def index(request):
     query = ''
 
     if "query" in request.GET:
-        form = SearchForm(request.POST)
+        form = SearchForm(request.GET)
         is_searching = True
         if form.is_valid():
             query = form.cleaned_data['query']
