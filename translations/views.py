@@ -16,6 +16,7 @@
 # You should have received a copy of the GNU General Public License
 # along with Pylyglot.  If not, see <http://www.gnu.org/licenses/>.
 
+from django.db.models import Count
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from pylyglot.core.forms import SearchForm
@@ -34,10 +35,25 @@ def index(request):
             query = form.cleaned_data['query']
             short_name = form.cleaned_data['languages']
 
+            """
             translations = Translation.objects.filter(
-                    msgid__icontains=query,
+                    msgid__iexact=query,
                     language__short_name=short_name,
                 ).order_by('length', 'msgid', 'package__name')
+            """
+
+            translations = Translation.objects.filter(
+                    msgid__iexact=query,language__short_name=short_name
+                ).values(
+                    "msgstr", "msgid"
+                ).order_by(
+                    'length', 'msgid', 'package__name'
+                ).annotate(pcount=Count('package'))
+
+            for translation in translations:
+                term = translation['msgstr']
+                packages = Translation.objects.filter(msgstr=term, language__short_name=short_name).values("package__name").order_by("package__name")
+                translation["packages"] = [package['package__name'] for package in packages]
     else:
         form = SearchForm()
         is_searching = False
