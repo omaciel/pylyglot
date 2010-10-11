@@ -18,14 +18,12 @@
                 <th>{% trans "Original" %}</th>
                 <th>{% trans "Translated" %}</th>
                 <th>{% trans "Package" %}</th>
-                <th>{% trans "Latest Revision (UTC)" %}</th>
             </tr>
             {% for translation in object_list %}
                 <tr>
                         <td>{{ translation.msgid }}</td>
                         <td>{{ translation.msgstr }}</td>
-                        <td>{{ translation.package.name }}</td>
-                        <td>{{ translation.create_date|date:"DATETIME_FORMAT" }}</td>
+                        <td>{{ translation.packages|join:"<br />" }}</td>
                 </tr>
             {% empty %}
                 <tr><td>{% trans "Could not find any sentences with this term." %}</td></tr>
