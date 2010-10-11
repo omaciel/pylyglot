@@ -35,13 +35,6 @@ def index(request):
             query = form.cleaned_data['query']
             short_name = form.cleaned_data['languages']
 
-            """
-            translations = Translation.objects.filter(
-                    msgid__iexact=query,
-                    language__short_name=short_name,
-                ).order_by('length', 'msgid', 'package__name')
-            """
-
             translations = Translation.objects.filter(
                     msgid__iexact=query,language__short_name=short_name
                 ).values(
