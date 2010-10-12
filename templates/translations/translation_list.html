@@ -23,7 +23,11 @@
                 <tr>
                         <td>{{ translation.msgid }}</td>
                         <td>{{ translation.msgstr }}</td>
-                        <td>{{ translation.packages|join:"<br />" }}</td>
+                        <td>
+                        {% for package in translation.packages %}
+                        <a href="{{ package.package__src_url }}{{ short_name}}/">{{ package.package__name }}</a><br />
+                        {% endfor %}
+                        </td>
                 </tr>
             {% empty %}
                 <tr><td>{% trans "Could not find any sentences with this term." %}</td></tr>

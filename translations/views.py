@@ -45,12 +45,13 @@ def index(request):
 
             for translation in translations:
                 term = translation['msgstr']
-                packages = Translation.objects.filter(msgstr=term, language__short_name=short_name).values("package__name").order_by("package__name")
-                translation["packages"] = [package['package__name'] for package in packages]
+                packages = Translation.objects.filter(msgstr=term, language__short_name=short_name).values("package__name", "package__src_url").order_by("package__name").distinct()
+                translation["packages"] = packages
     else:
         form = SearchForm()
         is_searching = False
 
+    print translations
     variables = RequestContext(request, {
         'object_list': translations,
         'query': query,
