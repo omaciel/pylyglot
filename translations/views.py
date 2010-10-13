@@ -36,22 +36,17 @@ def index(request):
             short_name = form.cleaned_data['languages']
 
             translations = Translation.objects.filter(
-                    msgid__iexact=query,language__short_name=short_name
+                    msgid__icontains=query,language__short_name=short_name
                 ).values(
                     "msgstr", "msgid"
                 ).order_by(
                     'length', 'msgid', 'package__name'
                 ).annotate(pcount=Count('package'))
 
-            for translation in translations:
-                term = translation['msgstr']
-                packages = Translation.objects.filter(msgstr=term, language__short_name=short_name).values("package__name", "package__src_url").order_by("package__name").distinct()
-                translation["packages"] = packages
     else:
         form = SearchForm()
         is_searching = False
 
-    print translations
     variables = RequestContext(request, {
         'object_list': translations,
         'query': query,
