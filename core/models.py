@@ -37,7 +37,7 @@ class Language(models.Model):
     short_name = models.CharField(max_length=30)
 
     def __unicode__(self):
-        return "%s (%s)" % (self.long_name, self.short_name)
+        return "%s (%s)" % (self.long_name, self.short_name) if self.long_name else self.short_name
 
 class Translation(models.Model):
 
