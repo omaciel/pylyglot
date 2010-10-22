@@ -17,13 +17,13 @@
             <tr>
                 <th>{% trans "Original" %}</th>
                 <th>{% trans "Translated" %}</th>
-                <th>{% trans "Packages" %}</th>
+                <th>{% trans "Packages / Google Translation" %}</th>
             </tr>
             {% for translation in object_list %}
-                <tr>
-                    <td>{{ translation.msgid }}</td>
+            <tr class="translation">
+                    <td class="translation-msgid">{{ translation.msgid }}</td>
                     <td>{{ translation.msgstr }}</td>
-                    <td>{{ translation.pcount }}</td>
+                    <td class="google-translation">{{ translation.pcount }} / <span class="translation-result"><a href="#">{% trans "Get Translation" %}</a></span></td>
                 </tr>
             {% empty %}
                 <tr><td>{% trans "Could not find any sentences with this term." %}</td></tr>
@@ -37,4 +37,35 @@
         {% endif %}
     {% endif %}
 </div>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+    google.load("language", "1");
+
+    function initialize() {
+        $('.translation a').click(function (e) {
+            var $translation = $(this).parent().parent().parent();
+            var msgid = $translation.find('.translation-msgid').text();
+
+            var language = '{{ short_name }}';
+            if (language === 'pt_BR') language = 'pt';
+
+            var $google_translation = $translation.find('.translation-result');
+
+            $google_translation.text('{% trans "Loading..." %}');
+
+            google.language.translate(msgid, 'en', language, function (result) {
+                if (result.translation) {
+                    console.log(result.translation);
+                    $google_translation.text(result.translation);
+                } else {
+                    $google_translation.text('{% trans "Failed to translate" %}');
+                }
+            });
+
+            e.preventDefault();
+        });
+    }
+
+    google.setOnLoadCallback(initialize);
+</script>
 {% endblock %}
