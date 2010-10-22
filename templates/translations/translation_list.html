@@ -17,13 +17,15 @@
             <tr>
                 <th>{% trans "Original" %}</th>
                 <th>{% trans "Translated" %}</th>
-                <th>{% trans "Packages / Google Translation" %}</th>
+                <th>{% trans "Google Translation" %}</th>
+                <th>{% trans "Packages" %}</th>
             </tr>
             {% for translation in object_list %}
             <tr class="translation">
                     <td class="translation-msgid">{{ translation.msgid }}</td>
                     <td>{{ translation.msgstr }}</td>
-                    <td class="google-translation">{{ translation.pcount }} / <span class="translation-result"><a href="#">{% trans "Get Translation" %}</a></span></td>
+                    <td class="google-translation"><span class="translation-result"><a href="#">{% trans "Translate" %}</a></span></td>
+                    <td>{{ translation.pcount }}</td>
                 </tr>
             {% empty %}
                 <tr><td>{% trans "Could not find any sentences with this term." %}</td></tr>
