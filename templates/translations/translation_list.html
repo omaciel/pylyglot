@@ -86,7 +86,7 @@
                         var package = data[i].fields;
                         if (package.src_url) {
                             var $a = $('<a/>').attr({
-                                href: package.src_url,
+                                href: package.src_url + '{{ short_name }}',
                                 title: package.name
                             }).text(package.name);
                             $content.append($('<li/>').append($a));
