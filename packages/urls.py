@@ -22,4 +22,5 @@ urlpatterns = patterns('pylyglot.packages.views',
 
         url(r'^$', 'index', name='packages_list'),
         url(r'^(?P<object_id>\d+)/$', 'detail', name='package_detail'),
+        url(r'^translation_packages/$', 'translation_packages', name='translation_packages'),
 )
