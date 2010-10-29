@@ -23,9 +23,9 @@
             {% for translation in object_list %}
             <tr class="translation">
                     <td class="translation-msgid">{{ translation.msgid }}</td>
-                    <td>{{ translation.msgstr }}</td>
-                    <td class="google-translation"><span class="translation-result"><a href="#">{% trans "Translate" %}</a></span></td>
-                    <td>{{ translation.pcount }}</td>
+                    <td class="translation-msgstr">{{ translation.msgstr }}</td>
+                    <td class="google-translation"><span class="translation-result"><a href="#" title="{% trans "Translate" %}">{% trans "Translate" %}</a></span></td>
+                    <td class="package-list"><a href="#" title="{% trans "View the packages" %}">{{ translation.pcount }}</a></td>
                 </tr>
             {% empty %}
                 <tr><td>{% trans "Could not find any sentences with this term." %}</td></tr>
@@ -69,5 +69,35 @@
     }
 
     google.setOnLoadCallback(initialize);
+
+    $(function () {
+        $('.package-list a').click(function () {
+            var $td = $(this).parent().text("{% trans "Loading..."%}"),
+                $parent = $td.parent(),
+                msgid = $parent.find('.translation-msgid').text(),
+                msgstr = $parent.find('.translation-msgstr').text();
+            $.post('/packages/translation_packages/', {
+                    short_name: '{{ short_name }}',
+                    msgid: msgid,
+                    msgstr: msgstr
+                }, function (data) {
+                    var $content = $("<ul/>");
+                    for (var i = 0; i < data.length; i++) {
+                        var package = data[i].fields;
+                        if (package.src_url) {
+                            var $a = $('<a/>').attr({
+                                href: package.src_url,
+                                title: package.name
+                            }).text(package.name);
+                            $content.append($('<li/>').append($a));
+                        } else {
+                            $content.append($("<li/>").text(package.name));
+                        }
+                    }
+
+                    $td.text("").append($content);
+            });
+        });
+    });
 </script>
 {% endblock %}

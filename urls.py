@@ -25,6 +25,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', include('pylyglot.translations.urls')),
+    url(r'^packages/', include('pylyglot.packages.urls')),
     url(r'^rpc_service/$', include('pylyglot.rpc_service.urls')),
 
     # Administration

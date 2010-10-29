@@ -16,12 +16,12 @@
 # You should have received a copy of the GNU General Public License
 # along with Pylyglot.  If not, see <http://www.gnu.org/licenses/>.
 
-from django.http import Http404
+from django.core import serializers
+from django.http import Http404, HttpResponse, HttpResponseNotFound
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from core.forms import PackageSearchForm
 from core.models import *
-from pylyglot.packages.models import Package
 
 def index(request):
 
@@ -57,3 +57,18 @@ def detail(request, object_id):
         })
 
     return render_to_response('packages/detail.html', variables)
+
+def translation_packages(request):
+    if request.method == 'POST':
+        short_name = request.POST['short_name']
+        msgid = request.POST['msgid']
+        msgstr = request.POST['msgstr']
+
+        queryset = Package.objects.filter(translation__language__short_name=short_name,
+                translation__msgid=msgid, translation__msgstr=msgstr)
+
+        response = serializers.serialize('json', queryset)
+
+        return HttpResponse(response, mimetype='application/json')
+    else:
+        return HttpResponseNotFound()
