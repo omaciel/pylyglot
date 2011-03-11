@@ -92,6 +92,7 @@ def get_translation(language, term):
         term -- Term to translate.
 
     Keys of the structure returned:
+        original -- The original untranslated message.
         translation -- Translated term.
         updatedate -- Last term revision.
         standardized -- Whether it's a standardized term or not.
@@ -106,6 +107,7 @@ def get_translation(language, term):
 
     for translation in translations:
         result.append({
+            'original': translation.msgid,
             'translation': translation.msgstr,
             'updatedate': translation.update_date,
             'standardized': translation.standardized,
