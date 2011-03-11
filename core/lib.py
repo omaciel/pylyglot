@@ -50,12 +50,14 @@ def populate_db(pofile, package, language):
 
     logging.info("Parsing %s for %s" % (package.name, language.short_name))
 
+    """
     # Delete existing translations for this package/language combination
     translations = Translation.objects.filter(language=language, package=package)
 
     if translations:
         logging.info("Deleting existing translations for %s / %s." % (package.name, language.short_name))
         translations.delete()
+    """
 
     valid_entries = [e for e in pofile if not e.obsolete]
 
