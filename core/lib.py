@@ -84,13 +84,27 @@ def populate_db(pofile, package, language):
 
 def add_translations(msgid, msgstr, language, package, revisiondate):
 
+    words = msgid.split()
+    clean_words = []
+
+    for word in words:
+        clean_word = "".join([x for x in word if x.isalpha()])
+        if len(clean_word) > 1:
+            clean_words.append(clean_word)
+
     translation = Translation(
             msgstr = msgstr,
             msgid = msgid,
+            clean_msgid = " ".join(clean_words),
             language = language,
             package = package,
             create_date = revisiondate,
-            length = len(msgid),
             translated=True,
         )
+
+    if len(words) == 1:
+        translation.length = len(msgid)
+    else:
+        translation.length = len(words) * len(msgid)
+
     translation.save()

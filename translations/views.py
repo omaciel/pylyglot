@@ -16,11 +16,11 @@
 # You should have received a copy of the GNU General Public License
 # along with Pylyglot.  If not, see <http://www.gnu.org/licenses/>.
 
-from django.db.models import Count
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from pylyglot.core.forms import SearchForm
 from pylyglot.core.models import Translation
+from django.db.models import Avg
 
 def index(request):
 
@@ -36,12 +36,12 @@ def index(request):
             short_name = form.cleaned_data['languages']
 
             translations = Translation.objects.filter(
-                    msgid__icontains=query,language__short_name=short_name
+                    clean_msgid__icontains=query, language__short_name=short_name
                 ).values(
                     "msgstr", "msgid"
                 ).order_by(
                     'length', 'msgid', 'package__name'
-                ).annotate(pcount=Count('package'))
+                ).annotate(pcount=Avg('package'))
 
     else:
         form = SearchForm()

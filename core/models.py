@@ -42,7 +42,8 @@ class Language(models.Model):
 class Translation(models.Model):
 
     msgstr = models.TextField(max_length=1000)
-    msgid = models.TextField()
+    msgid = models.TextField(max_length=1000)
+    clean_msgid = models.TextField(max_length=1000)
     length = models.IntegerField(blank=True, null=True)
     flags = models.CharField(max_length=255, blank=True, null=True)
     create_date = models.DateTimeField(auto_now_add=True)

@@ -22,6 +22,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from core.forms import PackageSearchForm
 from core.models import *
+from django.db.models import Avg
 
 def index(request):
 
@@ -64,8 +65,10 @@ def translation_packages(request):
         msgid = request.POST['msgid']
         msgstr = request.POST['msgstr']
 
-        queryset = Package.objects.filter(translation__language__short_name=short_name,
-                translation__msgid=msgid, translation__msgstr=msgstr)
+        queryset = Package.objects.filter(
+                translation__language__short_name=short_name,
+                translation__msgid=msgid, translation__msgstr=msgstr
+            ).annotate(average_packages=Avg('name'))
 
         response = serializers.serialize('json', queryset)
 
