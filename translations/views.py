@@ -20,7 +20,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from pylyglot.core.forms import SearchForm
 from pylyglot.core.models import Translation
-from django.db.models import Avg
+from django.db.models import Count
 
 def index(request):
 
@@ -41,7 +41,7 @@ def index(request):
                     "msgstr", "msgid"
                 ).order_by(
                     'length', 'msgid', 'package__name'
-                ).annotate(pcount=Avg('package'))
+                ).annotate(pcount=Count('package'))
 
     else:
         form = SearchForm()

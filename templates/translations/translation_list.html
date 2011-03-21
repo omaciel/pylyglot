@@ -25,7 +25,7 @@
                     <td class="translation-msgid">{{ translation.msgid }}</td>
                     <td class="translation-msgstr">{{ translation.msgstr }}</td>
                     <td class="google-translation"><span class="translation-result"><a href="#" title="{% trans "Translate" %}">{% trans "Translate" %}</a></span></td>
-                    <td class="package-list"><a href="#" title="{% trans "View the packages" %}">View</a></td>
+                    <td class="package-list"><a href="#" title="{% trans "View the packages" %}">{{ translation.pcount }}</a></td>
                 </tr>
             {% empty %}
                 <tr><td>{% trans "Could not find any sentences with this term." %}</td></tr>
