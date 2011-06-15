@@ -36,12 +36,10 @@ def index(request):
             short_name = form.cleaned_data['languages']
 
             translations = Translation.objects.filter(
-                    clean_msgid__icontains=query, language__short_name=short_name
-                ).values(
-                    "msgstr", "msgid"
+                    sentence__msgid__icontains=query, language__short_name=short_name
                 ).order_by(
-                    'length', 'msgid', 'package__name'
-                ).annotate(pcount=Count('package'))
+                    'sentence__length', 'sentence__msgid',
+                )
 
     else:
         form = SearchForm()

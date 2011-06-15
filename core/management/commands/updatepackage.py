@@ -23,7 +23,7 @@ from django.db import transaction
 
 from polib import pofile
 
-from pylyglot.core.models import Language, Package
+from pylyglot.core.models import Language, Package, Sentence, Translation
 from pylyglot.core.lib import populate_db
 
 import logging
@@ -40,31 +40,33 @@ class Command(BaseCommand):
         print test_labels
 
     @transaction.commit_manually
-    def update_package(self, package, language, url):
+    def update_package(self, package):
 
-        db_package, created = Package.objects.get_or_create(name=package)
-        db_language, created = Language.objects.get_or_create(short_name=language)
+        db_package, created = Package.objects.get(name=package)
+        languages = Language.objects.all()
 
-        try:
-            remote_file = urlopen(url)
-
-            (fd, filename) = tempfile.mkstemp(package)
-            f = os.fdopen(fd, "w")
-
-            for line in remote_file.readlines():
-                f.write(line)
-            f.close()
-
+        for language in languages:
             try:
-                po = pofile(filename, autodetect_encoding=True, encoding='utf-8')
+                url = "%s.%s.po" % (db_package.src_url, language.short_name)
+                remote_file = urlopen(url)
+
+                (fd, filename) = tempfile.mkstemp(package)
+                f = os.fdopen(fd, "w")
+
+                for line in remote_file.readlines():
+                    f.write(line)
+                f.close()
+
+                try:
+                    po = pofile(filename, autodetect_encoding=True, encoding='utf-8')
+                except Exception, e:
+                    logging.error("Failed to open po file %s for %s" % (package, language))
+                    logging.error("Error: %s" % str(e))
+                    return
+
+                populate_db(po, db_package, db_language)
+
             except Exception, e:
-                logging.error("Failed to open po file %s for %s" % (package, language))
+                logging.error("Failed to download the file located on %s" % url)
                 logging.error("Error: %s" % str(e))
                 return
-
-            populate_db(po, db_package, db_language)
-
-        except Exception, e:
-            logging.error("Failed to download the file located on %s" % url)
-            logging.error("Error: %s" % str(e))
-            return

@@ -4,39 +4,45 @@
 {% load sortfilter %}
 
 {% block search %}
-    {% include "search_form.html" %}
+{% include "search_form.html" %}
 {% endblock %}
 
 {% block content %}
 <div id="main">
     <div class="package-result">
-    {% if object_list %}
-    <h2><span>{% trans "Term:" %}</span> {{ query }} </h2>
+        {% if object_list %}
+        <h2><span>{% trans "Term:" %}</span> {{ query }} </h2>
         <table class="results">
             <tbody>
-            <tr>
-                <th>{% trans "Original" %}</th>
-                <th>{% trans "Translated" %}</th>
-                <th>{% trans "Google Translation" %}</th>
-                <th>{% trans "Packages" %}</th>
-            </tr>
-            {% for translation in object_list %}
-            <tr class="translation">
-                    <td class="translation-msgid">{{ translation.msgid }}</td>
+                <tr>
+                    <th>{% trans "Original" %}</th>
+                    <th>{% trans "Translated" %}</th>
+                    <th>{% trans "Google Translation" %}</th>
+                    <th>{% trans "Packages" %}</th>
+                </tr>
+                {% for translation in object_list %}
+                <tr class="translation">
+                    <td class="translation-msgid">{{ translation.sentence.msgid }}</td>
                     <td class="translation-msgstr">{{ translation.msgstr }}</td>
                     <td class="google-translation"><span class="translation-result"><a href="#" title="{% trans "Translate" %}">{% trans "Translate" %}</a></span></td>
-                    <td class="package-list"><a href="#" title="{% trans "View the packages" %}">{{ translation.pcount }}</a></td>
+                    <td class="package-list">
+                        <ul>
+                            {% for package in translation.sentence.packages.all %}
+                            <li>{{ package.name }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
                 </tr>
-            {% empty %}
+                {% empty %}
                 <tr><td>{% trans "Could not find any sentences with this term." %}</td></tr>
-            {% endfor %}
-        </tbody>
+                {% endfor %}
+            </tbody>
         </table>
     </div>
     {% else %}
-        {% if is_searching %}
-            <p style="text-align:center;">{% trans "No phrases were found that match your search term." %}</p>
-        {% endif %}
+    {% if is_searching %}
+    <p style="text-align:center;">{% trans "No phrases were found that match your search term." %}</p>
+    {% endif %}
     {% endif %}
 </div>
 <script type="text/javascript" src="http://www.google.com/jsapi"></script>
@@ -45,59 +51,59 @@
 
     function initialize() {
         $('.translation a').click(function (e) {
-            var $translation = $(this).parent().parent().parent();
-            var msgid = $translation.find('.translation-msgid').text();
+                var $translation = $(this).parent().parent().parent();
+                var msgid = $translation.find('.translation-msgid').text();
 
-            var language = '{{ short_name }}';
-            if (language === 'pt_BR') language = 'pt';
+                var language = '{{ short_name }}';
+                if (language === 'pt_BR') language = 'pt';
 
-            var $google_translation = $translation.find('.translation-result');
+                var $google_translation = $translation.find('.translation-result');
 
-            $google_translation.text('{% trans "Loading..." %}');
+                $google_translation.text('{% trans "Loading..." %}');
 
-            google.language.translate(msgid, 'en', language, function (result) {
-                if (result.translation) {
+                google.language.translate(msgid, 'en', language, function (result) {
+                    if (result.translation) {
                     console.log(result.translation);
                     $google_translation.text(result.translation);
-                } else {
+                    } else {
                     $google_translation.text('{% trans "Failed to translate" %}');
-                }
-            });
+                    }
+                    });
 
-            e.preventDefault();
+                e.preventDefault();
         });
     }
 
-    google.setOnLoadCallback(initialize);
+google.setOnLoadCallback(initialize);
 
-    $(function () {
+$(function () {
         $('.package-list a').click(function () {
             var $td = $(this).parent().text("{% trans "Loading..."%}"),
-                $parent = $td.parent(),
-                msgid = $parent.find('.translation-msgid').text(),
-                msgstr = $parent.find('.translation-msgstr').text();
+            $parent = $td.parent(),
+            msgid = $parent.find('.translation-msgid').text(),
+            msgstr = $parent.find('.translation-msgstr').text();
             $.post('/packages/translation_packages/', {
-                    short_name: '{{ short_name }}',
-                    msgid: msgid,
-                    msgstr: msgstr
-                }, function (data) {
-                    var $content = $("<ul/>");
-                    for (var i = 0; i < data.length; i++) {
-                        var package = data[i].fields;
-                        if (package.src_url) {
-                            var $a = $('<a/>').attr({
-                                href: package.src_url + '{{ short_name }}',
-                                title: package.name
-                            }).text(package.name);
-                            $content.append($('<li/>').append($a));
-                        } else {
-                            $content.append($("<li/>").text(package.name));
-                        }
-                    }
+short_name: '{{ short_name }}',
+msgid: msgid,
+msgstr: msgstr
+}, function (data) {
+var $content = $("<ul/>");
+for (var i = 0; i < data.length; i++) {
+var package = data[i].fields;
+if (package.src_url) {
+var $a = $('<a/>').attr({
+href: package.src_url + '{{ short_name }}',
+title: package.name
+}).text(package.name);
+$content.append($('<li/>').append($a));
+} else {
+$content.append($("<li/>").text(package.name));
+}
+}
 
-                    $td.text("").append($content);
-            });
-        });
-    });
+$td.text("").append($content);
+});
+});
+});
 </script>
 {% endblock %}

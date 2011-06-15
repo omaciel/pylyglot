@@ -27,10 +27,6 @@ class Package(models.Model):
     def __unicode__(self):
         return self.name
 
-    @models.permalink
-    def get_absolute_url(self):
-        return ('package_detail', [str(self.id)])
-
 class Language(models.Model):
 
     long_name = models.CharField(max_length=255, blank=True, null=True)
@@ -39,20 +35,24 @@ class Language(models.Model):
     def __unicode__(self):
         return "%s (%s)" % (self.long_name, self.short_name) if self.long_name else self.short_name
 
+class Sentence(models.Model):
+
+    msgid = models.TextField(max_length=1000)
+    translated = models.BooleanField()
+    length = models.IntegerField(blank=True, null=True)
+    flags = models.CharField(max_length=255, blank=True, null=True)
+
+    packages = models.ManyToManyField(Package, db_index=True)
+
+    def __unicode__(self):
+        return self.msgid
+
 class Translation(models.Model):
 
     msgstr = models.TextField(max_length=1000)
-    msgid = models.TextField(max_length=1000)
-    clean_msgid = models.TextField(max_length=1000)
-    length = models.IntegerField(blank=True, null=True)
-    flags = models.CharField(max_length=255, blank=True, null=True)
-    create_date = models.DateTimeField(auto_now_add=True)
-    update_date = models.DateTimeField(auto_now=True)
-    translated = models.BooleanField()
-    standardized = models.NullBooleanField(default=False, blank=True, null=True)
 
+    sentence = models.ForeignKey(Sentence, db_index=True)
     language = models.ForeignKey(Language, db_index=True)
-    package = models.ForeignKey(Package, db_index=True)
 
-    def __unicode_(self):
-        return self.msgstr.encode("utf-8")
+    def __unicode__(self):
+        return self.msgstr
