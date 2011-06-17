@@ -94,23 +94,24 @@ def get_translation(language, term):
     Keys of the structure returned:
         original -- The original untranslated message.
         translation -- Translated term.
-        updatedate -- Last term revision.
-        standardized -- Whether it's a standardized term or not.
+        packages -- Packages that contain the original message.
 
     """
     result = []
 
     translations = Translation.objects.filter(
-            msgid__icontains=term,
+            sentence__msgid__icontains=term,
             language__short_name=language,
-        ).order_by('length', 'msgid', 'package__name')
+            obsolete=False,
+        ).order_by(
+                'sentence__length', 'sentence__msgid',
+                )
 
     for translation in translations:
         result.append({
-            'original': translation.msgid,
+            'original': translation.sentence.msgid,
             'translation': translation.msgstr,
-            'updatedate': translation.update_date,
-            'standardized': translation.standardized,
+            'packages': [pkg.name for pkg in translation.packages.all()],
         })
 
     return result
