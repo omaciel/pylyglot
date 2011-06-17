@@ -26,6 +26,6 @@ NOTE: This will be changed so that the name of the package is parsed from the *.
 Dependencies:
 ============
 
-* Django 1.2: http://djangoproject.org
 * polib: http://bitbucket.org/izi/polib/src
 * dateutil: http://labix.org/python-dateutil
+* django-pagination: https://github.com/ericflo/django-pagination

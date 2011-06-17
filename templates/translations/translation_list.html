@@ -3,6 +3,8 @@
 {% load i18n %}
 {% load sortfilter %}
 
+{% load pagination_tags %}
+
 {% block search %}
 {% include "search_form.html" %}
 {% endblock %}
@@ -11,6 +13,7 @@
 <div id="main">
     <div class="package-result">
         {% if object_list %}
+        {% autopaginate object_list  %}
         <h2><span>{% trans "Term:" %}</span> {{ query }} </h2>
         <table class="results">
             <tbody>
@@ -38,6 +41,7 @@
                 {% endfor %}
             </tbody>
         </table>
+        {% paginate %}
     </div>
     {% else %}
     {% if is_searching %}
