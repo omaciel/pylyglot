@@ -49,6 +49,7 @@ class Sentence(models.Model):
 class Translation(models.Model):
 
     msgstr = models.TextField(max_length=1000)
+    obsolete = models.BooleanField(default=False)
 
     language = models.ForeignKey(Language, db_index=True)
     packages = models.ManyToManyField(Package, db_index=True)

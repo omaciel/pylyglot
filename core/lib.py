@@ -44,7 +44,12 @@ def update_package(package):
     for language in languages:
         try:
             url = "%s.%s.po" % (package.src_url, language.short_name)
-            remote_file = urlopen(url)
+
+            try:
+                remote_file = urlopen(url)
+            except Exception, e:
+                logging.error("Failed to fetch file for %s using url %s" % (package.name, package.src_url))
+                return
 
             (fd, filename) = tempfile.mkstemp(package.name)
             f = os.fdopen(fd, "w")

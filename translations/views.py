@@ -36,7 +36,9 @@ def index(request):
             short_name = form.cleaned_data['languages']
 
             translations = Translation.objects.filter(
-                    sentence__msgid__icontains=query, language__short_name=short_name
+                    sentence__msgid__icontains=query,
+                    language__short_name=short_name,
+                    obsolete=False,
                 ).order_by(
                     'sentence__length', 'sentence__msgid',
                 )
