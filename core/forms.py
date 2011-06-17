@@ -21,7 +21,7 @@ from pylyglot.core.models import Language
 
 class SearchForm(forms.Form):
 
-    available_languages = Language.objects.all().values_list('short_name','short_name').order_by('short_name')
+    available_languages = Language.objects.all().values_list('short_name','long_name').order_by('short_name')
 
     languages = forms.ChoiceField(choices = available_languages)
     query = forms.CharField()
