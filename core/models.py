@@ -42,7 +42,6 @@ class Sentence(models.Model):
     length = models.IntegerField(blank=True, null=True)
     flags = models.CharField(max_length=255, blank=True, null=True)
 
-    packages = models.ManyToManyField(Package, db_index=True)
 
     def __unicode__(self):
         return self.msgid
@@ -51,8 +50,9 @@ class Translation(models.Model):
 
     msgstr = models.TextField(max_length=1000)
 
-    sentence = models.ForeignKey(Sentence, db_index=True)
     language = models.ForeignKey(Language, db_index=True)
+    packages = models.ManyToManyField(Package, db_index=True)
+    sentence = models.ForeignKey(Sentence, db_index=True)
 
     def __unicode__(self):
         return self.msgstr

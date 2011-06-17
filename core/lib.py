@@ -100,25 +100,27 @@ def add_translation(entry, language, package):
 
     (sentence, created) = Sentence.objects.get_or_create(msgid = entry.msgid)
 
-    if package not in sentence.packages.all():
-        sentence.packages.add(package)
-
     sentence.length = len(entry.msgid)
     sentence.save()
 
     (trans, created) = Translation.objects.get_or_create(msgstr=entry.msgstr, sentence=sentence, language=language)
+
+    if package not in trans.packages.all():
+        trans.packages.add(package)
+
     trans.save()
 
     if entry.msgid_plural:
         (sentence, created) = Sentence.objects.get_or_create(msgid = entry.msgid_plural)
 
-        if package not in sentence.packages.all():
-            sentence.packages.add(package)
-
         sentence.length = len(entry.msgid)
         sentence.save()
 
         (trans, created) = Translation.objects.get_or_create(msgstr=entry.msgstr_plural, sentence=sentence, language=language)
+
+        if package not in trans.packages.all():
+            trans.packages.add(package)
+
         trans.save()
 
 

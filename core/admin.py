@@ -33,11 +33,10 @@ class PackageAdmin(admin.ModelAdmin):
     actions = [create_task]
 
 class TranslationAdmin(admin.ModelAdmin):
-    list_filter = ['language', ]
+    list_filter = ['language', 'packages',]
     search_fields = ['msgstr', 'language',]
 
 class SentenceAdmin(admin.ModelAdmin):
-    list_filter = ['packages',]
     search_fields = ['msgid',]
 
 admin.site.register(Language, LanguageAdmin)
