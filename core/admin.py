@@ -27,7 +27,7 @@ def create_task(modeladmin, request, queryset):
 create_task.short_description = "Update translations for this package."
 
 class LanguageAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('long_name', 'short_name',)
 
 class PackageAdmin(admin.ModelAdmin):
     actions = [create_task]
