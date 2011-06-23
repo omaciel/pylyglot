@@ -78,11 +78,11 @@ def populate_db(po, language, package):
     logging.debug("Updating %s translations for %s" % (language.long_name, package.name))
 
     # Delete existing translations for this package/language combination
-    #translations = Translation.objects.filter(language=language, package=package)
+    translations = Translation.objects.filter(language=language, package=package)
 
-    #if translations:
-    #    logging.info("Deleting existing translations for %s / %s." % (package.name, language.short_name))
-    #    translations.delete()
+    if translations:
+        logging.info("Deleting existing translations for %s / %s." % (package.name, language.short_name))
+        translations.delete()
 
     valid_entries = [e for e in po if not e.obsolete]
 
@@ -108,11 +108,7 @@ def add_translation(entry, language, package):
     sentence.length = len(entry.msgid)
     sentence.save()
 
-    (trans, created) = Translation.objects.get_or_create(msgstr=entry.msgstr, sentence=sentence, language=language)
-
-    if package not in trans.packages.all():
-        trans.packages.add(package)
-
+    (trans, created) = Translation.objects.get_or_create(msgstr=entry.msgstr, sentence=sentence, language=language, package=package)
     trans.save()
 
     if entry.msgid_plural:
@@ -121,37 +117,5 @@ def add_translation(entry, language, package):
         sentence.length = len(entry.msgid)
         sentence.save()
 
-        (trans, created) = Translation.objects.get_or_create(msgstr=entry.msgstr_plural, sentence=sentence, language=language)
-
-        if package not in trans.packages.all():
-            trans.packages.add(package)
-
+        (trans, created) = Translation.objects.get_or_create(msgstr=entry.msgstr_plural, sentence=sentence, language=language, package=package)
         trans.save()
-
-
-def add_translations(msgid, msgstr, language, package, revisiondate):
-
-    words = msgid.split()
-    clean_words = []
-
-    for word in words:
-        clean_word = "".join([x for x in word if x.isalpha()])
-        if len(clean_word) > 1:
-            clean_words.append(clean_word)
-
-    translation = Translation(
-            msgstr = msgstr,
-            msgid = msgid,
-            clean_msgid = " ".join(clean_words),
-            language = language,
-            package = package,
-            create_date = revisiondate,
-            translated=True,
-        )
-
-    if len(words) == 1:
-        translation.length = len(msgid)
-    else:
-        translation.length = len(words) * len(msgid)
-
-    translation.save()

@@ -31,9 +31,10 @@ class LanguageAdmin(admin.ModelAdmin):
 
 class PackageAdmin(admin.ModelAdmin):
     actions = [create_task]
+    search_fields = ['name',]
 
 class TranslationAdmin(admin.ModelAdmin):
-    list_filter = ['language', 'packages',]
+    list_filter = ['language', 'package',]
     search_fields = ['msgstr', 'language',]
 
 class SentenceAdmin(admin.ModelAdmin):

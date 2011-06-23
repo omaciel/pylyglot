@@ -52,7 +52,7 @@ class Translation(models.Model):
     obsolete = models.BooleanField(default=False)
 
     language = models.ForeignKey(Language, db_index=True)
-    packages = models.ManyToManyField(Package, db_index=True)
+    package = models.ForeignKey(Package, db_index=True)
     sentence = models.ForeignKey(Sentence, db_index=True)
 
     def __unicode__(self):

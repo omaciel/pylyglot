@@ -30,9 +30,7 @@
                     <td class="google-translation"><span class="translation-result"><a href="#" title="{% trans "Translate" %}">{% trans "Translate" %}</a></span></td>
                     <td class="package-list">
                         <ul>
-                            {% for package in translation.packages.all %}
-                            <li>{{ package.name }}</li>
-                            {% endfor %}
+                            <li>{{ translation.package.name }}</li>
                         </ul>
                     </td>
                 </tr>
