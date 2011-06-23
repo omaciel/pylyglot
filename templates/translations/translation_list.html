@@ -25,12 +25,14 @@
                 </tr>
                 {% for translation in object_list %}
                 <tr class="translation">
-                    <td class="translation-msgid">{{ translation.sentence.msgid }}</td>
-                    <td class="translation-msgstr">{{ translation.msgstr }}</td>
+                    <td class="translation.msgid">{{ translation.msgid }}</td>
+                    <td class="translation.msgstr">{{ translation.msgstr }}</td>
                     <td class="google-translation"><span class="translation-result"><a href="#" title="{% trans "Translate" %}">{% trans "Translate" %}</a></span></td>
                     <td class="package-list">
                         <ul>
-                            <li>{{ translation.package.name }}</li>
+                            {% for package in translation.packages %}
+                            <li>{{ package }}</li>
+                            {% endfor %}
                         </ul>
                     </td>
                 </tr>

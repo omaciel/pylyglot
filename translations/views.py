@@ -39,16 +39,39 @@ def index(request):
                     sentence__msgid__icontains=query,
                     language__short_name=short_name,
                     obsolete=False,
-                ).order_by(
-                    'sentence__length', 'sentence__msgid',
-                )
+                    ).values(
+                            'sentence__msgid',
+                            'msgstr',
+                            'sentence__length',
+                            ).order_by(
+                                    'sentence__length',
+                                    'sentence__msgid',
+                                    'msgstr'
+                                    ).distinct()
+
+            results = []
+            for trans in translations:
+                # I don't like this but for now it's ok
+                packages = Translation.objects.filter(
+                        language__short_name=short_name,
+                        sentence__msgid=trans['sentence__msgid']
+                        ).order_by(
+                                'package__name'
+                                )
+                results.append(
+                        {
+                            'msgid': trans['sentence__msgid'],
+                            'msgstr': trans['msgstr'],
+                            'packages': [x.package.name for x in packages]
+                            }
+                        )
 
     else:
         form = SearchForm()
         is_searching = False
 
     variables = RequestContext(request, {
-        'object_list': translations,
+        'object_list': results,
         'query': query,
         'short_name': short_name,
         'form': form,

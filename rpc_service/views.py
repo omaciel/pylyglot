@@ -103,15 +103,28 @@ def get_translation(language, term):
             sentence__msgid__icontains=term,
             language__short_name=language,
             obsolete=False,
-        ).order_by(
-                'sentence__length', 'sentence__msgid',
-                )
+            ).values(
+                    'sentence__msgid',
+                    'msgstr',
+                    'sentence__length',
+                    ).order_by(
+                            'sentence__length',
+                            'sentence__msgid',
+                            'msgstr'
+                            ).distinct()
 
     for translation in translations:
+        # I don't like this but for now it's ok
+        packages = Translation.objects.filter(
+                language__short_name=language,
+                sentence__msgid=translation['sentence__msgid']
+                ).order_by(
+                        'package__name'
+                        )
         result.append({
-            'original': translation.sentence.msgid,
-            'translation': translation.msgstr,
-            'packages': [pkg.name for pkg in translation.packages.all()],
+            'original': translation['sentence__msgid'],
+            'translation': translation['msgstr'],
+            'packages': [x.package.name for x in packages],
         })
 
     return result
