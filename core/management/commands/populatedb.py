@@ -70,4 +70,4 @@ class Command(BaseCommand):
         package, created = Package.objects.get_or_create(name=packageName)
         logging.info("Package %s created: %s" % (packageName, created))
 
-        populate_db(po, package, language)
+        populate_db(po, language, package)
