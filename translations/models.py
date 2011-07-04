@@ -27,6 +27,9 @@ class Translation(models.Model):
     translated = models.BooleanField()
     standardized = models.NullBooleanField(default=False, blank=True, null=True)
 
+    created = models.DateField(auto_now_add=True)
+    last_modified = models.DateField(auto_now=True)
+
     language = models.ForeignKey(Language, db_index=True)
     package = models.ForeignKey(Package, db_index=True)
 
