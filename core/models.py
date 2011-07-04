@@ -51,6 +51,9 @@ class Translation(models.Model):
     msgstr = models.TextField(max_length=1000)
     obsolete = models.BooleanField(default=False)
 
+    created = models.DateField(auto_now_add=True)
+    last_modified = models.DateField(auto_now=True)
+
     language = models.ForeignKey(Language, db_index=True)
     package = models.ForeignKey(Package, db_index=True)
     sentence = models.ForeignKey(Sentence, db_index=True)
