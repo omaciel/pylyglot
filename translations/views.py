@@ -27,6 +27,7 @@ def index(request):
     translations = []
     short_name = 1
     query = ''
+    results = []
 
     if "query" in request.GET:
         form = SearchForm(request.GET)
@@ -49,7 +50,6 @@ def index(request):
                                     'msgstr'
                                     ).distinct()
 
-            results = []
             for trans in translations:
                 # I don't like this but for now it's ok
                 packages = Translation.objects.filter(
