@@ -56,7 +56,7 @@
     function initialize() {
         $('.translation a').click(function (e) {
                 var $translation = $(this).parent().parent().parent();
-                var msgid = $translation.find('.translation-msgid').text();
+                var msgid = $translation.find('td:first-child').text();
 
                 var language = '{{ short_name }}';
                 if (language === 'pt_BR') language = 'pt';
