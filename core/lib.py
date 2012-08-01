@@ -80,12 +80,11 @@ def update_package(package):
 
             try:
                 po = pofile(filename, autodetect_encoding=True, encoding='utf-8')
+                populate_db(po, language, package)
             except Exception, e:
                 logging.error("Failed to open po file %s for %s" % (package.name, language))
                 logging.error("Error: %s" % str(e))
-                return
 
-            populate_db(po, language, package)
 
         except Exception, e:
             logging.error("Failed to download the file located on %s" % url)
