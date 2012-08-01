@@ -44,6 +44,7 @@ def index(request):
                             'sentence__msgid',
                             'msgstr',
                             'sentence__length',
+                            'package__name',
                             ).order_by(
                                     'sentence__length',
                                     'sentence__msgid',
@@ -51,6 +52,7 @@ def index(request):
                                     ).distinct()
 
             for trans in translations:
+                """
                 # I don't like this but for now it's ok
                 packages = Translation.objects.filter(
                         language__short_name=short_name,
@@ -58,11 +60,12 @@ def index(request):
                         ).order_by(
                                 'package__name'
                                 )
+                """
                 results.append(
                         {
                             'msgid': trans['sentence__msgid'],
                             'msgstr': trans['msgstr'],
-                            'packages': [x.package.name for x in packages]
+                            'packages': [trans['package__name'],]
                             }
                         )
 

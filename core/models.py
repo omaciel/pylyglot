@@ -51,8 +51,8 @@ class Translation(models.Model):
     msgstr = models.TextField(max_length=1000)
     obsolete = models.BooleanField(default=False)
 
-    created = models.DateField(auto_now_add=True)
-    last_modified = models.DateField(auto_now=True)
+    #created = models.DateField(auto_now_add=True)
+    #last_modified = models.DateField(auto_now=True)
 
     language = models.ForeignKey(Language, db_index=True)
     package = models.ForeignKey(Package, db_index=True)
@@ -60,3 +60,39 @@ class Translation(models.Model):
 
     def __unicode__(self):
         return self.msgstr
+
+class Job(models.Model):
+    """
+    In [1]: languages = Language.objects.all()
+
+    In [2]: packages = Package.objects.all()
+
+    In [3]: for package in packages:
+        for language in languages:
+            (job, created) = Job.objects.get_or_create(language=language, package=package)
+       ....:         job.save()
+       ....:
+
+    """
+
+    last_updated = models.DateTimeField(auto_now_add=True, auto_now=True)
+    update_on = models.DateTimeField(blank=True, null=True)
+    active = models.BooleanField(default=False)
+
+    language = models.ForeignKey(Language, db_index=True)
+    package = models.ForeignKey(Package, db_index=True)
+
+    def save(self, *args, **kwargs):
+        super(Job, self).save(*args, **kwargs)
+        # Set update_on to end of queue
+        end_queue = Job.objects.latest("update_on")
+        if not end_queue or not end_queue.update_on:
+            end_of_line = self.last_updated
+        else:
+            end_of_line = end_queue.update_on
+        # Now, add 5 minutes to it!
+        from datetime import timedelta
+        five_minutes = timedelta(minutes=5)
+
+        self.update_on = end_of_line + five_minutes
+        super(Job, self).save(*args, **kwargs)

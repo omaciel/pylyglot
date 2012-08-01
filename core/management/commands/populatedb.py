@@ -18,56 +18,69 @@
 
 import glob
 import os.path
-from django.conf import settings
-from django.db import transaction
-from django.template.defaultfilters import striptags
 from django.core.management.base import AppCommand
 from django.core.management.base import BaseCommand, CommandError
 
 from polib import pofile
 
-from pylyglot.core.models import Language, Package, Sentence, Translation
+from pylyglot.core.models import Job
 from pylyglot.core.lib import populate_db
 
-from datetime import datetime
-import logging
+import tempfile
+from urllib import urlopen
 
-log = logging.getLogger()
-log.setLevel(settings.LOG_LEVEL)
+import logging
 
 class Command(BaseCommand):
 
-    def handle(self, *test_labels, **options):
-        logging.info("Scratch directory is %s." % settings.SCRATCH_DIR)
+    def handle(self, *args, **options):
 
-        conffiles = glob.glob(os.path.join(settings.SCRATCH_DIR, '*.po'))
-
-        conffiles.sort()
-
-        for f in conffiles:
-            t1 = datetime.now()
-            self._populate_db(f)
-            t2 = datetime.now()
-            logging.info("Package added in %s seconds." % (t2 - t1).seconds)
-
-    @transaction.commit_manually
-    def _populate_db(self, pfile):
-
-        # Read in the *.po file
-        try:
-            po = pofile(pfile, autodetect_encoding=True, encoding='utf-8')
-        except Exception, e:
-            logging.error(str(e))
+        active_job = Job.objects.filter(active = True)
+        if active_job:
+            logging.info("There's a job being run right now for %s - %s later" % (active_job[0].package.name, active_job[0].language.short_name))
+            logging.info("Will try again later!")
             return
 
-        # Extract information from the file name.
-        packageName = os.path.basename(pfile).split(".")[0]
-        language =  os.path.basename(pfile).split(".")[-2]
+        job = Job.objects.order_by('update_on')[0]
+        logging.info("Running task for %s - %s" % (job.package.name, job.language.short_name))
+        logging.info("Setting job to 'active'.")
+        job.active = True
+        job.save()
 
-        language, created = Language.objects.get_or_create(short_name=language)
-        logging.info("Language %s created: %s" % (language.short_name, created))
+        try:
+            url = "%s.%s.po" % (job.package.src_url, job.language.short_name)
+            logging.info("Fetching file from %s" % url)
+            remote_file = urlopen(url)
 
-        package, created = Package.objects.get_or_create(name=packageName)
-        logging.info("Package %s created: %s" % (packageName, created))
+            (fd, filename) = tempfile.mkstemp(job.package.name)
+            f = os.fdopen(fd, "w")
 
-        populate_db(po, language, package)
+            for line in remote_file.readlines():
+                f.write(line)
+            f.close()
+            logging.info("File has been downloaded.")
+
+            try:
+                po = pofile(filename, autodetect_encoding=True, encoding='utf-8')
+                populate_db(po, job.language, job.package)
+            except Exception, e:
+                logging.error("Failed to open po file %s for %s" % (job.package.name, job.language.short_name))
+                logging.error("Error: %s" % str(e))
+
+
+        except Exception, e:
+            logging.error("Failed to download the file located on %s" % url)
+            logging.error("Error: %s" % str(e))
+        finally:
+            # Extract what we need from the "old" job
+            package = job.package
+            language = job.language
+            # Delete this job...
+            logging.info(job.update_on)
+            job.delete()
+            logging.info("Job has been deleted.")
+            # ... and create a new one, put it at the end of queue.
+            (job, created) = Job.objects.get_or_create(language=language, package=package)
+            job.save()
+            logging.info("New job has been created.")
+            logging.info(job.update_on)

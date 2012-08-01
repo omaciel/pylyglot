@@ -10,6 +10,16 @@
 <!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
 
+    <nav>
+        <ul class="information-links">
+            <li><a href="/">{% trans "home" %}</a></li>
+            <li><a href="{% url howto %}">{% trans "how to use" %}</a></li>
+            <li><a href="{% url about %}">{% trans "about" %}</a></li>
+            <li><a href="{% url xmlrpc %}">{% trans "developer" %}</a></li>
+            <li><a href="{% url contact %}">{% trans "contact" %}</a></li>
+        </ul>
+    </nav>
+
         <div id="container">
 
             <header>
@@ -19,14 +29,6 @@
 
                 {% block search %}{% endblock %}
 
-                <ul class="information-links">
-                    <li><a href="/">{% trans "home" %}</a></li>
-                    <li><a href="{% url howto %}">{% trans "how to use" %}</a></li>
-                    <li><a href="{% url about %}">{% trans "about" %}</a></li>
-                    <li><a href="{% url xmlrpc %}">{% trans "developer" %}</a></li>
-                    <li><a href="{% url contact %}">{% trans "contact" %}</a></li>
-                </ul>
-
             </header>
 
             {% block content %}{% endblock %}
@@ -34,5 +36,11 @@
             {% include "page_footer.html" %}
 
         </div> <!-- end of #container -->
+    <script type="text/javascript">
+        (function ($) {
+            $('#id_languages').chosen();
+        })(jQuery);
+    </script>
+    {% block extrajs %}{% endblock %}
     </body>
 </html>

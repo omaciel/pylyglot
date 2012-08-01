@@ -17,13 +17,14 @@
 # along with Pylyglot.  If not, see <http://www.gnu.org/licenses/>.
 
 from django import forms
+from django.db.models import Count
 from pylyglot.core.models import Language
 
 class SearchForm(forms.Form):
 
     available_languages = []
 
-    for language in Language.objects.all().values_list('short_name','long_name').order_by('long_name'):
+    for language in Language.objects.annotate(translations=Count('translation')).filter(translations__gt=1).values_list('short_name','long_name').order_by('long_name'):
         if not language[1]:
             available_languages.append((language[0], language[0]))
         else:

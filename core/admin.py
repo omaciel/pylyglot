@@ -17,20 +17,30 @@
 # along with Pylyglot.  If not, see <http://www.gnu.org/licenses/>.
 
 from django.contrib import admin
-from core.lib import update_package
+from core.lib import update_package, schedule_package
 
-from pylyglot.core.models import Language, Package, Sentence, Translation
+from pylyglot.core.models import Job, Language, Package, Sentence, Translation
 
-def create_task(modeladmin, request, queryset):
+def update_task(modeladmin, request, queryset):
     for package in queryset.all():
         update_package(package)
-create_task.short_description = "Update translations for this package."
+update_task.short_description = "Update translations for this package."
+
+def schedule_task(modeladmin, request, queryset):
+    for package in queryset.all():
+        schedule_package(package)
+schedule_task.short_description = "Schedule this package for translation."
+
+class JobAdmin(admin.ModelAdmin):
+    list_display = ['package', 'language', 'last_updated', 'update_on',]
+    list_filter = ['last_updated', 'update_on',]
+    search_fields = ['package', 'language',]
 
 class LanguageAdmin(admin.ModelAdmin):
     list_display = ('long_name', 'short_name',)
 
 class PackageAdmin(admin.ModelAdmin):
-    actions = [create_task]
+    actions = [update_task, schedule_task]
     search_fields = ['name',]
 
 class TranslationAdmin(admin.ModelAdmin):
@@ -40,6 +50,7 @@ class TranslationAdmin(admin.ModelAdmin):
 class SentenceAdmin(admin.ModelAdmin):
     search_fields = ['msgid',]
 
+admin.site.register(Job, JobAdmin)
 admin.site.register(Language, LanguageAdmin)
 admin.site.register(Package, PackageAdmin)
 admin.site.register(Translation, TranslationAdmin)

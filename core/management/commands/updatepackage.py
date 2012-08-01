@@ -19,7 +19,6 @@
 from django.conf import settings
 from django.core.management.base import AppCommand
 from django.core.management.base import BaseCommand, CommandError
-from django.db import transaction
 
 from polib import pofile
 
@@ -30,16 +29,12 @@ import logging
 import tempfile
 from urllib import urlopen
 
-log = logging.getLogger()
-log.setLevel(settings.LOG_LEVEL)
-
 class Command(BaseCommand):
     args = ''
 
     def handle(self, *test_labels, **options):
         print test_labels
 
-    @transaction.commit_manually
     def update_package(self, package):
 
         db_package, created = Package.objects.get(name=package)

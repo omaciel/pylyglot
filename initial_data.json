@@ -1,0 +1,1722 @@
+[
+  {
+    "pk": 1, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/accerciser.master/accerciser.master", 
+      "name": "accerciser"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/alacarte.master/alacarte.master", 
+      "name": "alacarte"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/anjuta.master/anjuta.master", 
+      "name": "anjuta"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/at-spi2-atk.master/at-spi2-atk.master", 
+      "name": "at-spi2-atk"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/at-spi2-core.master/at-spi2-core.master", 
+      "name": "at-spi2-core"
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/atk.master/atk.master", 
+      "name": "atk"
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/brasero.master/brasero.master", 
+      "name": "brasero"
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/cheese.master/cheese.master", 
+      "name": "cheese"
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/devhelp.master/devhelp.master", 
+      "name": "devhelp"
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/empathy.master/empathy.master", 
+      "name": "empathy"
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/eog.master/eog.master", 
+      "name": "eog"
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/epiphany.master/epiphany.master", 
+      "name": "epiphany"
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/evince.master/evince.master", 
+      "name": "evince"
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/evolution.master/evolution.master", 
+      "name": "evolution"
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/evolution-data-server.master/evolution-data-server.master", 
+      "name": "evolution-data-server"
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/file-roller.master/file-roller.master", 
+      "name": "file-roller"
+    }
+  }, 
+  {
+    "pk": 17, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gcalctool.master/gcalctool.master", 
+      "name": "gcalctool"
+    }
+  }, 
+  {
+    "pk": 18, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gconf.master/gconf.master", 
+      "name": "gconf"
+    }
+  }, 
+  {
+    "pk": 19, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gconf-editor.master/gconf-editor.master", 
+      "name": "gconf-editor"
+    }
+  }, 
+  {
+    "pk": 20, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gdk-pixbuf.master/gdk-pixbuf.master", 
+      "name": "gdk-pixbuf"
+    }
+  }, 
+  {
+    "pk": 21, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gdl.master/gdl.master", 
+      "name": "gdl"
+    }
+  }, 
+  {
+    "pk": 22, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gdm.master/gdm.master", 
+      "name": "gdm"
+    }
+  }, 
+  {
+    "pk": 23, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gedit.master/gedit.master", 
+      "name": "gedit"
+    }
+  }, 
+  {
+    "pk": 24, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/glade.master/glade.master", 
+      "name": "glade"
+    }
+  }, 
+  {
+    "pk": 25, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/glib.master/glib.master", 
+      "name": "glib"
+    }
+  }, 
+  {
+    "pk": 26, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/glib-networking.master/glib-networking.master", 
+      "name": "glib-networking"
+    }
+  }, 
+  {
+    "pk": 27, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-backgrounds.master/gnome-backgrounds.master", 
+      "name": "gnome-backgrounds"
+    }
+  }, 
+  {
+    "pk": 28, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-bluetooth.master/gnome-bluetooth.master", 
+      "name": "gnome-bluetooth"
+    }
+  }, 
+  {
+    "pk": 29, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-contacts.master/gnome-contacts.master", 
+      "name": "gnome-contacts"
+    }
+  }, 
+  {
+    "pk": 30, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-control-center.master/gnome-control-center.master", 
+      "name": "gnome-control-center"
+    }
+  }, 
+  {
+    "pk": 31, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-desktop.master/gnome-desktop.master", 
+      "name": "gnome-desktop"
+    }
+  }, 
+  {
+    "pk": 32, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-disk-utility.master/gnome-disk-utility.master", 
+      "name": "gnome-disk-utility"
+    }
+  }, 
+  {
+    "pk": 33, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-doc-utils.master/gnome-doc-utils.master", 
+      "name": "gnome-doc-utils"
+    }
+  }, 
+  {
+    "pk": 34, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-games.master/gnome-games.master", 
+      "name": "gnome-games"
+    }
+  }, 
+  {
+    "pk": 35, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-icon-theme.master/gnome-icon-theme.master", 
+      "name": "gnome-icon-theme"
+    }
+  }, 
+  {
+    "pk": 36, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-keyring.master/gnome-keyring.master", 
+      "name": "gnome-keyring"
+    }
+  }, 
+  {
+    "pk": 37, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-menus.master/gnome-menus.master", 
+      "name": "gnome-menus"
+    }
+  }, 
+  {
+    "pk": 38, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-nettool.master/gnome-nettool.master", 
+      "name": "gnome-nettool"
+    }
+  }, 
+  {
+    "pk": 39, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-packagekit.master/gnome-packagekit.master", 
+      "name": "gnome-packagekit"
+    }
+  }, 
+  {
+    "pk": 40, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-panel.master/gnome-panel.master", 
+      "name": "gnome-panel"
+    }
+  }, 
+  {
+    "pk": 41, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-power-manager.master/gnome-power-manager.master", 
+      "name": "gnome-power-manager"
+    }
+  }, 
+  {
+    "pk": 42, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-screensaver.master/gnome-screensaver.master", 
+      "name": "gnome-screensaver"
+    }
+  }, 
+  {
+    "pk": 43, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-session.master/gnome-session.master", 
+      "name": "gnome-session"
+    }
+  }, 
+  {
+    "pk": 44, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-settings-daemon.master/gnome-settings-daemon.master", 
+      "name": "gnome-settings-daemon"
+    }
+  }, 
+  {
+    "pk": 45, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-shell.master/gnome-shell.master", 
+      "name": "gnome-shell"
+    }
+  }, 
+  {
+    "pk": 46, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-system-monitor.master/gnome-system-monitor.master", 
+      "name": "gnome-system-monitor"
+    }
+  }, 
+  {
+    "pk": 47, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-terminal.master/gnome-terminal.master", 
+      "name": "gnome-terminal"
+    }
+  }, 
+  {
+    "pk": 48, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-themes-standard.master/gnome-themes-standard.master", 
+      "name": "gnome-themes-standard"
+    }
+  }, 
+  {
+    "pk": 49, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-user-share.master/gnome-user-share.master", 
+      "name": "gnome-user-share"
+    }
+  }, 
+  {
+    "pk": 50, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-utils.master/gnome-utils.master", 
+      "name": "gnome-utils"
+    }
+  }, 
+  {
+    "pk": 51, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gnome-video-effects.master/gnome-video-effects.master", 
+      "name": "gnome-video-effects"
+    }
+  }, 
+  {
+    "pk": 52, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gtk+.master/gtk+.master", 
+      "name": "gtk+"
+    }
+  }, 
+  {
+    "pk": 53, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gtkhtml.master/gtkhtml.master", 
+      "name": "gtkhtml"
+    }
+  }, 
+  {
+    "pk": 54, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gtksourceview.master/gtksourceview.master", 
+      "name": "gtksourceview"
+    }
+  }, 
+  {
+    "pk": 55, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gucharmap.master/gucharmap.master", 
+      "name": "gucharmap"
+    }
+  }, 
+  {
+    "pk": 56, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/gvfs.master/gvfs.master", 
+      "name": "gvfs"
+    }
+  }, 
+  {
+    "pk": 57, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/libgdata.master/libgdata.master", 
+      "name": "libgdata"
+    }
+  }, 
+  {
+    "pk": 58, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/libgnome-keyring.master/libgnome-keyring.master", 
+      "name": "libgnome-keyring"
+    }
+  }, 
+  {
+    "pk": 59, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/libgnome-media-profiles.master/libgnome-media-profiles.master", 
+      "name": "libgnome-media-profiles"
+    }
+  }, 
+  {
+    "pk": 60, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/libgnomekbd.master/libgnomekbd.master", 
+      "name": "libgnomekbd"
+    }
+  }, 
+  {
+    "pk": 61, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/libgtop.master/libgtop.master", 
+      "name": "libgtop"
+    }
+  }, 
+  {
+    "pk": 62, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/libgweather.master/libgweather.master", 
+      "name": "libgweather"
+    }
+  }, 
+  {
+    "pk": 63, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/libpeas.master/libpeas.master", 
+      "name": "libpeas"
+    }
+  }, 
+  {
+    "pk": 64, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/libwnck.master/libwnck.master", 
+      "name": "libwnck"
+    }
+  }, 
+  {
+    "pk": 65, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/metacity.master/metacity.master", 
+      "name": "metacity"
+    }
+  }, 
+  {
+    "pk": 66, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/mousetweaks.master/mousetweaks.master", 
+      "name": "mousetweaks"
+    }
+  }, 
+  {
+    "pk": 67, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/mutter.master/mutter.master", 
+      "name": "mutter"
+    }
+  }, 
+  {
+    "pk": 68, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/nautilus.master/nautilus.master", 
+      "name": "nautilus"
+    }
+  }, 
+  {
+    "pk": 69, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/nautilus-sendto.master/nautilus-sendto.master", 
+      "name": "nautilus-sendto"
+    }
+  }, 
+  {
+    "pk": 70, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/network-manager-applet.master/network-manager-applet.master", 
+      "name": "network-manager-applet"
+    }
+  }, 
+  {
+    "pk": 71, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/notification-daemon.master/notification-daemon.master", 
+      "name": "notification-daemon"
+    }
+  }, 
+  {
+    "pk": 72, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/orca.master/orca.master", 
+      "name": "orca"
+    }
+  }, 
+  {
+    "pk": 73, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/seahorse.master/seahorse.master", 
+      "name": "seahorse"
+    }
+  }, 
+  {
+    "pk": 74, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/seahorse-plugins.master/seahorse-plugins.master", 
+      "name": "seahorse-plugins"
+    }
+  }, 
+  {
+    "pk": 75, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/tomboy.master/tomboy.master", 
+      "name": "tomboy"
+    }
+  }, 
+  {
+    "pk": 76, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/totem.master/totem.master", 
+      "name": "totem"
+    }
+  }, 
+  {
+    "pk": 77, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/totem-pl-parser.master/totem-pl-parser.master", 
+      "name": "totem-pl-parser"
+    }
+  }, 
+  {
+    "pk": 78, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/vinagre.master/vinagre.master", 
+      "name": "vinagre"
+    }
+  }, 
+  {
+    "pk": 79, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/vino.master/vino.master", 
+      "name": "vino"
+    }
+  }, 
+  {
+    "pk": 80, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/vte.master/vte.master", 
+      "name": "vte"
+    }
+  }, 
+  {
+    "pk": 81, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/yelp.master/yelp.master", 
+      "name": "yelp"
+    }
+  }, 
+  {
+    "pk": 82, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/yelp-xsl.master/yelp-xsl.master", 
+      "name": "yelp-xsl"
+    }
+  }, 
+  {
+    "pk": 83, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/zenity.master/zenity.master", 
+      "name": "zenity"
+    }
+  }, 
+  {
+    "pk": 84, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/banshee.master/banshee.master", 
+      "name": "banshee"
+    }
+  }, 
+  {
+    "pk": 85, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/billreminder.master/billreminder.master", 
+      "name": "billreminder"
+    }
+  }, 
+  {
+    "pk": 86, 
+    "model": "core.package", 
+    "fields": {
+      "src_url": "http://l10n.gnome.org/POT/accerciser.master/accerciser.master", 
+      "name": "foo"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Brazilian Portuguese", 
+      "short_name": "pt_BR"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Afrikaans", 
+      "short_name": "af"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Amharic", 
+      "short_name": "am"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Aragonese", 
+      "short_name": "an"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Old English", 
+      "short_name": "ang"
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Arabic", 
+      "short_name": "ar"
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Assamese", 
+      "short_name": "as"
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Asturian", 
+      "short_name": "ast"
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Azerbaijani", 
+      "short_name": "az"
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Iranian", 
+      "short_name": "az_IR"
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Belarusian", 
+      "short_name": "be"
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Belarusian Latin", 
+      "short_name": "be@latin"
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Bemba", 
+      "short_name": "bem"
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Bulgarian", 
+      "short_name": "bg"
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Bengali", 
+      "short_name": "bn"
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Bengali (India)", 
+      "short_name": "bn_IN"
+    }
+  }, 
+  {
+    "pk": 17, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Breton", 
+      "short_name": "br"
+    }
+  }, 
+  {
+    "pk": 18, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Bosnian", 
+      "short_name": "bs"
+    }
+  }, 
+  {
+    "pk": 19, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Catalan", 
+      "short_name": "ca"
+    }
+  }, 
+  {
+    "pk": 20, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Catalan (Valencian)", 
+      "short_name": "ca@valencia"
+    }
+  }, 
+  {
+    "pk": 21, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Crimean", 
+      "short_name": "crh"
+    }
+  }, 
+  {
+    "pk": 22, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Czech", 
+      "short_name": "cs"
+    }
+  }, 
+  {
+    "pk": 23, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Welsh", 
+      "short_name": "cy"
+    }
+  }, 
+  {
+    "pk": 24, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Danish", 
+      "short_name": "da"
+    }
+  }, 
+  {
+    "pk": 25, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "German", 
+      "short_name": "de"
+    }
+  }, 
+  {
+    "pk": 26, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Divehi", 
+      "short_name": "dv"
+    }
+  }, 
+  {
+    "pk": 27, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Dzongkha", 
+      "short_name": "dz"
+    }
+  }, 
+  {
+    "pk": 28, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Greek", 
+      "short_name": "el"
+    }
+  }, 
+  {
+    "pk": 29, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Shavian", 
+      "short_name": "en@shaw"
+    }
+  }, 
+  {
+    "pk": 30, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Australian", 
+      "short_name": "en_AU"
+    }
+  }, 
+  {
+    "pk": 31, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Canadian", 
+      "short_name": "en_CA"
+    }
+  }, 
+  {
+    "pk": 32, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "British", 
+      "short_name": "en_GB"
+    }
+  }, 
+  {
+    "pk": 33, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "en_US", 
+      "short_name": "en_US"
+    }
+  }, 
+  {
+    "pk": 34, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Esperanto", 
+      "short_name": "eo"
+    }
+  }, 
+  {
+    "pk": 35, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Spanish", 
+      "short_name": "es"
+    }
+  }, 
+  {
+    "pk": 36, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Estonian", 
+      "short_name": "et"
+    }
+  }, 
+  {
+    "pk": 37, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Basque", 
+      "short_name": "eu"
+    }
+  }, 
+  {
+    "pk": 38, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Persian", 
+      "short_name": "fa"
+    }
+  }, 
+  {
+    "pk": 39, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Finnish", 
+      "short_name": "fi"
+    }
+  }, 
+  {
+    "pk": 40, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "French", 
+      "short_name": "fr"
+    }
+  }, 
+  {
+    "pk": 41, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Friulian", 
+      "short_name": "fur"
+    }
+  }, 
+  {
+    "pk": 42, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Frisian", 
+      "short_name": "fy"
+    }
+  }, 
+  {
+    "pk": 43, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Irish", 
+      "short_name": "ga"
+    }
+  }, 
+  {
+    "pk": 44, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Galician", 
+      "short_name": "gl"
+    }
+  }, 
+  {
+    "pk": 45, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Guarani", 
+      "short_name": "gn"
+    }
+  }, 
+  {
+    "pk": 46, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Gujarati", 
+      "short_name": "gu"
+    }
+  }, 
+  {
+    "pk": 47, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Manx", 
+      "short_name": "gv"
+    }
+  }, 
+  {
+    "pk": 48, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Hausa", 
+      "short_name": "ha"
+    }
+  }, 
+  {
+    "pk": 49, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Hebrew", 
+      "short_name": "he"
+    }
+  }, 
+  {
+    "pk": 50, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Hindi", 
+      "short_name": "hi"
+    }
+  }, 
+  {
+    "pk": 51, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Croatian", 
+      "short_name": "hr"
+    }
+  }, 
+  {
+    "pk": 52, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Hungarian", 
+      "short_name": "hu"
+    }
+  }, 
+  {
+    "pk": 53, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Armenian", 
+      "short_name": "hy"
+    }
+  }, 
+  {
+    "pk": 54, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Interlingua", 
+      "short_name": "ia"
+    }
+  }, 
+  {
+    "pk": 55, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Indonesian", 
+      "short_name": "id"
+    }
+  }, 
+  {
+    "pk": 56, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Igbo", 
+      "short_name": "ig"
+    }
+  }, 
+  {
+    "pk": 57, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Ido", 
+      "short_name": "io"
+    }
+  }, 
+  {
+    "pk": 58, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Icelandic", 
+      "short_name": "is"
+    }
+  }, 
+  {
+    "pk": 59, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Italian", 
+      "short_name": "it"
+    }
+  }, 
+  {
+    "pk": 60, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Japanese", 
+      "short_name": "ja"
+    }
+  }, 
+  {
+    "pk": 61, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Georgian", 
+      "short_name": "ka"
+    }
+  }, 
+  {
+    "pk": 62, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Kikongo", 
+      "short_name": "kg"
+    }
+  }, 
+  {
+    "pk": 63, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Kazakh", 
+      "short_name": "kk"
+    }
+  }, 
+  {
+    "pk": 64, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Khmer", 
+      "short_name": "km"
+    }
+  }, 
+  {
+    "pk": 65, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Kannada", 
+      "short_name": "kn"
+    }
+  }, 
+  {
+    "pk": 66, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Korean", 
+      "short_name": "ko"
+    }
+  }, 
+  {
+    "pk": 67, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Kashmiri", 
+      "short_name": "ks"
+    }
+  }, 
+  {
+    "pk": 68, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Kurdish", 
+      "short_name": "ku"
+    }
+  }, 
+  {
+    "pk": 69, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Kirghiz", 
+      "short_name": "ky"
+    }
+  }, 
+  {
+    "pk": 70, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Latin", 
+      "short_name": "la"
+    }
+  }, 
+  {
+    "pk": 71, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Luganda", 
+      "short_name": "lg"
+    }
+  }, 
+  {
+    "pk": 72, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Limburgian", 
+      "short_name": "li"
+    }
+  }, 
+  {
+    "pk": 73, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Lao", 
+      "short_name": "lo"
+    }
+  }, 
+  {
+    "pk": 74, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Lithuanian", 
+      "short_name": "lt"
+    }
+  }, 
+  {
+    "pk": 75, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Latvian", 
+      "short_name": "lv"
+    }
+  }, 
+  {
+    "pk": 76, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Maithili", 
+      "short_name": "mai"
+    }
+  }, 
+  {
+    "pk": 77, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Malagasy", 
+      "short_name": "mg"
+    }
+  }, 
+  {
+    "pk": 78, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Maori", 
+      "short_name": "mi"
+    }
+  }, 
+  {
+    "pk": 79, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Macedonian", 
+      "short_name": "mk"
+    }
+  }, 
+  {
+    "pk": 80, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Malayalam", 
+      "short_name": "ml"
+    }
+  }, 
+  {
+    "pk": 81, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Mongolian", 
+      "short_name": "mn"
+    }
+  }, 
+  {
+    "pk": 82, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Marathi", 
+      "short_name": "mr"
+    }
+  }, 
+  {
+    "pk": 83, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Malay", 
+      "short_name": "ms"
+    }
+  }, 
+  {
+    "pk": 84, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Burmese", 
+      "short_name": "my"
+    }
+  }, 
+  {
+    "pk": 85, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Norwegian", 
+      "short_name": "nb"
+    }
+  }, 
+  {
+    "pk": 86, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Low German", 
+      "short_name": "nds"
+    }
+  }, 
+  {
+    "pk": 87, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Nepali", 
+      "short_name": "ne"
+    }
+  }, 
+  {
+    "pk": 88, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Dutch", 
+      "short_name": "nl"
+    }
+  }, 
+  {
+    "pk": 89, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Norwegian", 
+      "short_name": "nn"
+    }
+  }, 
+  {
+    "pk": 90, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Northern Sotho", 
+      "short_name": "nso"
+    }
+  }, 
+  {
+    "pk": 91, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Occitan", 
+      "short_name": "oc"
+    }
+  }, 
+  {
+    "pk": 92, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Oriya", 
+      "short_name": "or"
+    }
+  }, 
+  {
+    "pk": 93, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Punjabi", 
+      "short_name": "pa"
+    }
+  }, 
+  {
+    "pk": 94, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Polish", 
+      "short_name": "pl"
+    }
+  }, 
+  {
+    "pk": 95, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Pashto", 
+      "short_name": "ps"
+    }
+  }, 
+  {
+    "pk": 96, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Portuguese", 
+      "short_name": "pt"
+    }
+  }, 
+  {
+    "pk": 97, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Romanian", 
+      "short_name": "ro"
+    }
+  }, 
+  {
+    "pk": 98, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Russian", 
+      "short_name": "ru"
+    }
+  }, 
+  {
+    "pk": 99, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Kinyarwanda", 
+      "short_name": "rw"
+    }
+  }, 
+  {
+    "pk": 100, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Sinhala", 
+      "short_name": "si"
+    }
+  }, 
+  {
+    "pk": 101, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Slovak", 
+      "short_name": "sk"
+    }
+  }, 
+  {
+    "pk": 102, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Slovenian", 
+      "short_name": "sl"
+    }
+  }, 
+  {
+    "pk": 103, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Albanian", 
+      "short_name": "sq"
+    }
+  }, 
+  {
+    "pk": 104, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Serbian", 
+      "short_name": "sr"
+    }
+  }, 
+  {
+    "pk": 105, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Serbian Jekavian", 
+      "short_name": "sr@ije"
+    }
+  }, 
+  {
+    "pk": 106, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Serbian Latin", 
+      "short_name": "sr@latin"
+    }
+  }, 
+  {
+    "pk": 107, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Swedish", 
+      "short_name": "sv"
+    }
+  }, 
+  {
+    "pk": 108, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Tamil", 
+      "short_name": "ta"
+    }
+  }, 
+  {
+    "pk": 109, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Telugu", 
+      "short_name": "te"
+    }
+  }, 
+  {
+    "pk": 110, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Tajik", 
+      "short_name": "tg"
+    }
+  }, 
+  {
+    "pk": 111, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Thai", 
+      "short_name": "th"
+    }
+  }, 
+  {
+    "pk": 112, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Turkmen", 
+      "short_name": "tk"
+    }
+  }, 
+  {
+    "pk": 113, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Tagalog", 
+      "short_name": "tl"
+    }
+  }, 
+  {
+    "pk": 114, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Turkish", 
+      "short_name": "tr"
+    }
+  }, 
+  {
+    "pk": 115, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Tatar", 
+      "short_name": "tt"
+    }
+  }, 
+  {
+    "pk": 116, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Uighur", 
+      "short_name": "ug"
+    }
+  }, 
+  {
+    "pk": 117, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Ukrainian", 
+      "short_name": "uk"
+    }
+  }, 
+  {
+    "pk": 118, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Urdu", 
+      "short_name": "ur"
+    }
+  }, 
+  {
+    "pk": 120, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Uzbek (Latin)", 
+      "short_name": "uz"
+    }
+  }, 
+  {
+    "pk": 121, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Uzbek (Cyrillic)", 
+      "short_name": "uz@cyrillic"
+    }
+  }, 
+  {
+    "pk": 122, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Vietnamese", 
+      "short_name": "vi"
+    }
+  }, 
+  {
+    "pk": 123, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Walloon", 
+      "short_name": "wa"
+    }
+  }, 
+  {
+    "pk": 124, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Xhosa", 
+      "short_name": "xh"
+    }
+  }, 
+  {
+    "pk": 125, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Yiddish", 
+      "short_name": "yi"
+    }
+  }, 
+  {
+    "pk": 126, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Yoruba", 
+      "short_name": "yo"
+    }
+  }, 
+  {
+    "pk": 127, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Chinese (China)", 
+      "short_name": "zh_CN"
+    }
+  }, 
+  {
+    "pk": 128, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Chinese (Hong Kong)", 
+      "short_name": "zh_HK"
+    }
+  }, 
+  {
+    "pk": 129, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Chinese (Taiwan)", 
+      "short_name": "zh_TW"
+    }
+  }, 
+  {
+    "pk": 130, 
+    "model": "core.language", 
+    "fields": {
+      "long_name": "Zulu", 
+      "short_name": "zu"
+    }
+  }
+]

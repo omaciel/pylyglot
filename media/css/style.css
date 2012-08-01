@@ -97,17 +97,32 @@ button {  width: auto; overflow: visible; }
  
 body							{ background:#fff: }
 header					 		{ width: 600px; margin: auto; margin-bottom:50px;}
-header h1						{ text-align: center; margin-top:74px; margin-bottom:25px;}
-header form						{ margin-bottom:50px !important; position:relative; border:1px solid #E8E8E8; height:32px; width:456px; margin:auto;}
+header h1						{ text-align: center; margin-top:54px; margin-bottom:25px;}
+/*header form						{ margin-bottom:50px !important; position:relative; border:1px solid #E8E8E8; height:32px; width:456px; margin:auto;}*/
 
-header form select 				{ position:	absolute; left:7px; top:6px; height: 1.6em; line-height:1.6em; border: 1px solid #E8E8E8; }
-header form input[type=text]	{ position: absolute; left: 90px; top: 0px; height: 1em; width:320px; border: none; height:30px; font-size:1.5em; color:#545454; background:#fff;}
-header form input[type=submit]	{ position:	absolute; right:7px; top:0; height: 1.6em; background: url(../images/search-30x30.png) no-repeat; width:30px; height:30px; text-indent:-9999px; overflow:hidden; border:none;}
+/*header form select 				{ line-height:1.6em; border: 1px solid #E8E8E8; }*/
+/*header form input[type=text]	{ border: none; height:30px; font-size:1.5em; color:#545454; background:#fff;}*/
 
-ul.information-links			{ list-style:none; margin:0 0; padding:0 0; text-align:center; position:absolute; top:-75px; left: 0; display:block; height:30px; background:#D9E021; width:100%; line-height:30px; }
+ul.information-links			{ list-style:none; margin:0; padding:0; text-align:center; display:block; height:30px; background:#D9E021; border-bottom:1px solid #d2d2d2; width:100%; line-height:30px; -moz-box-shadow:0 1px 0 #c1c1c1; -webkit-box-shadow:0 1px 0 #c1c1c1; box-shadow:0 1px 0 #c1c1c1 }
 ul.information-links li			{ display:inline; margin-left: 12px; font-size:80%;font-size:.9em;}
 ul.information-links li	a		{ color: #fff; font-weight:bold; }
 
+#search select,
+#id_languages_chzn,
+#id_query,
+#search input[type=submit] { display:block; float:left; }
+#search select,
+#id_languages_chzn { margin:3px; width:170px !important; }
+.chzn-drop { width:168px !important; }
+#id_languages_chzn a { height:34px; line-height:36px; }
+.chzn-container-single .chzn-single div b { background-position: 0 5px !important; }
+#search { background:#d9d9d9; height:42px; -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px; }
+#id_query { background:#f9f6fa; border:none; font-size:14px; height:36px; line-height:36px; margin:3px 0; outline:none; padding:0 6px; width:370px; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,0.3) inset; }
+#search input[type=submit] { float:right; height:38px; margin:3px 2px 0 2px; width:38px; text-indent:-9999px; overflow:hidden; border:none; }
+
+.search-button        { background:url(../images/search_button_bg_38x117.png) no-repeat center top; }
+.search-button:hover  { background:url(../images/search_button_bg_38x117.png) no-repeat center -40px; }
+.search-button:active { background:url(../images/search_button_bg_38x117.png) no-repeat center -80px; }
 
 ul.information-links,
 p#statistics,
@@ -115,18 +130,19 @@ p#website-information 			{ margin-bottom:10px; }
 
 #main							{ width:900px; margin:auto; }
 
-.package-result tbody td,
-.package-result tbody th					{margin:auto; border:1px solid #E8E8E8; padding:10px; font-size:1em;}
+.package-result td,
+.package-result th						{margin:auto; border:1px solid #E8E8E8; padding:10px; font-size:1em;}
+                
+.package-result tr:nth-child(even)		{ background:#fff; }
+.package-result tr:nth-child(odd)		{ background:#f8f8f8; }
+.package-result tr:hover				{ background:#F6F7D4; }
 
-.package-result tbody tr:nth-child(even)	{ background:#fff; }
-.package-result tbody tr:nth-child(odd)		{ background:#f8f8f8; }
-.package-result tbody tr:hover				{ background:#F6F7D4; }
-
-.package-result tbody th				{ background:#D9E021; color:#fff; letter-spacing:.05em; }
+.package-result th						{ background:#D9E021; color:#fff; letter-spacing:.05em; }
 
 .package-result	h2						{ margin-bottom:10px; font-size:2em;}
 .package-result	h2	span				{ color:#C1C1C1; font-size:80%;}
 
+#fixedTableHeader 						{ position: fixed; top: 0px; z-index: 10; width: 100%; }
 
 footer									{ padding-top:50px; padding-bottom:50px; width:600px; margin:auto; }
 footer p								{ text-align:center; }

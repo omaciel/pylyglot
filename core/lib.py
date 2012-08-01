@@ -16,25 +16,45 @@
 # You should have received a copy of the GNU General Public License
 # along with Pylyglot.  If not, see <http://www.gnu.org/licenses/>.
 
-from datetime import datetime
-from dateutil.parser import parse
-from dateutil.tz import tzutc
+try:
+    import json
+except ImportError:
+    import simplejson as json
+
 from django.conf import settings
 from django.db import transaction
 
 from polib import pofile
 
-from pylyglot.core.models import Package, Language, Sentence, Translation
+from pylyglot.core.models import Job, Language, Sentence, Translation
 
 import tempfile
-from urllib import urlopen
+from urllib import urlencode, urlopen
 
 import logging
-import time
 import os
 
-log = logging.getLogger()
-log.setLevel(settings.LOG_LEVEL)
+
+def translate(msgid, lang_to, lang_from='en'):
+
+    msgstr = ""
+
+    params = urlencode( ( ('key', settings.GOOGLE_KEY), ('source', lang_from), ('target', lang_to), ('q', msgid) ) )
+
+    url = settings.GOOGLE_URL + params
+    response = urlopen(url).read()
+
+    content = json.loads(response)
+
+    try:
+        if content['data']['translations']:
+            msgstr = content['data']['translations'][0]['translatedText']
+    except TypeError, e:
+        #TODO: Log the error message as it may be helpful later.
+        logging.error(str(e))
+        pass
+
+    return msgstr
 
 def update_package(package):
 
@@ -75,16 +95,19 @@ def update_package(package):
 @transaction.commit_manually
 def populate_db(po, language, package):
 
-    logging.debug("Updating %s translations for %s" % (language.long_name, package.name))
+    logging.info("Updating %s translations for %s" % (language.long_name, package.name))
 
     # Delete existing translations for this package/language combination
     translations = Translation.objects.filter(language=language, package=package)
 
     if translations:
-        logging.info("Deleting existing translations for %s / %s." % (package.name, language.short_name))
+        logging.info("Deleting existing translations for %s / %s." % (package.name, language.long_name))
         translations.delete()
 
     valid_entries = [e for e in po if not e.obsolete]
+
+    if not valid_entries:
+        logging.info("Apparently there are no %s translations for %s" % (language.long_name, package.name))
 
     try:
         for entry in valid_entries:
@@ -100,6 +123,7 @@ def populate_db(po, language, package):
         transaction.rollback()
     else:
         transaction.commit()
+
 
 def add_translation(entry, language, package):
 
@@ -119,3 +143,19 @@ def add_translation(entry, language, package):
 
         (trans, created) = Translation.objects.get_or_create(msgstr=entry.msgstr_plural, sentence=sentence, language=language, package=package)
         trans.save()
+
+def schedule_package(package):
+
+    # Is this package already in the jobs table?
+    jobs = Job.objects.filter(package = package)
+    if jobs:
+        logging.info("Package %s is already scheduled for updates." % package)
+        return
+
+    languages = Language.objects.all()
+
+    for language in languages:
+        job = Job(package=package, language=language)
+        job.save()
+        logging.info("Package %s is scheduled to be updated on %s" % (job.package.name, job.update_on.strftime("%B %d, %Y %H:%M")))
+
