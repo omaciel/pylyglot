@@ -42,6 +42,7 @@ class LanguageAdmin(admin.ModelAdmin):
 class PackageAdmin(admin.ModelAdmin):
     actions = [update_task, schedule_task]
     search_fields = ['name',]
+    ordering = ('name',)
 
 class TranslationAdmin(admin.ModelAdmin):
     list_filter = ['language', 'package',]
