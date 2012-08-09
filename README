@@ -8,17 +8,9 @@ Installation:
 
 * Install dependencies.
 * Copy the conf/99-devel.conf.sample file and rename it to 99-devel.conf. By default sqlite is configured to be the engine with a new development.db file.
-* Create a po/ directory in the root directory of your checkout.
-* Populate the newly created po/ directory with *.po files. Right now the parser expects that *.po files are named in the following format:
-    packagename-branchname-language.po
-
-For example, download the French GNOME packages from http://l10n.gnome.org/languages/fr/gnome-2-32/ui.tar.gz and untar it into the po/ directory.
-
-NOTE: This will be changed so that the name of the package is parsed from the *.po header section!
-
 * Create the original database:
     python manage.py syncdb
-* Populate the database by parsing the *.po files:
+* Populate the database:
     python manage.py populatedb
 * Start the server:
     python manage.py runserver
@@ -27,5 +19,4 @@ Dependencies:
 ============
 
 * polib: http://bitbucket.org/izi/polib/src
-* dateutil: http://labix.org/python-dateutil
 * django-pagination: https://github.com/ericflo/django-pagination
