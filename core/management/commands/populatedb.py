@@ -23,7 +23,7 @@ from django.core.management.base import BaseCommand, CommandError
 
 from polib import pofile
 
-from pylyglot.core.models import Job
+from pylyglot.core.models import Job, Language, Package
 from pylyglot.core.lib import populate_db
 
 import tempfile
@@ -34,6 +34,12 @@ import logging
 class Command(BaseCommand):
 
     def handle(self, *args, **options):
+        # Check if exists any Job and create them if necessary
+        for language in Language.objects.all():
+            for package in Package.objects.all():
+                (job, created) = Job.objects.get_or_create(language=language, package=package)
+                if created:
+                    job.save()
 
         active_job = Job.objects.filter(active = True)
         if active_job:
