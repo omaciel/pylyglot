@@ -19,7 +19,7 @@
 from django.contrib import admin
 from core.lib import update_package, schedule_package
 
-from pylyglot.core.models import Job, Language, Package, Sentence, Translation
+from core.models import Job, Language, Package, Sentence, Translation
 
 def update_task(modeladmin, request, queryset):
     for package in queryset.all():

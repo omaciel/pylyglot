@@ -23,7 +23,7 @@ from django.template import RequestContext
 from django.shortcuts import render_to_response
 from django.views.decorators.csrf import csrf_exempt
 
-from pylyglot.core.models import Language, Package, Translation
+from core.models import Language, Package, Translation
 
 try:
     rpc_dispatcher = SimpleXMLRPCDispatcher(allow_none=False, encoding=None)

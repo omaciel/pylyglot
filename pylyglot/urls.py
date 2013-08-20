@@ -16,31 +16,25 @@
 # You should have received a copy of the GNU General Public License
 # along with Pylyglot.  If not, see <http://www.gnu.org/licenses/>.
 
-from core.views import *
-from django.conf.urls.defaults import *
 from django.conf import settings
+from django.conf.urls import patterns, include, url
+from django.views.generic import TemplateView
+
+from core.views import *
 
 from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', include('pylyglot.translations.urls')),
-    url(r'^rpc_service/$', include('pylyglot.rpc_service.urls')),
+    url(r'^$', include('translations.urls')),
+    url(r'^rpc_service/$', include('rpc_service.urls')),
 
     # Administration
     url(r'^admin/', include(admin.site.urls)),
 )
 
 urlpatterns += patterns('django.views.generic.simple',
-        url(r'^about', 'direct_to_template', {'template': 'about.html'}, name='about'),
-        url(r'^howto', 'direct_to_template', {'template': 'howto.html'}, name='howto'),
-        url(r'^contact', 'direct_to_template', {'template': 'contact.html'}, name='contact'),
+        url(r'^about/$', TemplateView.as_view(template_name='about.html'), name='about'),
+        url(r'^howto/$', TemplateView.as_view(template_name='howto.html'), name='howto'),
+        url(r'^contact/$', TemplateView.as_view(template_name='contact.html'), name='contact'),
 )
-
-if settings.DEBUG:
-    urlpatterns += patterns('',
-        url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
-            {'document_root': settings.MEDIA_ROOT},
-            name='media',
-        ),
-    )

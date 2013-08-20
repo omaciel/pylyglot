@@ -1,7 +1,7 @@
 *~
 *.pyc
 *.swp
-99-*.conf
+settings_local.py
 .DS_Store
 *.db
 po/*

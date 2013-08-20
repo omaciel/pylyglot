@@ -13,10 +13,10 @@
     <nav>
         <ul class="information-links">
             <li><a href="/">{% trans "home" %}</a></li>
-            <li><a href="{% url howto %}">{% trans "how to use" %}</a></li>
-            <li><a href="{% url about %}">{% trans "about" %}</a></li>
-            <li><a href="{% url xmlrpc %}">{% trans "developer" %}</a></li>
-            <li><a href="{% url contact %}">{% trans "contact" %}</a></li>
+            <li><a href="{% url 'howto' %}">{% trans "how to use" %}</a></li>
+            <li><a href="{% url 'about' %}">{% trans "about" %}</a></li>
+            <li><a href="{% url 'xmlrpc' %}">{% trans "developer" %}</a></li>
+            <li><a href="{% url 'contact' %}">{% trans "contact" %}</a></li>
         </ul>
     </nav>
 
@@ -24,7 +24,7 @@
 
             <header>
                 <h1>
-                    <a href="/" class="ht"><img src="{{ MEDIA_URL }}images/logo-179x119.jpg" alt="Pylyglot" /></a>
+                    <a href="/" class="ht"><img src="{{ STATIC_URL }}images/logo-179x119.jpg" alt="Pylyglot" /></a>
                 </h1>
 
                 {% block search %}{% endblock %}

@@ -22,8 +22,8 @@ from django.core.management.base import BaseCommand, CommandError
 
 from polib import pofile
 
-from pylyglot.core.models import Language, Package, Sentence, Translation
-from pylyglot.core.lib import populate_db
+from core.models import Language, Package, Sentence, Translation
+from core.lib import populate_db
 
 import logging
 import tempfile

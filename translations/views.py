@@ -18,8 +18,8 @@
 
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from pylyglot.core.forms import SearchForm
-from pylyglot.core.models import Translation
+from core.forms import SearchForm
+from core.models import Translation
 from django.db.models import Count
 
 def index(request):

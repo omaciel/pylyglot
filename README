@@ -7,7 +7,7 @@ Installation:
 ============
 
 * Install dependencies.
-* Copy the conf/99-devel.conf.sample file and rename it to 99-devel.conf. By default sqlite is configured to be the engine with a new development.db file.
+* Copy the pylyglot/settings_local.py.sample file and rename it to pylyglot/settings_local.py. By default sqlite is configured to be the engine with a new development.db file.
 * Create the original database:
     python manage.py syncdb
 * Populate the database:

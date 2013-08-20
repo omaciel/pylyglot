@@ -17,12 +17,12 @@
 # along with Pylyglot.  If not, see <http://www.gnu.org/licenses/>.
 
 from django.db import models
-from pylyglot.translations.models import Translation
+from translations.models import Translation
 
 class Package(models.Model):
 
     name = models.CharField(max_length=255)
-    src_url = models.URLField(verify_exists=False, blank=True, null=True)
+    src_url = models.URLField(blank=True, null=True)
 
     def __unicode__(self):
         return self.name

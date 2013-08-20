@@ -26,7 +26,7 @@ from django.db import transaction
 
 from polib import pofile
 
-from pylyglot.core.models import Job, Language, Sentence, Translation
+from core.models import Job, Language, Sentence, Translation
 
 import tempfile
 from urllib import urlencode, urlopen

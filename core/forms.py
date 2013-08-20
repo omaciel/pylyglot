@@ -18,7 +18,7 @@
 
 from django import forms
 from django.db.models import Count
-from pylyglot.core.models import Language
+from core.models import Language
 
 class SearchForm(forms.Form):
 
