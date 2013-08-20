@@ -175,6 +175,8 @@ LOGGING = {
     }
 }
 
+SCRATCH_DIR = os.path.join(BASE_PATH, 'po')
+
 # Number of records to display on query results
 PAGINATION_DEFAULT_PAGINATION = 20
 
