@@ -38,11 +38,3 @@ urlpatterns += patterns('django.views.generic.simple',
         url(r'^howto', TemplateView.as_view(template_name='howto.html'), name='howto'),
         url(r'^contact', TemplateView.as_view(template_name='contact.html'), name='contact'),
 )
-
-if settings.DEBUG:
-    urlpatterns += patterns('',
-        url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
-            {'document_root': settings.MEDIA_ROOT},
-            name='media',
-        ),
-    )

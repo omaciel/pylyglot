@@ -140,6 +140,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.humanize',
 
+    'pylyglot',
     'core',
     'rpc_service',
     'pagination',
