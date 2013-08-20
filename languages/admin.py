@@ -17,7 +17,7 @@
 # along with Pylyglot.  If not, see <http://www.gnu.org/licenses/>.
 
 from django.contrib import admin
-from pylyglot.languages.models import Language
+from languages.models import Language
 
 class LanguageAdmin(admin.ModelAdmin):
     pass

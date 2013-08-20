@@ -17,8 +17,8 @@
 # along with Pylyglot.  If not, see <http://www.gnu.org/licenses/>.
 
 from django.db import models
-from pylyglot.languages.models import Language
-from pylyglot.packages.models import Package
+from languages.models import Language
+from packages.models import Package
 
 class Translation(models.Model):
 

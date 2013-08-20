@@ -16,9 +16,9 @@
 # You should have received a copy of the GNU General Public License
 # along with Pylyglot.  If not, see <http://www.gnu.org/licenses/>.
 
-from django.conf.urls.defaults import *
+from django.conf.urls import patterns, include, url
 
-urlpatterns = patterns('pylyglot.translations.views',
+urlpatterns = patterns('translations.views',
 
         url(r'^$', 'index', name='home'),
 )
