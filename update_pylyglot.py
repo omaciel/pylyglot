@@ -7,7 +7,7 @@ path = '/home/sgtotainha/pylyglot'
 if path not in sys.path:
     sys.path.append(path)
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'pylyglot.settings'
 
 #from core.models import *
 
