@@ -21,7 +21,7 @@ from django.core.management.base import BaseCommand
 
 from polib import pofile
 
-from pylyglot.core.lib import translate
+from core.lib import translate
 
 import logging
 from optparse import make_option

@@ -23,8 +23,8 @@ from django.core.management.base import BaseCommand, CommandError
 
 from polib import pofile
 
-from pylyglot.core.models import Job, Language, Package
-from pylyglot.core.lib import populate_db
+from core.models import Job, Language, Package
+from core.lib import populate_db
 
 import tempfile
 from urllib import urlopen

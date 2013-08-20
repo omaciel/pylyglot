@@ -18,7 +18,7 @@
 
 from django.contrib import admin
 
-from pylyglot.packages.models import Package
+from packages.models import Package
 
 class PackageAdmin(admin.ModelAdmin):
     pass
