@@ -34,7 +34,7 @@ urlpatterns = patterns('',
 )
 
 urlpatterns += patterns('django.views.generic.simple',
-        url(r'^about', TemplateView.as_view(template_name='about.html'), name='about'),
-        url(r'^howto', TemplateView.as_view(template_name='howto.html'), name='howto'),
-        url(r'^contact', TemplateView.as_view(template_name='contact.html'), name='contact'),
+        url(r'^about/$', TemplateView.as_view(template_name='about.html'), name='about'),
+        url(r'^howto/$', TemplateView.as_view(template_name='howto.html'), name='howto'),
+        url(r'^contact/$', TemplateView.as_view(template_name='contact.html'), name='contact'),
 )
