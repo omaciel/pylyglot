@@ -1,4 +1,9 @@
 Django==1.5.2
+boto==2.10.0
+dj-database-url==0.2.2
 django-pagination==1.0.7
+django-storages==1.1.8
+gunicorn==17.5
 polib==0.6.3
+psycopg2==2.5.1
 python-dateutil==2.0
