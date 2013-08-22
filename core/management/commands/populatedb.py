@@ -37,9 +37,10 @@ class Command(BaseCommand):
         # Check if exists any Job and create them if necessary
         for language in Language.objects.all():
             for package in Package.objects.all():
-                (job, created) = Job.objects.get_or_create(language=language, package=package)
-                if created:
-                    job.save()
+                try:
+                    Job.objects.get(language=language, package=package)
+                except Job.DoesNotExist:
+                    Job(language=language, package=package).save()
 
         active_job = Job.objects.filter(active = True)
         if active_job:
@@ -86,7 +87,11 @@ class Command(BaseCommand):
             job.delete()
             logging.info("Job has been deleted.")
             # ... and create a new one, put it at the end of queue.
-            (job, created) = Job.objects.get_or_create(language=language, package=package)
-            job.save()
+            try:
+                job = Job.objects.get(language=language, package=package)
+            except Job.DoesNotExist:
+                job = Job(language=language, package=package)
+                job.save()
+
             logging.info("New job has been created.")
             logging.info(job.update_on)
