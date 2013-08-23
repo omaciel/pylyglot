@@ -16,6 +16,7 @@
 # You should have received a copy of the GNU General Public License
 # along with Pylyglot.  If not, see <http://www.gnu.org/licenses/>.
 
+from django.db.models import Count
 from core.models import Language, Package, Translation
 
 def total_packages(request):
@@ -24,7 +25,10 @@ def total_packages(request):
 
 def total_languages(request):
 
-    return {'total_languages': Language.objects.count()}
+    return {
+        'total_languages': Language.objects.annotate(
+            trans=Count('translation')).filter(trans__gt=1).count()
+    }
 
 def total_translations(request):
 
