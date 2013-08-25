@@ -11,7 +11,7 @@ time, mark, audio, video {
   font-size:100%;
   vertical-align:baseline;
   background:transparent;
-}                  
+}
 article, aside, figure, footer, header, hgroup, nav, section { display:block; }
 nav ul { list-style:none; }
 blockquote, q { quotes:none; }
@@ -30,7 +30,7 @@ body { font:13px sans-serif; *font-size:small; *font:x-small; line-height:1.22; 
 table { font-size:inherit; font:100%;}
 select, input, textarea { font:99% sans-serif; }
 pre, code, kbd, samp { font-family: monospace, sans-serif; }
- 
+
 body, select, input, textarea { color:#444; }
 h1,h2,h3,h4,h5,h6 { font-weight: bold; text-rendering: optimizeLegibility; }
 html { -webkit-font-smoothing: antialiased; }
@@ -41,7 +41,7 @@ ul { margin-left:30px; }
 ol { margin-left:30px; list-style-type: decimal; }
 small { font-size:85%; }
 strong, th { font-weight: bold; }
-td, td img { vertical-align:top; } 
+td, td img { vertical-align:top; }
 sub { vertical-align: sub; font-size: smaller; }
 sup { vertical-align: super; font-size: smaller; }
 
@@ -53,9 +53,9 @@ input[type="checkbox"] { vertical-align: bottom; *vertical-align: baseline; }
 label, input[type=button], input[type=submit], button { cursor: pointer; }
 
 ::-moz-selection{ background: #DF2D21; color:#fff; text-shadow: none; }
-::selection { background:#DF2D21; color:#fff; text-shadow: none; } 
+::selection { background:#DF2D21; color:#fff; text-shadow: none; }
 
-a:link { -webkit-tap-highlight-color: #FF5E99; } 
+a:link { -webkit-tap-highlight-color: #FF5E99; }
 
 
 html { overflow-y: scroll; }
@@ -63,7 +63,7 @@ button {  width: auto; overflow: visible; }
 .ie7 img { -ms-interpolation-mode: bicubic; }
 
 .ir { display:block; text-indent:-999em; overflow:hidden; background-repeat: no-repeat; }
-.hidden { display:none; visibility:hidden; } 
+.hidden { display:none; visibility:hidden; }
 .visuallyhidden { position:absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px); }
 .invisible { visibility: hidden; }
 .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
@@ -72,29 +72,29 @@ button {  width: auto; overflow: visible; }
 .clearfix { display: block; }
 
 
- /* 
+ /*
  	Primary Styles
     Author: QuartoEstudio.com
  */
- 
- 
- 
+
+
+
  #container { width:900px; margin:auto; position:relative;}
- 
+
  h1 { font-size: 2.8em;}
  h2 { font-size: 2.3em;}
  h3 { font-size: 1.8em;}
  h4 { font-size: 1.3em;}
- 
+
  P { font-size: 1em; }
- 
+
  .ht{
  	text-indent:-9999px;
  	overflow:hidden;
  }
- 
 
- 
+
+
 body							{ background:#fff: }
 header					 		{ width: 600px; margin: auto; margin-bottom:50px;}
 header h1						{ text-align: center; margin-top:54px; margin-bottom:25px;}
@@ -108,14 +108,13 @@ ul.information-links li			{ display:inline; margin-left: 12px; font-size:80%;fon
 ul.information-links li	a		{ color: #fff; font-weight:bold; }
 
 #search select,
-#id_languages_chzn,
+#id_languages_chosen,
 #id_query,
 #search input[type=submit] { display:block; float:left; }
 #search select,
-#id_languages_chzn { margin:3px; width:170px !important; }
-.chzn-drop { width:168px !important; }
-#id_languages_chzn a { height:34px; line-height:36px; }
-.chzn-container-single .chzn-single div b { background-position: 0 5px !important; }
+#id_languages_chosen { margin:3px; width:170px !important; }
+#id_languages_chosen a { height:34px; line-height:36px; }
+.chosen-container-single .chosen-single div b { background-position: 0 9px !important; }
 #search { background:#d9d9d9; height:42px; -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px; }
 #id_query { background:#f9f6fa; border:none; font-size:14px; height:36px; line-height:36px; margin:3px 0; outline:none; padding:0 6px; width:370px; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,0.3) inset; }
 #search input[type=submit] { float:right; height:38px; margin:3px 2px 0 2px; width:38px; text-indent:-9999px; overflow:hidden; border:none; }
@@ -132,7 +131,7 @@ p#website-information 			{ margin-bottom:10px; }
 
 .package-result td,
 .package-result th						{margin:auto; border:1px solid #E8E8E8; padding:10px; font-size:1em;}
-                
+
 .package-result tr:nth-child(even)		{ background:#fff; }
 .package-result tr:nth-child(odd)		{ background:#f8f8f8; }
 .package-result tr:hover				{ background:#F6F7D4; }
@@ -147,7 +146,7 @@ p#website-information 			{ margin-bottom:10px; }
 footer									{ padding-top:50px; padding-bottom:50px; width:600px; margin:auto; }
 footer p								{ text-align:center; }
 
-footer p#website-information			{ font-size:90%; color:#C1C1C1; } 
+footer p#website-information			{ font-size:90%; color:#C1C1C1; }
 footer p#website-information a			{ color:gray; }
 
 
@@ -160,7 +159,7 @@ footer span#sentences-number			{ color:#E13220; }
 
 div#informational							{ padding-left:20px; padding-right:20px; width:600px; margin:auto;}
 div#informational p							{ line-height:1.5em; margin-bottom:1em;}
-div#informational span#pylyglot             { font-weight:bold; color:#D9E021; letter-spacing:.05em;} 
+div#informational span#pylyglot             { font-weight:bold; color:#D9E021; letter-spacing:.05em;}
 
 #contribute	{ margin:50px 0;}
 #contribute h4 { padding-top:15px;}
@@ -174,13 +173,13 @@ table tr th { width:25%;}
 p#contact-email { text-align:center; margin-top:40px;}
 
 
-/* 
+/*
  * print styles
  */
 @media print {
   * { background: transparent !important; color: #444 !important; text-shadow: none; }
   a, a:visited { color: #444 !important; text-decoration: underline; }
-  a:after { content: " (" attr(href) ")"; } 
+  a:after { content: " (" attr(href) ")"; }
   abbr:after { content: " (" attr(title) ")"; }
   .ir a:after { content: ""; }  /* Don't show links for images */
   pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
@@ -192,17 +191,17 @@ p#contact-email { text-align:center; margin-top:40px;}
 
 
 
-@media all and (orientation:portrait) { 
-  
+@media all and (orientation:portrait) {
+
 }
 
-@media all and (orientation:landscape) { 
-  
+@media all and (orientation:landscape) {
+
 }
 
 /* Grade-A Mobile Browsers */
 @media screen and (max-device-width: 480px) {
-  html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } 
+  html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; }
 
 }
 
