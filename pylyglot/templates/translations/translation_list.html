@@ -50,3 +50,16 @@
     {% endif %}
 </div>
 {% endblock %}
+
+{% block extrajs %}
+<script type="text/javascript" src="{{ STATIC_URL }}js/underscore-min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.floatThead.min.js"></script>
+<script type="text/javascript">
+(function ($) {
+    $('table.results').floatThead({
+        // scrollingTop: 31,
+        useAbsolutePositioning: false
+    });
+})(jQuery);
+</script>
+{% endblock %}
