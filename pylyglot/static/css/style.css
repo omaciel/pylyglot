@@ -150,9 +150,9 @@ footer p#website-information			{ font-size:90%; color:#C1C1C1; }
 footer p#website-information a			{ color:gray; }
 
 
-footer p#statistics						{ color: #C1C1C1; }
+footer p#statistics						{ color: #545454; }
 footer p#statistics	span				{ font-weight:bold; letter-spacing:.05em;}
-footer p#statistics span#now-serving	{ font-weight:lighter; color:#545454; letter-spacing:0;}
+footer p#statistics span#now-serving	{ font-weight:lighter; letter-spacing:0;}
 footer span#languages-number			{ color:#DD1152; }
 footer span#packages-number				{ color:#2855B5; }
 footer span#sentences-number			{ color:#E13220; }

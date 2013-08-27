@@ -3,10 +3,11 @@
 
 <footer>
     <p id="statistics">
-    <span id="now-serving">{% trans "Now serving" %}</span>: 
-    <span id="languages-number">{% trans "Languages" %}: {{ total_languages }}</span> | 
-    <span id="packages-number">{% trans "Packages:" %} {{ total_packages }}</span> | 
+    <span id="now-serving">{% trans "Now serving" %}</span>:
+    <span id="languages-number">{% trans "Languages" %}: {{ total_languages }}</span> |
+    <span id="packages-number">{% trans "Packages:" %} {{ total_packages }}</span> |
     <span id="sentences-number">{% trans "Translations:" %} {{ total_translations|intcomma }}</span>
+    {% trans "and counting" %}
     </p>
     <p id="website-information">Pylyglot 2010-{% now "Y" %}. {% trans "All Rights Reserverd. Design by:" %} <a rel="nofollow" href="http://quartoestudio.com">QuartoEstudio.com</a></p>
 </footer>
