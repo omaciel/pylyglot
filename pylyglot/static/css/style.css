@@ -1,78 +1,4 @@
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, figure, footer, header, hgroup, menu, nav, section, menu,
-time, mark, audio, video {
-  margin:0;
-  padding:0;
-  border:0;
-  outline:0;
-  font-size:100%;
-  vertical-align:baseline;
-  background:transparent;
-}
-article, aside, figure, footer, header, hgroup, nav, section { display:block; }
-nav ul { list-style:none; }
-blockquote, q { quotes:none; }
-blockquote:before, blockquote:after, q:before, q:after { content:''; content:none; }
-a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
-ins { background-color:#ff9; color:#000; text-decoration:none; }
-mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
-del { text-decoration: line-through; }
-abbr[title], dfn[title] { border-bottom:1px dotted #000; cursor:help; }
-table { border-collapse:collapse; border-spacing:0; }
-hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
-input, select { vertical-align:middle; }
-
-
-body { font:13px sans-serif; *font-size:small; *font:x-small; line-height:1.22; }
-table { font-size:inherit; font:100%;}
-select, input, textarea { font:99% sans-serif; }
-pre, code, kbd, samp { font-family: monospace, sans-serif; }
-
-body, select, input, textarea { color:#444; }
-h1,h2,h3,h4,h5,h6 { font-weight: bold; text-rendering: optimizeLegibility; }
-html { -webkit-font-smoothing: antialiased; }
-a:hover, a:active { outline: none; }
-a, a:active, a:visited { color:#2855B5; text-decoration:none; }
-a:hover { color:#E13220; text-decoration:underline; }
-ul { margin-left:30px; }
-ol { margin-left:30px; list-style-type: decimal; }
-small { font-size:85%; }
-strong, th { font-weight: bold; }
-td, td img { vertical-align:top; }
-sub { vertical-align: sub; font-size: smaller; }
-sup { vertical-align: super; font-size: smaller; }
-
-pre { padding: 15px; white-space: pre; white-space: pre-wrap; white-space: pre-line; word-wrap: break-word; }
-
-input[type="radio"] { vertical-align: text-bottom; }
-input[type="checkbox"] { vertical-align: bottom; *vertical-align: baseline; }
-.ie6 input { vertical-align: text-bottom; }
-label, input[type=button], input[type=submit], button { cursor: pointer; }
-
-::-moz-selection{ background: #DF2D21; color:#fff; text-shadow: none; }
-::selection { background:#DF2D21; color:#fff; text-shadow: none; }
-
-a:link { -webkit-tap-highlight-color: #FF5E99; }
-
-
-html { overflow-y: scroll; }
-button {  width: auto; overflow: visible; }
-.ie7 img { -ms-interpolation-mode: bicubic; }
-
-.ir { display:block; text-indent:-999em; overflow:hidden; background-repeat: no-repeat; }
-.hidden { display:none; visibility:hidden; }
-.visuallyhidden { position:absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px); }
-.invisible { visibility: hidden; }
-.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-.clearfix { display: inline-block; }
-* html .clearfix { height: 1%; }
-.clearfix { display: block; }
-
-
- /*
+/*
  	Primary Styles
     Author: QuartoEstudio.com
  */
@@ -96,28 +22,12 @@ button {  width: auto; overflow: visible; }
 
 
 body							{ background:#fff: }
-header					 		{ width: 600px; margin: auto; margin-bottom:50px;}
+header					 		{ margin-bottom:50px;}
 header h1						{ text-align: center; margin-top:54px; margin-bottom:25px;}
-/*header form						{ margin-bottom:50px !important; position:relative; border:1px solid #E8E8E8; height:32px; width:456px; margin:auto;}*/
-
-/*header form select 				{ line-height:1.6em; border: 1px solid #E8E8E8; }*/
-/*header form input[type=text]	{ border: none; height:30px; font-size:1.5em; color:#545454; background:#fff;}*/
 
 ul.information-links			{ list-style:none; margin:0; padding:0; text-align:center; display:block; height:30px; background:#D9E021; border-bottom:1px solid #d2d2d2; width:100%; line-height:30px; -moz-box-shadow:0 1px 0 #c1c1c1; -webkit-box-shadow:0 1px 0 #c1c1c1; box-shadow:0 1px 0 #c1c1c1 }
 ul.information-links li			{ display:inline; margin-left: 12px; font-size:80%;font-size:.9em;}
 ul.information-links li	a		{ color: #fff; font-weight:bold; }
-
-#search select,
-#id_languages_chosen,
-#id_query,
-#search input[type=submit] { display:block; float:left; }
-#search select,
-#id_languages_chosen { margin:3px; width:170px !important; }
-#id_languages_chosen a { height:34px; line-height:36px; }
-.chosen-container-single .chosen-single div b { background-position: 0 9px !important; }
-#search { background:#d9d9d9; height:42px; -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px; }
-#id_query { background:#f9f6fa; border:none; font-size:14px; height:36px; line-height:36px; margin:3px 0; outline:none; padding:0 6px; width:370px; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,0.3) inset; }
-#search input[type=submit] { float:right; height:38px; margin:3px 2px 0 2px; width:38px; text-indent:-9999px; overflow:hidden; border:none; }
 
 .search-button        { background:url(../images/search_button_bg_38x117.png) no-repeat center top; }
 .search-button:hover  { background:url(../images/search_button_bg_38x117.png) no-repeat center -40px; }
@@ -143,14 +53,14 @@ p#website-information 			{ margin-bottom:10px; }
 
 #fixedTableHeader 						{ position: fixed; top: 0px; z-index: 10; width: 100%; }
 
-footer									{ padding-top:50px; padding-bottom:50px; width:600px; margin:auto; }
-footer p								{ text-align:center; }
+footer									{ height: 60px; }
+footer p								{ text-align: center; }
 
 footer p#website-information			{ font-size:90%; color:#C1C1C1; }
 footer p#website-information a			{ color:gray; }
 
 
-footer p#statistics						{ color: #545454; }
+footer p#statistics						{ padding-top:10px; color: #545454; }
 footer p#statistics	span				{ font-weight:bold; letter-spacing:.05em;}
 footer p#statistics span#now-serving	{ font-weight:lighter; letter-spacing:0;}
 footer span#languages-number			{ color:#DD1152; }
@@ -172,6 +82,57 @@ table tr th { width:25%;}
 
 p#contact-email { text-align:center; margin-top:40px;}
 
+/*
+ * Bootstrap customizations
+ */
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+#wrap > .container {
+  padding: 60px 15px 0;
+}
+.container .credit {
+  margin: 20px 0;
+}
+
+#footer > .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*
+ * Chosen customizations
+ */
+#id_languages_chosen { width:160px !important; }
+
+.chosen-container-single .chosen-single {
+  border-right: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 5px 0 0 5px;
+}
 
 /*
  * print styles

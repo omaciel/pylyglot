@@ -1,7 +1,8 @@
 {% load i18n %}
 {% load humanize %}
 
-<footer>
+<footer id="footer">
+  <div class="container">
     <p id="statistics">
     <span id="now-serving">{% trans "Now serving" %}</span>:
     <span id="languages-number">{% trans "Languages" %}: {{ total_languages }}</span> |
@@ -10,4 +11,5 @@
     {% trans "and counting" %}
     </p>
     <p id="website-information">Pylyglot 2010-{% now "Y" %}. {% trans "All Rights Reserverd. Design by:" %} <a rel="nofollow" href="http://quartoestudio.com">QuartoEstudio.com</a></p>
+  </div>
 </footer>

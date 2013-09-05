@@ -11,8 +11,8 @@
 
 {% block content %}
 <div id="main">
-    <div class="package-result">
-        {% if object_list %}
+    {% if object_list %}
+        <div class="package-result">
         {% autopaginate object_list  %}
         <h2><span>{% trans "Term:" %}</span> {{ query }} </h2>
         <table class="results">
@@ -42,7 +42,7 @@
             </tbody>
         </table>
         {% paginate %}
-    </div>
+        </div>
     {% else %}
     {% if is_searching %}
     <p style="text-align:center;">{% trans "No phrases were found that match your search term." %}</p>
@@ -57,7 +57,7 @@
 <script type="text/javascript">
 (function ($) {
     $('table.results').floatThead({
-        // scrollingTop: 31,
+        scrollingTop: 50,
         useAbsolutePositioning: false
     });
 })(jQuery);

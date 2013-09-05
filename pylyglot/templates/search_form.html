@@ -1,6 +1,15 @@
-
-<form id="search" method="get" action=".">
-    {{ form.languages }}
-    {{ form.query }}
-    <input class="search-button" type="submit" value="search" />
-</form>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <form method="get" action=".">
+      <div class="input-group">
+        <span class="input-group-btn">
+          {{ form.languages }}
+        </span>
+        <input type="text" class="form-control" name="{{ form.query.name }}" {% if form.query.value %}value="{{ form.query.value }}"{% endif %}>
+        <span class="input-group-btn">
+          <button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+        </span>
+      </div><!-- /input-group -->
+    </form>
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
