@@ -37,8 +37,6 @@ ul.information-links,
 p#statistics,
 p#website-information 			{ margin-bottom:10px; }
 
-#main							{ width:900px; margin:auto; }
-
 .package-result td,
 .package-result th						{margin:auto; border:1px solid #E8E8E8; padding:10px; font-size:1em;}
 
@@ -122,6 +120,10 @@ body {
 #footer > .container {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+#results thead {
+  background: rgba(255, 255, 255, 0.9);
 }
 
 /*
