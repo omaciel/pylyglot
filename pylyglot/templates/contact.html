@@ -2,12 +2,14 @@
 {% load i18n %}
 
 {% block content %}
-<div id="informational">
-    <p>
-        <span id='pylyglot'>Pylyglot</span> {% trans "is maintained by Og Maciel, so feel free to send your comments, feedback and suggestions to him using the following email:" %}
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="page-header">
+      <h2>{% trans "Contact" %}</h2>
+    </div>
+    <p class="lead">
+        <span class="pylyglot">Pylyglot</span> {% trans "is maintained by Og Maciel, so feel free to send your comments, feedback and suggestions to him using the following email:" %} <img src="{{ STATIC_URL }}images/pylyglot-email-188x20.gif" alt="Contact Us" width="188" height="20" border="0" />
     </p>
-    <p  id="contact-email">
-        <img src="{{ STATIC_URL }}images/pylyglot-email-188x20.gif" alt="Contact Us" width="188" height="20" border="0" />
-    </p>
-</div>
+  </div>
+</div><!-- /.row -->
 {% endblock %}
