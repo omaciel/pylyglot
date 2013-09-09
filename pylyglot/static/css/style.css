@@ -65,10 +65,6 @@ footer span#languages-number			{ color:#DD1152; }
 footer span#packages-number				{ color:#2855B5; }
 footer span#sentences-number			{ color:#E13220; }
 
-div#informational							{ padding-left:20px; padding-right:20px; width:600px; margin:auto;}
-div#informational p							{ line-height:1.5em; margin-bottom:1em;}
-div#informational span#pylyglot             { font-weight:bold; color:#D9E021; letter-spacing:.05em;}
-
 #contribute	{ margin:50px 0;}
 #contribute h4 { padding-top:15px;}
 
@@ -125,6 +121,13 @@ body {
 #results thead {
   background: rgba(255, 255, 255, 0.9);
 }
+
+.lead .pylyglot {
+  font-weight:bold;
+  color:#D9E021;
+  letter-spacing:.05em;
+}
+
 
 /*
  * Chosen customizations

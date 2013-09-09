@@ -2,7 +2,12 @@
 {% load i18n %}
 
 {% block content %}
-<div id="informational">
-    <p>{% trans "Just select your language from the dropdown and type the term you're looking for translation suggestions. <span id='pylyglot'>Pylyglot</span> will search for the best translation from its vast database and will present the results in order of relevance." %}</p>
-</div>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="page-header">
+      <h1>{% trans "How to use" %}</h1>
+    </div>
+    <p class="lead">{% trans "Just select your language from the dropdown and type the term you're looking for translation suggestions. <span class=\"pylyglot\">Pylyglot</span> will search for the best translation from its vast database and will present the results in order of relevance." %}</p>
+  </div>
+</div><!-- /.row -->
 {% endblock %}
