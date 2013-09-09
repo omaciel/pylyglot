@@ -65,12 +65,6 @@ footer span#languages-number			{ color:#DD1152; }
 footer span#packages-number				{ color:#2855B5; }
 footer span#sentences-number			{ color:#E13220; }
 
-#contribute	{ margin:50px 0;}
-#contribute h4 { padding-top:15px;}
-
-code	{background: #D9E021; color:#fff; display:block; padding: 10px; font-weight:bold; }
-
-
 table { margin-bottom:50px; table-layout:fixed; width:100%;}
 table tr th { width:25%;}
 
@@ -127,7 +121,6 @@ body {
   color:#D9E021;
   letter-spacing:.05em;
 }
-
 
 /*
  * Chosen customizations
