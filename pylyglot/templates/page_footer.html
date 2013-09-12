@@ -3,13 +3,13 @@
 
 <footer id="footer">
   <div class="container">
-    <p id="statistics">
+    <div id="statistics" class="text-center">
     <span id="now-serving">{% trans "Now serving" %}</span>:
     <span id="languages-number">{% trans "Languages" %}: {{ total_languages }}</span> |
     <span id="packages-number">{% trans "Packages:" %} {{ total_packages }}</span> |
     <span id="sentences-number">{% trans "Translations:" %} {{ total_translations|intcomma }}</span>
     {% trans "and counting" %}
-    </p>
-    <p id="website-information">Pylyglot 2010-{% now "Y" %}. {% trans "All Rights Reserverd. Design by:" %} <a rel="nofollow" href="http://quartoestudio.com">QuartoEstudio.com</a></p>
+    </div>
+    <div class="text-center text-muted">Pylyglot 2010-{% now "Y" %}. {% trans "All Rights Reserverd. Design by:" %} <a rel="nofollow" href="http://quartoestudio.com">QuartoEstudio.com</a></div>
   </div>
 </footer>

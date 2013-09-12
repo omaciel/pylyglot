@@ -2,71 +2,45 @@
  	Primary Styles
     Author: QuartoEstudio.com
  */
+.ht{
+  text-indent:-9999px;
+  overflow:hidden;
+}
 
+header {
+  margin-bottom:50px;
+}
+header h1 {
+  text-align: center;
+  margin-top:54px;
+  margin-bottom:25px;
+}
 
+#statistics {
+  margin-bottom:8px;
+}
 
- #container { width:900px; margin:auto; position:relative;}
-
- h1 { font-size: 2.8em;}
- h2 { font-size: 2.3em;}
- h3 { font-size: 1.8em;}
- h4 { font-size: 1.3em;}
-
- P { font-size: 1em; }
-
- .ht{
- 	text-indent:-9999px;
- 	overflow:hidden;
- }
-
-
-
-body							{ background:#fff: }
-header					 		{ margin-bottom:50px;}
-header h1						{ text-align: center; margin-top:54px; margin-bottom:25px;}
-
-ul.information-links			{ list-style:none; margin:0; padding:0; text-align:center; display:block; height:30px; background:#D9E021; border-bottom:1px solid #d2d2d2; width:100%; line-height:30px; -moz-box-shadow:0 1px 0 #c1c1c1; -webkit-box-shadow:0 1px 0 #c1c1c1; box-shadow:0 1px 0 #c1c1c1 }
-ul.information-links li			{ display:inline; margin-left: 12px; font-size:80%;font-size:.9em;}
-ul.information-links li	a		{ color: #fff; font-weight:bold; }
-
-.search-button        { background:url(../images/search_button_bg_38x117.png) no-repeat center top; }
-.search-button:hover  { background:url(../images/search_button_bg_38x117.png) no-repeat center -40px; }
-.search-button:active { background:url(../images/search_button_bg_38x117.png) no-repeat center -80px; }
-
-ul.information-links,
-p#statistics,
-p#website-information 			{ margin-bottom:10px; }
-
-.package-result td,
-.package-result th						{margin:auto; border:1px solid #E8E8E8; padding:10px; font-size:1em;}
-
-.package-result tr:nth-child(even)		{ background:#fff; }
-.package-result tr:nth-child(odd)		{ background:#f8f8f8; }
-.package-result tr:hover				{ background:#F6F7D4; }
-
-.package-result th						{ background:#D9E021; color:#fff; letter-spacing:.05em; }
-
-.package-result	h2						{ margin-bottom:10px; font-size:2em;}
-.package-result	h2	span				{ color:#C1C1C1; font-size:80%;}
-
-#fixedTableHeader 						{ position: fixed; top: 0px; z-index: 10; width: 100%; }
-
-footer									{ height: 60px; }
-footer p								{ text-align: center; }
-
-footer p#website-information			{ font-size:90%; color:#C1C1C1; }
-footer p#website-information a			{ color:gray; }
-
-
-footer p#statistics						{ padding-top:10px; color: #545454; }
-footer p#statistics	span				{ font-weight:bold; letter-spacing:.05em;}
-footer p#statistics span#now-serving	{ font-weight:lighter; letter-spacing:0;}
-footer span#languages-number			{ color:#DD1152; }
-footer span#packages-number				{ color:#2855B5; }
-footer span#sentences-number			{ color:#E13220; }
-
-table { margin-bottom:50px; table-layout:fixed; width:100%;}
-table tr th { width:25%;}
+#statistics {
+  padding-top:5px;
+  color: #545454;
+}
+#statistics	span {
+  font-weight:bold;
+  letter-spacing:.05em;
+}
+#now-serving {
+  font-weight:lighter;
+  letter-spacing:0;
+}
+#languages-number {
+  color:#DD1152;
+}
+#packages-number {
+  color:#2855B5;
+}
+#sentences-number {
+  color:#E13220;
+}
 
 /*
  * Bootstrap customizations
@@ -99,7 +73,7 @@ body {
 }
 
 #wrap > .container {
-  padding: 60px 15px 0;
+  padding: 60px 15px 20px;
 }
 .container .credit {
   margin: 20px 0;
@@ -129,36 +103,3 @@ body {
   border-right: 1px solid rgba(0, 0, 0, 0);
   border-radius: 5px 0 0 5px;
 }
-
-/*
- * print styles
- */
-@media print {
-  * { background: transparent !important; color: #444 !important; text-shadow: none; }
-  a, a:visited { color: #444 !important; text-decoration: underline; }
-  a:after { content: " (" attr(href) ")"; }
-  abbr:after { content: " (" attr(title) ")"; }
-  .ir a:after { content: ""; }  /* Don't show links for images */
-  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  img { page-break-inside: avoid; }
-  @page { margin: 0.5cm; }
-  p, h2, h3 { orphans: 3; widows: 3; }
-  h2, h3{ page-break-after: avoid; }
-}
-
-
-
-@media all and (orientation:portrait) {
-
-}
-
-@media all and (orientation:landscape) {
-
-}
-
-/* Grade-A Mobile Browsers */
-@media screen and (max-device-width: 480px) {
-  html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; }
-
-}
-
