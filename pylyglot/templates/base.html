@@ -9,38 +9,54 @@
 <!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
 <!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
+  <div id="wrap">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
 
-    <nav>
-        <ul class="information-links">
-            <li><a href="/">{% trans "home" %}</a></li>
-            <li><a href="{% url 'howto' %}">{% trans "how to use" %}</a></li>
-            <li><a href="{% url 'about' %}">{% trans "about" %}</a></li>
-            <li><a href="{% url 'xmlrpc' %}">{% trans "developer" %}</a></li>
-            <li><a href="{% url 'contact' %}">{% trans "contact" %}</a></li>
-        </ul>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li><a class="active" href="{% url 'home' %}">{% trans "Home" %}</a></li>
+            <li><a href="{% url 'howto' %}">{% trans "How to use" %}</a></li>
+            <li><a href="{% url 'about' %}">{% trans "About" %}</a></li>
+            <li><a href="{% url 'contact' %}">{% trans "Contact" %}</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
     </nav>
 
-        <div id="container">
+    <div class="container">
+      <header>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1>
+                <a href="/" class="ht"><img src="{{ STATIC_URL }}images/logo-179x119.jpg" alt="Pylyglot" /></a>
+            </h1>
+          </div>
+        </div>
+      </header>
 
-            <header>
-                <h1>
-                    <a href="/" class="ht"><img src="{{ STATIC_URL }}images/logo-179x119.jpg" alt="Pylyglot" /></a>
-                </h1>
+      {% block search %}{% endblock %}
 
-                {% block search %}{% endblock %}
+      {% block content %}{% endblock %}
+    </div> <!-- end of #container -->
+  </div><!-- /#wrap -->
 
-            </header>
+  {% include "page_footer.html" %}
 
-            {% block content %}{% endblock %}
-
-            {% include "page_footer.html" %}
-
-        </div> <!-- end of #container -->
-    <script type="text/javascript">
-        (function ($) {
-            $('#id_languages').chosen();
-        })(jQuery);
-    </script>
-    {% block extrajs %}{% endblock %}
-    </body>
+  <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+      (function ($) {
+          $('#id_languages').chosen();
+      })(jQuery);
+  </script>
+  {% block extrajs %}{% endblock %}
+  </body>
 </html>
