@@ -2,8 +2,7 @@
 
 {% load i18n %}
 {% load sortfilter %}
-
-{% load pagination_tags %}
+{% load bootstrap3 %}
 
 {% block search %}
 {% include "search_form.html" %}
@@ -13,7 +12,6 @@
 <div class="row">
     {% if object_list %}
         <div class="col-md-10 col-md-offset-1">
-        {% autopaginate object_list  %}
         <h2><span>{% trans "Term:" %}</span> {{ query }} </h2>
         <div id="results" class="table-responsive">
             <table class="table table-bordered table-hover table-striped">
@@ -27,13 +25,11 @@
                 <tbody>
                     {% for translation in object_list %}
                     <tr class="translation">
-                        <td class="translation.msgid">{{ translation.msgid }}</td>
+                        <td class="translation.msgid">{{ translation.sentence__msgid }}</td>
                         <td class="translation.msgstr">{{ translation.msgstr }}</td>
                         <td class="package-list">
                             <ul>
-                                {% for package in translation.packages %}
-                                <li>{{ package }}</li>
-                                {% endfor %}
+                                <li>{{ translation.package__name }}</li>
                             </ul>
                         </td>
                     </tr>
@@ -43,11 +39,15 @@
                 </tbody>
             </table>
         </div><!-- /.table-responsive -->
-        {% paginate %}
+
+        <div class="text-center">
+        {% bootstrap_pagination page_obj pages_to_show=9 extra=pagination_extra %}
+        </div>
+
         </div>
     {% else %}
         {% if is_searching %}
-        <div class="alert alert-info alert-dismissable col-md-8 col-md-offset-2">
+        <div id="no_results" class="alert alert-info alert-dismissable col-md-8 col-md-offset-2">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
             {% trans "No phrases were found that match your search term." %}
         </div>

@@ -137,12 +137,12 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.humanize',
 
+    'bootstrap3',
     'gunicorn',
 
     'pylyglot',
     'core',
     'rpc_service',
-    'pagination',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -186,9 +186,6 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
 SCRATCH_DIR = os.path.join(BASE_PATH, 'po')
-
-# Number of records to display on query results
-PAGINATION_DEFAULT_PAGINATION = 20
 
 # Google translate api key
 GOOGLE_URL = 'https://www.googleapis.com/language/translate/v2?'

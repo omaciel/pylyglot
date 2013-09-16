@@ -17,8 +17,8 @@
 # along with Pylyglot.  If not, see <http://www.gnu.org/licenses/>.
 
 from django.conf.urls import patterns, include, url
+from translations.views import SearchableTranslationListView
 
-urlpatterns = patterns('translations.views',
-
-        url(r'^$', 'index', name='home'),
+urlpatterns = patterns('',
+        url(r'^$', SearchableTranslationListView.as_view(), name='home'),
 )

@@ -84,6 +84,14 @@ body {
   padding-right: 15px;
 }
 
+#search_form {
+  margin-bottom: 30px;
+}
+
+#no_results {
+  margin-top: 20px;
+}
+
 #results thead {
   background: rgba(255, 255, 255, 0.9);
 }

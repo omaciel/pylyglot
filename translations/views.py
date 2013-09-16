@@ -18,67 +18,54 @@
 
 from django.shortcuts import render_to_response
 from django.template import RequestContext
+from django.utils.http import urlencode
 from core.forms import SearchForm
 from core.models import Translation
 from django.db.models import Count
 
-def index(request):
+from django.views.generic import ListView
 
-    translations = []
-    short_name = 1
-    query = ''
-    results = []
+from django.views.generic import ListView
 
-    if "query" in request.GET:
-        form = SearchForm(request.GET)
-        is_searching = True
-        if form.is_valid():
-            query = form.cleaned_data['query']
-            short_name = form.cleaned_data['languages']
+class SearchableTranslationListView(ListView):
+    model = Translation
+    paginate_by = 20
+    template_name = 'translations/translation_list.html'
 
-            translations = Translation.objects.filter(
-                    sentence__msgid__icontains=query,
-                    language__short_name=short_name,
-                    obsolete=False,
-                    ).values(
-                            'sentence__msgid',
-                            'msgstr',
-                            'sentence__length',
-                            'package__name',
-                            ).order_by(
-                                    'sentence__length',
-                                    'sentence__msgid',
-                                    'msgstr'
-                                    ).distinct()
+    def get_queryset(self):
+        queryset = super(SearchableTranslationListView, self).get_queryset()
+        self.query = self.request.GET.get('query', '')
+        self.short_name = self.request.GET.get('languages', '')
 
-            for trans in translations:
-                """
-                # I don't like this but for now it's ok
-                packages = Translation.objects.filter(
-                        language__short_name=short_name,
-                        sentence__msgid=trans['sentence__msgid']
-                        ).order_by(
-                                'package__name'
-                                )
-                """
-                results.append(
-                        {
-                            'msgid': trans['sentence__msgid'],
-                            'msgstr': trans['msgstr'],
-                            'packages': [trans['package__name'],]
-                            }
-                        )
+        if self.query and self.short_name:
+            return queryset.filter(
+                sentence__msgid__icontains=self.query,
+                language__short_name=self.short_name,
+                obsolete=False,
+                ).values(
+                    'sentence__msgid',
+                    'msgstr',
+                    'sentence__length',
+                    'package__name',
+                    ).order_by(
+                        'sentence__length',
+                        'sentence__msgid',
+                        'msgstr'
+                        ).distinct()
+        else:
+            return queryset.none()
 
-    else:
-        form = SearchForm()
-        is_searching = False
-
-    variables = RequestContext(request, {
-        'object_list': results,
-        'query': query,
-        'short_name': short_name,
-        'form': form,
-        'is_searching': is_searching,
+    def get_context_data(self, **kwargs):
+        kwargs.update({
+            'query': self.query,
+            'short_name': self.short_name,
+            'form': SearchForm(self.request.GET or None),
+            'is_searching': ('query' in self.request.GET and
+                'languages' in self.request.GET),
+            'pagination_extra': urlencode({
+                'languages': self.short_name,
+                'query': self.query,
+            }),
         })
-
-    return render_to_response('translations/translation_list.html', variables)
+        return super(SearchableTranslationListView,
+            self).get_context_data(**kwargs)
