@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="page-header">
+              <h2>{% trans "Package" %}: {{ object }}</h2>
+            </div>
+
+            {% if object.languages.exists %}
+            <div id="results" class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Language</th>
+                            <th>Translations</th>
+                        </tr>
+                    </thead>
+                    {% for language, count in object.translations_by_language %}
+                    <tr>
+                        <td><a href="{% url 'package_translations_list' object.name language.short_name %}">{{ language }}</a></td>
+                        <td>{{ count }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extrajs %}
+{% include "float_thead.html" %}
+{% endblock %}

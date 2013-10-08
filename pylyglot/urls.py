@@ -26,6 +26,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
+    url(r'^packages/', include('packages.urls')),
     url(r'^$', include('translations.urls')),
     url(r'^rpc_service/$', include('rpc_service.urls')),
 

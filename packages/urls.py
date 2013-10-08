@@ -17,10 +17,14 @@
 # along with Pylyglot.  If not, see <http://www.gnu.org/licenses/>.
 
 from django.conf.urls import patterns, include, url
+from packages.views import (PackageListView, PackageDetailView,
+    PackageTranslationsListView)
 
 urlpatterns = patterns('packages.views',
-
-        url(r'^$', 'index', name='packages_list'),
-        url(r'^(?P<object_id>\d+)/$', 'detail', name='package_detail'),
+        url(r'^$', PackageListView.as_view(), name='package_list'),
+        url(r'^(?P<slug>[\w-]+)/$', PackageDetailView.as_view(),
+            name='package_detail'),
+        url(r'^(?P<name>[\w-]+)/(?P<language>[\w@-]+)/$', PackageTranslationsListView.as_view(),
+            name='package_translations_list'),
         url(r'^translation_packages/$', 'translation_packages', name='translation_packages'),
 )

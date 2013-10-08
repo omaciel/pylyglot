@@ -1,0 +1,10 @@
+<script type="text/javascript" src="{{ STATIC_URL }}js/underscore-min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.floatThead.min.js"></script>
+<script type="text/javascript">
+(function ($) {
+    $('#results > table').floatThead({
+        scrollingTop: 50,
+        useAbsolutePositioning: false
+    });
+})(jQuery);
+</script>

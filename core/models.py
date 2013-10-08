@@ -16,6 +16,7 @@
 # You should have received a copy of the GNU General Public License
 # along with Pylyglot.  If not, see <http://www.gnu.org/licenses/>.
 
+from django.core.urlresolvers import reverse
 from django.db import models
 from translations.models import Translation
 
@@ -26,6 +27,25 @@ class Package(models.Model):
 
     def __unicode__(self):
         return self.name
+
+    @property
+    def languages(self):
+        languages = Translation.objects.filter(package=self).values(
+            'language').distinct()
+        return Language.objects.filter(id__in=languages).order_by('long_name')
+
+    @property
+    def translations(self):
+        return self.translation_set.all()
+
+    @property
+    def translations_by_language(self):
+        return [(l, Translation.objects.filter(package=self,
+                language=l).count()) for l in self.languages]
+
+    def get_absolute_url(self):
+        return reverse('package_detail', args=[self.name])
+
 
 class Language(models.Model):
 

@@ -7,23 +7,22 @@
 
 <div id="search-results">
     <div class="page-header">
-      <h2>{% trans "Packages" %}</h2>
+      <h2>{% trans "Package" %}: {{ package }} <small>{{ language.long_name }} {% trans "translations" %}</small></h2>
     </div>
+
     {% if object_list %}
     <div id="results" class="table-responsive">
-        <table class="table table-bordered table-striped" id="packages">
+        <table class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th>{% trans "Name" %}</th>
-                    <th>{% trans "Translations" %}</th>
-                    <th>{% trans "Languages" %}</th>
+                    <th>{% trans "Original" %}</th>
+                    <th>{% trans "Translated" %}</th>
                 </tr>
             </thead>
             {% for object in object_list %}
             <tr>
-                <td><a href="{{ object.get_absolute_url }}">{{ object.name }}</a></td>
-                <td>{{ object.translations.count }}</td>
-                <td>{{ object.languages.count }}</td>
+                <td>{{ object.sentence }}</td>
+                <td>{{ object.msgstr }}</td>
             </tr>
             {% empty %}
             <tr><td>{% trans "No packages found." %}</td></tr>
@@ -31,6 +30,7 @@
         </table>
     </div>
     {% endif %}
+
     <div class="text-center">
     {% bootstrap_pagination page_obj pages_to_show=9 extra=pagination_extra %}
     </div>
