@@ -1,4 +1,5 @@
 {% load i18n %}
+{% load navigation %}
 
 <!DOCTYPE HTML>
 <html lang="en" class="no-js">
@@ -23,11 +24,11 @@
 
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav">
-            <li><a class="active" href="{% url 'home' %}">{% trans "Home" %}</a></li>
-            <li><a href="{% url 'howto' %}">{% trans "How to use" %}</a></li>
-            <li><a href="{% url 'package_list' %}">{% trans "Packages" %}</a></li>
-            <li><a href="{% url 'about' %}">{% trans "About" %}</a></li>
-            <li><a href="{% url 'contact' %}">{% trans "Contact" %}</a></li>
+            <li class="{% active request "^/$" %}"><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+            <li class="{% active request "^/howto/" %}"><a href="{% url 'howto' %}">{% trans "How to use" %}</a></li>
+            <li class="{% active request "^/packages/" %}"><a href="{% url 'package_list' %}">{% trans "Packages" %}</a></li>
+            <li class="{% active request "^/about/" %}"><a href="{% url 'about' %}">{% trans "About" %}</a></li>
+            <li class="{% active request "^/contact/" %}"><a href="{% url 'contact' %}">{% trans "Contact" %}</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
